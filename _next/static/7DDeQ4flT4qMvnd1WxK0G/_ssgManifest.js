@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fpublications\u002F[publicationId]","\u002Fteam\u002F[memberId]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
