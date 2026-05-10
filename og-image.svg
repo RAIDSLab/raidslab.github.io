@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#071113"/>
+  <g text-anchor="middle">
+    <text
+      x="600"
+      y="287"
+      font-family="Helvetica Neue, Arial, sans-serif"
+      font-size="126"
+      font-weight="700"
+      fill="#f4fbf8"
+    >RAIDS Lab</text>
+    <text
+      x="600"
+      y="389"
+      font-family="Helvetica Neue, Arial, sans-serif"
+      font-size="38"
+      font-weight="500"
+      fill="#2dd4bf"
+    >Where data thinks.</text>
+  </g>
+</svg>
