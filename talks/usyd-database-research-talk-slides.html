@@ -1,0 +1,2687 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Data Processing to Data Intelligence</title>
+  <style>
+    :root {
+      --slide-width: 1366px;
+      --slide-height: 768px;
+      --slide-scale: 1;
+      --paper: #ffffff;
+      --paper-2: #f4f7fa;
+      --ink: #101820;
+      --muted: #55616d;
+      --faint: #d9e0e7;
+      --teal: #0f6763;
+      --blue: #274f78;
+      --wine: #88424b;
+      --gold: #a97926;
+      --green: #3f744e;
+      --shadow: 0 18px 54px rgba(16, 24, 32, 0.24);
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #dfe5eb;
+      color: var(--ink);
+      font-family: var(--sans);
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      padding: 18px;
+    }
+
+    .slide {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      display: none;
+      width: var(--slide-width);
+      height: var(--slide-height);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      padding: 52px 66px 46px;
+      transform: translate(-50%, -50%) scale(var(--slide-scale));
+      transform-origin: center;
+    }
+
+    .slide.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      left: 66px;
+      right: 66px;
+      top: 28px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--ink), transparent 68%);
+      opacity: 0.24;
+    }
+
+    .slide-number {
+      position: absolute;
+      right: 66px;
+      bottom: 26px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .footer {
+      position: absolute;
+      left: 66px;
+      bottom: 26px;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    .title-speaker a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .title-speaker a:hover {
+      color: var(--blue);
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--gold);
+      display: inline-block;
+    }
+
+    .no-kicker h2 {
+      margin-top: 20px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: 61px;
+      line-height: 1.02;
+      letter-spacing: 0;
+      font-weight: 500;
+      max-width: 980px;
+    }
+
+    .title-main {
+      display: block;
+      white-space: nowrap;
+      font-size: 52px;
+      line-height: 1.04;
+    }
+
+    .title-sub {
+      display: block;
+      margin-top: 16px;
+      max-width: 1160px;
+      font-size: 34px;
+      line-height: 1.08;
+      color: #22303b;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: 46px;
+      line-height: 1.05;
+      font-weight: 500;
+      letter-spacing: 0;
+      max-width: 940px;
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 1.2;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 13px;
+    }
+
+    .lead {
+      font-size: 25px;
+      line-height: 1.42;
+      max-width: 960px;
+      color: #1e2932;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .small {
+      font-size: 16px;
+      line-height: 1.42;
+    }
+
+    .body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .spacer {
+      flex: 1;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card,
+    .panel {
+      border: 1px solid var(--faint);
+      background: #fff;
+      padding: 20px 20px 18px;
+      border-radius: 2px;
+    }
+
+    .motivation-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .motivation-item {
+      display: grid;
+      grid-template-columns: 168px 1fr;
+      gap: 18px;
+      align-items: center;
+      border: 1px solid var(--faint);
+      background: #fff;
+      padding: 17px 20px;
+      border-left: 6px solid var(--blue);
+    }
+
+    .motivation-item:nth-child(2) {
+      border-left-color: var(--teal);
+    }
+
+    .motivation-item:nth-child(3) {
+      border-left-color: var(--wine);
+    }
+
+    .motivation-item .panel-title {
+      margin-bottom: 0;
+    }
+
+    .motivation-item .panel-copy {
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .panel.dark {
+      background: var(--ink);
+      color: #f6efe4;
+      border-color: var(--ink);
+    }
+
+    .panel.tint-teal {
+      border-top: 4px solid var(--teal);
+    }
+
+    .panel.tint-blue {
+      border-top: 4px solid var(--blue);
+    }
+
+    .panel.tint-wine {
+      border-top: 4px solid var(--wine);
+    }
+
+    .panel.tint-gold {
+      border-top: 4px solid var(--gold);
+    }
+
+    .panel-title {
+      font-weight: 700;
+      font-size: 19px;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .panel-copy {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.42;
+    }
+
+    .dark .panel-copy {
+      color: #cfd7dd;
+    }
+
+    .quote {
+      position: relative;
+      padding: 18px 22px;
+      border-left: 4px solid var(--gold);
+      background: rgba(255, 255, 255, 0.38);
+      font-size: 24px;
+      line-height: 1.42;
+      color: #1b2730;
+    }
+
+    .motivation-slide .quote {
+      margin-top: 26px !important;
+      padding: 24px 28px;
+      font-size: 28px;
+      line-height: 1.38;
+    }
+
+    .motivation-slide .motivation-list {
+      gap: 15px;
+      margin-top: 26px;
+    }
+
+    .motivation-slide .motivation-item {
+      grid-template-columns: 210px 1fr;
+      padding: 22px 24px;
+      min-height: 92px;
+    }
+
+    .motivation-slide .motivation-item .panel-title {
+      font-size: 22px;
+      line-height: 1.16;
+    }
+
+    .motivation-slide .motivation-item .panel-copy {
+      font-size: 19px;
+      line-height: 1.38;
+    }
+
+    .motivation-slide .key-message {
+      margin-top: 24px;
+      padding: 14px 18px;
+      font-size: 22px;
+      line-height: 1.32;
+    }
+
+    .section-slide {
+      justify-content: center;
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin-bottom: 26px;
+    }
+
+    .section-meaning {
+      font-size: 28px;
+      line-height: 1.34;
+      max-width: 850px;
+      color: #1e2932;
+      margin-bottom: 34px;
+    }
+
+    .stage-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1px solid var(--faint);
+      margin-top: 38px;
+      max-width: 880px;
+    }
+
+    .stage-strip div {
+      padding: 13px 16px;
+      border-right: 1px solid var(--faint);
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .stage-strip div:last-child {
+      border-right: 0;
+    }
+
+    .stage-strip b {
+      display: block;
+      font-family: var(--sans);
+      font-size: 16px;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--ink);
+      margin-top: 4px;
+    }
+
+    .stage-flow {
+      display: grid;
+      gap: 8px;
+    }
+
+    .stage-layer-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 26px;
+      align-items: stretch;
+      margin-top: 24px;
+    }
+
+    .stage-panel,
+    .layer-panel {
+      min-height: 0;
+    }
+
+    .stage-panel h3,
+    .layer-panel h3 {
+      margin-bottom: 10px;
+    }
+
+    .stage-flow-item {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      gap: 14px;
+      align-items: center;
+      border: 1px solid var(--faint);
+      background: #fff;
+      padding: 13px 15px;
+      min-height: 90px;
+    }
+
+    .stage-flow-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--blue);
+    }
+
+    .stage-flow-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .stage-flow-item.understanding .stage-flow-icon {
+      background: var(--teal);
+    }
+
+    .stage-flow-item.intelligence .stage-flow-icon {
+      background: var(--wine);
+    }
+
+    .stage-flow-title {
+      font-weight: 800;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .stage-flow-copy {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.3;
+    }
+
+    .stage-flow-arrow {
+      height: 22px;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-family: var(--mono);
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .layer-stack {
+      display: grid;
+      gap: 10px;
+    }
+
+    .stage-layer-grid.aligned-agenda {
+      grid-template-columns: 0.9fr 1.1fr;
+      column-gap: 24px;
+      row-gap: 7px;
+      align-items: stretch;
+    }
+
+    .aligned-agenda .agenda-heading {
+      margin: 0 0 3px;
+    }
+
+    .aligned-agenda .stage-flow-item,
+    .aligned-agenda .layer {
+      min-height: 94px;
+    }
+
+    .aligned-agenda .stage-flow-arrow {
+      grid-column: 1;
+      height: 17px;
+    }
+
+    .aligned-agenda .agenda-arrow-spacer {
+      min-height: 17px;
+    }
+
+    .layer {
+      position: relative;
+      border: 1px solid var(--faint);
+      background: #fff;
+      padding: 18px 20px 17px;
+      min-height: 112px;
+      border-left: 7px solid var(--blue);
+    }
+
+    .layer.processing {
+      border-left-color: var(--blue);
+    }
+
+    .layer.understanding {
+      border-left-color: var(--teal);
+    }
+
+    .layer.intelligence {
+      border-left-color: var(--wine);
+    }
+
+    .layer-topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .layer-number {
+      font-family: var(--mono);
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .stage-label {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--blue);
+      padding: 5px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .layer.understanding .stage-label {
+      background: var(--teal);
+    }
+
+    .layer.intelligence .stage-label {
+      background: var(--wine);
+    }
+
+    .layer-title {
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .layer-meta {
+      font-size: 16px;
+      line-height: 1.36;
+      color: var(--muted);
+    }
+
+    .stack-arrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: 18px;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .stack-arrow::before {
+      content: "";
+      width: 2px;
+      height: 18px;
+      background: var(--gold);
+      display: inline-block;
+    }
+
+    .flow-row {
+      display: grid;
+      grid-template-columns: 1fr 56px 1fr 56px 1fr;
+      align-items: center;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .flow-node {
+      border: 1px solid var(--faint);
+      background: #fff;
+      padding: 18px;
+      min-height: 116px;
+    }
+
+    .arrow {
+      text-align: center;
+      color: var(--gold);
+      font-family: var(--mono);
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .loop-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+      margin-top: 18px;
+      margin-bottom: 24px;
+      align-items: center;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .loop-diagram {
+      position: relative;
+      height: 400px;
+      min-height: 400px;
+    }
+
+    .loop-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .loop-node {
+      position: absolute;
+      width: 238px;
+      min-height: 86px;
+      border: 1px solid var(--faint);
+      background: #fff;
+      padding: 14px 16px;
+      box-shadow: 0 10px 28px rgba(16, 24, 32, 0.08);
+    }
+
+    .loop-node b {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .loop-node span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.32;
+    }
+
+    .loop-node.systems {
+      left: 24px;
+      bottom: 8px;
+      border-top: 4px solid var(--blue);
+    }
+
+    .loop-node.understanding {
+      left: calc(50% - 119px);
+      top: 10px;
+      border-top: 4px solid var(--teal);
+    }
+
+    .loop-node.impact {
+      right: 24px;
+      bottom: 8px;
+      border-top: 4px solid var(--wine);
+    }
+
+    .loop-center {
+      position: absolute;
+      left: calc(50% - 76px);
+      top: 184px;
+      width: 152px;
+      height: 64px;
+      border: 1px solid var(--faint);
+      background: var(--paper-2);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .loop-segment {
+      fill: none;
+      stroke: var(--gold);
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .loop-label {
+      fill: var(--muted);
+      font-family: var(--mono);
+      font-size: 14px;
+      paint-order: stroke;
+      stroke: #fff;
+      stroke-width: 5px;
+      stroke-linejoin: round;
+    }
+
+    .loop-note {
+      border: 1px solid var(--faint);
+      background: #fff;
+      padding: 18px 18px 16px;
+    }
+
+    .loop-note + .loop-note {
+      margin-top: 14px;
+    }
+
+    .key-message {
+      margin-top: 18px;
+      padding: 14px 18px;
+      border-top: 1px solid var(--faint);
+      border-bottom: 1px solid var(--faint);
+      font-size: 20px;
+      line-height: 1.34;
+      color: #1e2932;
+      background: #fff;
+    }
+
+    .feedback-slide .key-message {
+      transform: translateY(-18px);
+    }
+
+    .content-layout {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 22px;
+      margin-top: 22px;
+      align-items: stretch;
+      min-height: 0;
+      flex: 1;
+    }
+
+    .problem {
+      font-size: 21px;
+      line-height: 1.38;
+      color: #1d2832;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--faint);
+      margin-bottom: 16px;
+    }
+
+    .topic-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .topic-list li {
+      position: relative;
+      padding-left: 16px;
+      font-size: 18px;
+      line-height: 1.34;
+      color: #26313b;
+    }
+
+    .topic-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .topic-list strong {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .work-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .work-list.two-col {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 12px;
+      row-gap: 10px;
+    }
+
+    .work-item {
+      border: 1px solid var(--faint);
+      background: #f8fafc;
+      padding: 11px 12px 10px;
+      min-height: 50px;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+
+    .work-title {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 7px;
+      color: #17222b;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .status,
+    .venue {
+      display: inline-flex;
+      align-items: center;
+      min-height: 20px;
+      padding: 3px 7px;
+      border-radius: 999px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .status.completed {
+      background: rgba(63, 116, 78, 0.14);
+      color: var(--green);
+      border: 1px solid rgba(63, 116, 78, 0.26);
+    }
+
+    .status {
+      display: none;
+    }
+
+    .status.ongoing {
+      background: rgba(169, 121, 38, 0.16);
+      color: #7b5619;
+      border: 1px solid rgba(169, 121, 38, 0.28);
+    }
+
+    .venue {
+      background: rgba(16, 24, 32, 0.06);
+      color: #25313b;
+      border: 1px solid rgba(16, 24, 32, 0.12);
+    }
+
+    span.venue {
+      pointer-events: none;
+      cursor: default;
+    }
+
+    a.venue {
+      cursor: pointer;
+    }
+
+    .work-groups {
+      display: grid;
+      gap: 14px;
+    }
+
+    .work-group {
+      border: 1px solid var(--faint);
+      background: #fff;
+      padding: 13px;
+    }
+
+    .work-group-heading {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 9px;
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .work-group-heading::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      display: inline-block;
+    }
+
+    .work-group.ongoing .work-group-heading::before {
+      background: var(--gold);
+    }
+
+    .work-group-list {
+      display: grid;
+      gap: 9px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .work-group-list.two-col {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 10px;
+    }
+
+    .paper-spotlight {
+      border: 1px solid var(--faint);
+      background: #fff;
+      padding: 18px;
+      margin-top: 18px;
+    }
+
+    .paper-spotlight-title {
+      font-family: var(--serif);
+      font-size: 25px;
+      line-height: 1.08;
+      margin-bottom: 8px;
+    }
+
+    .paper-spotlight-meta {
+      display: inline-flex;
+      margin-bottom: 14px;
+    }
+
+    .paper-spotlight ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #26313b;
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    .paper-spotlight li + li {
+      margin-top: 6px;
+    }
+
+    .engine-slide .paper-spotlight {
+      padding: 12px 14px;
+      margin-top: 12px;
+    }
+
+    .engine-slide .paper-spotlight-title {
+      font-size: 21px;
+      line-height: 1.08;
+      margin-bottom: 7px;
+    }
+
+    .engine-slide .paper-spotlight-title.large {
+      font-size: 24px;
+    }
+
+    .engine-slide .paper-spotlight-meta {
+      margin-bottom: 8px;
+    }
+
+    .engine-slide .paper-spotlight ul {
+      font-size: 14px;
+      line-height: 1.22;
+    }
+
+    .engine-slide .paper-spotlight li + li {
+      margin-top: 3px;
+    }
+
+    .engine-slide .work-list {
+      gap: 6px;
+    }
+
+    .engine-slide .work-item {
+      min-height: 42px;
+      padding: 8px 10px 7px;
+      font-size: 14px;
+    }
+
+    .engine-slide .related-work-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 7px;
+      border: 1px solid var(--faint);
+      background: #f8fafc;
+      padding: 7px 10px;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    .engine-slide .related-work-row .work-title {
+      margin: 0;
+    }
+
+    .compact-work .panel {
+      padding: 14px 14px 12px;
+    }
+
+    .compact-work .panel-title {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .compact-work .panel-copy {
+      font-size: 13px;
+      line-height: 1.25;
+    }
+
+    .compact-work .work-group {
+      padding: 10px;
+    }
+
+    .compact-work .work-group-heading {
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+
+    .compact-work .work-group-list {
+      gap: 6px;
+    }
+
+    .compact-work .work-item {
+      min-height: 42px;
+      padding: 8px 9px 7px;
+      font-size: 16px;
+      line-height: 1.22;
+    }
+
+    .compact-work .work-title {
+      margin-bottom: 5px;
+    }
+
+    .compact-work .venue {
+      min-height: 20px;
+      padding: 3px 7px;
+      font-size: 12px;
+    }
+
+    .extra-fit .dimension-strip {
+      margin-bottom: 10px;
+    }
+
+    .extra-fit .dimension-strip span {
+      padding: 6px 8px;
+      font-size: 13px;
+    }
+
+    .extra-fit .work-group {
+      padding: 8px;
+    }
+
+    .extra-fit .work-group-heading {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .extra-fit .work-group-list {
+      gap: 5px;
+    }
+
+    .extra-fit .work-item {
+      min-height: 36px;
+      padding: 6px 8px;
+      font-size: 16px;
+      line-height: 1.18;
+    }
+
+    .extra-fit .work-title {
+      margin-bottom: 4px;
+    }
+
+    .extra-fit .venue {
+      min-height: 19px;
+      padding: 2px 6px;
+      font-size: 11px;
+    }
+
+    .fit-slide .content-layout {
+      margin-top: 18px;
+    }
+
+    .fit-slide .problem {
+      font-size: 21px;
+      line-height: 1.38;
+      padding-bottom: 14px;
+      margin-bottom: 13px;
+    }
+
+    .fit-slide .topic-list {
+      gap: 8px;
+    }
+
+    .fit-slide .topic-list li {
+      font-size: 18px;
+      line-height: 1.34;
+    }
+
+    .fit-slide .key-message {
+      margin-top: 14px;
+      padding: 12px 14px;
+      font-size: 18px;
+      line-height: 1.26;
+    }
+
+    .fit-agenda .grid-2 {
+      margin-top: 18px !important;
+    }
+
+    .fit-agenda .stage-layer-grid {
+      margin-top: 22px;
+    }
+
+    .fit-agenda .stage-flow {
+      gap: 7px;
+    }
+
+    .fit-agenda .stage-flow-item {
+      grid-template-columns: 58px 1fr;
+      gap: 16px;
+      min-height: 96px;
+      padding: 17px 18px;
+    }
+
+    .fit-agenda .stage-flow-icon {
+      width: 58px;
+      height: 58px;
+    }
+
+    .fit-agenda .stage-flow-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .fit-agenda .stage-flow-title {
+      font-size: 21px;
+      margin-bottom: 6px;
+    }
+
+    .fit-agenda .stage-flow-copy {
+      font-size: 16px;
+      line-height: 1.34;
+    }
+
+    .fit-agenda .layer-number {
+      font-size: 16px;
+    }
+
+    .fit-agenda .stage-flow-arrow {
+      height: 23px;
+      font-size: 22px;
+    }
+
+    .fit-agenda .layer-stack {
+      gap: 7px;
+    }
+
+    .fit-agenda .layer {
+      min-height: 100px;
+      padding: 15px 16px;
+    }
+
+    .fit-agenda .layer-title {
+      font-size: 23px;
+      margin-bottom: 7px;
+    }
+
+    .fit-agenda .layer-meta {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+
+    .fit-agenda .layer-topline {
+      margin-bottom: 8px;
+    }
+
+    .fit-agenda .stack-arrow {
+      margin-left: 12px;
+      font-size: 12px;
+      gap: 8px;
+    }
+
+    .fit-agenda .stack-arrow::before {
+      height: 12px;
+    }
+
+    .fit-agenda .cell {
+      min-height: 82px;
+      padding: 11px;
+    }
+
+    .fit-agenda .key-message {
+      margin-top: 20px;
+      padding: 15px 18px;
+      font-size: 20px;
+      line-height: 1.28;
+    }
+
+    .dimension-strip,
+    .mini-flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0 14px;
+    }
+
+    .dimension-strip span,
+    .mini-flow span {
+      border: 1px solid var(--faint);
+      background: #fff;
+      padding: 8px 10px;
+      font-size: 13px;
+      color: #26313b;
+      line-height: 1.18;
+    }
+
+    .mini-flow {
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .mini-flow span {
+      flex: 1;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .mini-flow .mini-arrow {
+      flex: 0 0 auto;
+      border: 0;
+      padding: 0 2px;
+      color: var(--gold);
+      background: transparent;
+      font-family: var(--mono);
+      font-size: 18px;
+    }
+
+    .data-dimensions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin: 8px 0 14px;
+    }
+
+    .data-dimension {
+      border: 1px solid var(--faint);
+      background: #fff;
+      padding: 10px 9px;
+      min-height: 86px;
+    }
+
+    .data-dimension b {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      line-height: 1.15;
+    }
+
+    .data-dimension span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.28;
+    }
+
+    a.venue:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    span.venue:hover {
+      background: rgba(16, 24, 32, 0.06);
+      color: #25313b;
+      border-color: rgba(16, 24, 32, 0.12);
+    }
+
+    .pipeline {
+      display: grid;
+      grid-template-columns: 1fr 34px 1fr 34px 1fr 34px 1fr;
+      gap: 8px;
+      align-items: center;
+      margin-top: 16px;
+    }
+
+    .pipeline .step {
+      border: 1px solid var(--faint);
+      background: rgba(255, 255, 255, 0.46);
+      min-height: 92px;
+      padding: 13px 12px;
+    }
+
+    .step-num {
+      font-family: var(--mono);
+      color: var(--gold);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .step-title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.2;
+      margin-bottom: 5px;
+    }
+
+    .step-copy {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.28;
+    }
+
+    .matrix {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .matrix .cell {
+      border: 1px solid var(--faint);
+      padding: 13px;
+      min-height: 94px;
+      background: #fff;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .pillar {
+      border-left: 4px solid var(--blue);
+      background: rgba(255, 255, 255, 0.38);
+      padding: 16px 16px 14px;
+      min-height: 170px;
+    }
+
+    .pillar:nth-child(2) {
+      border-left-color: var(--teal);
+    }
+
+    .pillar:nth-child(3) {
+      border-left-color: var(--wine);
+    }
+
+    .pillar b {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .pillar span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.38;
+    }
+
+    .chip-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .chip {
+      border: 1px solid var(--faint);
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.38);
+      font-size: 16px;
+      color: #1f2a34;
+    }
+
+    .discussion-slide .lead {
+      max-width: 1040px;
+      font-size: 27px;
+      line-height: 1.38;
+    }
+
+    .discussion-slide .chip-cloud {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 30px;
+      max-width: 1110px;
+    }
+
+    .discussion-slide .chip {
+      min-height: 46px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 10px 12px;
+      line-height: 1.2;
+    }
+
+    .discussion-slide .stage-strip {
+      margin-top: 54px;
+      max-width: 960px;
+    }
+
+    .closing-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 28px;
+      align-items: stretch;
+      margin-top: 26px;
+    }
+
+    .closing-statement {
+      border-left: 5px solid var(--gold);
+      background: #fff;
+      padding: 24px 26px;
+      box-shadow: 0 18px 36px rgba(28, 45, 60, 0.08);
+      min-height: 310px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .closing-statement .claim {
+      font-family: var(--serif);
+      font-size: 33px;
+      line-height: 1.16;
+      color: var(--ink);
+    }
+
+    .closing-statement .support {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.42;
+      margin-top: 20px;
+    }
+
+    .trajectory-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .trajectory-item {
+      border: 1px solid var(--faint);
+      background: #fff;
+      padding: 16px 18px;
+      display: grid;
+      grid-template-columns: 98px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .trajectory-tag {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding-top: 4px;
+    }
+
+    .trajectory-item b {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: var(--ink);
+    }
+
+    .trajectory-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    .potential-line {
+      border-top: 1px solid var(--faint);
+      margin-top: 26px;
+      padding-top: 18px;
+      font-size: 22px;
+      line-height: 1.35;
+      color: #1f2a34;
+    }
+
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .roadmap-card {
+      border: 1px solid var(--faint);
+      background: #fff;
+      border-top: 4px solid var(--blue);
+      padding: 18px;
+      min-height: 370px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .roadmap-card.tint-teal {
+      border-top-color: var(--teal);
+    }
+
+    .roadmap-card.tint-wine {
+      border-top-color: var(--wine);
+    }
+
+    .roadmap-card h3 {
+      font-size: 13px;
+      font-family: var(--mono);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .roadmap-card .panel-title {
+      font-size: 21px;
+      margin-bottom: 13px;
+    }
+
+    .roadmap-card .topic-list {
+      gap: 9px;
+      font-size: 16px;
+      line-height: 1.34;
+    }
+
+    .db-intersections {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      border-top: 1px solid var(--faint);
+      margin-top: 24px;
+      padding-top: 16px;
+    }
+
+    .db-intersections span {
+      border: 1px solid rgba(16, 24, 32, 0.12);
+      background: rgba(16, 24, 32, 0.05);
+      padding: 7px 10px;
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #2b3742;
+    }
+
+    .collab-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 24px;
+      margin-top: 26px;
+      align-items: stretch;
+    }
+
+    .collab-panel {
+      border: 1px solid var(--faint);
+      background: #fff;
+      border-top: 4px solid var(--blue);
+      padding: 22px;
+    }
+
+    .collab-panel:nth-child(2) {
+      border-top-color: var(--teal);
+    }
+
+    .collab-panel h3 {
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .collab-list {
+      display: grid;
+      gap: 13px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .collab-list li {
+      border-left: 4px solid var(--blue);
+      padding-left: 14px;
+      font-size: 18px;
+      line-height: 1.35;
+      color: #1f2a34;
+    }
+
+    .collab-list li:nth-child(2) {
+      border-left-color: var(--teal);
+    }
+
+    .collab-list li:nth-child(3) {
+      border-left-color: var(--wine);
+    }
+
+    .collab-list b {
+      display: block;
+      font-size: 19px;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+
+    .contact-card {
+      margin-top: 26px;
+      border-top: 1px solid var(--faint);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: end;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .contact-card b {
+      display: block;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 46px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .title-slide {
+      padding: 64px 76px 54px;
+    }
+
+    .title-slide::before {
+      left: 76px;
+      right: 76px;
+    }
+
+    .title-logo {
+      position: absolute;
+      top: 78px;
+      right: 76px;
+      width: 198px;
+      height: auto;
+      display: block;
+    }
+
+    .slide-logo {
+      position: absolute;
+      top: 58px;
+      right: 76px;
+      width: 126px;
+      height: auto;
+      display: block;
+      opacity: 0.9;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .title-wrap {
+      margin: auto 0;
+      transform: translateY(-2px);
+    }
+
+    .title-slide .kicker {
+      margin-bottom: 26px;
+    }
+
+    .title-slide h1 {
+      max-width: 1160px;
+    }
+
+    .title-meta {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 44px;
+      align-items: end;
+      max-width: 1160px;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--faint);
+    }
+
+    .title-speaker {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .title-affiliation {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .title-contact {
+      color: #26313b;
+      font-family: var(--mono);
+      font-size: 16px;
+      line-height: 1.55;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .thesis-line {
+      position: absolute;
+      left: 76px;
+      right: 76px;
+      bottom: 74px;
+      height: 1px;
+      background: var(--faint);
+    }
+
+    .controls {
+      position: fixed;
+      right: 18px;
+      bottom: 14px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #dfe7ee;
+      font-family: var(--mono);
+      font-size: 12px;
+      user-select: none;
+    }
+
+    .controls button {
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      width: 34px;
+      height: 30px;
+      cursor: pointer;
+      font-family: var(--mono);
+    }
+
+    .controls button:not(:disabled):hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .controls button:disabled {
+      cursor: default;
+      opacity: 0.35;
+      background: rgba(255, 255, 255, 0.08);
+      pointer-events: none;
+    }
+
+    @media print {
+      html,
+      body {
+        width: 100%;
+        height: auto;
+        background: #fff;
+        overflow: visible;
+      }
+
+      .deck {
+        display: block;
+        width: auto;
+        height: auto;
+        padding: 0;
+      }
+
+      .slide {
+        display: flex !important;
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100vw;
+        height: 56.25vw;
+        min-width: 0;
+        min-height: 0;
+        transform: none;
+        box-shadow: none;
+        page-break-after: always;
+        break-after: page;
+      }
+
+      .controls {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-label="USyd Database Research Group talk slides">
+    <section class="slide active title-slide">
+      <img class="title-logo" alt="The University of Sydney logo" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMzIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMjMzIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHBhdGggZD0iTTk3LjM5MzcgMjcuMjg5M0g5My4wMTA2VjI2LjczMDhIOTQuNTM2VjE4LjAyNTlIOTEuNDg1MlYxOS4yMzkySDkwLjc1MTVWMTYuODMxOUg5MS40ODUyVjE3LjI1NTZIOTguOTE5MVYxNi44MzE5SDk5LjY1MjhWMTkuMjM5Mkg5OC45MTkxVjE4LjAyNTlIOTUuODY4M1YyNi43MzA4SDk3LjM5MzdWMjcuMjg5M1oiIGZpbGw9IiMxNDE0MTQiLz4KICAgIDxwYXRoIGQ9Ik0xMTEuMjU4IDI3LjI4OTNIMTA3LjYyOFYyNi43MzA4SDEwOC43NjdWMjIuNTUxN0gxMDMuMDUxVjI2LjczMDhIMTA0LjE5MVYyNy4yODkzSDEwMC41NjFWMjYuNzMwOEgxMDEuN1YxNy44MzM0SDEwMC41NjFWMTcuMjc0OUgxMDQuMTkxVjE3LjgzMzRIMTAzLjA1MVYyMS44Nzc3SDEwOC43NjdWMTcuODMzNEgxMDcuNjI4VjE3LjI3NDlIMTExLjI1OFYxNy44MzM0SDExMC4wOTlWMjYuNzUwMUgxMTEuMjU4VjI3LjI4OTNaIiBmaWxsPSIjMTQxNDE0Ii8+CiAgICA8cGF0aCBkPSJNMTE5LjQ2NCAyNy4yODg4SDExMi41MzJWMjYuNzMwM0gxMTMuNjcxVjE3LjgzMjlIMTEyLjUzMlYxNy4yNzQ0SDExOC42MTRWMTYuODUwN0gxMTkuMzA5VjE5LjI1OEgxMTguNjE0VjE3Ljk2NzdIMTE1LjAwM1YyMS44NTc5SDExNy44OFYyMC43MjE3TDExOC41NzUgMjAuNzAyNFYyMy42ODc1TDExNy44OCAyMy43MDY3VjIyLjUzMkgxMTUuMDAzVjI2LjYxNDhIMTE4Ljc0OVYyNS4yODU5SDExOS40NDRWMjcuMjg4OEgxMTkuNDY0WiIgZmlsbD0iIzE0MTQxNCIvPgogICAgPHBhdGggZD0iTTEzNC41MjQgMTcuODMzNEgxMzMuMzg1VjIzLjYzMDJDMTMzLjM4NSAyNS4yNDc5IDEzMi44MDYgMjYuMzA3MiAxMzEuNTMxIDI3LjAwMDVDMTMwLjg5NCAyNy4zMjc5IDEzMC4xNjEgMjcuNTIwNSAxMjkuNDA3IDI3LjUyMDVDMTI3LjIwNiAyNy41MjA1IDEyNS41NjUgMjYuMDU2OCAxMjUuNTY1IDI0LjA3MzJWMTcuODMzNEgxMjQuNDI2VjE3LjI3NDlIMTI4LjA1NlYxNy44MzM0SDEyNi45MTdWMjMuNTkxN0MxMjYuOTE3IDI1LjQ0MDUgMTI3Ljk5OCAyNi42MzQ2IDEyOS42OTcgMjYuNjM0NkMxMzEuNDM1IDI2LjYzNDYgMTMyLjYxMyAyNS40MDIgMTMyLjYxMyAyMy41NzI1VjE3LjgzMzRIMTMxLjQ3M1YxNy4yNzQ5SDEzNC41NDRWMTcuODMzNEgxMzQuNTI0WiIgZmlsbD0iIzE0MTQxNCIvPgogICAgPHBhdGggZD0iTTE0My45MjggMjcuNDYyN0gxNDMuNDQ1TDEzNy41OTUgMTkuNDMxOVYyNi43MzA4SDEzOC43NTNWMjcuMjg5M0gxMzUuNjY0VjI2LjczMDhIMTM2LjgyMlYxOC40MTEyTDEzNi40MTcgMTcuODMzNEgxMzUuMzc0VjE3LjI3NDlIMTM3LjU5NUwxNDMuMTc1IDI0LjkwMTNWMTcuODMzNEgxNDIuMDE2VjE3LjI3NDlIMTQ1LjA4NlYxNy44MzM0SDE0My45NDdWMjcuNDYyN0gxNDMuOTI4WiIgZmlsbD0iIzE0MTQxNCIvPgogICAgPHBhdGggZD0iTTE0OS44MTcgMjcuMjg5M0gxNDYuMTg3VjI2LjczMDhIMTQ3LjMyNlYxNy44MzM0SDE0Ni4xODdWMTcuMjc0OUgxNDkuODE3VjE3LjgzMzRIMTQ4LjY3OFYyNi43NTAxSDE0OS44MTdWMjcuMjg5M1oiIGZpbGw9IiMxNDE0MTQiLz4KICAgIDxwYXRoIGQ9Ik0xNTUuOTc2IDI3LjU1OUgxNTUuNDU1TDE1MS42MTMgMTcuODMzNEgxNTAuNzA1VjE3LjI3NDlIMTU0LjQ5VjE3LjgzMzRIMTUzLjA2MUwxNTYuMDE1IDI1LjMwNTdMMTU4Ljk1IDE3LjgzMzRIMTU3Ljk0NlYxNy4yNzQ5SDE2MC41NTNWMTcuODMzNEgxNTkuNzk5TDE1NS45NzYgMjcuNTU5WiIgZmlsbD0iIzE0MTQxNCIvPgogICAgPHBhdGggZD0iTTE2OC40MTEgMjcuMjg4OEgxNjEuNDc5VjI2LjczMDNIMTYyLjYxOVYxNy44MzI5SDE2MS40NzlWMTcuMjc0NEgxNjcuNTYyVjE2Ljg1MDdIMTY4LjI1N1YxOS4yNThIMTY3LjU2MlYxNy45Njc3SDE2My45NTFWMjEuODU3OUgxNjYuODI4VjIwLjcyMTdMMTY3LjUyMyAyMC43MDI0VjIzLjY4NzVMMTY2LjgyOCAyMy43MDY3VjIyLjUzMkgxNjMuOTUxVjI2LjYxNDhIMTY3LjY5N1YyNS4yODU5SDE2OC4zOTJWMjcuMjg4OEgxNjguNDExWiIgZmlsbD0iIzE0MTQxNCIvPgogICAgPHBhdGggZD0iTTE3OC42ODMgMjcuMjg5M0gxNzcuMzlDMTc2LjQ4MiAyNy4yODkzIDE3Ni4zMjggMjcuMTkzMSAxNzUuODI2IDI2LjM4NDJMMTczLjU0NyAyMi43ODI4SDE3Mi4zNVYyNi43MzA4SDE3My40ODlWMjcuMjg5M0gxNjkuODU5VjI2LjczMDhIMTcwLjk5OVYxNy44MzM0SDE2OS44NTlWMTcuMjc0OUgxNzQuMTA3QzE3NS41OTQgMTcuMjc0OSAxNzYuNDI0IDE3LjY3OTMgMTc2Ljg4OCAxOC42MjNDMTc3LjA4MSAxOS4wMjc0IDE3Ny4xOTcgMTkuNDg5NiAxNzcuMTk3IDE5Ljk3MTFDMTc3LjE5NyAyMS40NTQgMTc2LjM2NiAyMi4zOTc3IDE3NC45MTggMjIuNjA5NUwxNzcuMTE5IDI1Ljk3OThDMTc3LjQ4NiAyNi41MzgzIDE3Ny43MzcgMjYuNzMwOCAxNzguMTA0IDI2LjczMDhIMTc4LjcwM1YyNy4yODkzSDE3OC42ODNaTTE3Mi4zNSAyMi4wODk1SDE3My44MThDMTc0Ljk3NiAyMi4wODk1IDE3NS43ODcgMjEuMjQyMiAxNzUuNzg3IDE5Ljk5MDRDMTc1Ljc4NyAxOC42ODA4IDE3NS4wNzMgMTcuOTQ5IDE3My43OTggMTcuOTQ5SDE3Mi4zN1YyMi4wODk1SDE3Mi4zNVoiIGZpbGw9IiMxNDE0MTQiLz4KICAgIDxwYXRoIGQ9Ik0xODAuNjMzIDI3LjQ0MzRIMTc5LjkxOVYyNC43MDg3SDE4MC42MzNWMjUuOTAyN0MxODEuNTYgMjYuNTE5IDE4MS45NjYgMjYuNjczMSAxODIuNjQyIDI2LjY3MzFDMTgzLjg1OCAyNi42NzMxIDE4NC42ODggMjYuMDM3NSAxODQuNjg4IDI1LjA3NDZDMTg0LjY4OCAyNC4yMDggMTg0LjA5IDIzLjU3MjQgMTgyLjQ0OCAyMi43MjUxQzE4MC41MTggMjEuNzIzNiAxNzkuODggMjAuOTUzMyAxNzkuODggMTkuNzIwN0MxNzkuODggMTguMjE4NiAxODEuMTU1IDE3LjA4MjMgMTgyLjg5MyAxNy4wODIzQzE4My42NDYgMTcuMDgyMyAxODQuMjI1IDE3LjIxNzEgMTg0LjcwOCAxNy41MDZWMTYuOTQ3NUgxODUuNDAzVjE5LjU0NzRIMTg0LjcwOFYxOC40Njg5QzE4My45MzUgMTcuOTQ5IDE4My41NDkgMTcuNzk0OSAxODIuOTMxIDE3Ljc5NDlDMTgxLjg4OCAxNy43OTQ5IDE4MS4yMzIgMTguNDExMiAxODEuMjMyIDE5LjM1NDhDMTgxLjIzMiAyMC4xMjUyIDE4MS42NzYgMjAuNTY4MSAxODMuNTg4IDIxLjY2NTlDMTg1LjQ5OSAyMi43NjM2IDE4Ni4wNCAyMy40Mzc2IDE4Ni4wNCAyNC42NzAyQzE4Ni4wNCAyNi4yNDk0IDE4NC43MjcgMjcuNDYyNyAxODMuMDA4IDI3LjQ2MjdDMTgyLjA0MyAyNy40NjI3IDE4MS40MjUgMjcuMjcwMSAxODAuNjUzIDI2Ljc2OTRWMjcuNDQzNEgxODAuNjMzWiIgZmlsbD0iIzE0MTQxNCIvPgogICAgPHBhdGggZD0iTTE5MS4wNDEgMjcuMjg5M0gxODcuNDExVjI2LjczMDhIMTg4LjU1VjE3LjgzMzRIMTg3LjQxMVYxNy4yNzQ5SDE5MS4wNDFWMTcuODMzNEgxODkuOTAyVjI2Ljc1MDFIMTkxLjA0MVYyNy4yODkzWiIgZmlsbD0iIzE0MTQxNCIvPgogICAgPHBhdGggZD0iTTE5OC42NjggMjcuMjg5M0gxOTQuMjg1VjI2LjczMDhIMTk1LjgxVjE4LjAyNTlIMTkyLjc2VjE5LjIzOTJIMTkyLjAyNlYxNi44MzE5SDE5Mi43NlYxNy4yNTU2SDIwMC4xOTNWMTYuODMxOUgyMDAuOTI3VjE5LjIzOTJIMjAwLjE5M1YxOC4wMjU5SDE5Ny4xNDNWMjYuNzMwOEgxOTguNjY4VjI3LjI4OTNaIiBmaWxsPSIjMTQxNDE0Ii8+CiAgICA8cGF0aCBkPSJNMjA4LjMwMyAyNy4yODkzSDIwNC42NzNWMjYuNzMwOEgyMDUuODEyVjIyLjY2NzNMMjAyLjY2NSAxNy44MTQxSDIwMS43NzdWMTcuMjU1NkgyMDUuNTQyVjE3LjgxNDFIMjA0LjE1MkwyMDYuNzc4IDIxLjgwMDZMMjA5LjIxMSAxNy44MTQxSDIwNy44MjFWMTcuMjU1NkgyMTAuODcxVjE3LjgxNDFIMjEwLjA4TDIwNy4xNDUgMjIuNTcxVjI2LjczMDhIMjA4LjMwM1YyNy4yODkzWiIgZmlsbD0iIzE0MTQxNCIvPgogICAgPHBhdGggZD0iTTIxNC43OTEgMjIuMzAxM0MyMTQuNzkxIDE5LjQ1MTEgMjE3LjAxMSAxNy4wODIzIDIxOS43MTQgMTcuMDgyM0MyMjIuMzYgMTcuMDgyMyAyMjQuNTk5IDE5LjQ1MTEgMjI0LjU5OSAyMi4yODIxQzIyNC41OTkgMjUuMTEzMSAyMjIuMzc5IDI3LjUwMTIgMjE5LjcxNCAyNy41MDEyQzIxNy4wNSAyNy41MDEyIDIxNC43OTEgMjUuMTMyMyAyMTQuNzkxIDIyLjMwMTNaTTIxNi4zMTYgMjIuMjgyMUMyMTYuMzE2IDI0Ljg0MzUgMjE3Ljc0NSAyNi43MTE1IDIxOS43MzQgMjYuNzExNUMyMjEuNjg0IDI2LjcxMTUgMjIzLjExMyAyNC44NDM1IDIyMy4xMTMgMjIuMjgyMUMyMjMuMTEzIDE5LjcyMDcgMjIxLjcwMyAxNy44NzE5IDIxOS43NTMgMTcuODcxOUMyMTcuNzQ1IDE3Ljg3MTkgMjE2LjMxNiAxOS43MDE0IDIxNi4zMTYgMjIuMjgyMVoiIGZpbGw9IiMxNDE0MTQiLz4KICAgIDxwYXRoIGQ9Ik0yMjkuMTc2IDI3LjI4ODhIMjI1LjU0NlYyNi43MzAzSDIyNi42ODVWMTcuODMyOUgyMjUuNTQ2VjE3LjI3NDRIMjMxLjYyOFYxNi44NTA3SDIzMi4zMjNWMTkuMjU4SDIzMS42MjhWMTcuOTY3N0gyMjguMDE3VjIxLjg1NzlIMjMwLjg5NFYyMC43MjE3TDIzMS41OSAyMC43MDI0VjIzLjY4NzVMMjMwLjg5NCAyMy43MDY3VjIyLjUzMkgyMjguMDE3VjI2LjczMDNIMjI5LjE1N1YyNy4yODg4SDIyOS4xNzZaIiBmaWxsPSIjMTQxNDE0Ii8+CiAgICA8cGF0aCBkPSJNOTIuNjQzOCA1OS43Nzg2SDkwLjc1MTZWNTIuNTc1OUg5Mi42NDM4VjU1LjczNDNDOTUuMDk2MSA1Ny4zOTA2IDk2LjE3NzMgNTcuNzc1NyA5Ny45NTM3IDU3Ljc3NTdDMTAxLjE3OCA1Ny43NzU3IDEwMy4zNDEgNTYuMTAwMiAxMDMuMzQxIDUzLjU3NzRDMTAzLjM0MSA1MS4yODU2IDEwMS43NzcgNDkuNjEwMSA5Ny40MzI0IDQ3LjM1NjlDOTIuMzczNSA0NC43MTg0IDkwLjYzNTcgNDIuNjk2MyA5MC42MzU3IDM5LjQwMzFDOTAuNjM1NyAzNS40MzU4IDk0LjAxNDggMzIuNDcgOTguNTUyMyAzMi40N0MxMDAuNTYgMzIuNDcgMTAyLjA0NyAzMi44MzU5IDEwMy4zNDEgMzMuNTg3VjMyLjE2MTlIMTA1LjE5NVYzOS4wMTc5SDEwMy4zNDFWMzYuMTY3NkMxMDEuMjk0IDM0LjgwMDMgMTAwLjI5IDM0LjM5NTkgOTguNjg3NSAzNC4zOTU5Qzk1Ljk0NTYgMzQuMzk1OSA5NC4xODg1IDM2LjAzMjggOTQuMTg4NSAzOC41MTcyQzk0LjE4ODUgNDAuNTU4NiA5NS4zNDcxIDQxLjczMzQgMTAwLjM2NyA0NC42MjIxQzEwNS4zODggNDcuNTEwOSAxMDYuODM2IDQ5LjI2MzUgMTA2LjgzNiA1Mi41NTY3QzEwNi44MzYgNTYuNzE2NSAxMDMuMzc5IDU5LjkzMjcgOTguODQxOSA1OS45MzI3Qzk2LjMxMjUgNTkuOTMyNyA5NC42NzEzIDU5LjQxMjcgOTIuNjYzMiA1OC4xMjI0VjU5Ljc3ODZIOTIuNjQzOFoiIGZpbGw9IiMxNDE0MTQiLz4KICAgIDxwYXRoIGQ9Ik0xMjQuNzU0IDU5LjQzMTlIMTE1LjE5N1Y1Ny45NDlIMTE4LjIwOVY0Ny4yNDEzTDEwOS44ODcgMzQuNDM0M0gxMDcuNTVWMzIuOTUxNEgxMTcuNDc1VjM0LjQzNDNIMTEzLjgyNkwxMjAuNzM4IDQ0Ljk0OTVMMTI3LjEyOSAzNC40MzQzSDEyMy40OFYzMi45NTE0SDEzMS41MTJWMzQuNDM0M0gxMjkuNDI3TDEyMS43MDQgNDYuOTkwOVY1Ny45Mjk3SDEyNC43NTRWNTkuNDMxOVoiIGZpbGw9IiMxNDE0MTQiLz4KICAgIDxwYXRoIGQ9Ik0xMzMuNTAxIDU5LjQzMTlWNTcuOTQ5SDEzNi41MTNWMzQuNDM0M0gxMzMuNTAxVjMyLjk1MTRIMTQ1LjM1N0MxNTIuNTk3IDMyLjk1MTQgMTU4LjQ4NiAzOC44ODMgMTU4LjQ4NiA0Ni4xNjI4QzE1OC40ODYgNTMuNTc3MyAxNTIuNjk0IDU5LjQzMTkgMTQ1LjI5OSA1OS40MzE5SDEzMy41MDFaTTE0MC4wNDcgNTcuNDI5SDE0NC44NzRDMTUwLjM3NyA1Ny40MjkgMTU0LjU2NyA1Mi41NzU5IDE1NC41MDkgNDYuMjAxM0MxNTQuNTA5IDQwIDE1MC4yNDIgMzQuOTkyOCAxNDQuOTUxIDM0Ljk5MjhIMTQwLjA0N1Y1Ny40MjlaIiBmaWxsPSIjMTQxNDE0Ii8+CiAgICA8cGF0aCBkPSJNMTgxLjY3NiA1OS44NzQ5SDE4MC40NDFMMTY1LjAxMyAzOC42OTA1VjU3Ljk0OUgxNjguMDY0VjU5LjQzMTlIMTU5Ljk1NFY1Ny45NDlIMTYzLjAwNVYzNS45NTU3TDE2MS45MjQgMzQuNDM0M0gxNTkuMTQzVjMyLjk1MTRIMTY0Ljk1NUwxNzkuNjY4IDUzLjA5NTlWMzQuNDM0M0gxNzYuNjE3VjMyLjk1MTRIMTg0LjY4OVYzNC40MzQzSDE4MS42NzZWNTkuODc0OVoiIGZpbGw9IiMxNDE0MTQiLz4KICAgIDxwYXRoIGQ9Ik0yMDUuNjk3IDU5LjQzMkgxODcuNDExVjU3Ljk0OTFIMTkwLjQ0M1YzNC40MzQ0SDE4Ny40M1YzMi45NTE1SDIwMy40NTdWMzEuODM0NUgyMDUuMzFWMzguMjA5MUgyMDMuNDk1VjM0LjgwMDNIMTkzLjk3NlY0NS4wODQ0SDIwMS41NjRWNDIuMDhMMjAzLjQxOCA0Mi4wNDE1VjQ5LjkzNzVMMjAxLjU2NCA0OS45NzZWNDYuODk0N0gxOTMuOTc2VjU3LjY0MDlIMjAzLjg2MlY1NC4xMTY2SDIwNS43MTZWNTkuNDMySDIwNS42OTdaIiBmaWxsPSIjMTQxNDE0Ii8+CiAgICA8cGF0aCBkPSJNMjI1LjU4NSA1OS40MzE5SDIxNi4wMjdWNTcuOTQ5SDIxOS4wMzlWNDcuMjQxM0wyMTAuNzE3IDM0LjQzNDNIMjA4LjRWMzIuOTUxNEgyMTguMzI1VjM0LjQzNDNIMjE0LjY3NUwyMjEuNTg4IDQ0Ljk0OTVMMjI3Ljk3OSAzNC40MzQzSDIyNC4zM1YzMi45NTE0SDIzMi4zNjJWMzQuNDM0M0gyMzAuMjc3TDIyMi41NTMgNDYuOTkwOVY1Ny45Mjk3SDIyNS42MDRWNTkuNDMxOUgyMjUuNTg1WiIgZmlsbD0iIzE0MTQxNCIvPgogICAgPHBhdGggZD0iTTQwLjM1NTggNTEuOTk4MUg0Ni4yODM1VjUxLjA5MjlINDAuMzU1OFY1MS45OTgxWk00MC4zNTU4IDU0LjQ0MzlINDYuMjgzNVY1My41NThINDAuMzU1OFY1NC40NDM5Wk00MC4zNTU4IDQ5LjU1MjJINDYuMjgzNVY0OC42NDcxSDQwLjM1NThWNDkuNTUyMlpNMzYuMDg4NSA1MS4wOTI5SDMwLjE2MDdWNTEuOTk4MUgzNi4wODg1VjUxLjA5MjlaTTM2LjA4ODUgNTMuNTU4SDMwLjE2MDdWNTQuNDQzOUgzNi4wODg1VjUzLjU1OFpNMzYuMDg4NSA0OC42NDcxSDMwLjE2MDdWNDkuNTUyMkgzNi4wODg1VjQ4LjY0NzFaTTQ1LjUxMTIgMzIuOTUxNEM0My4wOTc2IDMyLjgzNTggNDAuNjQ1NCAzMi43NTg4IDM4LjIzMTggMzIuNzU4OEMzNS44MTgyIDMyLjc1ODggMzMuMzY2IDMyLjgzNTggMzAuOTUyNCAzMi45NTE0VjQ0Ljg5MTdIOC4wMzI5NEM4Ljk3OTA3IDUwLjYzMDcgMTEuMzM0NyA1NS45ODQ2IDE0LjY5NDUgNjAuNDUyNkMxNS4xMzg2IDU5LjgxNyAxNS44OTE2IDU5LjM5MzQgMTYuNzQxMiA1OS4zOTM0SDMwLjk1MjRWNzEuODM0NEMzMy4yNjk1IDcyLjQ2OTkgMzUuNzAyNCA3Mi44MTY2IDM4LjIxMjUgNzIuODE2NlY3Mi45MTI5SDM4LjIzMThWNzIuODE2NkM0MC43NDE5IDcyLjgxNjYgNDMuMTc0OCA3Mi40Njk5IDQ1LjUxMTIgNzEuODE1MVY1OS4zOTM0SDU5Ljc0MTdDNjAuNTcyIDU5LjM5MzQgNjEuMzI1IDU5Ljc5NzggNjEuNzY5MSA2MC40MzMzQzY1LjEyODkgNTUuOTY1MyA2Ny40NjUyIDUwLjU5MjIgNjguNDMwNyA0NC44NzI0SDQ1LjUxMTJWMzIuOTUxNFpNMzQuMDIyNSAzNi42NjgzTDM3LjExMTkgMzguMTMxOUwzOC4yMTI1IDM0LjkxNTdMMzkuMzcxIDM4LjEzMTlMNDIuNDIxOCAzNi42NDlMNDAuOTU0MyAzOS43MzA0TDQ0LjE3ODkgNDAuODI4MUw0MC45NTQzIDQxLjk4MzZMNDIuNDQxMSA0NS4wMjY1TDM5LjMzMjQgNDMuNTYyOEwzOC4yMzE4IDQ2Ljc1OThMMzcuMDczMyA0My41NDM2TDM0LjAyMjUgNDUuMDI2NUwzNS40OSA0MS45MjU5TDMyLjI2NTQgNDAuODI4MUwzNS41MDkzIDM5LjY3MjZMMzQuMDIyNSAzNi42NjgzWk0yMy4xOTAzIDU2LjQwODNMMjAuMTM5NSA1NC45MjU0TDE4Ljk4MSA1OC4xNDE2TDE3Ljg4MDQgNTQuOTQ0NkwxNC43NzE3IDU2LjQwODNMMTYuMjc3OCA1My4zNjU0TDEzLjAzMzkgNTIuMjA5OUwxNi4yNTg1IDUxLjExMjJMMTQuNzkxIDQ4LjAxMTZMMTcuODIyNSA0OS40OTQ1TDE4Ljk4MSA0Ni4yNzgzTDIwLjA4MTYgNDkuNDc1MkwyMy4xOTAzIDQ4LjAxMTZMMjEuNzAzNSA1MS4wNTQ0TDI0LjkyODEgNTIuMjA5OUwyMS43MDM1IDUzLjMwNzdMMjMuMTkwMyA1Ni40MDgzWk0yOC4wOTQ3IDU2LjE3NzJIMjYuNzQzMVY1NS4xOTVIMjguMDk0N1Y1Ni4xNzcyWk0yOC4wOTQ3IDUzLjUzODhIMjYuNzQzMVY1Mi41NTY2SDI4LjA5NDdWNTMuNTM4OFpNMjguMDk0NyA1MC45MDAzSDI2Ljc0MzFWNDkuOTE4MkgyOC4wOTQ3VjUwLjkwMDNaTTI4LjA5NDcgNDguMjgxMkgyNi43NDMxVjQ3LjI5OUgyOC4wOTQ3VjQ4LjI4MTJaTTI4LjgyODQgNTYuMTc3MlY0Ni42ODI3SDM0LjgxNDJDMzQuOTMgNDYuNjYzNSAzNS4wNjUyIDQ2LjY4MjcgMzUuMTgxIDQ2LjY4MjdDMzYuNTUxOSA0Ni42ODI3IDM3LjYxMzkgNDcuNzQxOSAzNy42MTM5IDQ5LjA3MDhWNTcuMDI0NkMzNy4xNjk4IDU2LjUwNDYgMzYuNDk0IDU2LjE1NzkgMzUuNzQxIDU2LjE1NzlDMzUuNjQ0NCA1Ni4xNzcyIDMwLjcwMTQgNTYuMTc3MiAyOC44Mjg0IDU2LjE3NzJaTTQyLjQ0MTEgNjguNTYwNEwzOS4zMzI0IDY3LjA5NjhMMzguMjMxOCA3MC4zMTNMMzcuMDczMyA2Ny4wNzc1TDM0LjAyMjUgNjguNTYwNEwzNS40OSA2NS40NTk4TDMyLjI2NTQgNjQuMzYyMUwzNS40OSA2My4yMDY2TDM0LjAwMzIgNjAuMTYzN0wzNy4xMTE5IDYxLjYyNzNMMzguMjEyNSA1OC40MzA0TDM5LjM3MSA2MS42NDY2TDQyLjQyMTggNjAuMTYzN0w0MC45NTQzIDYzLjI2NDNMNDQuMTc4OSA2NC4zNjIxTDQwLjk1NDMgNjUuNTE3Nkw0Mi40NDExIDY4LjU2MDRaTTUzLjI1NCA0OC4wMTE2TDU2LjM2MjcgNDkuNDc1Mkw1Ny40NjMzIDQ2LjI3ODNMNTguNjIxOCA0OS40OTQ1TDYxLjY3MjYgNDguMDExNkw2MC4yMDUxIDUxLjExMjJMNjMuNDI5NyA1Mi4yMDk5TDYwLjE4NTggNTMuMzY1NEw2MS42NzI2IDU2LjQwODNMNTguNTYzOSA1NC45NDQ2TDU3LjQ2MzMgNTguMTQxNkw1Ni4zMDQ4IDU0LjkyNTRMNTMuMjU0IDU2LjQwODNMNTQuNzIxNSA1My4zMDc3TDUxLjQ5NjkgNTIuMjA5OUw1NC43MjE1IDUxLjA1NDRMNTMuMjU0IDQ4LjAxMTZaTTQ4LjM0OTYgNDcuMjc5N0g0OS43MDEyVjQ4LjI2MTlINDguMzQ5NlY0Ny4yNzk3Wk00OC4zNDk2IDQ5LjkxODJINDkuNzAxMlY1MC45MDAzSDQ4LjM0OTZWNDkuOTE4MlpNNDguMzQ5NiA1Mi41NTY2SDQ5LjcwMTJWNTMuNTM4OEg0OC4zNDk2VjUyLjU1NjZaTTQ4LjM0OTYgNTUuMTk1SDQ5LjcwMTJWNTYuMTc3Mkg0OC4zNDk2VjU1LjE5NVpNNDcuNjM1MSA0Ni42ODI3VjU2LjE3NzJDNDUuNzYyMiA1Ni4xNzcyIDQwLjc5OTkgNTYuMTc3MiA0MC43MDMzIDU2LjE3NzJDMzkuOTUwMyA1Ni4xNzcyIDM5LjI5MzggNTYuNTA0NiAzOC44MzA0IDU3LjA0MzhWNDkuMDlDMzguODMwNCA0Ny43NDE5IDM5Ljg5MjMgNDYuNzAyIDQxLjI2MzMgNDYuNzAyQzQxLjM3OTEgNDYuNzAyIDQxLjUxNDMgNDYuNjgyNyA0MS42MzAxIDQ2LjcwMkg0Ny42MzUxVjQ2LjY4MjdaTTU5LjQ1MjEgNi4xODE5OUM1My41NDM2IDQuOTMwMTkgNDUuNzQyOSAzLjY5NzY0IDM4LjIzMTggMy42OTc2NEMyNi45NTU1IDMuNjk3NjQgMTUuMDQyIDYuNDkwMTMgOS44MDkzNCA3Ljg5NkM4Ljc2NjY3IDguMTY1NjIgNy45OTQzMiA4LjM5NjczIDcuNTMwOTEgOC41MzE1NFYzNC4xMDY5QzEwLjkyOTIgMzMuNTY3NiAyNC45MjgxIDMxLjQ0OTIgMzguMjEyNSAzMS40Mjk5QzUxLjQ5NjkgMzEuNDI5OSA2NS40OTU3IDMzLjU0ODQgNjguODk0MSAzNC4xMDY5VjguNTMxNTRDNjguNDMwNyA4LjM5NjczIDY3LjY1ODMgOC4xODQ4OCA2Ni42MTU2IDcuODk2QzY0Ljg5NzIgNy40MzM4IDYyLjQwNjMgNi44MTc1MyA1OS40NTIxIDYuMTgxOTlaTTI3LjM5OTYgOC44NzgxOUMyNy44NjMgOC43NjI2NCAyNi44NTkgOC4wMTE1NiAyNy41MTU0IDguMDUwMDdDMjcuOTQwMiA4LjA2OTMzIDI5LjM0OTggOC4wNjkzMyAzMC40MTE4IDguNTg5MzFDMzAuNjA0OCA4LjY2NjM1IDMwLjc0IDguMzAwNDMgMzEuMTQ1NSA4LjAzMDgxQzMxLjE4NDEgOC4wMTE1NiAzMS4yODA3IDcuOTczMDQgMzEuMzM4NiA4LjAzMDgxQzMxLjc2MzQgOC4yODExOCAzMS44OTg1IDguNjY2MzUgMzIuMTEwOSA4LjU3MDA1QzMzLjE3MjkgOC4wNjkzMyAzNC41NjMxIDguMDY5MzMgMzQuOTY4NiA4LjAzMDgxQzM1LjY0NDQgNy45OTIzIDM0LjYyMTEgOC43NjI2NCAzNS4wODQ1IDguODU4OTNDMzcuNDc4OCA5LjQzNjY5IDM5LjI1NTIgMTEuNDU4OCAzOS4yNTUyIDEzLjg2NjJDMzkuMjU1MiAxNC41NTk1IDM5LjA4MTQgMTUuMjE0MyAzOC44NDk3IDE1LjgzMDVDMzguNzE0NSAxNi4xNTc5IDM4LjM4NjMgMTUuMjMzNSAzOC4yNTExIDE1Ljc3MjdDMzguMDE5NCAxNi43NTQ5IDM3Ljc2ODQgMTcuNDg2OCAzNy4yNDcxIDE4LjQ2ODlDMzYuNzQ1IDE5LjM5MzQgMzUuOTM0MSAxNy40Njc1IDM1LjY4MyAxOC4wMDY3QzM1LjIxOTYgMTguOTY5NyAzNC4xMzgzIDE5LjMxNjMgMzMuMzg1MyAxOS40MzE5QzMzLjI4ODggMTkuNDMxOSAzMy4yMTE1IDE5LjQzMTkgMzMuMzI3NCAxOS4zMzU2QzMzLjM2NiAxOS4yOTcxIDMzLjU1OTEgMTkuMTIzNyAzMy41OTc3IDE4Ljc3NzFDMzMuNTk3NyAxOC43Mzg2IDMzLjU3ODQgMTguNjgwOCAzMy42NTU2IDE4LjY0MjNDMzQuMjM0OSAxOC4zNzI3IDM0LjY1OTcgMTcuODMzNCAzNC43NzU1IDE3LjE5NzlDMzQuOTQ5MyAxNi42MDA5IDM1LjIwMDMgMTUuNzUzNSAzNS40OSAxNS4yMzM1QzM2LjE0NjUgMTQuMDc4IDM1LjM1NDggMTIuNjkxNCAzNS41NDc5IDEyLjM4MzJDMzUuOTkyIDEyLjA5NDQgMzYuMjgxNiAxMS41OTM2IDM2LjI4MTYgMTEuMDE1OUMzNi4yODE2IDEwLjExMDcgMzUuNTQ3OSA5LjM3ODkxIDM0LjY0MDQgOS4zNzg5MUMzNC4xNTc3IDkuMzc4OTEgMzMuNzEzNiA5LjU5MDc2IDMzLjQyMzkgOS45Mzc0MUwzMy4zODUzIDkuOTc1OTNDMzMuMjMwOCAxMC4xMyAzMy4wOTU3IDEwLjMwMzMgMzIuOTYwNSAxMC40NzY3QzMyLjgwNiAxMC42NjkyIDMyLjg0NDcgMTEuMDE1OSAzMy4wOTU3IDExLjA3MzdDMzQuMjE1NiAxMS4zNjI1IDM0LjkzIDEzLjg2NjIgMzQuNDg1OSAxNC42NzVDMzQuMjkyOCAxNS4wNDA5IDMzLjY3NDkgMTYuMzg5IDMzLjY3NDkgMTYuNzc0MkMzMy42NzQ5IDE3LjI3NDkgMzMuMjY5NSAxNy42NzkzIDMyLjc2NzQgMTcuNjc5M0MzMi4zODEzIDE3LjY3OTMgMzIuMDUzIDE3LjQ0ODIgMzEuOTE3OCAxNy4wODIzTDMxLjkzNzIgMTcuMDQzOEMzMi4yNDYxIDE2Ljg1MTIgMzIuOTIxOSAxNi40NDY4IDMyLjkyMTkgMTYuMDIzMUwzMi43ODY3IDE0LjY1NThDMzMuMzQ2NyAxNC41OTggMzMuNTk3NyAxNC4yODk4IDMzLjY3NDkgMTMuNzY5OUMzMy43MzI5IDEzLjczMTMgMzMuNzcxNSAxMy42OTI4IDMzLjgxMDEgMTMuNjU0M0MzNC4wMDMyIDEzLjQ4MSAzNC4xMTkgMTMuMDE4OCAzMy43MTM2IDEzLjA5NThDMzMuMTUzNiAxMy4xOTIxIDMyLjUxNjQgMTMuMTcyOCAzMS44NzkyIDEzLjM0NjJDMzEuODAyIDEzLjM2NTQgMzEuNzQ0MSAxMy40NDI1IDMxLjcyNDggMTMuNTE5NUMzMS43MDU0IDEzLjYzNTEgMzIuMDUzIDE1LjI5MTMgMzIuMTQ5NSAxNS42NTcyQzMyLjE0OTUgMTUuNjk1NyAzMi4xMzAyIDE1LjcxNSAzMi4xMTA5IDE1LjcxNUMzMS44NTk5IDE1LjY5NTcgMzEuNDE1OCAxNS42NzY1IDMxLjMgMTUuNjc2NUMzMS4xODQxIDE1LjY3NjUgMzAuNzU5MyAxNS42OTU3IDMwLjQ4OSAxNS43MTVDMzAuNDY5NyAxNS43MTUgMzAuNDMxMSAxNS42NzY1IDMwLjQzMTEgMTUuNjU3MkMzMC41MDgzIDE1LjI3MiAzMC44NzUyIDEzLjYxNTggMzAuODc1MiAxMy42MTU4QzMwLjg3NTIgMTMuNTM4OCAzMC44NzUyIDEzLjQ4MSAzMC44MzY2IDEzLjQyMzJDMzAuNzIwNyAxMy4yNjkxIDI5LjA5ODggMTMuMTM0MyAyOC44ODY0IDEzLjA5NThDMjguNzg5OCAxMy4wNzY2IDI4LjY5MzMgMTMuMTE1MSAyOC42MzU0IDEzLjE5MjFDMjguNDgwOSAxMy40MjMyIDI4Ljc1MTIgMTMuNjczNiAyOC45NDQzIDEzLjc2OTlDMjkuMDIxNSAxNC4yNzA2IDI5LjI3MjUgMTQuNTc4NyAyOS44MTMyIDE0LjYzNjVMMjkuODMyNSAxNC42NTU4QzI5LjgxMzIgMTQuNzUyIDI5LjY3OCAxNi4wMjMxIDI5LjY3OCAxNi4wMjMxQzI5LjY3OCAxNi40NjYxIDMwLjM1MzggMTYuODMyIDMwLjY4MjEgMTcuMDI0NkMzMC43MDE0IDE3LjA0MzggMzAuNzIwNyAxNy4wODIzIDMwLjcyMDcgMTcuMTAxNkMzMC41NjYyIDE3LjQwOTcgMzAuMjM4IDE3LjY0MDggMjkuODkwNCAxNy42NDA4QzI5LjM4ODQgMTcuNjQwOCAyOC45ODI5IDE3LjIzNjQgMjguOTgyOSAxNi43MzU3QzI4Ljk4MjkgMTYuNDA4MyAyOC4zODQzIDE1LjAwMjQgMjguMTUyNiAxNC42MTcyQzI3LjY2OTkgMTMuNzg5MSAyOC4zODQzIDExLjMyNCAyOS41NDI5IDExLjAzNTFDMjkuNzkzOSAxMC45Nzc0IDI5LjkyOSAxMC42MTE1IDI5LjczNiAxMC40MTg5QzI5LjI1MzIgOS45Mzc0MSAyOC42OTMzIDkuMzQwMzkgMjcuOTU5NiA5LjM0MDM5QzI3LjA1MiA5LjM0MDM5IDI2LjMzNzYgMTAuMDcyMiAyNi4zMzc2IDEwLjk3NzRDMjYuMzM3NiAxMi4wMTczIDI3LjEyOTMgMTIuMTcxNCAyNy4wNzEzIDEyLjQ2MDNDMjYuNzQzMSAxMy40MjMyIDI2Ljc0MzEgMTQuNDYzMiAyNy4xNjc5IDE1LjE5NUMyNy40NTc1IDE1LjY5NTcgMjcuNjg5MiAxNi41MjM4IDI3Ljg4MjMgMTcuMTAxNkMyNy45OTgyIDE3LjY5ODYgMjguMzQ1NyAxOC4yMTg2IDI4Ljg2NzEgMTguNTA3NUMyOS4xMTgxIDE4LjY2MTUgMjkuMDAyMiAxOC44NTQxIDI5LjA5ODggMTkuMDY2QzI5LjE1NjcgMTkuMTYyMyAyOS4yMzM5IDE5LjIzOTMgMjkuMjkxOSAxOS4yOTcxQzI5LjQwNzcgMTkuMzc0MSAyOS4zMTEyIDE5LjM5MzQgMjkuMjMzOSAxOS4zOTM0QzI4LjQ4MDkgMTkuMjk3MSAyNy4zMDMxIDE4Ljk2OTcgMjYuODIwMyAxNy45NDlDMjYuNTY5MyAxNy40MDk3IDI1LjczOSAxOS4zMzU2IDI1LjI1NjMgMTguNDExMkMyNC43MzUgMTcuNDI5IDI0LjUwMzMgMTYuNjk3MiAyNC4yNTIzIDE1LjcxNUMyNC4xMTcxIDE1LjE3NTcgMjMuNzg4OSAxNi4xMDAxIDIzLjY1MzcgMTUuNzcyN0MyMy40MjIgMTUuMTU2NSAyMy4yNDgyIDE0LjUyMDkgMjMuMjQ4MiAxMy44MDg0QzIzLjI0ODIgMTEuNDU4OCAyNS4wMjQ2IDkuNDM2NjkgMjcuMzk5NiA4Ljg3ODE5Wk0zNC4yMTU2IDEwLjU1MzdDMzQuMTk2MyAxMC41MzQ0IDM0LjE5NjMgMTAuNDM4MSAzNC4yMzQ5IDEwLjQxODlDMzQuMzUwNyAxMC4zMjI2IDM0LjUwNTIgMTAuMjg0MSAzNC42NTk3IDEwLjI4NDFDMzUuMDY1MiAxMC4yODQxIDM1LjM5MzQgMTAuNjExNSAzNS4zOTM0IDExLjAxNTlDMzUuMzkzNCAxMS4yNDcgMzUuMjk2OSAxMS40Mzk2IDM1LjEyMzEgMTEuNTc0NEMzNS4wODQ1IDExLjYxMjkgMzUuMDA3MiAxMS41NzQ0IDM0Ljk4NzkgMTEuNTM1OUMzNC43NzU1IDExLjE1MDcgMzQuNTI0NSAxMC44MjMzIDM0LjIxNTYgMTAuNTUzN1pNMzIuNTc0MyAxOC43NTc4QzMyLjQwMDYgMTkuMjIgMzEuNzQ0MSAxOS4wNjYgMzEuMzk2NSAxOS4zNTQ4QzMxLjM1NzkgMTkuMzkzNCAzMS4yNjEzIDE5LjM5MzQgMzEuMjIyNyAxOS4zNTQ4QzMwLjg3NTIgMTkuMDY2IDMwLjIzOCAxOS4yMDA4IDMwLjAyNTYgMTguN0MzMC4wMDYzIDE4LjY2MTUgMzAuMDA2MyAxOC41ODQ1IDMwLjEwMjggMTguNTY1MkMzMC41NjYyIDE4LjUwNzUgMzAuOTcxNyAxOC4yOTU2IDMxLjI2MTMgMTcuOTY4MkMzMS4yODA3IDE3LjkyOTcgMzEuMzU3OSAxNy45MTA0IDMxLjQzNTEgMTcuOTg3NUMzMS43MDU0IDE4LjI3NjQgMzIuMDcyMyAxOC41MDc1IDMyLjQ5NzEgMTguNTY1MkMzMi41MzU3IDE4LjU4NDUgMzIuNjEzIDE4LjYyMyAzMi41NzQzIDE4Ljc1NzhaTTI3LjY1MDYgMTEuNTU1MUMyNy42MzEzIDExLjU3NDQgMjcuNTU0MSAxMS42MTI5IDI3LjQ5NjEgMTEuNTU1MUMyNy4zNDE3IDExLjQyMDMgMjcuMjI1OCAxMS4yMDg1IDI3LjIyNTggMTAuOTc3NEMyNy4yMjU4IDEwLjU3MjkgMjcuNTU0MSAxMC4yNDU1IDI3Ljk1OTYgMTAuMjQ1NUMyOC4xNTI2IDEwLjI0NTUgMjguMzI2NCAxMC4zMjI2IDI4LjQ2MTYgMTAuNDM4MUMyOC41MTk1IDEwLjQ3NjYgMjguNDgwOSAxMC41NzI5IDI4LjQ2MTYgMTAuNTkyMkMyOC4xNTI2IDEwLjkwMDMgMjcuODgyMyAxMS4yMDg1IDI3LjY1MDYgMTEuNTU1MVpNMjEuMjAxNSAyMC45MzRDMjAuNjk5NSAyMC45MzQgMjAuNTA2NCAyMS4wODgxIDIwLjEzOTUgMjEuMzE5MkMxOS45MDc4IDIxLjQ3MzMgMTkuODQ5OSAyMS4wMzAzIDIwLjEyMDIgMjAuMTI1MkMyMC4zMzI2IDE5LjQxMjYgMTguOTIzMSAxOS4wMjc0IDE4LjU5NDggMTkuMzU0OEMxOC4xMTIxIDE5LjcyMDggMTYuOTE1IDIwLjQ1MjYgMTUuNzE3OCAxOS4yMDA4QzE1LjQ4NjEgMTguOTUwNCAxNi4yNTg1IDE5LjAyNzQgMTYuMjk3MSAxOC44MTU2QzE2LjM3NDMgMTguNDg4MiAxNi42NjM5IDE4LjI5NTYgMTYuNzc5OCAxOC4xODAxQzE2Ljg1NyAxOC4wODM4IDE2Ljg1NyAxNy45Mjk3IDE2LjcyMTkgMTcuODcxOUMxNi4zNTUgMTcuNjc5MyAxNS44NTMgMTcuMjU1NyAxNS45ODgxIDE2LjQ4NTNDMTYuMDA3NCAxNi4zNjk4IDE1LjM3MDMgMTYuMzMxMiAxNS41ODI3IDE2LjEzODdDMTYuNzAyNiAxNS4xMTggMTcuOTE5IDE1Ljc1MzUgMTguNDAxNyAxNi4wODA5QzE4LjQ3OSAxNi4xMTk0IDE4LjY1MjcgMTYuMTE5NCAxOC42NzIxIDE1Ljk2NTNDMTguNzEwNyAxNS42Mzc5IDE4LjUzNjkgMTUuNDA2OCAxOS4yMTI3IDE0Ljg2NzZDMTkuMzQ3OSAxNC43NTIgMTguODI2NSAxNC4zMDkxIDE5LjE5MzQgMTQuMzI4NEMyMS40OTExIDE0LjkwNjEgMjAuNDQ4NSAxNy4yOTQyIDIwLjkzMTIgMTcuNzE3OUMyMS44MTk0IDE4LjUwNzUgMjMuOTQzMyAxOS4xMjM3IDI1LjkzMjEgMTkuNTQ3NEMyNi4xMDU5IDE5LjU4NTkgMjYuNzIzOCAxOS43OTc4IDI2Ljg1OSAxOS44NzQ4QzI4LjQ4MDkgMjAuNzAyOSAyOS40NjU2IDIwLjYyNTkgMzAuMzM0NSAyMC4yNzkzQzMwLjYwNDggMjAuMTYzNyAzMC42MDQ4IDIwLjUyOTYgMzAuNTA4MyAyMC42MDY2QzI3LjMwMzEgMjMuNjY4OCAyNC44NTA4IDIyLjg3OTIgMjQuMDAxMyAyMi4zMzk5QzIzLjQwMjcgMjEuOTU0NyAyMi4xNjY5IDIxLjkzNTUgMjEuNjA3IDIyLjcyNTFDMjEuNTEwNCAyMi44MjE0IDIxLjMzNjcgMjIuODc5MiAyMS4yNTk0IDIyLjYyODhDMjEuMDg1NiAyMi4wNTEgMjEuMjc4NyAyMS42NjU5IDIxLjQ1MjUgMjEuMjQyMkMyMS41Njg0IDIwLjk5MTggMjEuMjk4IDIwLjkzNCAyMS4yMDE1IDIwLjkzNFpNNTEuNzg2NSAyMy43NjVDNTEuMzYxNyAyNC4xMzEgNTAuNTg5NCAyNC41NTQ2IDQ5LjM3MjkgMjQuNDk2OUM0OC44NTE2IDI0LjQ3NzYgNDguNjAwNiAyNC42MzE3IDQ4LjQ4NDcgMjQuNzY2NUM0OC40MDc1IDI0Ljg2MjggNDguMzY4OSAyNC45OTc2IDQ4LjM0OTYgMjUuMDE2OUM0OC4yNzIzIDI1LjI2NzIgNDguMzY4OSAyNS41MzY4IDQ4LjUwNCAyNS43NDg3QzQ4LjYzOTIgMjUuOTQxMyA0OC41ODEzIDI2LjA1NjggNDguMzg4MiAyNi4wOTUzQzQ4LjE5NTEgMjYuMTUzMSA0Ny45MjQ4IDI2LjE1MzEgNDcuNDAzNCAyNS45MDI3QzQ3LjE3MTcgMjUuNzg3MiA0Ny4xMTM4IDI1Ljk0MTMgNDcuMDc1MiAyNi4wMzc2QzQ2Ljk3ODcgMjYuMjg3OSA0Ny4xNTI0IDI2LjU5NjEgNDcuNSAyNi44MjcyQzQ3LjY3MzggMjYuOTgxMiA0Ny42MzUyIDI3LjEzNTMgNDcuMzY0OCAyNy4yMzE2QzQ2LjkwMTQgMjcuMzg1NyA0Ni40OTU5IDI3LjE3MzggNDUuODIwMSAyNi44MDc5QzQ1LjQzNCAyNi41OTYxIDQ1LjEyNSAyNi41NTc1IDQ0Ljg1NDcgMjYuODY1N0M0NC43MDAyIDI3LjAzOSA0NC43MTk1IDI3LjE5MzEgNDQuNzk2OCAyNy4yODk0QzQ1LjA2NzEgMjcuNTM5NyA0NS4yMjE2IDI4LjA1OTcgNDQuNTY1MSAyOC44ODc4QzQ0LjM1MjcgMjkuMTU3NCA0NC4xMjEgMjguNDA2NCA0My45MDg2IDI4LjUwMjZDNDMuMDIwNCAyOC45MjYzIDQyLjI4NjYgMjguMzY3OCA0MS45OTcgMjguMDAxOUM0MS45MzkxIDI3LjkyNDkgNDEuODAzOSAyNy45MDU2IDQxLjY0OTQgMjguMDAxOUM0MS4yMDUzIDI4LjMxMDEgNDAuMjM5OSAyOC43OTE1IDM5Ljg3MyAyNy45MjQ5QzM5LjgxNTEgMjcuNzkwMSAzOS4yOTM4IDI4LjExNzUgMzkuMjkzOCAyNy44NjcxQzM5LjMxMzEgMjYuNDQyIDQwLjU0ODggMjYuMTcyNCA0MS4wODk1IDI2LjEzMzhDNDEuMjQ0IDI2LjExNDYgNDEuMjgyNiAyNi4wMzc2IDQxLjIwNTMgMjUuOTAyN0M0MC45OTI5IDI1LjU5NDYgNDAuNzQxOSAyNS4yMjg3IDQwLjg3NzEgMjQuODA1QzQwLjk3MzYgMjQuNDk2OSA0MC4xNjI3IDI0LjQxOTggNDAuNDkwOSAyNC4yNDY1QzQyLjEzMjIgMjMuNDM3NyA0My4wMzk3IDI0Ljk5NzYgNDMuMzI5MyAyNS4xNTE3QzQzLjgxMiAyNS40MjEzIDQ1LjkzNiAyNC43MjggNDYuMjA2MyAyMy41NzI1QzQ2LjI2NDIgMjMuMzQxNCA0NS43MDQzIDIzLjI0NTEgNDUuMTYzNiAyMy4xMTAzQzQ1LjA2NzEgMjMuMDkxIDQ1LjAwOTIgMjIuOTU2MiA0NS4xODI5IDIyLjgyMTRDNDYuNDc2NiAyMS44NTg0IDQ3LjUxOTMgMjAuNjA2NiA0OS44NTU3IDIwLjM3NTVDNTAuMTQ1MyAyMC4zMzcgNTAuMjYxMSAyMC41ODc0IDUwLjI2MTEgMjAuNzAyOUM1MC4yOTk4IDIxLjA2ODggNTAuMzk2MyAyMS40MTU1IDUwLjU1MDggMjEuNzQyOUM1MC44OTgzIDIyLjQ1NTUgNTEuMzAzOCAyMi44OTg0IDUxLjcwOTMgMjMuMjI1OEM1MS45NDEgMjMuNDU2OSA1MS45MDI0IDIzLjY2ODggNTEuNzg2NSAyMy43NjVaTTYxLjU5NTQgMjMuMDMzMkM2MS44MDc4IDIzLjE0ODggNjEuODA3OCAyMy4yNjQzIDYxLjY1MzMgMjMuMzk5MUM2MS40OTg4IDIzLjUzMzkgNjEuMjQ3OCAyMy42Njg4IDYwLjY4NzkgMjMuNjY4OEM2MC40MzY4IDIzLjY2ODggNjAuNDM2OCAyMy44MjI4IDYwLjQ1NjEgMjMuOTM4NEM2MC40OTQ4IDI0LjIwOCA2MC43ODQ0IDI0LjQwMDYgNjEuMTg5OSAyNC40NTg0QzYxLjQwMjMgMjQuNTE2MSA2MS40NjAyIDI0LjY3MDIgNjEuMjQ3OCAyNC44NjI4QzYwLjkwMDIgMjUuMjA5NCA2MC40NTYxIDI1LjIwOTQgNTkuNjgzOCAyNS4xOTAyQzU4Ljk1MDEgMjUuMTcwOSA1OC4zNzA4IDI2LjAzNzYgNTguNzk1NiAyNi40MDM1QzU5LjA4NTIgMjYuNjUzOCA1OS42NjQ1IDI3LjE5MzEgNTkuMTYyNSAyOC42OTUyQzU5LjAwOCAyOS4xMzgyIDU4LjcxODQgMjguMjkwOCA1OC40ODY3IDI4LjQyNTZDNTcuODg4MSAyOC43OTE1IDU3LjM0NzQgMjguMzI5MyA1Ny4wNzcxIDI4LjAwMTlDNTYuOTYxMyAyNy44NjcxIDU2Ljg0NTQgMjcuODY3MSA1Ni43NjgyIDI4LjAwMTlDNTYuNTE3MiAyOC40MjU2IDU1Ljg4IDI5LjE1NzQgNTQuNjA1NiAyOC40NjQxQzU0LjMzNTMgMjguMzEwMSA1My43NTYgMjguODMgNTMuNzE3NCAyOC42NTY3QzUzLjUwNSAyNy42NTUzIDU0LjAyNjMgMjcuMDc3NSA1NC40NTExIDI2Ljc2OTRDNTQuNDg5OCAyNi43MzA5IDU0LjY2MzUgMjYuNDk5OCA1NC4zNzM5IDI2LjUxOUM1My45NDkxIDI2LjQ5OTggNTMuNDA4NSAyNi4zNjUgNTMuMzUwNSAyNS44MjU3QzUzLjM1MDUgMjUuNzEwMiA1Mi43OTA2IDI1Ljc0ODcgNTIuODI5MiAyNS41OTQ2QzUyLjk2NDQgMjQuODYyOCA1NC41NjcgMjQuMzIzNSA1NS42ODY5IDI1LjA3NDZDNTYuNjMzIDI1LjY5MDkgNTcuODEwOSAyMy41NzI1IDU2Ljk2MTMgMjIuNTkwM0M1Ni4zNDM0IDIxLjg3NzcgNTIuNzUyIDIzLjg4MDYgNTEuNTM1NSAyMS4yODA3QzUxLjA1MjggMjAuMjQwNyA1MS42NTE0IDE5LjM1NDggNTEuMTY4NyAxOS4yNzc4QzUwLjY2NjYgMTkuMjAwOCA0OC40MDc1IDE4LjcxOTMgNDUuODk3NCAyMC43MjIyQzQxLjY2ODggMjQuMTExNyAzNy4wNzMzIDIyLjI2MjkgMzUuOTkyIDIxLjUxMThDMzUuODE4MiAyMS40NTQgMzUuNjYzNyAyMS41ODg4IDM1LjcyMTcgMjEuNzYyMkMzNS44OTU0IDIyLjIwNTEgMzUuODE4MiAyMi42MDk1IDM1LjYwNTggMjIuOTE3N0MzNS4xNjE3IDIzLjU5MTcgMzMuNjM2MyAyNC4yNjU4IDMzLjM2NiAyNC4zNDI4QzMxLjU4OTYgMjQuODYyOCAzMS43NjM0IDI2LjIzMDEgMzEuOTU2NSAyNi44MjcyQzMyLjAxNDQgMjcuMDE5NyAzMS45MzcyIDI3LjExNiAzMS43NDQxIDI3LjA5NjhDMzEuMjAzNCAyNy4wMDA1IDMwLjEwMjggMjYuNjUzOCAyOS42NTg3IDI1LjU5NDZDMjkuNjIwMSAyNS40NzkxIDI5LjQ4NDkgMjUuNDU5OCAyOS4zMzA1IDI1LjU3NTRDMjguNjc0IDI2LjAzNzYgMjguOTA1NyAyNi43MzA5IDI5LjA2MDEgMjcuMDM5QzI5LjExODEgMjcuMTU0NiAyOS4wNzk1IDI3LjI3MDEgMjguOTI1IDI3LjI4OTRDMjguMzI2NCAyNy4zNjY0IDI3Ljg4MjMgMjYuNjUzOCAyNy4zNjEgMjYuNzExNkMyNy4wMTM0IDI2Ljc1MDEgMjYuNjI3MiAyNy4wMDA1IDI2LjM5NTUgMjcuMTU0NkMyNi4yOTkgMjcuMjEyMyAyNi4yNzk3IDI3LjM4NTcgMjYuMzM3NiAyNy41OTc1QzI2Ljk5NDEgMjkuNTYxOSAyNS45MTI4IDI5LjYzODkgMjUuODM1NiAyOS42MDA0QzI1Ljc1ODQgMjkuNTYxOSAyNS43OTcgMjkuMjM0NSAyNS40ODggMjkuMTc2N0MyNC40MDY3IDI5LjIzNDUgMjQuMTE3MSAyOC41NDEyIDI0LjA1OTIgMjguMDIxMkMyNC4wMzk5IDI3Ljg0NzkgMjMuOTYyNiAyNy43OTAxIDIzLjg2NjEgMjcuODY3MUMyMy40NjA2IDI4LjE1NiAyMi40NTY2IDI4LjY5NTIgMjEuODE5NCAyNy44ODY0QzIxLjcyMjggMjcuNzcwOCAyMS40MzMyIDI3Ljg4NjQgMjEuMjU5NCAyNy45NjM0QzIxLjEyNDMgMjguMDIxMiAyMS4xMjQzIDI3LjgwOTMgMjEuMTI0MyAyNy43MzIzQzIxLjIwMTUgMjYuNjE1MyAyMS45NTQ1IDI2LjA5NTMgMjIuMzc5MyAyNS45MDI3QzIyLjUzMzggMjUuODI1NyAyMi41NTMxIDI1Ljc0ODcgMjIuNDE3OSAyNS42NTI0QzIyLjA3MDQgMjUuNDAyIDIxLjQ3MTggMjQuODYyOCAyMS42NjQ5IDI0LjI2NThDMjEuNzAzNSAyNC4xNTAyIDIxLjE2MjkgMjMuOTM4NCAyMS4yOTggMjMuODQyMUMyMi41MzM4IDIyLjk1NjIgMjQuMTE3MSAyNC40MTk4IDI0LjMxMDIgMjQuNTkzMkMyNC41MjI2IDI0Ljc2NjUgMjUuNjQyNSAyNC44MDUgMjguNTAwMiAyMy4xODczQzMwLjMxNTIgMjIuMTY2NiAzMS4yNjEzIDIxLjMxOTIgMzEuNzgyNyAyMC42ODM3QzMxLjg0MDYgMjAuNjA2NiAzMS45NzU4IDIwLjQ3MTggMzIuMTY4OSAyMC40NzE4QzMzLjMyNzQgMjAuNDMzMyAzNC40NjY2IDIwLjI2IDM1LjM1NDggMTkuNDg5NkMzNS41MDkzIDE5LjMzNTYgMzUuNjQ0NCAxOS40MzE5IDM1LjcyMTcgMTkuNDcwNEMzNy4zNjI5IDIwLjYwNjYgMzguMTkzMiAxOC4xMDMgMzguNTQwNyAxNi45NDc1QzM4LjU3OTQgMTYuNzE2NCAzOC42MzczIDE2LjUyMzggMzguODg4MyAxNi41MDQ2QzQ0LjkxMjYgMTYuNzkzNSA1Ni4zMjQxIDE2Ljc1NDkgNTYuMzI0MSAxNi43NTQ5QzU2LjMyNDEgMTYuNzU0OSA1Ny44MzAyIDE2Ljg3MDUgNTcuNzUyOSAxNS45NDYxQzU3LjYzNzEgMTQuNDQzOSA1MS40MDA0IDE0LjQ4MjQgNDYuNzY2MyAxNS4xMThDNDUuMDg2NCAxNS4zNDkxIDQyLjYzNDIgMTUuNDgzOSA0MS4xODYgMTQuOTI1NEM0MC41ODc1IDE0LjY5NDMgNDAuMTA0NyAxNC4zMjg0IDM5LjgzNDQgMTMuODQ2OUMzOS41NDQ4IDEzLjIzMDYgMzkuNjIyIDEyLjg2NDcgMzkuNjggMTIuNDc5NUMzOS43NTcyIDEyLjIwOTkgMzkuODkyMyAxMS45MDE4IDQwLjA4NTQgMTEuNTkzNkM0MS4yODI2IDkuNzY0MDggNDQuMDI0NCA5LjYxMDAxIDQ0Ljg5MzMgOS42MTAwMUM0NS4wNDc4IDkuNjEwMDEgNDUuMTYzNiA5LjUzMjk4IDQ1LjE4MjkgOS40MTc0M0M0NS4yNjAyIDguOTkzNzQgNDUuNTg4NCA4LjAxMTU2IDQ2Ljc0NjkgNy45NTM3OEM0Ny4wNzUyIDcuOTM0NTIgNDcuNDAzNCA3LjgxODk3IDQ3LjYxNTggNy43MjI2OEM0Ny43NTEgNy42NjQ5IDQ3Ljg0NzUgNy43MDM0MiA0Ny44MDg5IDcuODE4OTdDNDcuNzcwMyA3Ljk3MzA0IDQ3LjcxMjQgOC4xNjU2MiA0Ny41Mzg2IDguMzE5NjlDNDYuNzI3NiA5LjAxMyA0Ni44NDM1IDkuMzQwNCA0Ni45NCA5LjQxNzQzQzQ2Ljk5OCA5LjQ1NTk1IDQ3LjA3NTIgOS40MzY2OSA0Ny4xMzMxIDkuMzc4OTFDNDkuNTg1MyA3LjI0MTIxIDUxLjAxNDIgOC42NjYzNSA1MS40NTgzIDkuMTI4NTVDNTEuNTM1NSA5LjIwNTU5IDUxLjU1NDggOS4zNDAzOSA1MS40MDA0IDkuMzc4OTFDNDkuNzM5OCA5Ljc0NDgyIDQ5LjA4MzMgMTEuMjI3NyA0NS42ODUgMTAuOTk2NkM0NS4yNzk1IDEwLjk3NzQgNDIuNDc5NyAxMC44MjMzIDQxLjU5MTUgMTIuMDk0NEM0MS4wODk1IDEyLjgyNjIgNDEuNDM3IDEzLjUwMDIgNDIuOTQzMSAxMy44NDY5QzQ0LjA4MjMgMTQuMDk3MyA0Ni43NDY5IDEzLjcxMjEgNDguMDAyIDEzLjYxNThDNDkuMjM3OCAxMy41MTk1IDU0LjU4NjMgMTIuODQ1NSA1Ny40MDU0IDEzLjY1NDNDNTguNTgzMiAxNC4wMDEgNjAuMzIxIDE0Ljk0NDYgNTkuOTczNCAxNi43MzU3QzU5Ljc0MTcgMTcuODcxOSA1OC42NjA0IDE4LjMxNDkgNTguNjYwNCAxOC4zMTQ5QzU4LjY2MDQgMTguMzE0OSA1NS41NzEgMjAuNDcxOCA2MS4xMTI2IDIwLjUxMDRDNjIuODMxMSAyMC41MTA0IDYxLjEzMiAyMS45MzU1IDYxLjA1NDcgMjIuMzM5OUM2MS4wNTQ3IDIyLjYwOTUgNjEuMzI1IDIyLjg3OTIgNjEuNTk1NCAyMy4wMzMyWk01MS40MzkgMTEuMDczN0M1MS4yNjUyIDExLjExMjIgNTEuMDMzNSAxMS4xNyA1MC43NjMyIDExLjM0MzNDNTAuMjYxMSAxMS42NzA3IDQ4LjI1MyAxMi40OTg4IDQ3LjYzNTEgMTEuNTE2NkM0Ny42MzUxIDExLjUxNjYgNDkuMDQ0NyAxMS40NzgxIDQ5Ljk1MjIgMTAuNjY5MkM0OS45NTIyIDEwLjY2OTIgNTAuOTM2OSAxMC4zNDE4IDUxLjUxNjIgMTAuODYxOEM1MS41OTM0IDEwLjkwMDMgNTEuNTkzNCAxMS4wMzUxIDUxLjQzOSAxMS4wNzM3Wk0zOC4yMzE4IDBDMTkuMzg2NSAwIDAuNjM3Njk1IDUuMDA3MjIgMC42Mzc2OTUgNS4wMDcyMlYzMC4wMDQ4QzAuNjM3Njk1IDUyLjUzNzMgMTYuODE4NCA3NS45NTU3IDM4LjIzMTggODBDNjAuNDM2OCA3NS42NjY4IDc1Ljg0NTIgNTIuNTE4MSA3NS44NDUyIDMwLjAwNDhWNS4wMDcyMkM3NS44MjU5IDUuMDA3MjIgNjAuMTA4NiAwIDM4LjIzMTggMFpNNzAuMjQ1NyAzOS4xMzM0QzcwLjI0NTcgNTcuNDg2OCA1Ni4yNjYyIDc0LjEyNjEgMzguMjMxOCA3NC4xNDU0SDM4LjIxMjVDMjAuMTc4MSA3NC4xMjYxIDYuMTk4NjEgNTcuNDY3NSA2LjE5ODYxIDM5LjEzMzRDNi4xOTg2MSAxNy41ODMxIDYuMTk4NjEgNy41NDkzNSA2LjE5ODYxIDcuNTQ5MzVMNi42NjIwMiA3LjQxNDU0QzYuNzAwNjQgNy40MTQ1NCAyMi45MDA3IDIuMzg4MDYgMzguMjEyNSAyLjM4ODA2QzUzLjUyNDMgMi4zODgwNiA2OS43NjMgNy40MTQ1NCA2OS43NjMgNy40MTQ1NEw3MC4yMjY0IDcuNTQ5MzVDNzAuMjQ1NyA3LjU0OTM1IDcwLjI0NTcgMTcuNTgzMSA3MC4yNDU3IDM5LjEzMzRaIiBmaWxsPSIjMTQxNDE0Ii8+CiAgICA8L3N2Zz4KICAgIA==" />
+      <div class="title-wrap">
+        <h1>
+          <span class="title-main">From Data Processing to Data Intelligence:</span>
+          <span class="title-sub">Building Systems for Scalable and Responsible Data Management</span>
+        </h1>
+        <div class="title-meta">
+          <div>
+            <div class="title-speaker"><a href="http://www.zhengyi.one" target="_blank" rel="noopener noreferrer">Zhengyi Yang</a></div>
+            <div class="title-affiliation">University of Sydney</div>
+          </div>
+          <div class="title-contact">
+            <div>zhengyi.yang@sydney.edu.au</div>
+            <div>Office: Room 350, Building J12</div>
+          </div>
+        </div>
+      </div>
+      <div class="thesis-line"></div>
+      <div class="footer">Building data systems for complex, dynamic, and responsible intelligence</div>
+      <div class="slide-number">01 / 20</div>
+    </section>
+
+    <section class="slide no-kicker motivation-slide">
+      <h2>Motivation</h2>
+      <div class="quote" style="margin-top: 22px;">
+        My research asks how to build data systems that scale to complex workloads, support reliable AI workflows over data, and inform responsible real-world decision-making.
+      </div>
+      <div class="motivation-list">
+        <div class="motivation-item">
+          <div class="panel-title">Complex and dynamic data</div>
+          <div class="panel-copy">Tables, graphs, text, documents, multimedia data, logs, streams, and evolving workloads.</div>
+        </div>
+        <div class="motivation-item">
+          <div class="panel-title">AI data workloads</div>
+          <div class="panel-copy">Retrieval, indexing, evidence selection, reasoning, verification, serving, and cost control.</div>
+        </div>
+        <div class="motivation-item">
+          <div class="panel-title">Real-world applications</div>
+          <div class="panel-copy">ESG, finance, workforce analytics, fairness, climate, health, and scientific discovery.</div>
+        </div>
+      </div>
+      <div class="key-message">Database systems provide the foundation for managing, processing, and reasoning over data across these motivations.</div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">02 / 20</div>
+    </section>
+
+    <section class="slide fit-agenda no-kicker">
+      <h2>Three-Theme Research Agenda</h2>
+      <div class="stage-layer-grid aligned-agenda">
+        <h3 class="agenda-heading">Stage</h3>
+        <h3 class="agenda-heading">Research Focus</h3>
+        <div class="stage-flow-item processing">
+          <div class="stage-flow-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <ellipse cx="12" cy="5" rx="7" ry="3"></ellipse>
+              <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"></path>
+              <path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="stage-flow-title">Data Processing</div>
+            <div class="stage-flow-copy">Process heterogeneous and dynamic data efficiently.</div>
+          </div>
+        </div>
+          <div class="layer processing">
+            <div class="layer-topline">
+              <div class="layer-number">Theme 1</div>
+            </div>
+            <div class="layer-title">Scalable Data Systems</div>
+            <div class="layer-meta">Graphs, tables, streams, query processing, GPU, out-of-core</div>
+        </div>
+        <div class="stage-flow-arrow">&darr;</div>
+        <div class="agenda-arrow-spacer" aria-hidden="true"></div>
+        <div class="stage-flow-item understanding">
+          <div class="stage-flow-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <circle cx="7" cy="8" r="2.4"></circle>
+              <circle cx="16.5" cy="6.5" r="2.4"></circle>
+              <circle cx="15" cy="16" r="2.4"></circle>
+              <path d="M9.2 7.6l5-.8"></path>
+              <path d="M8.4 9.8l4.8 4.5"></path>
+              <path d="M16.2 8.9l-.8 4.7"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="stage-flow-title">Data Understanding</div>
+            <div class="stage-flow-copy">Extract structure, semantics, context, and evidence.</div>
+          </div>
+        </div>
+          <div class="layer understanding">
+            <div class="layer-topline">
+              <div class="layer-number">Theme 2</div>
+            </div>
+            <div class="layer-title">Responsible Data Intelligence</div>
+            <div class="layer-meta">GraphRAG, LLM reasoning, AI/ML for DB, tabular learning, data-centric AI</div>
+        </div>
+        <div class="stage-flow-arrow">&darr;</div>
+        <div class="agenda-arrow-spacer" aria-hidden="true"></div>
+        <div class="stage-flow-item intelligence">
+          <div class="stage-flow-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="8"></circle>
+              <circle cx="12" cy="12" r="3.3"></circle>
+              <path d="M14.2 10.4l-2.7 3.2-1.7-1.5"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="stage-flow-title">Data Intelligence</div>
+            <div class="stage-flow-copy">Support responsible decisions in real domains.</div>
+          </div>
+        </div>
+        <div class="layer intelligence">
+          <div class="layer-topline">
+            <div class="layer-number">Theme 3</div>
+          </div>
+          <div class="layer-title">Data for Real-World Applications</div>
+          <div class="layer-meta">ESG, finance, built environment, fairness, climate, health</div>
+        </div>
+      </div>
+      <div class="key-message">The agenda links scalable systems, responsible intelligence, and real-world applications through three themes.</div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">03 / 20</div>
+    </section>
+
+    <section class="slide no-kicker feedback-slide">
+      <h2>The Feedback Loop</h2>
+      <div class="loop-layout">
+        <div class="loop-diagram">
+          <svg class="loop-svg" viewBox="0 0 620 420" aria-hidden="true">
+            <defs>
+              <marker id="loop-arrow" viewBox="0 0 12 12" markerWidth="8" markerHeight="8" refX="6" refY="6" orient="auto-start-reverse" markerUnits="strokeWidth">
+                <path d="M 0 0 L 12 6 L 0 12 Z" fill="#a97926"></path>
+              </marker>
+            </defs>
+            <path class="loop-segment" d="M 150 292 C 166 236 195 193 230 160" marker-end="url(#loop-arrow)"></path>
+            <path class="loop-segment" d="M 260 160 C 230 205 204 247 184 298" marker-end="url(#loop-arrow)"></path>
+            <path class="loop-segment" d="M 358 160 C 393 192 426 236 456 292" marker-end="url(#loop-arrow)"></path>
+            <path class="loop-segment" d="M 486 292 C 458 238 424 197 388 160" marker-end="url(#loop-arrow)"></path>
+            <path class="loop-segment" d="M 266 324 C 292 312 326 312 352 324" marker-end="url(#loop-arrow)"></path>
+            <path class="loop-segment" d="M 352 350 C 326 362 292 362 266 350" marker-end="url(#loop-arrow)"></path>
+            <text class="loop-label" x="70" y="224">capabilities</text>
+            <text class="loop-label" x="134" y="258">requirements</text>
+            <text class="loop-label" x="410" y="244">reasoning</text>
+            <text class="loop-label" x="438" y="210">domain context</text>
+            <text class="loop-label" x="270" y="314">deployment</text>
+            <text class="loop-label" x="282" y="372">constraints</text>
+          </svg>
+          <div class="loop-node systems"><b>Scalable Data Systems</b><span>Algorithms, indexes, runtimes, and hardware-aware processing</span></div>
+          <div class="loop-node understanding"><b>Responsible Data Intelligence</b><span>Retrieval, reasoning, evidence, learning, and verification</span></div>
+          <div class="loop-node impact"><b>Data for Real-World Applications</b><span>ESG, finance, workforce, fairness, climate, health</span></div>
+          <div class="loop-center">feedback<br>loop</div>
+        </div>
+        <div>
+          <div class="loop-note">
+            <h3>Bottom-up</h3>
+            <div class="panel-title">Capabilities accumulate</div>
+            <div class="panel-copy">Scalable systems make complex data usable; data understanding builds retrieval, reasoning, and learning on top.</div>
+          </div>
+          <div class="loop-note">
+            <h3>Top-down</h3>
+            <div class="panel-title">Requirements return</div>
+            <div class="panel-copy">Real-world domains send requirements back to AI pipelines and system design: provenance, robustness, fairness, validation, and deployability.</div>
+          </div>
+        </div>
+      </div>
+      <div class="key-message">Processing enables understanding; understanding enables intelligence; real-world applications feed requirements back into data systems.</div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">04 / 20</div>
+    </section>
+
+    <section class="slide section-slide">
+      <div class="kicker">Part I</div>
+      <h2 class="section-title">Scalable Data Systems</h2>
+      <p class="section-meaning">Data processing is about making complex and dynamic data computationally manageable at scale.</p>
+      <div class="grid grid-3">
+        <div class="panel tint-blue">
+          <div class="panel-title">Graph Analytics and Processing</div>
+          <div class="panel-copy">Graphs, hypergraphs, temporal graphs, matching, centrality, decomposition.</div>
+        </div>
+        <div class="panel tint-teal">
+          <div class="panel-title">Database Systems &amp; Query Processing</div>
+          <div class="panel-copy">Query processing, joins, JIT/runtime, OLTP kernels, storage, transactions.</div>
+        </div>
+        <div class="panel tint-gold">
+          <div class="panel-title">Parallel and Hardware-Aware Processing</div>
+          <div class="panel-copy">GPU, FPGA, RISC-V, UMA, streaming, parallelism, memory- and I/O-aware execution.</div>
+        </div>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">05 / 20</div>
+    </section>
+
+    <section class="slide compact-work fit-slide">
+      <div class="kicker">Scalable Data Systems</div>
+      <h2>Graph Analytics at Scale</h2>
+      <div class="content-layout">
+        <div>
+          <div class="problem">Complex relational structures are no longer only graphs; they include higher-order and temporal interactions that make naive enumeration infeasible.</div>
+          <h3>Representative topics</h3>
+          <ul class="topic-list">
+            <li><strong>Higher-order</strong> graph and hypergraph analytics</li>
+            <li><strong>Pattern matching</strong> and substructure search</li>
+            <li><strong>Connectivity</strong> and path analytics</li>
+            <li><strong>Temporal</strong> and evolving graph analytics</li>
+          </ul>
+          <div class="key-message">Turn structural properties into indexes, pruning rules, and execution strategies that avoid exhaustive search.</div>
+        </div>
+        <div>
+          <h3>Selected work</h3>
+          <ul class="work-list two-col">
+            <li class="work-item"><span class="work-title">Nucleus decomposition</span><span class="badges"><span class="status completed">completed</span><span class="venue">SIGMOD 2026</span></span></li>
+            <li class="work-item"><span class="work-title">Diversified graph pattern matching</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.14778/3785297.3785310">VLDB 2026</a></span></li>
+            <li class="work-item"><span class="work-title">Hypergraph pattern matching</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2512.10621">ICDE 2026</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/icde55515.2023.00160">ICDE 2023</a></span></li>
+            <li class="work-item"><span class="work-title">Hypergraph decomposition</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3709656">SIGMOD 2025</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/s00778-025-00915-x">VLDBJ 2025</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3627673.3679765">CIKM 2024</a></span></li>
+            <li class="work-item"><span class="work-title">Constrained path analytics</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/icde65448.2025.00262">ICDE 2025</a></span></li>
+            <li class="work-item"><span class="work-title">Clique cover and dense subgraph</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3696410.3714897">WWW 2025</a></span></li>
+            <li class="work-item"><span class="work-title">Temporal graph ranking and analytics</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3589334.3645438">WWW 2024</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/s11280-024-01259-2">WWWJ 2024</a></span></li>
+            <li class="work-item"><span class="work-title">Nuclear decomposition</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">SIGMOD 2027</span></span></li>
+            <li class="work-item"><span class="work-title">Higher-order graph analytics</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">Springer monograph, in press</span></span></li>
+            <li class="work-item"><span class="work-title">Hypergraph core decomposition</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">VLDBJ 2026</span></span></li>
+            <li class="work-item"><span class="work-title">Reachability indexing and querying</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">EDBT 2026 under revision</span></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">06 / 20</div>
+    </section>
+
+    <section class="slide fit-slide engine-slide">
+      <div class="kicker">Scalable Data Systems</div>
+      <h2>Database Systems &amp; Query Processing</h2>
+      <div class="content-layout">
+        <div>
+          <div class="problem">Database performance depends not only on algorithms but also on how query logic interacts with compilation, runtime execution, storage, and deployment constraints.</div>
+          <h3>Representative topics</h3>
+          <ul class="topic-list">
+            <li><strong>Transactional</strong> engine design</li>
+            <li><strong>Query processing</strong>, joins, and runtime optimization</li>
+            <li><strong>JIT / MLIR</strong> compilation for database execution</li>
+            <li><strong>Storage</strong>, concurrency, and recovery</li>
+          </ul>
+          <div class="key-message">Systems optimization should make database engines faster while keeping them maintainable and deployable.</div>
+        </div>
+        <div>
+          <h3>Execution pipeline</h3>
+          <div class="pipeline" style="grid-template-columns: 1fr 34px 1fr 34px 1fr;">
+            <div class="step"><div class="step-num">01</div><div class="step-title">Query</div><div class="step-copy">Declarative intent and workload shape.</div></div>
+            <div class="arrow">&rarr;</div>
+            <div class="step"><div class="step-num">02</div><div class="step-title">Runtime</div><div class="step-copy">JIT, MLIR, and specialized execution.</div></div>
+            <div class="arrow">&rarr;</div>
+            <div class="step"><div class="step-num">03</div><div class="step-title">Engine</div><div class="step-copy">Storage, transactions, and deployment.</div></div>
+          </div>
+          <h3 style="margin-top: 24px;">Selected work</h3>
+          <div class="paper-spotlight">
+          <div class="paper-spotlight-title large">PhoebeDB: High-Performance Disk-Based RDBMS Kernel for OLTP</div>
+            <div class="paper-spotlight-meta">
+              <a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.48786/edbt.2025.82">EDBT 2025 Industry</a>
+              <span class="venue">Industry collaboration</span>
+              <span class="venue">Target: industry-ready</span>
+            </div>
+            <ul>
+              <li><strong>Industry collaboration</strong> toward an <strong>enterprise-oriented</strong>, industry-ready RDBMS kernel.</li>
+              <li><strong>PostgreSQL-compatible OLTP</strong> on <strong>commodity hardware</strong>, reducing migration and deployment risk.</li>
+              <li><strong>Full-stack kernel design</strong>: temperature-aware storage, coroutine runtime, smart scheduling, transaction management, WAL, and snapshots.</li>
+              <li>Reports <strong>13.7M tpmC</strong> and <strong>30M tpm</strong> on <strong>TPC-C</strong> using one machine, with <strong>27x</strong> improvement over PostgreSQL.</li>
+            </ul>
+          </div>
+          <div class="related-work-row">
+            <span class="work-title">Batch-dynamic high-dimensional kNN join</span>
+            <span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-981-96-0814-0_6">ADMA 2024 Best Student Paper</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">07 / 20</div>
+    </section>
+
+    <section class="slide compact-work fit-slide extra-fit">
+      <div class="kicker">Scalable Data Systems</div>
+      <h2>Parallel and Hardware-Aware Processing</h2>
+      <div class="content-layout">
+        <div>
+          <div class="problem">At billion scale, performance depends on coordinating distributed execution, parallelism, memory hierarchy, storage, and accelerators.</div>
+          <h3>Representative topics</h3>
+          <ul class="topic-list">
+            <li><strong>Distributed</strong> and out-of-core processing</li>
+            <li><strong>Parallel</strong> runtime and adaptive scheduling</li>
+            <li><strong>GPU-/FPGA-accelerated</strong> indexing and analytics</li>
+            <li><strong>Emerging hardware</strong> and scalable execution</li>
+          </ul>
+          <div class="key-message">Scale by co-designing algorithms, runtimes, and hardware-aware execution.</div>
+        </div>
+        <div>
+          <h3>Execution dimensions</h3>
+          <div class="dimension-strip">
+            <span>Distributed execution</span>
+            <span>Memory / Out-of-core</span>
+            <span>Parallel runtimes</span>
+            <span>GPU / FPGA / RISC-V</span>
+          </div>
+          <h3>Selected work</h3>
+          <ul class="work-list two-col">
+            <li class="work-item"><span class="work-title">Out-of-core graph processing system</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3769795">SIGMOD 2026</a></span></li>
+            <li class="work-item"><span class="work-title">GPU-accelerated vector index construction</span><span class="badges"><span class="status completed">completed</span><span class="venue">SIGMOD 2026</span></span></li>
+            <li class="work-item"><span class="work-title">GPU-accelerated top-k query processing</span><span class="badges"><span class="status completed">completed</span><span class="venue">HPDC 2026</span></span></li>
+            <li class="work-item"><span class="work-title">Architecture-aware database benchmarking</span><span class="badges"><span class="status completed">completed</span><span class="venue">VLDB ADMS 2025</span></span></li>
+            <li class="work-item"><span class="work-title">FPGA-accelerated graph random walks</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">SIGMOD 2027</span></span></li>
+            <li class="work-item"><span class="work-title">Out-of-core vector search and indexing</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2512.22838">EuroSys 2027</a></span></li>
+            <li class="work-item"><span class="work-title">Unified-memory DataFrame processing</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">VLDB 2026 Demo</span></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">08 / 20</div>
+    </section>
+
+    <section class="slide section-slide">
+      <div class="kicker">Part II</div>
+      <h2 class="section-title">Responsible Data Intelligence</h2>
+      <p class="section-meaning">Data understanding is about turning processed data into structure, semantics, context, and reliable evidence for AI systems.</p>
+      <div class="grid grid-3">
+        <div class="panel tint-teal">
+          <div class="panel-title">Data Systems for Reliable LLMs</div>
+          <div class="panel-copy">Retrieval, evidence selection, reasoning, agent memory, and context management.</div>
+        </div>
+        <div class="panel tint-blue">
+          <div class="panel-title">AI/ML for Data Systems</div>
+          <div class="panel-copy">Cost estimation, tuning, temporal analytics, and costly system decisions.</div>
+        </div>
+        <div class="panel tint-gold">
+          <div class="panel-title">Data-Centric AI</div>
+          <div class="panel-copy">Tables, labels, condensation, reasoning, quality, and data-efficient learning.</div>
+        </div>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">09 / 20</div>
+    </section>
+
+    <section class="slide compact-work fit-slide">
+      <div class="kicker">Responsible Data Intelligence</div>
+      <h2>Data Systems for Reliable LLMs</h2>
+      <div class="content-layout">
+        <div>
+          <div class="problem">Reliable LLM applications over data need systems for retrieval, evidence organization, verification, reasoning orchestration, and serving, not just fluent generation.</div>
+          <h3>Representative topics</h3>
+          <ul class="topic-list">
+            <li><strong>Data-to-structure</strong> construction</li>
+            <li><strong>Evidence retrieval</strong> and selection</li>
+            <li><strong>Reasoning</strong> and verification</li>
+            <li><strong>Serving, memory</strong>, and context management</li>
+          </ul>
+          <div class="key-message">Reliable LLMs create data-management workloads: indexing, planning, provenance, cost control, and evidence quality.</div>
+        </div>
+        <div>
+          <h3>Retrieval-to-reasoning pipeline</h3>
+          <div class="pipeline">
+            <div class="step"><div class="step-num">01</div><div class="step-title">Corpus</div><div class="step-copy">Raw text, tables, documents.</div></div>
+            <div class="arrow">&rarr;</div>
+            <div class="step"><div class="step-num">02</div><div class="step-title">Graph</div><div class="step-copy">Structure and semantic units.</div></div>
+            <div class="arrow">&rarr;</div>
+            <div class="step"><div class="step-num">03</div><div class="step-title">Evidence</div><div class="step-copy">Retrieval and verification.</div></div>
+            <div class="arrow">&rarr;</div>
+            <div class="step"><div class="step-num">04</div><div class="step-title">Reasoning</div><div class="step-copy">Serving and memory.</div></div>
+          </div>
+          <h3 style="margin-top: 20px;">Selected work</h3>
+          <ul class="work-list two-col">
+            <li class="work-item"><span class="work-title">Adaptive GraphRAG retrieval</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2601.21162">KDExLLM 2026 Best Paper</a></span></li>
+            <li class="work-item"><span class="work-title">Graph exploration for data understanding</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3722212.3725106">SIGMOD Demo 2025</a></span></li>
+            <li class="work-item"><span class="work-title">Graph CoT reasoning and serving</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2511.01633">TOIS</a></span></li>
+            <li class="work-item"><span class="work-title">Cost-efficient KG evidence construction</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">TKDE</span></span></li>
+            <li class="work-item"><span class="work-title">Semantic-unit retrieval for HyperRAG</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">EMNLP 2026</span></span></li>
+            <li class="work-item"><span class="work-title">Long-term memory for LLM agents</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">EMNLP 2026</span></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">10 / 20</div>
+    </section>
+
+    <section class="slide compact-work fit-slide">
+      <div class="kicker">Responsible Data Intelligence</div>
+      <h2>AI/ML for Databases and Data Systems</h2>
+      <div class="content-layout">
+        <div>
+          <div class="problem">This line of work learns to approximate, tune, and adapt costly decisions in data systems while respecting query, graph, and temporal semantics.</div>
+          <h3>Representative topics</h3>
+          <ul class="topic-list">
+            <li><strong>Learning</strong> for query optimization</li>
+            <li><strong>Learning</strong> for graph and temporal analytics</li>
+            <li><strong>Representation learning</strong> over structured data</li>
+            <li><strong>Deployment-aware</strong> learned components</li>
+          </ul>
+          <div class="key-message">AI/ML is useful when learning acts as a system component with clear semantics, error behavior, and operational cost.</div>
+        </div>
+        <div>
+          <div class="grid grid-2" style="gap: 12px; margin-top: 4px;">
+            <div class="panel tint-blue"><div class="panel-title">Query Optimization</div><div class="panel-copy">Cost estimation and optimization signals for expensive database decisions.</div></div>
+            <div class="panel tint-teal"><div class="panel-title">Graph Analytics</div><div class="panel-copy">Temporal centrality and graph signals where exact computation is costly.</div></div>
+          </div>
+          <h3 style="margin-top: 18px;">Selected work</h3>
+          <ul class="work-list two-col">
+            <li class="work-item"><span class="work-title">Learning-based temporal centrality</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3774904.3792709">WWW 2026</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3589334.3645432">WWW 2024</a></span></li>
+            <li class="work-item"><span class="work-title">Adaptive parallelism tuning for stream processing</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/icde65448.2025.00264">ICDE 2025</a></span></li>
+            <li class="work-item"><span class="work-title">Heterogeneous graph learning</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3746252.3761008">CIKM 2025</a></span></li>
+            <li class="work-item"><span class="work-title">Learned query cost estimation</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">ICDE 2026</span></span></li>
+            <li class="work-item"><span class="work-title">Event-centric heterogeneous graph learning</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">ICDM 2026</span></span></li>
+            <li class="work-item"><span class="work-title">Learning-based attributed community detection</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">TKDD</span></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">11 / 20</div>
+    </section>
+
+    <section class="slide compact-work fit-slide">
+      <div class="kicker">Responsible Data Intelligence</div>
+      <h2>Data-Centric AI</h2>
+      <div class="content-layout">
+        <div>
+          <div class="problem">Data-centric AI studies how tables, labels, schemas, and data quality shape model learning, reasoning, efficiency, and reliability.</div>
+          <h3>Representative topics</h3>
+          <ul class="topic-list">
+            <li><strong>Structured data</strong> representation and reasoning</li>
+            <li><strong>Data condensation</strong> and efficiency</li>
+            <li><strong>Label quality</strong> and aggregation</li>
+            <li><strong>Data quality</strong> for AI workflows</li>
+          </ul>
+          <div class="key-message">Data-centric AI brings classic data quality questions back into the core of model performance and reasoning reliability.</div>
+        </div>
+        <div>
+          <h3>Data problems</h3>
+          <div class="data-dimensions">
+            <div class="data-dimension"><b>Tables</b><span>Representation, schema, values, and reasoning.</span></div>
+            <div class="data-dimension"><b>Labels</b><span>Crowdsourcing, quality, and aggregation.</span></div>
+            <div class="data-dimension"><b>Efficiency</b><span>Condensation and data-efficient learning.</span></div>
+          </div>
+          <h3>Selected work</h3>
+          <ul class="work-list">
+            <li class="work-item"><span class="work-title">Tabular data condensation</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2602.21717">ICDE 2026</a></span></li>
+            <li class="work-item"><span class="work-title">Structured table reasoning</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/s11280-025-01351-1">WWWJ 2025</a></span></li>
+            <li class="work-item"><span class="work-title">LLM-based tabular reasoning</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2601.08444">EMNLP 2026</a></span></li>
+            <li class="work-item"><span class="work-title">Label aggregation in crowdsourcing</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">ICDE 2026</span></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">12 / 20</div>
+    </section>
+
+    <section class="slide section-slide">
+      <div class="kicker">Part III</div>
+      <h2 class="section-title">Data for Real-World Applications</h2>
+      <p class="section-meaning">Data intelligence is about using processed and interpreted data to support responsible decisions in real-world domains.</p>
+      <div class="grid grid-4">
+        <div class="panel tint-blue"><div class="panel-title">ESG and Finance</div><div class="panel-copy">Disclosure, standards, fraud, interpretable analytics.</div></div>
+        <div class="panel tint-teal"><div class="panel-title">Built Environment</div><div class="panel-copy">Smart construction, careers, leadership, guidance.</div></div>
+        <div class="panel tint-wine"><div class="panel-title">Fairness and Diversity</div><div class="panel-copy">Representation, bias, evaluation, context.</div></div>
+        <div class="panel tint-gold"><div class="panel-title">Science and Society</div><div class="panel-copy">Climate, health, materials, validation.</div></div>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">13 / 20</div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Data for Real-World Applications</div>
+      <h2>ESG and Financial Intelligence</h2>
+      <div class="content-layout">
+        <div>
+          <div class="problem">ESG (Environmental, Social, and Governance) and finance turn messy documents, reports, and behavioral traces into decisions that require traceability and interpretation.</div>
+          <h3>Representative topics</h3>
+          <ul class="topic-list">
+            <li><strong>Document</strong> and report intelligence</li>
+            <li><strong>Knowledge-grounded</strong> evidence management</li>
+            <li><strong>Financial behavior</strong> and risk analytics</li>
+            <li><strong>Interpretable</strong> decision support</li>
+          </ul>
+          <div class="key-message">The database problem is evidence governance: linking claims, standards, provenance, and models into auditable workflows.</div>
+        </div>
+        <div>
+          <div class="grid grid-2" style="gap: 12px;">
+            <div class="panel tint-teal"><div class="panel-title">ESG</div><div class="panel-copy">Standards, reports, provenance, auditability.</div></div>
+            <div class="panel tint-wine"><div class="panel-title">Finance</div><div class="panel-copy">Noisy behavior, robust signals, fraud detection.</div></div>
+          </div>
+          <h3 style="margin-top: 24px;">Selected work</h3>
+          <ul class="work-list">
+            <li class="work-item"><span class="work-title">Agent-based ESG report analysis</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2603.10646">ICSA 2026</a></span></li>
+            <li class="work-item"><span class="work-title">Finance analysis and fraud detection</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/bigcomp68355.2026.00019">BigComp 2026</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-981-95-3459-3_3">ADMA 2025</a></span></li>
+            <li class="work-item"><span class="work-title">ESG reporting and knowledge graph construction</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2511.21712">ICDM Demo 2026</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2512.01289">ICKG 2026</a></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">14 / 20</div>
+    </section>
+
+    <section class="slide compact-work fit-slide extra-fit">
+      <div class="kicker">Data for Real-World Applications</div>
+      <h2>Built Environment Intelligence</h2>
+      <div class="content-layout">
+        <div>
+          <div class="problem">Built-environment and smart-construction applications transform fragmented professional, project, and regulatory traces into interpretable evidence for career, compliance, sustainability, and organizational decisions.</div>
+          <h3>Representative topics</h3>
+          <ul class="topic-list">
+            <li><strong>Built-environment</strong> decision support</li>
+            <li><strong>Workforce</strong> and career intelligence</li>
+            <li><strong>Compliance</strong> and sustainability analytics</li>
+            <li><strong>Heterogeneous</strong> domain data integration</li>
+          </ul>
+          <div class="key-message">Real-world decision support often begins as entity resolution, evidence extraction, and schema design over noisy human-centered data.</div>
+        </div>
+        <div>
+          <h3>Data to decision flow</h3>
+          <div class="mini-flow">
+            <span>Professional traces</span>
+            <span class="mini-arrow">&rarr;</span>
+            <span>Structured evidence</span>
+            <span class="mini-arrow">&rarr;</span>
+            <span>Decision support</span>
+          </div>
+          <h3 style="margin-top: 14px;">Selected work</h3>
+          <ul class="work-list two-col">
+            <li class="work-item"><span class="work-title">Construction career guidance</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/bigcomp68355.2026.00075">BigComp 2026</a><span class="venue">ISARC 2026</span></span></li>
+            <li class="work-item"><span class="work-title">Built-environment GraphRAG systems</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.3390/buildings16061224">Buildings 2026</a></span></li>
+            <li class="work-item"><span class="work-title">Workforce leadership and progression analysis</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.3390/buildings16040727">Buildings 2026</a><span class="venue">CRIOCM 2026</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1080/15623599.2025.2532114">IJCM 2025</a></span></li>
+            <li class="work-item"><span class="work-title">Australian built-environment AI co-pilot</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">Automation in Construction</span></span></li>
+            <li class="work-item"><span class="work-title">Compliance and sustainability intelligence</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">ARC Linkage Project</span></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">15 / 20</div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Data for Real-World Applications</div>
+      <h2>Fairness and Diversity Intelligence</h2>
+      <div class="content-layout">
+        <div>
+          <div class="problem">Fairness work requires careful data modeling because representation, missingness, and measurement choices shape downstream conclusions.</div>
+          <h3>Representative topics</h3>
+          <ul class="topic-list">
+            <li><strong>Representation</strong> and measurement</li>
+            <li><strong>Fairness</strong> in decision support</li>
+            <li><strong>Diversity</strong> and progression analytics</li>
+            <li><strong>Evaluation</strong> of model behavior</li>
+          </ul>
+          <div class="key-message">Fairness is not only a model metric; it is also a data-management problem of measurement, provenance, and context.</div>
+        </div>
+        <div>
+          <h3>Fairness questions</h3>
+          <div class="matrix">
+            <div class="cell"><b>Representation</b><br><span class="muted small">Who is visible in the data?</span></div>
+            <div class="cell"><b>Measurement</b><br><span class="muted small">What proxies shape conclusions?</span></div>
+            <div class="cell"><b>Decision support</b><br><span class="muted small">How are outputs used?</span></div>
+            <div class="cell"><b>Evaluation</b><br><span class="muted small">What is fairness beyond accuracy?</span></div>
+          </div>
+          <h3 style="margin-top: 24px;">Selected work</h3>
+          <ul class="work-list">
+            <li class="work-item"><span class="work-title">Gender representation and career progression</span><span class="badges"><span class="status completed">completed</span><span class="venue">JCEM 2026</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1080/15623599.2025.2532114">IJCM 2025</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1080/15623599.2025.2482220">IJCM 2025</a></span></li>
+            <li class="work-item"><span class="work-title">LLM fairness and bias evaluation</span><span class="badges"><span class="status completed">completed</span><span class="venue">FAIML 2026</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-981-95-4969-6_16">AI 2025</a></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">16 / 20</div>
+    </section>
+
+    <section class="slide compact-work fit-slide">
+      <div class="kicker">Data for Real-World Applications</div>
+      <h2>Scientific and Societal Intelligence</h2>
+      <div class="content-layout">
+        <div>
+          <div class="problem">Scientific and societal applications need AI pipelines that respect domain constraints and produce outputs that can be validated.</div>
+          <h3>Representative topics</h3>
+          <ul class="topic-list">
+            <li><strong>Domain-aware</strong> scientific modeling</li>
+            <li><strong>Health</strong> and conversation intelligence</li>
+            <li><strong>Scientific discovery</strong> workflows</li>
+            <li><strong>Validation</strong> and trustworthy outputs</li>
+          </ul>
+          <div class="key-message">Domain-facing intelligence needs data systems that make heterogeneous evidence scalable, checkable, and reusable.</div>
+        </div>
+        <div>
+          <h3>Domain pillars</h3>
+          <div class="pillars">
+            <div class="pillar"><b>Climate</b><span>Heterogeneous evidence and domain-aligned modeling.</span></div>
+            <div class="pillar"><b>Health</b><span>Conversation data, semantics, and responsible interpretation.</span></div>
+            <div class="pillar"><b>Science</b><span>Materials discovery and validation-centered AI pipelines.</span></div>
+          </div>
+          <h3 style="margin-top: 24px;">Selected work</h3>
+          <ul class="work-list">
+            <li class="work-item"><span class="work-title">Weather and climate modeling</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2602.09030">NeurIPS 2026</a></span></li>
+            <li class="work-item"><span class="work-title">Health conversation data intelligence</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2601.09717">ADMA 2026</a></span></li>
+            <li class="work-item"><span class="work-title">AI-assisted materials discovery</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">multiple manuscripts</span></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">17 / 20</div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Synthesis</div>
+      <h2>What This Agenda Enables</h2>
+      <div class="closing-grid">
+        <div class="closing-statement">
+          <div>
+            <div class="claim">A database systems agenda for AI-era decision-making.</div>
+            <div class="support">The common thread is to turn complex data into scalable computation, reliable understanding, and responsible decision support in real domains.</div>
+          </div>
+          <div class="db-intersections">
+            <span>Systems</span>
+            <span>AI pipelines</span>
+            <span>Applications</span>
+          </div>
+        </div>
+        <div>
+          <div class="trajectory-list">
+            <div class="trajectory-item">
+              <div class="trajectory-tag">Capability</div>
+              <div><b>Scalable data substrates</b><span>Algorithms, indexes, runtimes, and hardware-aware execution for complex workloads.</span></div>
+            </div>
+            <div class="trajectory-item">
+              <div class="trajectory-tag">Reliability</div>
+              <div><b>AI-facing data understanding</b><span>Retrieval, reasoning, provenance, and verification over structured and unstructured data.</span></div>
+            </div>
+            <div class="trajectory-item">
+              <div class="trajectory-tag">Impact</div>
+              <div><b>Domain-grounded intelligence</b><span>Real-world settings feed back requirements for fairness, robustness, auditability, and deployment.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="potential-line">The broader contribution is to connect database systems, AI pipelines, and real-world data deployment through one coherent feedback loop.</div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">18 / 20</div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">Roadmap</div>
+      <h2>Research Roadmap</h2>
+      <div class="roadmap-grid">
+        <div class="roadmap-card tint-teal">
+          <h3>Direction 1</h3>
+          <div class="panel-title">Data Systems for Reliable LLMs</div>
+          <ul class="topic-list">
+            <li><strong>RAG-aware</strong> indexing and retrieval planning</li>
+            <li><strong>Evidence-aware</strong> query processing and verification</li>
+            <li><strong>Cost-based</strong> optimization for reasoning pipelines</li>
+            <li><strong>Provenance</strong> and audit trails for LLM outputs</li>
+          </ul>
+        </div>
+        <div class="roadmap-card tint-blue">
+          <h3>Direction 2</h3>
+          <div class="panel-title">Scalable Processing for Complex Data</div>
+          <ul class="topic-list">
+            <li><strong>Distributed</strong> graph, hypergraph, and temporal analytics</li>
+            <li><strong>Hardware-aware</strong> vector and graph indexing</li>
+            <li><strong>Adaptive parallel</strong> runtimes for evolving workloads</li>
+            <li><strong>Emerging architectures</strong> for scalable execution</li>
+          </ul>
+        </div>
+        <div class="roadmap-card tint-wine">
+          <h3>Direction 3</h3>
+          <div class="panel-title">Responsible Data Intelligence</div>
+          <ul class="topic-list">
+            <li><strong>ESG</strong> and financial data intelligence</li>
+            <li><strong>Built environment</strong> and smart construction</li>
+            <li><strong>Fairness</strong>, diversity, and accountable data use</li>
+            <li><strong>Climate, health</strong>, and scientific data intelligence</li>
+          </ul>
+        </div>
+      </div>
+      <div class="db-intersections">
+        <span>Indexing</span>
+        <span>Optimization</span>
+        <span>Runtime systems</span>
+        <span>Distributed processing</span>
+        <span>Data quality</span>
+        <span>Provenance</span>
+        <span>Benchmarks</span>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">19 / 20</div>
+    </section>
+
+    <section class="slide discussion-slide">
+      <div class="kicker">Q&amp;A</div>
+      <h2>Collaboration &amp; Discussion</h2>
+      <div class="collab-grid">
+        <div class="collab-panel">
+          <h3>Research summary</h3>
+          <ul class="collab-list">
+            <li><b>Scalable data systems</b>Graph and hypergraph analytics, database runtime, streaming, and hardware-aware processing.</li>
+            <li><b>AI-facing data management</b>GraphRAG, LLM retrieval and reasoning, AI4DB, tabular learning, and data-centric AI.</li>
+            <li><b>Responsible data applications</b>ESG, finance, built environment, fairness, climate, and health.</li>
+          </ul>
+        </div>
+        <div class="collab-panel">
+          <h3>Possible collaborations</h3>
+          <ul class="collab-list">
+            <li><b>RDBMS and HTAP systems</b>OLTP/HTAP engines, query execution, isolation and consistency, runtime optimization, and provenance.</li>
+            <li><b>Data engineering for AI and science</b>ML-in-DB, multicore/cloud execution, scientific data management, caching, and benchmarking.</li>
+            <li><b>Graph data management at scale</b>Higher-order and temporal graphs, subgraph matching, dynamic graph processing, and GraphRAG indexing.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div><b>Thank you!</b></div>
+        <div>zhengyi.yang@sydney.edu.au<br>Room 350, Building J12</div>
+      </div>
+      <div class="footer">Zhengyi Yang - University of Sydney</div>
+      <div class="slide-number">20 / 20</div>
+    </section>
+  </main>
+
+  <div class="controls" aria-label="Slide controls">
+    <button type="button" id="prev" aria-label="Previous slide">&lt;</button>
+    <span id="counter">01 / 20</span>
+    <button type="button" id="next" aria-label="Next slide">&gt;</button>
+  </div>
+
+  <script>
+    (function () {
+      const titleLogo = document.querySelector(".title-logo");
+      if (titleLogo) {
+        document.querySelectorAll(".slide:not(.title-slide)").forEach((slide) => {
+          if (slide.querySelector(".slide-logo")) {
+            return;
+          }
+          const logo = titleLogo.cloneNode(false);
+          logo.className = "slide-logo";
+          logo.setAttribute("aria-hidden", "true");
+          slide.appendChild(logo);
+        });
+      }
+
+      const slides = Array.from(document.querySelectorAll(".slide"));
+      const counter = document.getElementById("counter");
+      const prev = document.getElementById("prev");
+      const next = document.getElementById("next");
+      const total = slides.length;
+      const slideWidth = 1366;
+      const slideHeight = 768;
+      const viewportPadding = 28;
+
+      function clamp(value) {
+        return Math.max(0, Math.min(total - 1, value));
+      }
+
+      function fitSlideToViewport() {
+        const availableWidth = Math.max(320, window.innerWidth - viewportPadding);
+        const availableHeight = Math.max(180, window.innerHeight - viewportPadding);
+        const scale = Math.min(availableWidth / slideWidth, availableHeight / slideHeight);
+        document.documentElement.style.setProperty("--slide-scale", String(scale));
+      }
+
+      function groupSelectedWork() {
+        document.querySelectorAll(".work-list").forEach((list) => {
+          if (list.dataset.grouped === "true") {
+            return;
+          }
+
+          const items = Array.from(list.children).filter((item) => item.classList.contains("work-item"));
+          const completed = [];
+          const ongoing = [];
+          const other = [];
+
+          items.forEach((item) => {
+            if (item.querySelector(".status.ongoing")) {
+              ongoing.push(item);
+            } else if (item.querySelector(".status.completed")) {
+              completed.push(item);
+            } else {
+              other.push(item);
+            }
+          });
+
+          if (!completed.length && !ongoing.length) {
+            return;
+          }
+
+          const wrapper = document.createElement("div");
+          wrapper.className = "work-groups";
+
+          const makeGroup = (label, groupItems, className) => {
+            if (!groupItems.length) {
+              return;
+            }
+            const group = document.createElement("section");
+            group.className = "work-group " + className;
+            const heading = document.createElement("div");
+            heading.className = "work-group-heading";
+            heading.textContent = label;
+            const groupedList = document.createElement("ul");
+            groupedList.className = "work-group-list";
+            if (list.classList.contains("two-col")) {
+              groupedList.classList.add("two-col");
+            }
+            groupItems.forEach((item) => groupedList.appendChild(item));
+            group.append(heading, groupedList);
+            wrapper.appendChild(group);
+          };
+
+          makeGroup("Completed", completed.concat(other), "completed");
+          makeGroup("Under Submission", ongoing, "ongoing");
+          list.dataset.grouped = "true";
+          list.replaceWith(wrapper);
+        });
+      }
+
+      function show(index, updateHash) {
+        const nextIndex = clamp(index);
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === nextIndex);
+        });
+        counter.textContent = String(nextIndex + 1).padStart(2, "0") + " / " + String(total).padStart(2, "0");
+        document.title = "Slide " + String(nextIndex + 1).padStart(2, "0") + " - From Data Processing to Data Intelligence";
+        prev.disabled = nextIndex === 0;
+        next.disabled = nextIndex === total - 1;
+        if (updateHash) {
+          history.replaceState(null, "", "#/" + (nextIndex + 1));
+        }
+      }
+
+      function fromHash() {
+        const match = location.hash.match(/#\/(\d+)/);
+        return match ? clamp(Number(match[1]) - 1) : 0;
+      }
+
+      groupSelectedWork();
+      fitSlideToViewport();
+
+      prev.addEventListener("click", () => show(fromHash() - 1, true));
+      next.addEventListener("click", () => show(fromHash() + 1, true));
+      window.addEventListener("resize", fitSlideToViewport);
+      window.addEventListener("hashchange", () => show(fromHash(), false));
+      document.addEventListener("keydown", (event) => {
+        const key = event.key;
+        if (key === "ArrowRight" || key === "PageDown" || key === " ") {
+          event.preventDefault();
+          show(fromHash() + 1, true);
+        }
+        if (key === "ArrowLeft" || key === "PageUp" || key === "Backspace") {
+          event.preventDefault();
+          show(fromHash() - 1, true);
+        }
+        if (key === "Home") {
+          event.preventDefault();
+          show(0, true);
+        }
+        if (key === "End") {
+          event.preventDefault();
+          show(total - 1, true);
+        }
+      });
+
+      show(fromHash(), false);
+    })();
+  </script>
+</body>
+</html>
