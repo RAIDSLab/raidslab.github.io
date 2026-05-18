@@ -53,6 +53,7 @@
       width: 100vw;
       height: 100vh;
       padding: 18px;
+      touch-action: none;
     }
 
     .slide {
@@ -2568,6 +2569,11 @@
       const slideWidth = 1366;
       const slideHeight = 768;
       const viewportPadding = 28;
+      let currentIndex = fromHash();
+      const minSwipeDistance = 36;
+      let touchStartX = 0;
+      let touchStartY = 0;
+      let touchStartTime = 0;
 
       function clamp(value) {
         return Math.max(0, Math.min(total - 1, value));
@@ -2636,6 +2642,7 @@
 
       function show(index, updateHash) {
         const nextIndex = clamp(index);
+        currentIndex = nextIndex;
         slides.forEach((slide, i) => {
           slide.classList.toggle("active", i === nextIndex);
         });
@@ -2653,6 +2660,27 @@
         return match ? clamp(Number(match[1]) - 1) : 0;
       }
 
+      function handleSwipeEnd(clientX, clientY, touchTime) {
+        const deltaX = clientX - touchStartX;
+        const deltaY = clientY - touchStartY;
+        if (Math.abs(deltaX) < Math.abs(deltaY)) {
+          return;
+        }
+
+        if (Math.abs(deltaX) >= minSwipeDistance) {
+          const elapsed = Date.now() - touchTime;
+          const speedFactor = Math.max(1, 400 / Math.max(1, elapsed));
+          const normalized = Math.round((Math.abs(deltaX) / minSwipeDistance) * speedFactor);
+          const step = Math.max(1, Math.min(3, normalized));
+
+          if (deltaX < 0) {
+            show(currentIndex + step, true);
+          } else {
+            show(currentIndex - step, true);
+          }
+        }
+      }
+
       groupSelectedWork();
       fitSlideToViewport();
 
@@ -2660,6 +2688,38 @@
       next.addEventListener("click", () => show(fromHash() + 1, true));
       window.addEventListener("resize", fitSlideToViewport);
       window.addEventListener("hashchange", () => show(fromHash(), false));
+      document.querySelector(".deck").addEventListener(
+        "touchstart",
+        (event) => {
+          if (event.touches.length !== 1) {
+            return;
+          }
+          touchStartX = event.touches[0].clientX;
+          touchStartY = event.touches[0].clientY;
+          touchStartTime = Date.now();
+        },
+        { passive: true }
+      );
+      document.querySelector(".deck").addEventListener("touchmove", (event) => {
+        if (!touchStartTime) {
+          return;
+        }
+        const touch = event.touches[0];
+        const deltaX = Math.abs(touch.clientX - touchStartX);
+        const deltaY = Math.abs(touch.clientY - touchStartY);
+        if (deltaX > 8 && deltaX > deltaY) {
+          event.preventDefault();
+        }
+      });
+      document.querySelector(".deck").addEventListener("touchend", (event) => {
+        if (!touchStartTime || event.changedTouches.length !== 1) {
+          touchStartTime = 0;
+          return;
+        }
+        const touch = event.changedTouches[0];
+        handleSwipeEnd(touch.clientX, touch.clientY, touchStartTime);
+        touchStartTime = 0;
+      });
       document.addEventListener("keydown", (event) => {
         const key = event.key;
         if (key === "ArrowRight" || key === "PageDown" || key === " ") {
