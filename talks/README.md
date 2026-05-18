@@ -1,8 +1,11 @@
 # Talks
 
-This folder stores materials and assets for talks.
+This folder is the public web-serving copy for shared talk materials.
 
-- `talks/` is the repository-level archive for talk materials (outline, slides source, PDFs).
-- `public/talks/` is the web-serving directory for direct-access static assets.
-- Keep the same file naming convention under both places when a talk needs both an internal copy and a shareable URL.
-- Only keep files under `talks/` that should be tracked for reuse, notes, and long-term storage.
+- Use `talks/` for source maintenance and long-term storage.
+- Copy final/approved files into `public/talks/` before sharing via direct links.
+
+Published files for this talk:
+- `usyd-database-research-talk-outline.md`
+- `usyd-database-research-talk-slides.html`
+- `usyd-database-research-talk-slides.pdf`
