@@ -2464,7 +2464,7 @@
             <path class="loop-segment" d="M 272 292 C 302 270 332 270 362 292" marker-end="url(#loop-arrow)"></path>
             <path class="loop-segment" d="M 364 332 C 332 354 302 354 270 332" marker-end="url(#loop-arrow)"></path>
             <text class="loop-label" x="96" y="214">capabilities</text>
-            <text class="loop-label" x="92" y="252">requirements</text>
+            <text class="loop-label" x="210" y="246">requirements</text>
             <text class="loop-label" x="430" y="238">reasoning</text>
             <text class="loop-label" x="500" y="198">domain context</text>
             <text class="loop-label" x="318" y="260">deployment</text>
@@ -3119,9 +3119,12 @@
       const viewportPadding = 28;
       let currentIndex = fromHash();
       const minSwipeDistance = 36;
+      const swipeCooldownMs = 450;
       let touchStartX = 0;
       let touchStartY = 0;
       let touchStartTime = 0;
+      let swipeHandled = false;
+      let lastSwipeTime = 0;
 
       slides.forEach((slide, index) => {
         const number = slide.querySelector(".slide-number");
@@ -3216,6 +3219,11 @@
       }
 
       function handleSwipeEnd(clientX, clientY) {
+        const now = Date.now();
+        if (swipeHandled || now - lastSwipeTime < swipeCooldownMs) {
+          return;
+        }
+
         const deltaX = clientX - touchStartX;
         const deltaY = clientY - touchStartY;
         if (Math.abs(deltaX) < Math.abs(deltaY)) {
@@ -3223,6 +3231,8 @@
         }
 
         if (Math.abs(deltaX) >= minSwipeDistance) {
+          swipeHandled = true;
+          lastSwipeTime = now;
           if (deltaX < 0) {
             show(currentIndex + 1, true);
           } else {
@@ -3247,6 +3257,7 @@
           touchStartX = event.touches[0].clientX;
           touchStartY = event.touches[0].clientY;
           touchStartTime = Date.now();
+          swipeHandled = false;
         },
         { passive: true }
       );
@@ -3272,6 +3283,7 @@
       });
       document.querySelector(".deck").addEventListener("touchcancel", () => {
         touchStartTime = 0;
+        swipeHandled = false;
       });
       document.addEventListener("keydown", (event) => {
         const key = event.key;
