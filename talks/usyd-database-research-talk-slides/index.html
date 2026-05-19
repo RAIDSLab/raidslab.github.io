@@ -3215,7 +3215,7 @@
         return match ? clamp(Number(match[1]) - 1) : 0;
       }
 
-      function handleSwipeEnd(clientX, clientY, touchTime) {
+      function handleSwipeEnd(clientX, clientY) {
         const deltaX = clientX - touchStartX;
         const deltaY = clientY - touchStartY;
         if (Math.abs(deltaX) < Math.abs(deltaY)) {
@@ -3223,15 +3223,10 @@
         }
 
         if (Math.abs(deltaX) >= minSwipeDistance) {
-          const elapsed = Date.now() - touchTime;
-          const speedFactor = Math.max(1, 400 / Math.max(1, elapsed));
-          const normalized = Math.round((Math.abs(deltaX) / minSwipeDistance) * speedFactor);
-          const step = Math.max(1, Math.min(3, normalized));
-
           if (deltaX < 0) {
-            show(currentIndex + step, true);
+            show(currentIndex + 1, true);
           } else {
-            show(currentIndex - step, true);
+            show(currentIndex - 1, true);
           }
         }
       }
@@ -3272,7 +3267,10 @@
           return;
         }
         const touch = event.changedTouches[0];
-        handleSwipeEnd(touch.clientX, touch.clientY, touchStartTime);
+        handleSwipeEnd(touch.clientX, touch.clientY);
+        touchStartTime = 0;
+      });
+      document.querySelector(".deck").addEventListener("touchcancel", () => {
         touchStartTime = 0;
       });
       document.addEventListener("keydown", (event) => {
