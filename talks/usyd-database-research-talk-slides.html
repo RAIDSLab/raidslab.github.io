@@ -732,6 +732,7 @@
       fill: var(--muted);
       font-family: var(--mono);
       font-size: 13px;
+      text-anchor: middle;
       paint-order: stroke;
       stroke: #fff;
       stroke-width: 7px;
@@ -1612,6 +1613,129 @@
       text-align: center;
     }
 
+    .merged-fellowship .fellowship-layout {
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 22px;
+      margin-top: 18px;
+    }
+
+    .merged-fellowship .fellowship-card {
+      padding: 24px 24px 22px;
+    }
+
+    .merged-fellowship .fellowship-card-title {
+      font-size: 30px;
+      line-height: 1.07;
+      margin-bottom: 14px;
+    }
+
+    .merged-fellowship .fellowship-card-copy {
+      font-size: 16px;
+      line-height: 1.32;
+      margin-bottom: 14px;
+    }
+
+    .merged-fellowship .fellowship-aims {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .merged-fellowship .fellowship-aim {
+      border: 1px solid var(--faint);
+      border-left: 4px solid var(--teal);
+      background: rgba(20, 123, 121, 0.08);
+      min-height: 58px;
+      padding: 8px 10px;
+    }
+
+    .merged-fellowship .fellowship-aim:nth-child(2) {
+      border-left-color: var(--gold);
+      background: rgba(166, 122, 42, 0.08);
+    }
+
+    .merged-fellowship .fellowship-aim:nth-child(3) {
+      border-left-color: var(--blue);
+      background: rgba(34, 83, 120, 0.08);
+    }
+
+    .merged-fellowship .fellowship-aim b {
+      display: block;
+      color: #17222b;
+      font-size: 14px;
+      line-height: 1.15;
+      margin-bottom: 4px;
+    }
+
+    .merged-fellowship .fellowship-aim span {
+      color: var(--muted);
+      display: block;
+      font-size: 12px;
+      line-height: 1.18;
+    }
+
+    .merged-fellowship .fellowship-meta-row {
+      grid-template-columns: 92px 1fr;
+      padding: 9px 0;
+    }
+
+    .merged-fellowship .fellowship-meta-row span {
+      font-size: 14px;
+      line-height: 1.24;
+    }
+
+    .merged-fellowship .fellowship-thesis {
+      padding: 13px 16px;
+      font-size: 18px;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .merged-fellowship .fellowship-callouts {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .merged-fellowship .fellowship-callout {
+      min-height: 82px;
+      padding: 10px 12px;
+    }
+
+    .merged-fellowship .fellowship-callout b {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .merged-fellowship .fellowship-callout span {
+      font-size: 12px;
+      line-height: 1.22;
+    }
+
+    .merged-fellowship h3 {
+      margin-bottom: 7px;
+    }
+
+    .merged-fellowship .fellowship-stage-grid {
+      gap: 9px;
+      grid-template-columns: 1fr 20px 1fr 20px 1fr;
+    }
+
+    .merged-fellowship .fellowship-stage {
+      min-height: 104px;
+      padding: 10px 11px;
+    }
+
+    .merged-fellowship .fellowship-stage b {
+      font-size: 16px;
+    }
+
+    .merged-fellowship .fellowship-stage span {
+      font-size: 12px;
+      line-height: 1.22;
+    }
+
     .matrix {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -2230,12 +2354,12 @@
             <path class="loop-segment" d="M 512 306 C 486 246 442 198 398 156" marker-end="url(#loop-arrow)"></path>
             <path class="loop-segment" d="M 272 292 C 302 270 332 270 362 292" marker-end="url(#loop-arrow)"></path>
             <path class="loop-segment" d="M 364 332 C 332 354 302 354 270 332" marker-end="url(#loop-arrow)"></path>
-            <text class="loop-label" x="42" y="214">capabilities</text>
-            <text class="loop-label" x="42" y="252">requirements</text>
-            <text class="loop-label" x="512" y="232">reasoning</text>
-            <text class="loop-label" x="438" y="194">domain context</text>
-            <text class="loop-label" x="250" y="258">deployment</text>
-            <text class="loop-label" x="264" y="374">constraints</text>
+            <text class="loop-label" x="96" y="214">capabilities</text>
+            <text class="loop-label" x="92" y="252">requirements</text>
+            <text class="loop-label" x="430" y="238">reasoning</text>
+            <text class="loop-label" x="500" y="198">domain context</text>
+            <text class="loop-label" x="318" y="260">deployment</text>
+            <text class="loop-label" x="318" y="374">constraints</text>
           </svg>
           <div class="loop-node systems"><b>Scalable Data Systems</b><span>Algorithms, indexes, runtimes, and hardware-aware processing</span></div>
           <div class="loop-node understanding"><b>Responsible Data Intelligence</b><span>Retrieval, reasoning, evidence, learning, and verification</span></div>
@@ -2588,22 +2712,30 @@
       <div class="slide-number">14 / 21</div>
     </section>
 
-    <section class="slide fellowship-slide">
-      <div class="kicker">ARC Early-Career Industry Fellowship</div>
-      <h2>ESG Data Intelligence in Practice</h2>
+    <section class="slide fellowship-slide merged-fellowship">
+      <div class="kicker">ARC Early-Career Industry Fellowship · IE250100264</div>
+      <h2>AI-Empowered ESG Data Analytics</h2>
       <div class="fellowship-layout">
         <div class="fellowship-card">
-          <div class="fellowship-badge">Industry Project</div>
-          <div class="fellowship-card-title">Turning ESG evidence into governed decision workflows</div>
-          <div class="fellowship-card-copy">With Sigma Trading Management, the project studies how ESG standards, reports, metrics, and enterprise evidence can be connected for reliable AI-supported decisions.</div>
+          <div class="fellowship-badge">Active ARC Project</div>
+          <div class="fellowship-card-title">Responsible investment from reliable ESG evidence</div>
+          <div class="fellowship-card-copy">The project leverages advanced AI and data management to improve ESG risk assessment, performance forecasting, and report generation.</div>
           <div class="fellowship-meta">
-            <div class="fellowship-meta-row"><b>Partner</b><span>Sigma Trading Management</span></div>
-            <div class="fellowship-meta-row"><b>Focus</b><span>Green, secure, compliant, and evidence-grounded LLM utilisation for ESG workflows</span></div>
+            <div class="fellowship-meta-row"><b>Scheme</b><span>Early Career Industry Fellowships</span></div>
+            <div class="fellowship-meta-row"><b>Lead</b><span>Dr Zhengyi Yang</span></div>
+            <div class="fellowship-meta-row"><b>FoR</b><span>4605 - Data Management and Data Science</span></div>
           </div>
         </div>
         <div class="fellowship-main">
-          <div class="fellowship-thesis">ESG is a data-management problem before it is an AI problem: claims must be linked to standards, sources, evidence chains, model outputs, and decision context.</div>
+          <div class="fellowship-thesis">ESG analysis is a data-management problem before it is an AI problem: complex data, evolving ESG demands, risk signals, forecasts, and reports must become timely, objective, and auditable decision support.</div>
+          <div class="fellowship-aims" aria-label="ARC project aims">
+            <div class="fellowship-aim"><b>Assess</b><span>Improve ESG risk analysis from complex, mixed-source data.</span></div>
+            <div class="fellowship-aim"><b>Forecast</b><span>Surface performance signals for responsible investment.</span></div>
+            <div class="fellowship-aim"><b>Generate</b><span>Produce transparent reports backed by auditable evidence.</span></div>
+          </div>
           <div class="fellowship-callouts">
+            <div class="fellowship-callout"><b>National need</b><span>Reliable ESG insights support sustainable investment, corporate responsibility, and regulatory compliance.</span></div>
+            <div class="fellowship-callout"><b>Research output</b><span>More accurate, accessible, timely, and objective ESG analysis for investors and companies.</span></div>
             <div class="fellowship-callout"><b>Data science challenges</b><span>Availability, quality, integration, traceability, timeliness, privacy, and cross-standard semantics.</span></div>
             <div class="fellowship-callout"><b>Systems agenda</b><span>ESG knowledge layer, claim-level provenance, retrieval/reasoning guardrails, and workflow evaluation.</span></div>
           </div>
@@ -2876,6 +3008,13 @@
       let touchStartX = 0;
       let touchStartY = 0;
       let touchStartTime = 0;
+
+      slides.forEach((slide, index) => {
+        const number = slide.querySelector(".slide-number");
+        if (number) {
+          number.textContent = String(index + 1).padStart(2, "0") + " / " + String(total).padStart(2, "0");
+        }
+      });
 
       function clamp(value) {
         return Math.max(0, Math.min(total - 1, value));
