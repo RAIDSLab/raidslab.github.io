@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>From Data Processing to Data Intelligence</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='0' y='0' width='64' height='64' rx='12' fill='%23071113'/%3E%3Ctext x='32' y='30' text-anchor='middle' font-family='Helvetica Neue, Arial, sans-serif' font-size='18.6' font-weight='900' letter-spacing='-1.25' fill='%23f4fbf8'%3ER%3Ctspan fill='%232dd4bf'%3EA%3C/tspan%3EIDS%3C/text%3E%3Ctext x='32' y='47' text-anchor='middle' font-family='Helvetica Neue, Arial, sans-serif' font-size='13.5' font-weight='800' letter-spacing='0' fill='%23f4fbf8'%3ELab%3C/text%3E%3C/svg%3E">
   <style>
     :root {
       --slide-width: 1366px;
@@ -1011,6 +1012,29 @@
       min-height: 42px;
       padding: 8px 10px 7px;
       font-size: 14px;
+    }
+
+    .engine-slide .engine-related-work {
+      margin-top: 7px;
+    }
+
+    .engine-slide .work-groups {
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+      margin-top: 7px;
+    }
+
+    .engine-slide .work-group {
+      padding: 8px 10px;
+    }
+
+    .engine-slide .work-group-heading {
+      font-size: 11px;
+      margin-bottom: 6px;
+    }
+
+    .engine-slide .work-group-list {
+      gap: 6px;
     }
 
     .engine-slide .related-work-row {
@@ -2034,6 +2058,7 @@
         <div>
           <h3>Selected work</h3>
           <ul class="work-list two-col">
+            <li class="work-item"><span class="work-title">Higher-order graph analytics</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">Springer monograph, in press</span></span></li>
             <li class="work-item"><span class="work-title">Nucleus decomposition</span><span class="badges"><span class="status completed">completed</span><span class="venue">SIGMOD 2026</span></span></li>
             <li class="work-item"><span class="work-title">Diversified graph pattern matching</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.14778/3785297.3785310">VLDB 2026</a></span></li>
             <li class="work-item"><span class="work-title">Hypergraph pattern matching</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2512.10621">ICDE 2026</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/icde55515.2023.00160">ICDE 2023</a></span></li>
@@ -2041,9 +2066,8 @@
             <li class="work-item"><span class="work-title">Constrained path analytics</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/icde65448.2025.00262">ICDE 2025</a></span></li>
             <li class="work-item"><span class="work-title">Clique cover and dense subgraph</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3696410.3714897">WWW 2025</a></span></li>
             <li class="work-item"><span class="work-title">Temporal graph ranking and analytics</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3589334.3645438">WWW 2024</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/s11280-024-01259-2">WWWJ 2024</a></span></li>
-            <li class="work-item"><span class="work-title">Nuclear decomposition</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">SIGMOD 2027</span></span></li>
-            <li class="work-item"><span class="work-title">Higher-order graph analytics</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">Springer monograph, in press</span></span></li>
-            <li class="work-item"><span class="work-title">Hypergraph core decomposition</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">VLDBJ 2026</span></span></li>
+            <li class="work-item"><span class="work-title">Nucleus and nuclear decomposition</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">SIGMOD 2027</span><span class="venue">VLDB 2027</span></span></li>
+            <li class="work-item"><span class="work-title">Hypergraph core decomposition and maintenance</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">ICDE 2027</span><span class="venue">VLDBJ</span></span></li>
             <li class="work-item"><span class="work-title">Reachability indexing and querying</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">EDBT 2026 under revision</span></span></li>
           </ul>
         </div>
@@ -2091,10 +2115,10 @@
               <li>Reports <strong>13.7M tpmC</strong> and <strong>30M tpm</strong> on <strong>TPC-C</strong> using one machine, with <strong>27x</strong> improvement over PostgreSQL.</li>
             </ul>
           </div>
-          <div class="related-work-row">
-            <span class="work-title">Batch-dynamic high-dimensional kNN join</span>
-            <span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-981-96-0814-0_6">ADMA 2024 Best Student Paper</a></span>
-          </div>
+          <ul class="work-list engine-related-work">
+            <li class="work-item"><span class="work-title">Batch-dynamic high-dimensional kNN join</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-981-96-0814-0_6">ADMA 2024 Best Student Paper</a></span></li>
+            <li class="work-item"><span class="work-title">Fully dynamic high-dimensional kNN joins</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">VLDBJ</span></span></li>
+          </ul>
         </div>
       </div>
       <div class="footer">Zhengyi Yang - University of Sydney</div>
@@ -2131,6 +2155,7 @@
             <li class="work-item"><span class="work-title">GPU-accelerated top-k query processing</span><span class="badges"><span class="status completed">completed</span><span class="venue">HPDC 2026</span></span></li>
             <li class="work-item"><span class="work-title">Architecture-aware database benchmarking</span><span class="badges"><span class="status completed">completed</span><span class="venue">VLDB ADMS 2025</span></span></li>
             <li class="work-item"><span class="work-title">FPGA-accelerated graph random walks</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">SIGMOD 2027</span></span></li>
+            <li class="work-item"><span class="work-title">SIMD set-intersection benchmarking</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">SIGMOD 2027</span></span></li>
             <li class="work-item"><span class="work-title">Out-of-core vector search and indexing</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2512.22838">EuroSys 2027</a></span></li>
             <li class="work-item"><span class="work-title">Unified-memory DataFrame processing</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">VLDB 2026 Demo</span></span></li>
           </ul>
@@ -2308,10 +2333,12 @@
             <div class="panel tint-wine"><div class="panel-title">Finance</div><div class="panel-copy">Noisy behavior, robust signals, fraud detection.</div></div>
           </div>
           <h3 style="margin-top: 24px;">Selected work</h3>
-          <ul class="work-list">
+          <ul class="work-list two-col">
             <li class="work-item"><span class="work-title">Agent-based ESG report analysis</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2603.10646">ICSA 2026</a></span></li>
             <li class="work-item"><span class="work-title">Finance analysis and fraud detection</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/bigcomp68355.2026.00019">BigComp 2026</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-981-95-3459-3_3">ADMA 2025</a></span></li>
-            <li class="work-item"><span class="work-title">ESG reporting and knowledge graph construction</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2511.21712">ICDM Demo 2026</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2512.01289">ICKG 2026</a></span></li>
+            <li class="work-item"><span class="work-title">ESG data management survey</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">The Innovation</span></span></li>
+            <li class="work-item"><span class="work-title">Standard-aware ESG disclosure analysis</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2511.21712">ICDM Demo 2026</a></span></li>
+            <li class="work-item"><span class="work-title">ESG knowledge graph construction</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2512.01289">ICKG 2026</a></span></li>
           </ul>
         </div>
       </div>
