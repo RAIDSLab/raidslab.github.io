@@ -1620,13 +1620,15 @@
     }
 
     .merged-fellowship .fellowship-card {
+      align-self: start;
+      height: 513px;
       padding: 24px 24px 22px;
     }
 
     .merged-fellowship .fellowship-card-title {
-      font-size: 30px;
-      line-height: 1.07;
-      margin-bottom: 14px;
+      font-size: 28px;
+      line-height: 1.06;
+      margin-bottom: 12px;
     }
 
     .merged-fellowship .fellowship-card-copy {
@@ -1635,29 +1637,53 @@
       margin-bottom: 14px;
     }
 
+    .merged-fellowship .fellowship-context {
+      border: 1px solid rgba(246, 239, 228, 0.16);
+      background: rgba(255, 255, 255, 0.055);
+      display: grid;
+      gap: 10px;
+      margin-top: 2px;
+      padding: 12px 14px;
+    }
+
+    .merged-fellowship .fellowship-context-row b {
+      color: #c6b17c;
+      display: block;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      line-height: 1.2;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .merged-fellowship .fellowship-context-row span {
+      color: #e4ecee;
+      display: block;
+      font-size: 13px;
+      line-height: 1.28;
+    }
+
+    .merged-fellowship .fellowship-main {
+      gap: 9px;
+    }
+
     .merged-fellowship .fellowship-aims {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 8px;
-      margin-bottom: 10px;
+      grid-template-columns: 112px repeat(3, minmax(0, 1fr));
+      gap: 0;
+      border: 1px solid var(--faint);
+      border-left: 5px solid var(--teal);
+      background: #fff;
+      margin-bottom: 0;
     }
 
     .merged-fellowship .fellowship-aim {
-      border: 1px solid var(--faint);
-      border-left: 4px solid var(--teal);
-      background: rgba(20, 123, 121, 0.08);
+      border: 0;
+      border-left: 1px solid var(--faint);
+      background: transparent;
       min-height: 58px;
       padding: 8px 10px;
-    }
-
-    .merged-fellowship .fellowship-aim:nth-child(2) {
-      border-left-color: var(--gold);
-      background: rgba(166, 122, 42, 0.08);
-    }
-
-    .merged-fellowship .fellowship-aim:nth-child(3) {
-      border-left-color: var(--blue);
-      background: rgba(34, 83, 120, 0.08);
     }
 
     .merged-fellowship .fellowship-aim b {
@@ -1675,6 +1701,21 @@
       line-height: 1.18;
     }
 
+    .merged-fellowship .fellowship-section-label {
+      align-items: center;
+      background: rgba(23, 34, 43, 0.035);
+      color: var(--muted);
+      display: flex;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 800;
+      justify-content: center;
+      letter-spacing: 0.12em;
+      line-height: 1.25;
+      padding: 8px 9px;
+      text-transform: uppercase;
+    }
+
     .merged-fellowship .fellowship-meta-row {
       grid-template-columns: 92px 1fr;
       padding: 9px 0;
@@ -1689,18 +1730,37 @@
       padding: 13px 16px;
       font-size: 18px;
       line-height: 1.25;
-      margin-bottom: 10px;
+      margin-bottom: 0;
+    }
+
+    .merged-fellowship .fellowship-evidence-panel {
+      border: 1px solid var(--faint);
+      background: #fff;
+    }
+
+    .merged-fellowship .fellowship-evidence-panel .fellowship-section-label {
+      border-bottom: 1px solid var(--faint);
+      justify-content: flex-start;
+      min-height: 30px;
+      padding-left: 12px;
     }
 
     .merged-fellowship .fellowship-callouts {
       grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-      margin-bottom: 10px;
+      gap: 0;
+      margin-bottom: 0;
     }
 
     .merged-fellowship .fellowship-callout {
-      min-height: 82px;
-      padding: 10px 12px;
+      border: 0;
+      border-top: 1px solid var(--faint);
+      background: rgba(255, 255, 255, 0.76);
+      min-height: 74px;
+      padding: 9px 12px;
+    }
+
+    .merged-fellowship .fellowship-callout:nth-child(odd) {
+      border-right: 1px solid var(--faint);
     }
 
     .merged-fellowship .fellowship-callout b {
@@ -1714,17 +1774,26 @@
     }
 
     .merged-fellowship h3 {
-      margin-bottom: 7px;
+      color: var(--muted);
+      font-size: 19px;
+      letter-spacing: 0.06em;
+      margin: 1px 0 -1px;
     }
 
     .merged-fellowship .fellowship-stage-grid {
-      gap: 9px;
-      grid-template-columns: 1fr 20px 1fr 20px 1fr;
+      border: 1px solid var(--faint);
+      background: #fff;
+      gap: 8px;
+      grid-template-columns: 1fr 18px 1fr 18px 1fr;
+      padding: 8px;
     }
 
     .merged-fellowship .fellowship-stage {
-      min-height: 104px;
-      padding: 10px 11px;
+      border: 0;
+      border-left: 4px solid var(--blue);
+      background: rgba(246, 248, 249, 0.86);
+      min-height: 96px;
+      padding: 9px 10px;
     }
 
     .merged-fellowship .fellowship-stage b {
@@ -2518,8 +2587,8 @@
           <ul class="work-list two-col">
             <li class="work-item"><span class="work-title">Out-of-core graph processing system</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3769795">SIGMOD 2026</a></span></li>
             <li class="work-item"><span class="work-title">GPU-accelerated vector index construction</span><span class="badges"><span class="status completed">completed</span><span class="venue">SIGMOD 2026</span></span></li>
-            <li class="work-item"><span class="work-title">GPU-accelerated top-k query processing</span><span class="badges"><span class="status completed">completed</span><span class="venue">HPDC 2026</span></span></li>
-            <li class="work-item"><span class="work-title">Architecture-aware database benchmarking</span><span class="badges"><span class="status completed">completed</span><span class="venue">VLDB ADMS 2025</span></span></li>
+            <li class="work-item"><span class="work-title">GPU-accelerated range top-k query</span><span class="badges"><span class="status completed">completed</span><span class="venue">HPDC 2026</span></span></li>
+            <li class="work-item"><span class="work-title">Database benchmarking on RISC-V</span><span class="badges"><span class="status completed">completed</span><span class="venue">VLDB ADMS 2025</span></span></li>
             <li class="work-item"><span class="work-title">FPGA-accelerated graph random walks</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">SIGMOD 2027</span></span></li>
             <li class="work-item"><span class="work-title">SIMD set-intersection benchmarking</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">SIGMOD 2027</span></span></li>
             <li class="work-item"><span class="work-title">Out-of-core vector search and indexing</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2512.22838">EuroSys 2027</a></span></li>
@@ -2603,7 +2672,7 @@
           <h3>Representative topics</h3>
           <ul class="topic-list">
             <li><strong>Learning</strong> for query optimization</li>
-            <li><strong>Learning</strong> for graph and temporal analytics</li>
+            <li><strong>Graph Neural Network</strong> (GNN)</li>
             <li><strong>Representation learning</strong> over structured data</li>
             <li><strong>Deployment-aware</strong> learned components</li>
           </ul>
@@ -2718,8 +2787,12 @@
       <div class="fellowship-layout">
         <div class="fellowship-card">
           <div class="fellowship-badge">Active ARC Project</div>
-          <div class="fellowship-card-title">Responsible investment from reliable ESG evidence</div>
+          <div class="fellowship-card-title">AI-Empowered ESG Data Analytics in Responsible Investment</div>
           <div class="fellowship-card-copy">The project leverages advanced AI and data management to improve ESG risk assessment, performance forecasting, and report generation.</div>
+          <div class="fellowship-context">
+            <div class="fellowship-context-row"><b>Background</b><span>ESG links environmental impact, social responsibility, and governance quality to investment, compliance, and accountability.</span></div>
+            <div class="fellowship-context-row"><b>Significance</b><span>Reliable data infrastructure makes ESG claims traceable, comparable, and actionable for responsible investment.</span></div>
+          </div>
           <div class="fellowship-meta">
             <div class="fellowship-meta-row"><b>Scheme</b><span>Early Career Industry Fellowships</span></div>
             <div class="fellowship-meta-row"><b>Lead</b><span>Dr Zhengyi Yang</span></div>
@@ -2727,17 +2800,21 @@
           </div>
         </div>
         <div class="fellowship-main">
-          <div class="fellowship-thesis">ESG analysis is a data-management problem before it is an AI problem: complex data, evolving ESG demands, risk signals, forecasts, and reports must become timely, objective, and auditable decision support.</div>
+          <div class="fellowship-thesis">ESG analysis is a data-management problem before it is an AI problem: fragmented standards, disclosures, market signals, enterprise evidence, risk signals, forecasts, and reports must become timely, objective, and auditable decision support.</div>
           <div class="fellowship-aims" aria-label="ARC project aims">
+            <div class="fellowship-section-label">Project aims</div>
             <div class="fellowship-aim"><b>Assess</b><span>Improve ESG risk analysis from complex, mixed-source data.</span></div>
             <div class="fellowship-aim"><b>Forecast</b><span>Surface performance signals for responsible investment.</span></div>
             <div class="fellowship-aim"><b>Generate</b><span>Produce transparent reports backed by auditable evidence.</span></div>
           </div>
-          <div class="fellowship-callouts">
-            <div class="fellowship-callout"><b>National need</b><span>Reliable ESG insights support sustainable investment, corporate responsibility, and regulatory compliance.</span></div>
-            <div class="fellowship-callout"><b>Research output</b><span>More accurate, accessible, timely, and objective ESG analysis for investors and companies.</span></div>
-            <div class="fellowship-callout"><b>Data science challenges</b><span>Availability, quality, integration, traceability, timeliness, privacy, and cross-standard semantics.</span></div>
-            <div class="fellowship-callout"><b>Systems agenda</b><span>ESG knowledge layer, claim-level provenance, retrieval/reasoning guardrails, and workflow evaluation.</span></div>
+          <div class="fellowship-evidence-panel">
+            <div class="fellowship-section-label">Need -> output -> data -> system</div>
+            <div class="fellowship-callouts">
+              <div class="fellowship-callout"><b>National need</b><span>Reliable ESG insights support sustainable investment, corporate responsibility, and regulatory compliance.</span></div>
+              <div class="fellowship-callout"><b>Research output</b><span>More accurate, accessible, timely, and objective ESG analysis for investors and companies.</span></div>
+              <div class="fellowship-callout"><b>Data science challenges</b><span>Availability, quality, integration, traceability, timeliness, privacy, and cross-standard semantics.</span></div>
+              <div class="fellowship-callout"><b>Systems agenda</b><span>ESG knowledge layer, claim-level provenance, retrieval/reasoning guardrails, and workflow evaluation.</span></div>
+            </div>
           </div>
           <h3>Governed ESG Decision Loop</h3>
           <div class="fellowship-stage-grid">
