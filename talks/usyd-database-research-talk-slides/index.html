@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Building Systems for Scalable and Responsible Data Management: The Data-Intelligence Loop</title>
+  <title>Building Systems for Scalable and Responsible Data Management: The Data Intelligence Loop</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='0' y='0' width='64' height='64' rx='12' fill='%23071113'/%3E%3Ctext x='32' y='30' text-anchor='middle' font-family='Helvetica Neue, Arial, sans-serif' font-size='18.6' font-weight='900' letter-spacing='-1.25' fill='%23f4fbf8'%3ER%3Ctspan fill='%232dd4bf'%3EA%3C/tspan%3EIDS%3C/text%3E%3Ctext x='32' y='47' text-anchor='middle' font-family='Helvetica Neue, Arial, sans-serif' font-size='13.5' font-weight='800' letter-spacing='0' fill='%23f4fbf8'%3ELab%3C/text%3E%3C/svg%3E">
   <style>
     :root {
@@ -54,7 +54,7 @@
       width: 100vw;
       height: 100vh;
       padding: 18px;
-      touch-action: none;
+      touch-action: manipulation;
     }
 
     .slide {
@@ -953,6 +953,16 @@
       margin-top: 18px;
     }
 
+    .paper-spotlight-label {
+      display: inline-block;
+      margin-bottom: 7px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
     .paper-spotlight-title {
       font-family: var(--serif);
       font-size: 25px;
@@ -980,6 +990,11 @@
     .engine-slide .paper-spotlight {
       padding: 12px 14px;
       margin-top: 12px;
+    }
+
+    .engine-slide .paper-spotlight-label {
+      margin-bottom: 5px;
+      font-size: 10px;
     }
 
     .engine-slide .paper-spotlight-title {
@@ -1031,8 +1046,11 @@
     }
 
     .engine-slide .work-group-heading {
-      font-size: 10px;
-      margin-bottom: 5px;
+      min-height: 18px;
+      align-items: center;
+      font-size: 12px;
+      line-height: 1;
+      margin-bottom: 6px;
     }
 
     .engine-slide .work-group-list {
@@ -1194,6 +1212,35 @@
       line-height: 1.26;
     }
 
+    .llm-slide .pipeline {
+      margin-top: 8px;
+      gap: 6px;
+    }
+
+    .llm-slide .pipeline .step {
+      min-height: 68px;
+      padding: 8px 9px;
+    }
+
+    .llm-slide .step-num {
+      font-size: 11px;
+      margin-bottom: 4px;
+    }
+
+    .llm-slide .step-title {
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    .llm-slide .step-copy {
+      font-size: 12px;
+      line-height: 1.2;
+    }
+
+    .llm-slide .pipeline + h3 {
+      margin-top: 12px !important;
+    }
+
     .fit-agenda .grid-2 {
       margin-top: 18px !important;
     }
@@ -1328,7 +1375,7 @@
 
     .data-dimensions {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 8px;
       margin: 8px 0 14px;
     }
@@ -1336,13 +1383,13 @@
     .data-dimension {
       border: 1px solid var(--faint);
       background: #fff;
-      padding: 10px 9px;
-      min-height: 86px;
+      padding: 9px 8px;
+      min-height: 88px;
     }
 
     .data-dimension b {
       display: block;
-      font-size: 14px;
+      font-size: 13px;
       margin-bottom: 6px;
       line-height: 1.15;
     }
@@ -1350,8 +1397,8 @@
     .data-dimension span {
       display: block;
       color: var(--muted);
-      font-size: 13px;
-      line-height: 1.28;
+      font-size: 12px;
+      line-height: 1.22;
     }
 
     a.venue:hover {
@@ -1408,6 +1455,24 @@
 
     .fellowship-slide h2 {
       max-width: 1120px;
+    }
+
+    .fellowship-title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .fellowship-title-icon {
+      width: 54px;
+      height: 54px;
+      flex: 0 0 auto;
+      color: var(--green);
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     .fellowship-layout {
@@ -1821,6 +1886,67 @@
       padding: 13px;
       min-height: 94px;
       background: #fff;
+    }
+
+    .fairness-slide .content-layout {
+      margin-top: 18px;
+    }
+
+    .fairness-slide .problem {
+      font-size: 20px;
+      line-height: 1.34;
+      padding-bottom: 14px;
+      margin-bottom: 14px;
+    }
+
+    .fairness-slide .topic-list {
+      gap: 8px;
+    }
+
+    .fairness-slide .topic-list li {
+      font-size: 17px;
+      line-height: 1.26;
+    }
+
+    .fairness-slide .matrix {
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .fairness-slide .matrix .cell {
+      min-height: 70px;
+      padding: 10px 11px;
+    }
+
+    .fairness-slide .matrix .cell b {
+      font-size: 15px;
+    }
+
+    .fairness-slide .matrix .cell .small {
+      font-size: 13px;
+      line-height: 1.25;
+    }
+
+    .fairness-slide .work-list {
+      gap: 8px;
+    }
+
+    .fairness-slide .work-item {
+      min-height: 42px;
+      padding: 8px 9px;
+      font-size: 15px;
+      line-height: 1.22;
+    }
+
+    .fairness-slide .work-title {
+      margin-bottom: 5px;
+    }
+
+    .fairness-slide .status,
+    .fairness-slide .venue {
+      min-height: 18px;
+      padding: 2px 6px;
+      font-size: 10.5px;
     }
 
     .pillars {
@@ -2327,7 +2453,7 @@
       <div class="title-wrap">
         <h1>
           <span class="title-main">Building Systems for Scalable and<br>Responsible Data Management</span>
-          <span class="title-sub">The Data-Intelligence Loop</span>
+          <span class="title-sub">The Data Intelligence Loop</span>
         </h1>
         <div class="title-meta">
           <div>
@@ -2448,7 +2574,7 @@
     </section>
 
     <section class="slide no-kicker feedback-slide">
-      <h2>The Feedback Loop</h2>
+      <h2>The Data Intelligence Loop</h2>
       <div class="loop-layout">
         <div class="loop-diagram">
           <svg class="loop-svg" viewBox="0 0 620 420" aria-hidden="true">
@@ -2473,18 +2599,17 @@
           <div class="loop-node systems"><b>Scalable Data Systems</b><span>Algorithms, indexes, runtimes, and hardware-aware processing</span></div>
           <div class="loop-node understanding"><b>Responsible Data Intelligence</b><span>Retrieval, reasoning, evidence, learning, and verification</span></div>
           <div class="loop-node impact"><b>Data for Real-World Applications</b><span>ESG, finance, workforce, fairness, climate, health</span></div>
-          <div class="loop-center">feedback<br>loop</div>
         </div>
         <div>
           <div class="loop-note">
             <h3>Bottom-up</h3>
-            <div class="panel-title">Capabilities accumulate</div>
-            <div class="panel-copy">Scalable systems make complex data usable; data understanding builds retrieval, reasoning, and learning on top.</div>
+            <div class="panel-title">Systems enable intelligence</div>
+            <div class="panel-copy">Efficient data systems organize and process complex data, so AI methods can retrieve evidence, reason over it, and support decisions.</div>
           </div>
           <div class="loop-note">
             <h3>Top-down</h3>
-            <div class="panel-title">Requirements return</div>
-            <div class="panel-copy">Real-world domains send requirements back to AI pipelines and system design: provenance, robustness, fairness, validation, and deployability.</div>
+            <div class="panel-title">Applications define requirements</div>
+            <div class="panel-copy">Real-world use cases tell us what the systems must guarantee: traceable evidence, reliable outputs, fair decisions, validation, and deployment readiness.</div>
           </div>
         </div>
       </div>
@@ -2534,16 +2659,17 @@
           <h3>Selected work</h3>
           <ul class="work-list two-col">
             <li class="work-item"><span class="work-title">Higher-order graph analytics</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">Springer monograph, in press</span></span></li>
+            <li class="work-item"><span class="work-title">Nucleus and nuclear decomposition</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">SIGMOD 2027</span><span class="venue">VLDB 2027</span></span></li>
+            <li class="work-item"><span class="work-title">Hypergraph core maintenance</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">ICDE 2027</span></span></li>
+            <li class="work-item"><span class="work-title">Reachability indexing and querying</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">EDBT 2026 under revision</span></span></li>
             <li class="work-item"><span class="work-title">Nucleus decomposition</span><span class="badges"><span class="status completed">completed</span><span class="venue">SIGMOD 2026</span></span></li>
             <li class="work-item"><span class="work-title">Diversified graph pattern matching</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.14778/3785297.3785310">VLDB 2026</a></span></li>
-            <li class="work-item"><span class="work-title">Hypergraph pattern matching</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2512.10621">ICDE 2026</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/icde55515.2023.00160">ICDE 2023</a></span></li>
-            <li class="work-item"><span class="work-title">Hypergraph decomposition</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3709656">SIGMOD 2025</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/s00778-025-00915-x">VLDBJ 2025</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3627673.3679765">CIKM 2024</a></span></li>
+            <li class="work-item"><span class="work-title">Hypergraph matching</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2512.10621">ICDE 2026</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/icde55515.2023.00160">ICDE 2023</a></span></li>
+            <li class="work-item"><span class="work-title">Hypergraph decomposition</span><span class="badges"><span class="status completed">completed</span><span class="venue">VLDBJ 2026</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3709656">SIGMOD 2025</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/s00778-025-00915-x">VLDBJ 2025</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3627673.3679765">CIKM 2024</a></span></li>
             <li class="work-item"><span class="work-title">Constrained path analytics</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/icde65448.2025.00262">ICDE 2025</a></span></li>
-            <li class="work-item"><span class="work-title">Clique cover and dense subgraph</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3696410.3714897">WWW 2025</a></span></li>
-            <li class="work-item"><span class="work-title">Temporal graph ranking and analytics</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3589334.3645438">WWW 2024</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/s11280-024-01259-2">WWWJ 2024</a></span></li>
-            <li class="work-item"><span class="work-title">Nucleus and nuclear decomposition</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">SIGMOD 2027</span><span class="venue">VLDB 2027</span></span></li>
-            <li class="work-item"><span class="work-title">Hypergraph core decomposition and maintenance</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">ICDE 2027</span><span class="venue">VLDBJ</span></span></li>
-            <li class="work-item"><span class="work-title">Reachability indexing and querying</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">EDBT 2026 under revision</span></span></li>
+            <li class="work-item"><span class="work-title">Clique and dense subgraph analytics</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3696410.3714897">WWW 2025</a></span></li>
+            <li class="work-item"><span class="work-title">Temporal graph analytics</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3589334.3645438">WWW 2024</a></span></li>
+            <li class="work-item"><span class="work-title">Graph pattern matching systems</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.14778/3339490.3339494">VLDB 2019</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3448016.3457237">SIGMOD 2021</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/ICDE51399.2021.00129">ICDE 2021</a></span></li>
           </ul>
         </div>
       </div>
@@ -2577,7 +2703,8 @@
           </div>
           <h3 style="margin-top: 16px;">Selected work</h3>
           <div class="paper-spotlight">
-          <div class="paper-spotlight-title large">PhoebeDB: High-Performance Disk-Based RDBMS Kernel for OLTP</div>
+            <div class="paper-spotlight-label">Spotlight</div>
+            <div class="paper-spotlight-title large">PhoebeDB: High-Performance Disk-Based RDBMS Kernel for OLTP</div>
             <div class="paper-spotlight-meta">
               <a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.48786/edbt.2025.82">EDBT 2025 Industry</a>
               <span class="venue">Industry collaboration</span>
@@ -2650,19 +2777,19 @@
           <div class="panel-copy">Retrieval, evidence selection, reasoning, agent memory, and context management.</div>
         </div>
         <div class="panel tint-blue">
-          <div class="panel-title">AI/ML for Data Systems</div>
+          <div class="panel-title">AI/ML for Databases and Data Systems</div>
           <div class="panel-copy">Cost estimation, tuning, temporal analytics, and costly system decisions.</div>
         </div>
         <div class="panel tint-gold">
           <div class="panel-title">Data-Centric AI</div>
-          <div class="panel-copy">Tables, labels, condensation, reasoning, quality, and data-efficient learning.</div>
+          <div class="panel-copy">Relational, unstructured, and graph data; efficient learning.</div>
         </div>
       </div>
       <div class="footer">Zhengyi Yang - University of Sydney</div>
       <div class="slide-number">09 / 21</div>
     </section>
 
-    <section class="slide compact-work fit-slide">
+    <section class="slide compact-work fit-slide llm-slide">
       <div class="kicker">Responsible Data Intelligence</div>
       <h2>Data Systems for Reliable LLMs</h2>
       <div class="content-layout">
@@ -2674,6 +2801,7 @@
             <li><strong>Evidence retrieval</strong> and <strong>selection</strong></li>
             <li><strong>Reasoning</strong> and <strong>verification</strong></li>
             <li><strong>Serving</strong>, <strong>memory</strong>, and <strong>context management</strong></li>
+            <li><strong>LLM safety</strong> and <strong>jailbreaking</strong></li>
           </ul>
           <div class="key-message">Reliable LLMs create data-management workloads: indexing, planning, provenance, cost control, and evidence quality.</div>
         </div>
@@ -2691,11 +2819,12 @@
           <h3 style="margin-top: 20px;">Selected work</h3>
           <ul class="work-list two-col">
             <li class="work-item"><span class="work-title">Adaptive GraphRAG retrieval</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2601.21162">KDExLLM 2026 Best Paper</a></span></li>
-            <li class="work-item"><span class="work-title">Graph exploration for data understanding</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3722212.3725106">SIGMOD Demo 2025</a></span></li>
+            <li class="work-item"><span class="work-title">LLM-graph for data exploration</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3722212.3725106">SIGMOD Demo 2025</a></span></li>
             <li class="work-item"><span class="work-title">Graph CoT reasoning and serving</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2511.01633">TOIS</a></span></li>
-            <li class="work-item"><span class="work-title">Cost-efficient KG evidence construction</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">TKDE</span></span></li>
+            <li class="work-item"><span class="work-title">Cost-efficient KG construction</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">TKDE</span></span></li>
             <li class="work-item"><span class="work-title">Semantic-unit retrieval for HyperRAG</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">EMNLP 2026</span></span></li>
             <li class="work-item"><span class="work-title">Long-term memory for LLM agents</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">EMNLP 2026</span></span></li>
+            <li class="work-item"><span class="work-title">Memory-driven LLM jailbreaking</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">EMNLP 2026</span></span></li>
           </ul>
         </div>
       </div>
@@ -2712,7 +2841,7 @@
           <h3>Representative topics</h3>
           <ul class="topic-list">
             <li><strong>Learning</strong> for <strong>query optimization</strong></li>
-            <li><strong>Graph Neural Network (GNN)</strong></li>
+            <li><strong>Graph neural networks (GNNs)</strong></li>
             <li><strong>Representation learning</strong> over <strong>structured data</strong></li>
             <li><strong>Deployment-aware</strong> learned components</li>
           </ul>
@@ -2743,7 +2872,7 @@
       <h2>Data-Centric AI</h2>
       <div class="content-layout">
         <div>
-          <div class="problem">Data-centric AI studies how tables, labels, schemas, and data quality shape model learning, reasoning, efficiency, and reliability.</div>
+          <div class="problem">Data-centric AI studies how relational, unstructured, and graph data shape model learning, reasoning, efficiency, and reliability.</div>
           <h3>Representative topics</h3>
           <ul class="topic-list">
             <li><strong>Structured data representation</strong> and <strong>reasoning</strong></li>
@@ -2756,9 +2885,10 @@
         <div>
           <h3>Data problems</h3>
           <div class="data-dimensions">
-            <div class="data-dimension"><b>Tables</b><span>Representation, schema, values, and reasoning.</span></div>
-            <div class="data-dimension"><b>Labels</b><span>Crowdsourcing, quality, and aggregation.</span></div>
-            <div class="data-dimension"><b>Efficiency</b><span>Condensation and data-efficient learning.</span></div>
+            <div class="data-dimension"><b>Relational data</b><span>Tables, schemas, joins, and structured reasoning.</span></div>
+            <div class="data-dimension"><b>Unstructured data</b><span>Text, documents, and multimodal evidence.</span></div>
+            <div class="data-dimension"><b>Graph data</b><span>Entities, relations, paths, and context.</span></div>
+            <div class="data-dimension"><b>Efficiency</b><span>Less data, lower cost, and faster learning.</span></div>
           </div>
           <h3>Selected work</h3>
           <ul class="work-list">
@@ -2813,6 +2943,7 @@
             <li class="work-item"><span class="work-title">Finance analysis and fraud detection</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1109/bigcomp68355.2026.00019">BigComp 2026</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-981-95-3459-3_3">ADMA 2025</a></span></li>
             <li class="work-item"><span class="work-title">ESG data management survey</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">The Innovation</span></span></li>
             <li class="work-item"><span class="work-title">Standard-aware ESG disclosure analysis</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2511.21712">ICDM Demo 2026</a></span></li>
+            <li class="work-item"><span class="work-title">Mining ESG analysis</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">APWeb-WAIM</span></span></li>
             <li class="work-item"><span class="work-title">ESG knowledge graph construction</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2512.01289">ICKG 2026</a></span></li>
           </ul>
         </div>
@@ -2823,7 +2954,14 @@
 
     <section class="slide fellowship-slide merged-fellowship">
       <div class="kicker">ARC Early-Career Industry Fellowship · IE250100264</div>
-      <h2>AI-Empowered ESG Data Analytics</h2>
+      <h2 class="fellowship-title">
+        <svg class="fellowship-title-icon" viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M40 8C25 8 12 16 8 31c11 2 25-2 32-23Z"></path>
+          <path d="M10 34c7-10 16-16 27-22"></path>
+          <path d="M18 26c1 7 5 11 12 13"></path>
+        </svg>
+        <span>ESG Data Management</span>
+      </h2>
       <div class="fellowship-layout">
         <div class="fellowship-card">
           <div class="fellowship-card-title">AI-Empowered ESG Data Analytics in Responsible Investment</div>
@@ -2848,7 +2986,7 @@
             <div class="fellowship-section-label">Need -> output -> data -> system</div>
             <div class="fellowship-callouts">
               <div class="fellowship-callout"><b>National need</b><span>Reliable ESG insights support sustainable investment, corporate responsibility, and regulatory compliance.</span></div>
-              <div class="fellowship-callout"><b>Research output</b><span>More accurate, accessible, timely, and objective ESG analysis for investors and companies.</span></div>
+              <div class="fellowship-callout"><b>Expected outcome</b><span>More accurate, accessible, timely, and objective ESG analysis for investors and companies.</span></div>
               <div class="fellowship-callout"><b>Data science challenges</b><span>Availability, quality, integration, traceability, timeliness, privacy, and cross-standard semantics.</span></div>
               <div class="fellowship-callout"><b>Systems agenda</b><span>ESG knowledge layer, claim-level provenance, retrieval/reasoning guardrails, and workflow evaluation.</span></div>
             </div>
@@ -2905,7 +3043,7 @@
       <div class="slide-number">16 / 21</div>
     </section>
 
-    <section class="slide">
+    <section class="slide fairness-slide">
       <div class="kicker">Data for Real-World Applications</div>
       <h2>Fairness and Diversity Intelligence</h2>
       <div class="content-layout">
@@ -2923,15 +3061,16 @@
         <div>
           <h3>Fairness questions</h3>
           <div class="matrix">
-            <div class="cell"><b>Representation</b><br><span class="muted small">Who is visible in the data?</span></div>
-            <div class="cell"><b>Measurement</b><br><span class="muted small">What proxies shape conclusions?</span></div>
-            <div class="cell"><b>Decision support</b><br><span class="muted small">How are outputs used?</span></div>
-            <div class="cell"><b>Evaluation</b><br><span class="muted small">What is fairness beyond accuracy?</span></div>
+            <div class="cell"><b>Who is underrepresented?</b><br><span class="muted small">Groups missing or poorly measured.</span></div>
+            <div class="cell"><b>Who is affected?</b><br><span class="muted small">Real decisions shaped by outputs.</span></div>
+            <div class="cell"><b>What harm can scale?</b><br><span class="muted small">Bias amplified across workflows.</span></div>
+            <div class="cell"><b>What is the social impact?</b><br><span class="muted small">Fairness, opportunity, and trust.</span></div>
           </div>
-          <h3 style="margin-top: 24px;">Selected work</h3>
+          <h3 style="margin-top: 16px;">Selected work</h3>
           <ul class="work-list">
             <li class="work-item"><span class="work-title">Gender representation and career progression</span><span class="badges"><span class="status completed">completed</span><span class="venue">JCEM 2026</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1080/15623599.2025.2532114">IJCM 2025</a><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1080/15623599.2025.2482220">IJCM 2025</a></span></li>
             <li class="work-item"><span class="work-title">LLM fairness and bias evaluation</span><span class="badges"><span class="status completed">completed</span><span class="venue">FAIML 2026</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-981-95-4969-6_16">AI 2025</a></span></li>
+            <li class="work-item"><span class="work-title">LLM bias in hiring</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">work in progress</span></span></li>
           </ul>
         </div>
       </div>
@@ -3005,7 +3144,7 @@
           </div>
         </div>
       </div>
-      <div class="potential-line">The broader contribution is to connect database systems, AI pipelines, and real-world data deployment through one coherent feedback loop.</div>
+      <div class="potential-line">The broader contribution is to connect database systems, AI pipelines, and real-world data deployment through one coherent data intelligence loop.</div>
       <div class="footer">Zhengyi Yang - University of Sydney</div>
       <div class="slide-number">19 / 21</div>
     </section>
@@ -3205,7 +3344,7 @@
           slide.classList.toggle("active", i === nextIndex);
         });
         counter.textContent = String(nextIndex + 1).padStart(2, "0") + " / " + String(total).padStart(2, "0");
-        document.title = "Slide " + String(nextIndex + 1).padStart(2, "0") + " - Building Systems for Scalable and Responsible Data Management: The Data-Intelligence Loop";
+        document.title = "Slide " + String(nextIndex + 1).padStart(2, "0") + " - Building Systems for Scalable and Responsible Data Management: The Data Intelligence Loop";
         prev.disabled = nextIndex === 0;
         next.disabled = nextIndex === total - 1;
         if (updateHash) {
@@ -3262,7 +3401,7 @@
         { passive: true }
       );
       document.querySelector(".deck").addEventListener("touchmove", (event) => {
-        if (!touchStartTime) {
+        if (!touchStartTime || event.touches.length !== 1) {
           return;
         }
         const touch = event.touches[0];
