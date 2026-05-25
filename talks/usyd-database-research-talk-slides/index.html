@@ -190,13 +190,6 @@
       margin-bottom: 13px;
     }
 
-    .lead {
-      font-size: 25px;
-      line-height: 1.42;
-      max-width: 960px;
-      color: #1e2932;
-    }
-
     .muted {
       color: var(--muted);
     }
@@ -204,17 +197,6 @@
     .small {
       font-size: 16px;
       line-height: 1.42;
-    }
-
-    .body {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      min-height: 0;
-    }
-
-    .spacer {
-      flex: 1;
     }
 
     .grid {
@@ -230,11 +212,6 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
-    .grid-4 {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .card,
     .panel {
       border: 1px solid var(--faint);
       background: #fff;
@@ -276,12 +253,6 @@
       line-height: 1.35;
     }
 
-    .panel.dark {
-      background: var(--ink);
-      color: #f6efe4;
-      border-color: var(--ink);
-    }
-
     .panel.tint-teal {
       border-top: 4px solid var(--teal);
     }
@@ -309,10 +280,6 @@
       color: var(--muted);
       font-size: 16px;
       line-height: 1.42;
-    }
-
-    .dark .panel-copy {
-      color: #cfd7dd;
     }
 
     .quote {
@@ -377,60 +344,12 @@
       margin-bottom: 34px;
     }
 
-    .stage-strip {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-      border: 1px solid var(--faint);
-      margin-top: 38px;
-      max-width: 880px;
-    }
-
-    .stage-strip div {
-      padding: 13px 16px;
-      border-right: 1px solid var(--faint);
-      font-family: var(--mono);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-    }
-
-    .stage-strip div:last-child {
-      border-right: 0;
-    }
-
-    .stage-strip b {
-      display: block;
-      font-family: var(--sans);
-      font-size: 16px;
-      letter-spacing: 0;
-      text-transform: none;
-      color: var(--ink);
-      margin-top: 4px;
-    }
-
-    .stage-flow {
-      display: grid;
-      gap: 8px;
-    }
-
     .stage-layer-grid {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
       gap: 26px;
       align-items: stretch;
       margin-top: 24px;
-    }
-
-    .stage-panel,
-    .layer-panel {
-      min-height: 0;
-    }
-
-    .stage-panel h3,
-    .layer-panel h3 {
-      margin-bottom: 10px;
     }
 
     .stage-flow-item {
@@ -492,11 +411,6 @@
       font-family: var(--mono);
       font-size: 20px;
       font-weight: 800;
-    }
-
-    .layer-stack {
-      display: grid;
-      gap: 10px;
     }
 
     .stage-layer-grid.aligned-agenda {
@@ -561,26 +475,6 @@
       text-transform: uppercase;
     }
 
-    .stage-label {
-      font-family: var(--mono);
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #fff;
-      background: var(--blue);
-      padding: 5px 8px;
-      border-radius: 999px;
-      white-space: nowrap;
-    }
-
-    .layer.understanding .stage-label {
-      background: var(--teal);
-    }
-
-    .layer.intelligence .stage-label {
-      background: var(--wine);
-    }
-
     .layer-title {
       font-weight: 700;
       font-size: 22px;
@@ -591,41 +485,6 @@
       font-size: 16px;
       line-height: 1.36;
       color: var(--muted);
-    }
-
-    .stack-arrow {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-left: 18px;
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .stack-arrow::before {
-      content: "";
-      width: 2px;
-      height: 18px;
-      background: var(--gold);
-      display: inline-block;
-    }
-
-    .flow-row {
-      display: grid;
-      grid-template-columns: 1fr 56px 1fr 56px 1fr;
-      align-items: center;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .flow-node {
-      border: 1px solid var(--faint);
-      background: #fff;
-      padding: 18px;
-      min-height: 116px;
     }
 
     .arrow {
@@ -700,24 +559,6 @@
       right: 10px;
       bottom: 8px;
       border-top: 4px solid var(--wine);
-    }
-
-    .loop-center {
-      position: absolute;
-      left: calc(50% - 58px);
-      top: 176px;
-      width: 116px;
-      height: 52px;
-      border: 1px solid var(--faint);
-      background: var(--paper-2);
-      display: grid;
-      place-items: center;
-      text-align: center;
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
     }
 
     .loop-segment {
@@ -1085,23 +926,6 @@
       line-height: 1.22;
     }
 
-    .engine-slide .related-work-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: 7px;
-      border: 1px solid var(--faint);
-      background: #f8fafc;
-      padding: 7px 10px;
-      font-size: 14px;
-      line-height: 1.2;
-    }
-
-    .engine-slide .related-work-row .work-title {
-      margin: 0;
-    }
-
     .compact-work .panel {
       padding: 14px 14px 12px;
     }
@@ -1249,10 +1073,6 @@
       margin-top: 22px;
     }
 
-    .fit-agenda .stage-flow {
-      gap: 7px;
-    }
-
     .fit-agenda .stage-flow-item {
       grid-template-columns: 58px 1fr;
       gap: 16px;
@@ -1289,10 +1109,6 @@
       font-size: 22px;
     }
 
-    .fit-agenda .layer-stack {
-      gap: 7px;
-    }
-
     .fit-agenda .layer {
       min-height: 100px;
       padding: 15px 16px;
@@ -1312,16 +1128,6 @@
       margin-bottom: 8px;
     }
 
-    .fit-agenda .stack-arrow {
-      margin-left: 12px;
-      font-size: 12px;
-      gap: 8px;
-    }
-
-    .fit-agenda .stack-arrow::before {
-      height: 12px;
-    }
-
     .fit-agenda .cell {
       min-height: 82px;
       padding: 11px;
@@ -1334,43 +1140,20 @@
       line-height: 1.28;
     }
 
-    .dimension-strip,
-    .mini-flow {
+    .dimension-strip {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin: 8px 0 14px;
     }
 
-    .dimension-strip span,
-    .mini-flow span {
+    .dimension-strip span {
       border: 1px solid var(--faint);
       background: #fff;
       padding: 8px 10px;
       font-size: 13px;
       color: #26313b;
       line-height: 1.18;
-    }
-
-    .mini-flow {
-      align-items: center;
-      flex-wrap: nowrap;
-    }
-
-    .mini-flow span {
-      flex: 1;
-      text-align: center;
-      font-weight: 700;
-    }
-
-    .mini-flow .mini-arrow {
-      flex: 0 0 auto;
-      border: 0;
-      padding: 0 2px;
-      color: var(--gold);
-      background: transparent;
-      font-family: var(--mono);
-      font-size: 18px;
     }
 
     .data-dimensions {
@@ -1496,18 +1279,6 @@
       border-left: 6px solid var(--gold);
     }
 
-    .fellowship-badge {
-      align-self: flex-start;
-      border: 1px solid rgba(246, 239, 228, 0.28);
-      color: #f6efe4;
-      padding: 7px 10px;
-      font-family: var(--mono);
-      font-size: 12px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
     .fellowship-card-title {
       font-family: var(--serif);
       font-size: 33px;
@@ -1605,33 +1376,6 @@
 
     .fellowship-slide h3 {
       margin-bottom: 9px;
-    }
-
-    .fellowship-flow {
-      display: grid;
-      grid-template-columns: 1fr 28px 1fr 28px 1fr;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 11px;
-    }
-
-    .fellowship-flow span {
-      border: 1px solid var(--faint);
-      background: #fff;
-      padding: 10px 8px;
-      text-align: center;
-      font-weight: 800;
-      color: #17222b;
-      font-size: 16px;
-    }
-
-    .fellowship-flow .mini-arrow {
-      border: 0;
-      background: transparent;
-      color: var(--gold);
-      font-family: var(--mono);
-      font-size: 21px;
-      padding: 0;
     }
 
     .fellowship-stage-grid {
@@ -1927,28 +1671,6 @@
       line-height: 1.25;
     }
 
-    .fairness-slide .work-list {
-      gap: 8px;
-    }
-
-    .fairness-slide .work-item {
-      min-height: 42px;
-      padding: 8px 9px;
-      font-size: 15px;
-      line-height: 1.22;
-    }
-
-    .fairness-slide .work-title {
-      margin-bottom: 5px;
-    }
-
-    .fairness-slide .status,
-    .fairness-slide .venue {
-      min-height: 18px;
-      padding: 2px 6px;
-      font-size: 10.5px;
-    }
-
     .pillars {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1982,49 +1704,6 @@
       color: var(--muted);
       font-size: 13px;
       line-height: 1.38;
-    }
-
-    .chip-cloud {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 30px;
-    }
-
-    .chip {
-      border: 1px solid var(--faint);
-      padding: 10px 14px;
-      background: rgba(255, 255, 255, 0.38);
-      font-size: 16px;
-      color: #1f2a34;
-    }
-
-    .discussion-slide .lead {
-      max-width: 1040px;
-      font-size: 27px;
-      line-height: 1.38;
-    }
-
-    .discussion-slide .chip-cloud {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin-top: 30px;
-      max-width: 1110px;
-    }
-
-    .discussion-slide .chip {
-      min-height: 46px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 10px 12px;
-      line-height: 1.2;
-    }
-
-    .discussion-slide .stage-strip {
-      margin-top: 54px;
-      max-width: 960px;
     }
 
     .closing-grid {
@@ -2640,7 +2319,7 @@
       <div class="slide-number">05 / 20</div>
     </section>
 
-    <section class="slide compact-work fit-slide">
+    <section class="slide compact-work fit-slide extra-fit">
       <div class="kicker">Scalable Data Systems</div>
       <h2>Graph Analytics and Processing</h2>
       <div class="content-layout">
@@ -2676,7 +2355,7 @@
       <div class="slide-number">06 / 20</div>
     </section>
 
-    <section class="slide fit-slide engine-slide">
+    <section class="slide fit-slide engine-slide extra-fit">
       <div class="kicker">Scalable Data Systems</div>
       <h2>Database Systems &amp; Query Processing</h2>
       <div class="content-layout">
@@ -2712,7 +2391,7 @@
             <ul>
               <li><strong>Industry collaboration</strong> toward an <strong>enterprise-oriented</strong>, industry-ready RDBMS kernel.</li>
               <li><strong>PostgreSQL-compatible OLTP</strong> on <strong>commodity hardware</strong>, reducing migration and deployment risk.</li>
-              <li><strong>Full-stack kernel design</strong>: temperature-aware storage, coroutine runtime, smart scheduling, transaction management, WAL, and snapshots.</li>
+              <li><strong>Full-stack kernel design</strong>: temperature-aware storage, coroutine runtime, smart scheduling, transaction management, WAL, and snapshot isolation.</li>
               <li>Reports <strong>13.7M tpmC</strong> and <strong>30M tpm</strong> on <strong>TPC-C</strong> using one machine, with <strong>27x</strong> improvement over PostgreSQL.</li>
             </ul>
           </div>
@@ -2731,12 +2410,12 @@
       <h2>Hardware Acceleration at Scale</h2>
       <div class="content-layout">
         <div>
-          <div class="problem">At billion scale, performance depends on coordinating distributed execution, parallelism, memory hierarchy, storage, and accelerators.</div>
+          <div class="problem">At billion-scale workloads, performance depends on coordinating distributed execution, parallelism, memory hierarchy, storage, and accelerators.</div>
           <h3>Representative topics</h3>
           <ul class="topic-list">
             <li><strong>Distributed</strong> and out-of-core processing</li>
             <li><strong>Parallel runtime</strong> and <strong>adaptive scheduling</strong></li>
-            <li><strong>GPU-/FPGA-accelerated indexing</strong> and analytics</li>
+            <li><strong>GPU- and FPGA-accelerated indexing</strong> and analytics</li>
             <li><strong>Emerging hardware</strong> and <strong>scalable execution</strong></li>
           </ul>
           <div class="key-message">Scale by co-designing algorithms, runtimes, and hardware-aware execution.</div>
@@ -2790,7 +2469,7 @@
       <div class="slide-number">09 / 20</div>
     </section>
 
-    <section class="slide compact-work fit-slide llm-slide">
+    <section class="slide compact-work fit-slide extra-fit llm-slide">
       <div class="kicker">Responsible Data Intelligence</div>
       <h2>Data Systems for Reliable LLMs</h2>
       <div class="content-layout">
@@ -2801,6 +2480,7 @@
             <li><strong>Data-to-structure</strong> construction</li>
             <li><strong>Evidence retrieval</strong> and <strong>selection</strong></li>
             <li><strong>Reasoning</strong> and <strong>verification</strong></li>
+            <li><strong>Multi-agent systems</strong> and <strong>debate</strong></li>
             <li><strong>Serving</strong>, <strong>memory</strong>, and <strong>context management</strong></li>
             <li><strong>LLM safety</strong> and <strong>jailbreaking</strong></li>
           </ul>
@@ -2820,6 +2500,7 @@
           <h3 style="margin-top: 20px;">Selected work</h3>
           <ul class="work-list two-col">
             <li class="work-item"><span class="work-title">Adaptive GraphRAG retrieval</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2601.21162">KDExLLM 2026 Best Paper</a></span></li>
+            <li class="work-item"><span class="work-title">Multi-agent LLM debate</span><span class="badges"><span class="status completed">completed</span><span class="venue">AgentSearch 2026</span></span></li>
             <li class="work-item"><span class="work-title">LLM-graph for data exploration</span><span class="badges"><span class="status completed">completed</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1145/3722212.3725106">SIGMOD Demo 2025</a></span></li>
             <li class="work-item"><span class="work-title">Graph CoT reasoning and serving</span><span class="badges"><span class="status ongoing">under submission</span><a class="venue" target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2511.01633">TOIS</a></span></li>
             <li class="work-item"><span class="work-title">Cost-efficient KG construction</span><span class="badges"><span class="status ongoing">under submission</span><span class="venue">TKDE</span></span></li>
@@ -2833,7 +2514,7 @@
       <div class="slide-number">10 / 20</div>
     </section>
 
-    <section class="slide compact-work fit-slide">
+    <section class="slide compact-work fit-slide extra-fit">
       <div class="kicker">Responsible Data Intelligence</div>
       <h2>Learning-Augmented Data Systems</h2>
       <div class="content-layout">
@@ -2868,7 +2549,7 @@
       <div class="slide-number">11 / 20</div>
     </section>
 
-    <section class="slide compact-work fit-slide">
+    <section class="slide compact-work fit-slide extra-fit">
       <div class="kicker">Responsible Data Intelligence</div>
       <h2>Data-Centric AI</h2>
       <div class="content-layout">
@@ -2909,7 +2590,7 @@
       <h2 class="section-title">Data for Real-World Applications</h2>
       <p class="section-meaning">Data intelligence is about using processed and interpreted data to support responsible decisions in real-world domains.</p>
       <div class="grid grid-3">
-        <div class="panel tint-blue"><div class="panel-title">Industry Collaboration</div><div class="panel-copy">Critical domains: ESG, finance, law, mining, energy, power, and built environment.</div></div>
+        <div class="panel tint-blue"><div class="panel-title">Industry Collaboration</div><div class="panel-copy">Critical domains: ESG, finance, law, mining, energy, power, and the built environment.</div></div>
         <div class="panel tint-wine"><div class="panel-title">Fair Decision Support</div><div class="panel-copy">Representation, bias, evaluation, context.</div></div>
         <div class="panel tint-gold"><div class="panel-title">Science and Society</div><div class="panel-copy">Climate, health, social/economic simulation, materials.</div></div>
       </div>
@@ -2922,7 +2603,7 @@
       <h2>Industry-Critical Applications</h2>
       <div class="content-layout">
         <div>
-          <div class="problem">Industry collaborations in critical domains such as ESG, finance, law, mining, energy, and built environment turn messy records into decisions that require traceability, interpretation, and accountability.</div>
+          <div class="problem">Industry collaborations in critical domains such as ESG, finance, law, mining, energy, and the built environment turn messy records into decisions that require traceability, interpretation, and accountability.</div>
           <h3>Representative topics</h3>
           <ul class="topic-list">
             <li><strong>ESG, finance, and sustainability</strong> evidence governance</li>
@@ -3007,7 +2688,7 @@
       <div class="slide-number">15 / 20</div>
     </section>
 
-    <section class="slide fairness-slide">
+    <section class="slide fairness-slide extra-fit">
       <div class="kicker">Data for Real-World Applications</div>
       <h2>Fairness and Diversity in Decision Support</h2>
       <div class="content-layout">
@@ -3042,7 +2723,7 @@
       <div class="slide-number">16 / 20</div>
     </section>
 
-    <section class="slide compact-work fit-slide">
+    <section class="slide compact-work fit-slide extra-fit">
       <div class="kicker">Data for Real-World Applications</div>
       <h2>Science, Health, and Society</h2>
       <div class="content-layout">
@@ -3143,7 +2824,7 @@
           <div class="panel-title">Responsible Data Intelligence</div>
           <ul class="topic-list">
             <li>Industry collaboration in critical domains</li>
-            <li>ESG, finance, law, mining, energy, and built environment</li>
+            <li>ESG, finance, law, mining, energy, and the built environment</li>
             <li>Fairness, diversity, and accountable data use</li>
             <li>Science, health, and society</li>
           </ul>
