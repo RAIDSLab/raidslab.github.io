@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
 2:I[7121,[],""]
 3:I[4581,[],""]
-:HL["/_next/static/css/6a3a22b7e8b5fb71.css","style"]
-0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/6a3a22b7e8b5fb71.css","precedence":"next"}]],["$","div",null,{"className":"conference-root","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"MSdkbjUtuNC6fv2gGy-FW"}
+:HL["/_next/static/css/202692c758c74379.css","style"]
+0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/202692c758c74379.css","precedence":"next"}]],["$","div",null,{"className":"conference-root","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"WuK-pbZkVhke4ZzKIwDNx"}
