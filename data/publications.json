@@ -1158,6 +1158,7 @@
       "Guanfeng Liu",
       "Lu Qin"
     ],
+    "track": "Vision Paper",
     "authorAffiliations": {
       "Zhengyi Yang": "University of Sydney",
       "Wenke Yang": "University of New South Wales",
@@ -2092,8 +2093,8 @@
     "venueShort": "ADMA",
     "venueUrl": "https://adma2025.github.io/",
     "publisher": "Springer",
+    "track": "Short Paper",
     "rankings": {
-      "ccf": "C",
       "icore2026": "C",
       "core2023": "C"
     },
