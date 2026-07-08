@@ -938,8 +938,8 @@
   },
   {
     "id": "he2026minority",
-    "type": "workshop",
-    "status": "accepted",
+    "type": "preprint",
+    "status": "preprint",
     "year": 2026,
     "displayOrder": 20,
     "title": "Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates",
@@ -963,14 +963,9 @@
       "Dong Wen": "University of New South Wales",
       "Guanfeng Liu": "Macquarie University"
     },
-    "venue": "The First Workshop on Indexing, Retrieval, and Ranking of AI Agents",
-    "venueShort": "AgentSearch",
-    "venueUrl": "https://agent-search.github.io/agentsearch-sigir26/",
-    "hostVenue": {
-      "name": "ACM SIGIR Conference on Research and Development in Information Retrieval",
-      "shortName": "SIGIR",
-      "year": 2026
-    },
+    "venue": "arXiv",
+    "venueShort": "arXiv",
+    "venueUrl": "https://arxiv.org/",
     "arxiv": "2606.29270",
     "abstract": "Multi-Agent Debate (MAD) with Majority Voting is a dominant paradigm for improving LLM reasoning, yet its effectiveness rests on the Condorcet Jury Theorem's assumption of independent errors. Because contemporary LLMs share similar pretraining corpora, their errors are strongly correlated, causing the majority to systematically suppress correct minority opinions, a phenomenon we term Minority Truth. Through debates among three heterogeneous LLM agents on six benchmarks, we find that roughly one in four divergent cases has the minority holding the correct answer, yielding a 10-percentage-point theoretical recovery margin. We propose Minority Sentinel, a lightweight meta-classifier that extracts a multi-dimensional debate fingerprint from debate logs and trains a LightGBM model to decide when to overturn majority voting. Minority Sentinel achieves a stable Flip Precision of 81.2% with positive Net Gain across all six datasets and all 20 random seed trials, demonstrating that debate logs contain sufficient behavioral signals for a non-LLM classifier to reliably recover suppressed minorities without degrading system accuracy. The LLM-as-Judge baseline yields negative Net Gain despite higher recall, confirming that flip safety, not recovery volume, determines intervention value.",
     "tags": [
@@ -982,6 +977,7 @@
     "researchAreas": [
       "Responsible Data Intelligence"
     ],
+    "note": "Presented at the AgentSearch Workshop, co-located with SIGIR 2026; no archival proceedings.",
     "bibtex": "@misc{he2026minority,\n  title = {Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates},\n  author = {Chuan He and Zebin Chen and Zhengyi Yang and Shaobo Qiao and Mingchen Ju and Jiate Liu and Dong Wen and Guanfeng Liu},\n  year = {2026},\n  eprint = {2606.29270},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.MA},\n  url = {https://arxiv.org/abs/2606.29270}\n}"
   },
   {
