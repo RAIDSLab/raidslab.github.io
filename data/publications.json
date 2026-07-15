@@ -29,9 +29,9 @@
     "venueShort": "EDBT",
     "publisher": "OpenProceedings.org",
     "rankings": {
-      "ccf": "B",
+      "core2023": "A",
       "icore2026": "B",
-      "core2023": "A"
+      "ccf": "B"
     },
     "abstract": "Reachability queries are a core operation in graph analytics. Existing labeling methods assume a global query space and construct uniform labels for all vertices. In practice, however, many systems issue queries over semantically structured endpoint domains such as V_s x V_t, where only a subset of vertices serve as meaningful sources or targets. This mismatch makes global labeling redundant and inefficient. We propose Partitioned Tree-Cover Interval Labeling (PTIL), a restricted-domain reachability indexing framework that extends classical Tree-Cover Labeling. PTIL timestamps only target vertices and stores compact disjoint intervals at sources, reducing each query to a single membership test while avoiding unnecessary global labels. By partitioning targets into groups, PTIL provides an explicit and predictable space-time trade-off: finer grouping yields lower latency at the cost of larger index size. PTIL also supports dynamic updates to endpoint domains. We further develop two instantiations: PTIL-g, a grouped scheme for scalable domain-aligned indexing, and PTIL-p, which additionally leverages query distributions for further prioritization when available. Experiments on real and synthetic graphs show that PTIL-g achieves order-of-magnitude lower query latency than state-of-the-art baselines, while PTIL-p provides additional gains under skewed workloads, with near-linear and predictable space-time behavior.",
     "tags": [
@@ -74,9 +74,9 @@
     "venueUrl": "https://2026.sigmod.org/",
     "publisher": "Association for Computing Machinery (ACM)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "doi": "10.1145/3802092",
     "code": "https://github.com/JamesZwq/nuclearSigmod",
@@ -128,9 +128,9 @@
     "venueUrl": "https://2026.sigmod.org/",
     "publisher": "Association for Computing Machinery (ACM)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "doi": "10.1145/3769795",
     "abstract": "Monotonic graph algorithms, such as shortest path, BFS, and reachability, are fundamental to graph analytics and are widely used across domains. Recent systems employ pruning techniques to accelerate the processing of these algorithms. However, state-of-the-art monotonic graph engines are restricted to in-memory execution and cannot scale to graphs that exceed main memory capacity. In contrast, existing out-of-core graph engines are designed for general-purpose workloads and lack effective pruning mechanisms tailored to monotonic graph algorithms. To bridge this gap, we present Gem, an out-of-core graph engine designed for monotonic graph algorithms. Gem introduces a PageRank-based graph sketch that captures key topological features inmemory with minimal preprocessing overhead. Building on this sketch, we propose a novel graph abstraction that enables the direct derivation of tight bounds for monotonic graph algorithms, supporting effective pruning at both the vertex and partition levels. Comprehensive evaluations on six real-world datasets, including the 42.5-billion-edge ClueWeb graph, show that Gem significantly outperforms existing systems. It achieves up to 135.40x speedup over GridGraph and 12.58x over Wonderland in out-of-core settings, and also delivers substantial improvements in other modes: up to 10.41x over RisGraph in memory and 20.64x over CGgraph out-of-GPU memory.",
@@ -185,9 +185,9 @@
     "venueUrl": "https://2026.sigmod.org/",
     "publisher": "Association for Computing Machinery (ACM)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "doi": "10.1145/3802027",
     "abstract": "Graph-based approximate nearest neighbor search (ANNS) delivers state-of-the-art accuracy latency tradeoffs, yet index construction remains the bottleneck: fusing dense distance evaluation with irregular traversal or pruning collapses GPU throughput, and limited device memory forces costly data movement at scale. To address these problems, in this paper, we present CMANNS, a GPU-accelerated graph index construction framework that preserves the algorithmic rules of target graph (e.g., NSG and HNSW) and its query procedure. The core idea is compute-memory (CM) disaggregation: distance evaluation is reformulated as high-arithmetic-intensity GEMMs on Tensor Core accelerators with fused epilogues, while memory-intensive phases employ hot-set-aware on-chip locality (e.g., shared-memory staging, warp-cooperative gathers and scatters) to maximize effective bandwidth. To scale beyond the HBM capacity, we stream device-sized shards through a double-buffered pipeline and write back only compact adjacency. Data transfers and kernel execution overlap, so each shard completes in roughly the time of the slower step, keeping the GPU highly utilized even with irregular access. Across seven benchmarks, CMANNS reduces end-to-end index build time by up to 13.05x (vs. FAISS) and 2.20x (vs. FLASH), increases the cache hit rate by up to 58.7%, and preserves vector query latency and recall.",
@@ -226,9 +226,9 @@
     "venueUrl": "https://www.vldb.org/2026/",
     "publisher": "VLDB Endowment",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "arxiv": "2511.19008",
     "doi": "10.14778/3785297.3785310",
@@ -324,9 +324,9 @@
     "venueUrl": "https://icde2026.github.io/",
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "arxiv": "2602.21717",
     "code": "https://github.com/Sssara-5/TF-TabularCondensation",
@@ -368,9 +368,9 @@
     "venueUrl": "https://icde2026.github.io/",
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "arxiv": "2512.10621",
     "code": "https://github.com/SNUCSE-CTA/MaCH",
@@ -419,9 +419,9 @@
     "venueUrl": "https://www2026.thewebconf.org/",
     "publisher": "Association for Computing Machinery (ACM)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "arxiv": "2506.14122",
     "doi": "10.1145/3774904.3792709",
@@ -495,9 +495,9 @@
     "venueUrl": "https://hpdc.sci.utah.edu/2026/",
     "publisher": "Association for Computing Machinery (ACM)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A",
       "icore2026": "A",
-      "core2023": "A"
+      "ccf": "A"
     },
     "doi": "10.1145/3806645.3807585",
     "pages": "249-264",
@@ -547,9 +547,9 @@
       "shortName": "ICDE",
       "year": 2026,
       "rankings": {
-        "ccf": "A",
+        "core2023": "A*",
         "icore2026": "A*",
-        "core2023": "A*"
+        "ccf": "A"
       }
     },
     "doi": "10.1109/ICDEW71238.2026.00024",
@@ -609,9 +609,9 @@
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "track": "Software Architecture in Practice",
     "rankings": {
-      "ccf": "C",
+      "core2023": "A",
       "icore2026": "A",
-      "core2023": "A"
+      "ccf": "C"
     },
     "arxiv": "2603.10646",
     "abstract": "Environmental, Social, and Governance (ESG) standards have been increasingly adopted by organizations to demonstrate accountability towards ethical, social, and sustainability goals. However, generating ESG reports that align with these standards remains challenging due to unstructured data formats, inconsistent terminology, and complex requirements. Existing ESG lifecycles provide guidance for structuring ESG reports but lack the automation, adaptability, and continuous feedback mechanisms needed to address these challenges. To bridge this gap, we introduce an agentic ESG lifecycle framework that systematically integrates the ESG stages of identification, measurement, reporting, engagement, and improvement. In this framework, multiple AI agents extract ESG information, verify ESG performance, and update ESG reports based on organisational outcomes. By embedding agentic components within the ESG lifecycle, the proposed framework transforms ESG from a static reporting process into a dynamic, accountable, and adaptive system for sustainability governance. We further define the technical requirements and quality attributes needed to support four main ESG tasks, such as report validation, multi-report comparison, report generation, and knowledge-base maintenance, and propose three architectural approaches, namely single-model, single-agent, and multi-agent, for addressing these tasks. The source code and data for the prototype of these approaches are available at https://gitlab.com/for_peer_review-group/esg_assistant.",
@@ -1403,9 +1403,9 @@
     "venueUrl": "https://2025.sigmod.org/",
     "publisher": "Association for Computing Machinery (ACM)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "doi": "10.1145/3709656",
     "code": "https://github.com/unswdb/hyper-k-core",
@@ -1494,9 +1494,9 @@
     "venueUrl": "https://ieee-icde.org/2025/",
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "doi": "10.1109/ICDE65448.2025.00262",
     "pdf": "https://doi.ieeecomputersociety.org/10.1109/ICDE65448.2025.00262",
@@ -1544,9 +1544,9 @@
     "venueUrl": "https://ieee-icde.org/2025/",
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "doi": "10.1109/ICDE65448.2025.00264",
     "pdf": "https://doi.ieeecomputersociety.org/10.1109/ICDE65448.2025.00264",
@@ -1589,9 +1589,9 @@
     "venueUrl": "https://www2025.thewebconf.org/",
     "publisher": "Association for Computing Machinery (ACM)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "doi": "10.1145/3696410.3714897",
     "abstract": "The k-clique structure in graphs has been investigated in various real-world applications, such as community detection in complex networks, functional module discovery in biological networks, and link spam detection in web graphs. Despite extensive research on k-clique enumeration, the large number of k-cliques in many graphs poses a challenge for practical application and computation. To address this, we explore the k-clique τ-cover problem, a generalization of the vertex cover problem. The problem aims to find a small set of vertices that can effectively represent all k-cliques in the graph. We prove the NP-hardness of finding the minimum k-clique cover. We propose a hierarchical solution that computes a small cover without enumerating k-cliques. Extensive experiments on real-world graphs verify the efficiency and effectiveness of our solution.",
@@ -1673,9 +1673,9 @@
     "publisher": "OpenProceedings.org",
     "track": "Industrial & Applications",
     "rankings": {
-      "ccf": "B",
+      "core2023": "A",
       "icore2026": "B",
-      "core2023": "A"
+      "ccf": "B"
     },
     "doi": "10.48786/EDBT.2025.82",
     "pdf": "https://openproceedings.org/2025/conf/edbt/paper-292.pdf",
@@ -1725,9 +1725,9 @@
     "venueUrl": "https://cikm2025.org/",
     "publisher": "Association for Computing Machinery (ACM)",
     "rankings": {
-      "ccf": "B",
+      "core2023": "A",
       "icore2026": "A",
-      "core2023": "A"
+      "ccf": "B"
     },
     "arxiv": "2501.14600",
     "doi": "10.1145/3746252.3761008",
@@ -1773,9 +1773,9 @@
     "venueUrl": "https://www.ficloud.org/wise2025/",
     "publisher": "Springer",
     "rankings": {
-      "ccf": "B",
+      "core2023": "B",
       "icore2026": "B",
-      "core2023": "B"
+      "ccf": "B"
     },
     "doi": "10.1007/978-981-95-7394-3_25",
     "tags": [
@@ -1825,9 +1825,9 @@
     "pdf": "https://link.springer.com/content/pdf/10.1007/978-981-95-7251-9_25.pdf",
     "abstract": "Graphs are widely used to model complex relationships among entities in domains such as recommendation systems and social networks. A fundamental problem in these applications is quantifying the connectivity between two entities, often formulated as estimating the number of source-to-target paths under specific constraints. In this paper, we study the problem of hop-constrained s-t path counting, which aims to estimate the number of paths from a source vertex s to a target vertex t within a given hop bound k. We propose kPathAssess, an efficient path counting algorithm inspired by the recent PathAssess algorithm. kPathAssess balances estimation accuracy and computational complexity by leveraging locally computable lower bounds on path counts. Extensive experiments on real-world graphs demonstrate that kPathAssess achieves high estimation efficiency with significantly reduced computation time, particularly as the hop constraint increases.",
     "rankings": {
-      "ccf": "B",
+      "core2023": "B",
       "icore2026": "B",
-      "core2023": "B"
+      "ccf": "B"
     },
     "tags": [
       "Graph",
@@ -1873,9 +1873,9 @@
     "venueUrl": "https://pakdd2025.org/",
     "publisher": "Springer",
     "rankings": {
-      "ccf": "C",
+      "core2023": "B",
       "icore2026": "B",
-      "core2023": "B"
+      "ccf": "C"
     },
     "doi": "10.1007/978-981-96-8295-9_4",
     "abstract": "Graph reachability queries, which determine whether a path exists between two vertices in a graph, are a foundational problem in graph analytics. This survey provides a comprehensive review of techniques for efficient graph reachability querying, including static and dynamic approaches, indexed and online methods, and recent advancements. Detailed discussions explore various design choices for efficiently handling graph reachability queries, emphasising their applicability, limitations, and performance trade-offs. Additionally, we outline key open challenges and potential future directions to advance this field. This survey aims to guide researchers in navigating and advancing the state-of-the-art in graph reachability queries.",
@@ -1927,8 +1927,8 @@
     "venueUrl": "https://www.sciencedirect.com/journal/knowledge-based-systems",
     "publisher": "Elsevier B.V.",
     "rankings": {
-      "sjr": "Q1",
-      "ccf": "C"
+      "ccf": "C",
+      "sjr": "Q1"
     },
     "doi": "10.1016/j.knosys.2025.114282",
     "pdf": "https://www.sciencedirect.com/science/article/pii/S0950705125013231",
@@ -1969,8 +1969,8 @@
     "venueUrl": "https://link.springer.com/journal/11280",
     "publisher": "Springer",
     "rankings": {
-      "sjr": "Q1",
-      "ccf": "B"
+      "ccf": "B",
+      "sjr": "Q1"
     },
     "doi": "10.1007/s11280-025-01351-1",
     "abstract": "Hybrid tabular-textual question answering (HTQA) involves integrating multiple data sources, traditionally managed through LSTM-based step-by-step reasoning. However, such sequential approaches are prone to exposure bias and cumulative errors, limiting their effectiveness. This paper first introduces an innovative parallel program generation method, ConcurGen, aiming to transform this paradigm by simultaneously formulating comprehensive program constructs that seamlessly blend operations and values. This approach not only rectifies the inherent pitfalls of sequential methodologies but also infuses efficiency into the process. Through our further research, we found that some HTQA scenarios extend beyond traditional question-answering, often involving open-ended questions that demand dynamic, context-aware response generation. Therefore, we introduce a second framework that leverages large language models (LLMs) to effectively answer both traditional and open-ended questions. Our method demonstrates substantial improvements over existing models such as FinQANet and MT2Net on benchmarks including ConvFinQA and MultiHiertt, achieving new state-of-the-art performance across multiple evaluation metrics. In addition to its accuracy, it delivers a nearly 21x speedup in program generation, significantly enhancing inference efficiency. Unlike traditional models, our system maintains robust performance as the complexity of numerical reasoning increases, highlighting its adaptability in challenging scenarios. Furthermore, supplementary experiments on the LLM-based framework show that it provides enriched answer justifications while achieving similar performance to ConcurGen on standard benchmarks.",
@@ -2023,8 +2023,8 @@
     "venueUrl": "https://www.sciencedirect.com/journal/ad-hoc-networks",
     "publisher": "Elsevier B.V.",
     "rankings": {
-      "sjr": "Q1",
-      "ccf": "C"
+      "ccf": "C",
+      "sjr": "Q1"
     },
     "doi": "10.1016/j.adhoc.2025.103755",
     "pdf": "https://www.sciencedirect.com/science/article/pii/S1570870525000034",
@@ -2116,8 +2116,8 @@
     "publisher": "Springer",
     "track": "Short Paper",
     "rankings": {
-      "icore2026": "C",
-      "core2023": "C"
+      "core2023": "C",
+      "icore2026": "C"
     },
     "doi": "10.1007/978-981-95-3462-3_18",
     "abstract": "Temporal Katz Centrality (TKC) measures node importance by aggregating time-decayed contributions from all temporal walks, emphasizing recent interactions. This enables TKC to capture the evolving influence of vertices in dynamic networks, making it a valuable tool for ranking and identifying key entities. However, computing TKC is computationally intensive due to the need to traverse all time-respecting paths. To address this challenge, we propose a temporal graph neural network-based framework. Our model utilizes a temporal graph neural network to learn node representations. To enhance efficiency, it adopts a degree-based temporal neighbor sampling strategy, selectively targeting key temporal neighbors to effectively reduce computation. Additionally, a fused long short-term memory (LSTM) module is integrated into the framework to aggregate temporal neighbor information, mimicking the accumulation of weighted temporal walk contributions. Experimental results on six real-world datasets demonstrate the effectiveness and efficiency of the proposed method.",
@@ -2169,9 +2169,9 @@
     "venueUrl": "https://adma2025.github.io/",
     "publisher": "Springer",
     "rankings": {
-      "ccf": "C",
+      "core2023": "C",
       "icore2026": "C",
-      "core2023": "C"
+      "ccf": "C"
     },
     "doi": "10.1007/978-981-95-3459-3_3",
     "abstract": "The Foreign Exchange (Forex) market is a decentralized, high-frequency trading environment that is particularly vulnerable to manipulation and fraud. Fraudulent strategies often exploit low-liquidity periods to distort price movements and mislead traders. While traditional fraud detection strategies are simple and interpretable, their effectiveness and efficiency are constrained in real industrial scenarios due to the need for extensive expert verification and significant time investment, making it challenging to identify complex fraud patterns. To tackle these challenges, we propose a Forex market fraud detection (FMFD) framework named Accelerated Ensemble Fraud Analysis (AEFA). It consists of three key components: an Initial Data Optimization module for outlier removal, a Probabilistic Decision Module employing Random Forest for high-recall classification, and an Advanced Voting Integration module with a soft voting strategy. Extensive experiments demonstrate that AEFA outperforms existing methods with superior performance and efficiency, enabling scalable fraud detection in Forex trading systems.",
@@ -2225,9 +2225,9 @@
       "shortName": "VLDB",
       "year": 2025,
       "rankings": {
-        "ccf": "A",
+        "core2023": "A*",
         "icore2026": "A*",
-        "core2023": "A*"
+        "ccf": "A"
       }
     },
     "pdf": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/ADMS/ADMS25-06.pdf",
@@ -2279,8 +2279,8 @@
     "venueUrl": "https://adc2025.scimeeting.cn/",
     "publisher": "Springer",
     "rankings": {
-      "icore2026": "Australasian B",
-      "core2023": "Australasian B"
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
     },
     "doi": "10.1007/978-981-95-6196-4_4",
     "abstract": "Graph pattern mining (GPM) extracts subgraph structures (e.g., motifs and cliques) from large graphs, but traditional vertex-centric graph computing frameworks struggle with the explosive growth of intermediate embeddings and redundant isomorphism checks. Building on the first GPM system, Arabesque, this thesis presents a systematic survey and an empirical study of modern GPM systems. We then conduct a comparative evaluation across six real-world graphs (CiteSeer, Mico, YouTube, LiveJournal, Orkut, and Twitter20) and three representative mining tasks: Motif Counting (MC), Clique Finding (CF), and Triangle Counting (TC) on large graphs. The experiments measure runtime together with CPU and memory usage. Results show clear specialization across systems: Peregrine is the most efficient for MC on small to large graphs; Sandslash (and, to a lesser extent, Pangolin) is strongest on CF and is the only tested system to finish 4-clique finding on the billion-edge Twitter20 graph, and Arya delivers state-of-the-art TC on large graphs, completing Orkut and Twitter20 in fractions of a second, far faster than CPU-centric baselines. Overall, pattern-aware exploration, decomposition (with or without sampling), and heterogeneous execution are the dominant factors behind scalable performance, while exhaustive embedding enumeration remains the primary bottleneck. These findings provide a unified view of the GPM systems landscape and practical guidance for building the next generation of scalable graph mining systems.",
@@ -2320,8 +2320,8 @@
     "venueUrl": "https://adc2025.scimeeting.cn/",
     "publisher": "Springer",
     "rankings": {
-      "icore2026": "Australasian B",
-      "core2023": "Australasian B"
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
     },
     "doi": "10.1007/978-981-95-6196-4_15",
     "abstract": "Temporal reachability prediction aims to determine whether a target node can be reached from a source node within a given time interval in a temporal graph. This problem is challenging due to the need to jointly capture evolving structural patterns, temporal dependencies, and multi-hop propagation. In this work, we propose an enhanced temporal graph embedding framework tailored for temporal reachability prediction. Previously, there was work on reachability prediction using random walk incorporating continuous time through constraints on transition probabilities and path frequency bias on starting node selection to solve this problem. Our method ReaCH-TGN (Reachability prediction with Contrastive Hop-Time aware Temporal Graph Network) integrates three key optimizations: (1) Hop-aware contrastive loss, which extends the NT-Xent objective by incorporating hop-dependent weights to emphasize more challenging long-range dependencies; (2) Time-gap penalty, which regularizes embeddings based on the temporal distance between events, improving recency sensitivity; and (3) Temporal data augmentation, which combines random event dropout with timestamp jitter to enhance robustness against temporal noise. Experiments on three real-world temporal networks show that our approach achieves significant improvements in accuracy across multiple hop distances, particularly in long-range reachability scenarios.",
@@ -2361,8 +2361,8 @@
     "venueUrl": "https://adc2025.scimeeting.cn/",
     "publisher": "Springer",
     "rankings": {
-      "icore2026": "Australasian B",
-      "core2023": "Australasian B"
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
     },
     "doi": "10.1007/978-981-95-6196-4_2",
     "abstract": "Temporal graphs capture time-stamped interactions in domains such as finance and social networks. Prior work formalized historical k-core queries and the PHC index; constructing it reduces to computing, for every vertex and start time, its core time--the earliest end time at which the vertex enters the k-core of the windowed snapshot. The existing method computes start times serially and propagates neighbor updates, introducing dependencies within each round of computation, which hinder parallelization and scalability. We revisit the task through a parallel lens and propose a vertex-centric algorithm that computes core times for multiple start times in parallel, then updates them incrementally for subsequent start times, preserving exactness while mitigating these dependencies. Experiments on real temporal graphs show consistent speedups over a single-threaded baseline and a naive lock-based parallelization.",
@@ -2415,8 +2415,8 @@
     "venueUrl": "https://ajcai2025.org/",
     "publisher": "Springer",
     "rankings": {
-      "icore2026": "Australasian B",
-      "core2023": "Australasian B"
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
     },
     "doi": "10.1007/978-981-95-4969-6_16",
     "abstract": "Large Language Models (LLMs) are increasingly deployed in sensitive contexts where fairness and inclusivity are critical. Pronoun usage, especially concerning gender-neutral and neopronouns, remains a key challenge for responsible AI. Prior work, such as the MISGENDERED benchmark, revealed significant limitations in earlier LLMs' handling of inclusive pronouns, but was constrained to outdated models and limited evaluations. In this study, we introduce MISGENDERED+, an extended and updated benchmark for evaluating LLMs' pronoun fidelity. We benchmark five representative LLMs, GPT-4o, Claude 4, DeepSeek-V3, Qwen Turbo and Qwen2.5, across zero-shot, few-shot, and gender identity inference. Our results show notable improvements compared with the previous studies, especially in binary and gender-neutral pronoun accuracy. However, accuracy on neopronouns and reverse inference tasks remains inconsistent, underscoring persistent gaps in identity-sensitive reasoning. We discussed implications, model-specific observations, and avenues for future inclusive AI research.",
@@ -2836,9 +2836,9 @@
       "shortName": "VLDB",
       "year": 2025,
       "rankings": {
-        "ccf": "A",
+        "core2023": "A*",
         "icore2026": "A*",
-        "core2023": "A*"
+        "ccf": "A"
       }
     },
     "pdf": "https://www.vldb.org/2025/Workshops/VLDB-Workshops-2025/LSGDA/LSGDA25_01.pdf",
@@ -2879,9 +2879,9 @@
     "venueUrl": "https://www2024.thewebconf.org/",
     "publisher": "Association for Computing Machinery (ACM)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "doi": "10.1145/3589334.3645432",
     "code": "https://github.com/ZJUT-DBLab/TATKC",
@@ -2931,9 +2931,9 @@
     "venueUrl": "https://www2024.thewebconf.org/",
     "publisher": "Association for Computing Machinery (ACM)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "doi": "10.1145/3589334.3645438",
     "code": "https://github.com/ZJUT-DBLab/TBC",
@@ -2979,9 +2979,9 @@
     "venueUrl": "https://cikm2024.org/",
     "publisher": "Association for Computing Machinery (ACM)",
     "rankings": {
-      "ccf": "B",
+      "core2023": "A",
       "icore2026": "A",
-      "core2023": "A"
+      "ccf": "B"
     },
     "doi": "10.1145/3627673.3679765",
     "abstract": "Exploring the hierarchical structure of graphs presents notable advantages for graph analysis, revealing insights ranging from individual vertex behavior to community distribution and overall graph stability. This paper studies hierarchical structures within hypergraphs, where a hyperedge can connect multiple vertices. We observed that directly extending hierarchical frameworks from pairwise graphs to hypergraphs overlooks high-order interactions and can result in either high computational complexity or sparse hierarchy structure. To address this challenge, we introduce a dual-layer hypergraph hierarchy consisting of a primary hierarchy and a secondary hierarchy, enabling the construction of a refined hypergraph hierarchy in linear time. The dual-layer hierarchy establishes a global hierarchy based on vertex cohesion, utilizing vertex-induced subhypergraphs, and a local hierarchy based on hyperedge containment, employing edge-induced subhypergraphs. The combination of global and local hierarchy mitigates the homogeneity and sparsity issues inherent in single-layer hierarchies, allowing more effective modeling of high-order interactions. Furthermore, we propose an efficient hierarchical construction algorithm by leveraging a novel hyperedge-based disjoint set to identify connected subhypergraphs. Additionally, to optimize the local hierarchy further and prevent the emergence of excessively redundant levels, we introduce a compact local hierarchy by defining a restricted subgraph metric to eliminate redundancy caused by large-sized hyperedges. Empirical studies on real-world hypergraphs demonstrate the effectiveness of our approach.",
@@ -3013,9 +3013,9 @@
     "venueUrl": "https://www.dasfaa2024.org/",
     "publisher": "Springer",
     "rankings": {
-      "ccf": "B",
+      "core2023": "B",
       "icore2026": "B",
-      "core2023": "B"
+      "ccf": "B"
     },
     "doi": "10.1007/978-981-97-5552-3_3",
     "abstract": "Maximal clique is a fundamental cohesive subgraph model that plays an important role in many practical applications such as social network analysis and bioinformatics. Many real-world graphs change over time, with edges arriving continuously, and each edge has a timestamp representing the arrival time of that edge; such graphs are also known as temporal graphs. All maximal cliques in all snapshots since all possible historical moments are called historical cliques. Querying historical cliques has not been explored in existing research efforts. In this paper, we study the problem of compressing historical cliques in temporal graphs. We design a novel trie index structure called HC-Trie to compress historical cliques by exploiting the duration of historical cliques and the overlapping relationship between different historical cliques. We also propose an algorithm for maintaining the index when the graph changes. Experiments on real-world temporal graphs demonstrate that our solution achieves much faster query efficiency than the online solution and significantly less index space than the straightforward solution.",
@@ -3062,8 +3062,8 @@
     "venueUrl": "https://link.springer.com/journal/11280",
     "publisher": "Springer",
     "rankings": {
-      "sjr": "Q1",
-      "ccf": "B"
+      "ccf": "B",
+      "sjr": "Q1"
     },
     "doi": "10.1007/s11280-024-01259-2",
     "abstract": "In the context of searching a single data graph G, graph pattern matching is to find all the occurrences of a pattern graph Q in G, specified by a matching rule. It is of paramount importance in many real applications such as social network analysis and cyber security, among others. A wide spectrum of studies target general graph pattern matching. However, to analyze time-relevant services such as studying the spread of diseases and detecting attack patterns, it is attractive to study inexact temporal graph pattern matching. Hence, in this paper, we propose a relaxed matching rule called constrained temporal dual simulation, and study simulation-based constrained temporal graph pattern matching which guarantees that the matching result (i) preserves the ancestor and descendant temporal connectivities; and (ii) implements edge-to-temporal path mapping. We devise a decomposition-based matching method, which first decomposes the data graph into Source Temporal Connected Components, and then performs matching on decomposed subgraphs. To speed up the matching, we define child/parent dependency relation tables and propose an efficient double hierarchical traverse strategy. Considering that the temporal graphs are naturally dynamic, we further propose update algorithms. An extensive empirical study over real-world and synthetic temporal graphs has demonstrated the effectiveness and efficiency of our approach.",
@@ -3115,9 +3115,9 @@
     "venueUrl": "https://adma2024.github.io/",
     "publisher": "Springer",
     "rankings": {
-      "ccf": "C",
+      "core2023": "C",
       "icore2026": "C",
-      "core2023": "C"
+      "ccf": "C"
     },
     "doi": "10.1007/978-981-96-0814-0_6",
     "abstract": "The k nearest neighbors (kNN) join is a crucial operation in data mining, retrieving the kNN for each point in the query set within an answer set. This operation finds extensive applications in various domains, including recommendation systems, spatial databases, and knowledge discovery. With the surge in data volume and dimensionality, numerous approaches have emerged to enhance the efficiency of kNN join operations on static and dynamic high-dimensional data. However, we observed that research on batch-dynamic kNN join, where updates occur in batches rather than individually, remains scarce. To bridge this gap, we propose a novel cluster-based approach tailored for batch-dynamic kNN join over high-dimensional data. Our contributions include a cluster-based batch update technique, which efficiently processes similar updates in clusters, and a cluster-based pruning method using the high-dimensional R-tree (HDR-Tree) for optimised search during updates. Extensive experimental evaluations across 6 real-world datasets demonstrate the efficiency of our approach, significantly outperforming state-of-the-art methods by 19 to 55 times.",
@@ -3166,9 +3166,9 @@
     "publisher": "Springer",
     "track": "Demonstration",
     "rankings": {
-      "ccf": "C",
+      "core2023": "C",
       "icore2026": "C",
-      "core2023": "C"
+      "ccf": "C"
     },
     "doi": "10.1007/978-981-97-7244-5_25",
     "abstract": "Field-programmable gate arrays (FPGAs) have significant advantages in parallelism and energy efficiency over CPUs and GPUs and are widely deployed by many enterprises and cloud server providers nowadays. In this paper, we demonstrate FGAQ, an FPGA-based system for accelerating graph queries on massive graphs. FGAQ supports the two most fundamental types of graph queries, namely subgraph and path queries, and features 1) a CPU-FPGA co-designed framework, 2) a fully pipelined FPGA execution, and 3) reduced data transfer from FPGA's external memory. FGAQ provides a user-friendly interface and significantly improved performance. Performance evaluation shows that FGAQ outperforms the most popular graph database, Neo4j, by up to three orders of magnitude. The demo video can be found at https://www.youtube.com/watch?v=pEkzw_DOQYE.",
@@ -3221,9 +3221,9 @@
     "publisher": "Springer",
     "track": "Industry",
     "rankings": {
-      "ccf": "C",
+      "core2023": "C",
       "icore2026": "C",
-      "core2023": "C"
+      "ccf": "C"
     },
     "doi": "10.1007/978-981-97-7244-5_44",
     "abstract": "Just-in-Time (JIT) compilation is an effective technique for enhancing query execution in modern relational databases, and it has gained increasing attention from academia and industry in recent years. However, the architectures of state-of-the-art JIT-based database systems are often complex, leading to challenges and limitations when adopted for commercial use. In this paper, we present an industrial view to JIT compilation for relational databases, emphasizing practicality and applicability. Our focus is on minimizing engineering effort, simplifying testing, and ensuring seamless integration with existing database ecosystems. We achieve these goals by adhering to three core principles: a simple, lightweight architecture; reuse of existing technologies and frameworks, particularly LLVM; and strong extensibility and compatibility. We demonstrate the feasibility and potential of this approach through an initial exploration using LLVM's mature JIT compilation capabilities to translate TPC-H database queries into optimized machine code. This proof-of-concept implementation shows the promise of our approach, pivoting the way for a comprehensive database system that leverages a lightweight yet powerfu JIT compilation framework for real-world applications.",
@@ -3275,9 +3275,9 @@
     "venueUrl": "https://apweb2024.zjnu.edu.cn/",
     "publisher": "Springer",
     "rankings": {
-      "ccf": "C",
+      "core2023": "C",
       "icore2026": "C",
-      "core2023": "C"
+      "ccf": "C"
     },
     "doi": "10.1007/978-981-97-7232-2_9",
     "abstract": "Hybrid tabular-textual question answering (HTQA) involves tapping into a mosaic of data sources, traditionally managed through LSTM-based step-by-step reasoning, which has been vulnerable to exposure bias and subsequent error accumulation. This paper introduces an innovative parallel program generation method, ConcurGen, aiming to transform this paradigm by simultaneously formulating comprehensive program constructs that seamlessly blend operations and values. This approach not only rectifies the inherent pitfalls of sequential methodologies but also infuses efficiency into the process. When subjected to rigorous evaluation on benchmarks like the ConvFinQA and MultiHiertt datasets, our methodology showcased significant superiority over prevalent models such as FinQANet and MT2Net. This was evidenced by enhancements in various performance metrics, effectively raising the bar for what's deemed state-of-the-art. Notably, beyond setting these commendable benchmarks, our method facilitates a striking acceleration in program creation, achieving speeds nearly 21 times faster. Additionally, a salient feature of our approach becomes evident when numerical reasoning steps escalate: unlike traditional models, our system sustains its robust performance, emphasizing its adaptability and resilience in complex scenarios.",
@@ -3321,8 +3321,8 @@
     "venueUrl": "https://adc-conference.github.io/2024/",
     "publisher": "Springer",
     "rankings": {
-      "icore2026": "Australasian B",
-      "core2023": "Australasian B"
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
     },
     "doi": "10.1007/978-981-96-1242-0_20",
     "abstract": "Hop-constrained s-t simple path (HC-s-t path) enumeration is a core problem in graph analysis, commonly applied to unlabelled graphs without considering label constraints. However, in many practical scenarios, graphs are edge-labelled, requiring queries to satisfy specific label constraints on the paths between vertices. This introduces new computational challenges that traditional HC-s-t path algorithms are not equipped to handle, especially in distributed environments dealing with large-scale graphs. To address these challenges, we propose a distributed algorithm for labelled hop-constrained s-t path (LHC-s-t path) enumeration. Our approach introduces an online label-based index to prune unnecessary computations, reducing both redundant processing and communication overhead. This enables efficient LHC-s-t path enumeration across distributed systems. Extensive experiments on large real-world graphs demonstrate that our algorithm significantly outperforms existing methods, achieving over an order of magnitude improvement in performance and scalability.",
@@ -3363,8 +3363,8 @@
     "venueUrl": "https://adc-conference.github.io/2024/",
     "publisher": "Springer",
     "rankings": {
-      "icore2026": "Australasian B",
-      "core2023": "Australasian B"
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
     },
     "doi": "10.1007/978-981-96-1242-0_17",
     "abstract": "This paper investigates the k-reachability problem on temporal bipartite graphs, which determines whether a vertex can reach another vertex within a given time interval I and a step constraint k. The problem is motivated by real-world scenarios where the number of hops from a source vertex s to a target vertex t reflects the influence s exerts on t. Bipartite graphs are used to model relationships between two types of entities, such as people-location, author-paper, and customer-product. When modeling real-world applications like disease outbreaks, biomedical reactions, and travel planning, edges are often enriched with temporal information. Temporal bipartite graphs provide an effective tool for modeling these dynamic scenarios. Recent studies show that k-reachability on temporal bipartite graphs can expand research in the above fields. Adding a step constraint k provides more insights into the connectivity of temporal bipartite graphs. Although k-reachability has been extensively studied on unipartite graphs, it remains unexplored on temporal bipartite graphs. To fill this research gap, we propose an efficient algorithm for k-reachability problem on temporal bipartite graphs in this paper. Specifically, we introduce a 2-hop index-based approach to efficiently answer k-reachability queries. Extensive experiments on real-world datasets demonstrate that the proposed method achieves a speedup of at least three orders of magnitude in query performance.",
@@ -3409,8 +3409,8 @@
     "venueUrl": "https://adc-conference.github.io/2024/",
     "publisher": "Springer",
     "rankings": {
-      "icore2026": "Australasian B",
-      "core2023": "Australasian B"
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
     },
     "doi": "10.1007/978-981-96-1242-0_16",
     "abstract": "Betweenness centrality is a key concept in graph analysis that measures the significance of a node by counting how often it appears in the shortest paths between other nodes. The task of betweenness centrality maximization, which seeks to identify a set of nodes with the highest centrality scores, is crucial in various real-world applications. Most existing studies about betweenness centrality focus on general graphs. However, in reality, users in networks are usually associated with attributes such as preferences, which play an essential role in analyzing the properties of networks. Therefore, the traditional betweenness centrality is not applicable to the attribute graphs. Motivated by this, we propose a novel concept called Keyword-based Betweenness Centrality (KBC), which quantifies the number of times each node acts as the midpoint of shortest paths between nodes having one of the given attributes. Given an attribute graph G, a query attribute set Q, and a positive integer k, in this paper, we aim to find a node set of size no larger than k so that its KBC value based on Q is maximized. To address this problem, we propose a keyword-based hyper-edge sampler and devise an algorithm achieving the approximation guarantee of (1 - 1/e - epsilon) with at least 1 - delta probability. Extensive experiments on four real networks demonstrate the efficiency and effectiveness of our proposed algorithms.",
@@ -3455,8 +3455,8 @@
     "venueUrl": "https://adc-conference.github.io/2024/",
     "publisher": "Springer",
     "rankings": {
-      "icore2026": "Australasian B",
-      "core2023": "Australasian B"
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
     },
     "doi": "10.1007/978-981-96-1242-0_3",
     "abstract": "With the growing use of graph-based applications across various domains, the demand for efficient and scalable RDF (Resource Description Framework) systems has intensified. As organizations increasingly deploy RDF systems on cloud infrastructures, understanding the trade-offs between performance and cost becomes critical. This paper presents a comprehensive experimental comparison of multiple RDF systems, analyzing their performance in cloud and on-premises environments. Our study evaluates key metrics such as query execution time, data ingestion speed, storage efficiency, and cost-effectiveness across several benchmarks, including LDBC SNB, WatDiv, LUBM, and DBpedia. The experiments reveal distinct advantages and limitations in RDF systems. Notably, Virtuoso demonstrated strong performance and cost-efficiency across most datasets, while systems like gStore exhibited higher variability under stress conditions. Our findings offer actionable insights for practitioners seeking to balance performance and cost when deploying RDF systems in cloud environments. We also highlight areas for improvement in system documentation, compatibility, and stability under extreme workloads. Future work will explore alternative architectures and further optimization strategies for cloud-based RDF solutions. The related code, scripts and data of this paper are available online (https://github.com/unswdb/RDF_on_Cloud).",
@@ -3501,8 +3501,8 @@
     "venueUrl": "https://adc-conference.github.io/2024/",
     "publisher": "Springer",
     "rankings": {
-      "icore2026": "Australasian B",
-      "core2023": "Australasian B"
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
     },
     "doi": "10.1007/978-981-96-1242-0_37",
     "abstract": "Image classification is one of the fundamental tasks in computer vision (CV) and has numerous practical applications. Traditionally, machine learning and deep learning methods such as k-Nearest Neighbors (kNN), decision trees, and Convolutional Neural Networks (CNN) have been widely used to perform this task. However, with the recent emergence of large language models (LLMs), such as Generative Pre-trained Transformers (GPT), originally designed for natural language processing, their cross-domain applications, including in CV, are now being explored. In this paper, we investigate the capabilities of GPT-4o, a variant of the GPT model, for image classification on the Fashion-MNIST dataset. By using carefully designed prompts, we evaluate GPT-4o's performance and compare it with more traditional models. Our study offers insights into the cross-domain potential of GPT models, explores how prompt engineering can enhance GPT's performance on image classification tasks, and suggests new avenues for developing more flexible and adaptable multimodal LLM systems. The code can be found at https://github.com/Tanghaha1424/gpt-fashionmnist.",
@@ -3713,9 +3713,9 @@
       "shortName": "APWeb-WAIM",
       "year": 2024,
       "rankings": {
-        "ccf": "C",
+        "core2023": "C",
         "icore2026": "C",
-        "core2023": "C"
+        "ccf": "C"
       }
     },
     "doi": "10.1007/978-981-96-0055-7_1",
@@ -3761,9 +3761,9 @@
       "shortName": "VLDB",
       "year": 2024,
       "rankings": {
-        "ccf": "A",
+        "core2023": "A*",
         "icore2026": "A*",
-        "core2023": "A*"
+        "ccf": "A"
       }
     },
     "pdf": "https://www.vldb.org/workshops/2024/proceedings/LSGDA/LSGDA24.01.pdf",
@@ -3831,9 +3831,9 @@
     "venueUrl": "https://icde2023.ics.uci.edu/",
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "arxiv": "2302.06119",
     "doi": "10.1109/ICDE55515.2023.00160",
@@ -3873,9 +3873,9 @@
     "venueUrl": "http://www.tjudb.cn/dasfaa2023/",
     "publisher": "Springer",
     "rankings": {
-      "ccf": "B",
+      "core2023": "B",
       "icore2026": "B",
-      "core2023": "B"
+      "ccf": "B"
     },
     "doi": "10.1007/978-3-031-30675-4_16",
     "abstract": "Structural Graph Clustering (SCAN) is a fundamental problem in graph analysis and has received considerable attention recently. Existing distributed solutions either lack efficiency or suffer from high memory consumption when addressing this problem in billion-scale graphs. Motivated by these, in this paper, we aim to devise a distributed algorithm for SCAN that is both efficient and scalable. We first propose a fine-grained clustering framework tailored for SCAN. Based on the new framework, we devise a distributed SCAN algorithm, which not only keeps a low communication overhead during execution, but also effectively reduces the memory consumption at all time. We also devise an effective workload balance mechanism that is automatically triggered by the idle machines to handle skewed workloads. The experiment results demonstrate the efficiency and scalability of our proposed algorithm.",
@@ -3923,8 +3923,8 @@
     "venueUrl": "https://link.springer.com/journal/11280",
     "publisher": "Springer",
     "rankings": {
-      "sjr": "Q1",
-      "ccf": "B"
+      "ccf": "B",
+      "sjr": "Q1"
     },
     "doi": "10.1007/s11280-023-01204-9",
     "abstract": "Given a user dataset U and an object dataset I, a kNN join query in high-dimensional space returns the k nearest neighbors of each object in dataset U from the object dataset I. The kNN join is a basic and necessary operation in many applications, such as databases, data mining, computer vision, multi-media, machine learning, recommendation systems, and many more. In the real world, datasets frequently update dynamically as objects are added or removed. In this paper, we propose novel methods of continuous kNN join over dynamic high-dimensional data. We firstly propose the HDR+ Tree, which supports more efficient insertion, deletion, and batch update. Further observed that the existing methods rely on globally correlated datasets for effective dimensionality reduction, we then propose the HDR Forest. It clusters the dataset and constructs multiple HDR Trees to capture local correlations among the data. As a result, our HDR Forest is able to process non-globally correlated datasets efficiently. Two novel optimisations are applied to the proposed HDR Forest, including the precomputation of the PCA states of data items and pruning-based kNN recomputation during item deletion. For the completeness of the work, we also present the proof of computing distances in reduced dimensions of PCA in HDR Tree. Extensive experiments on real-world datasets show that the proposed methods and optimisations outperform the baseline algorithms of naive RkNN join and HDR Tree.",
@@ -3977,9 +3977,9 @@
       "shortName": "ICDM",
       "year": 2023,
       "rankings": {
-        "ccf": "B",
+        "core2023": "A*",
         "icore2026": "A*",
-        "core2023": "A*"
+        "ccf": "B"
       }
     },
     "doi": "10.1109/ICDMW60847.2023.00135",
@@ -4017,8 +4017,8 @@
     "venueUrl": "https://adc2023.github.io/",
     "publisher": "Springer",
     "rankings": {
-      "icore2026": "Australasian B",
-      "core2023": "Australasian B"
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
     },
     "arxiv": "2311.04692",
     "doi": "10.1007/978-3-031-47843-7_16",
@@ -4063,8 +4063,8 @@
     "venueUrl": "https://adc2023.github.io/",
     "publisher": "Springer",
     "rankings": {
-      "icore2026": "Australasian B",
-      "core2023": "Australasian B"
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
     },
     "doi": "10.1007/978-3-031-47843-7_1",
     "abstract": "The k nearest neighbor (kNN) join operation is a fundamental task that combines two high-dimensional databases, enabling data points in the User dataset U to identify their k nearest neighbor points from the Item dataset I. This operation plays a crucial role in various domains, including knowledge discovery, data mining, similarity search applications, and scientific research. However, exact kNN search in high-dimensional spaces is computationally demanding, and existing sequential methods face challenges in handling large datasets. In this paper, we propose an efficient parallel solution for dynamic kNN join over high-dimensional data, leveraging the high-dimensional R tree (HDR Tree) for improved efficiency. Our solution harnesses the power of Simultaneous Multi-Threading (SMT) technologies and Single-Instruction-Multiple-Data (SIMD) instructions in modern CPUs for parallelisation. Importantly, our research is the first to introduce parallel computation for exact kNN join over high-dimensional data. Experimental results demonstrate that our proposed approach outperforms the sequential HDR Tree method by up to 1.2 times with a single thread. Moreover, our solution provides near-linear scalability as the number of threads increases.",
@@ -4200,9 +4200,9 @@
     "venueUrl": "https://wise2022.sigappfr.org/",
     "publisher": "Springer",
     "rankings": {
-      "ccf": "B",
+      "core2023": "B",
       "icore2026": "B",
-      "core2023": "B"
+      "ccf": "B"
     },
     "doi": "10.1007/978-3-031-20891-1_5",
     "abstract": "Hop-constrained s-t simple path (HC-s-tpath) enumeration is a fundamental problem in graph analysis. Existing solutions for this problem focus on unlabelled graphs and assume queries are issued without any label constraints. However, in many real-world applications, graphs are edge-labelled and the queries involve label constraints on the path connecting two vertices. Therefore, we study the problem of labelled hop-constrained s-t path (LHC-s-tpath) enumeration in this paper. We aim to efficiently enumerate the HC-s-tpaths using only edges with provided labels. To achieve this goal, we first demonstrate the existence of unnecessary computation specific to the label constraints in the state-of-the-art HC-s-tpath enumeration algorithm. We then devise a novel online index to identify the fruitless exploration during the enumeration. Based on the proposed index, we design an efficient LHC-s-tpath enumeration algorithm in which unnecessary computation is effectively pruned. Extensive experiments are conducted on real-world graphs with billions of edges. Experiment results show that our proposed algorithms significantly outperform the baseline methods by over one order of magnitude.",
@@ -4248,8 +4248,8 @@
     "venueUrl": "https://adc2022.github.io/",
     "publisher": "Springer",
     "rankings": {
-      "icore2026": "Australasian B",
-      "core2023": "Australasian B"
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
     },
     "doi": "10.1007/978-3-031-15512-3_5",
     "abstract": "Given a user dataset U and an object dataset I in high-dimensional space, a kNN join query retrieves each object in dataset U its k nearest neighbors from the dataset I. kNN join is a fundamental and essential operation in applications from many domains such as databases, computer vision, multi-media, machine learning, recommendation systems, and many more. The datasets in real world often update dynamically on insertion or deletion of objects. However, existing algorithms of dynamic kNN join lack support for deletion and batch update, which are important in real-life applications. In this paper, we propose a new method of kNN join over dynamic high-dimensional data. Specifically, our method features lazy updates, batch operations, and optimised deletions. Experiments on real-world datasets show that our method outperforms the existing algorithms of naive RkNN join and HDR Tree by up to 5 and 4 times, respectively.",
@@ -4291,8 +4291,8 @@
     "venueUrl": "https://adc2022.github.io/",
     "publisher": "Springer",
     "rankings": {
-      "icore2026": "Australasian B",
-      "core2023": "Australasian B"
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
     },
     "doi": "10.1007/978-3-031-15512-3_9",
     "abstract": "Uncertain graphs are graphs where each edge is assigned with a probability of existence. In this paper, we study the problem of hop-constrained s-t simple path enumeration in large uncertain graphs. To the best of our knowledge, we are the first to study this problem in the literature. Specifically, we propose a light-weight index to prune candidate paths by adopting the concept of probability-constrained distance. An efficient enumeration algorithm is designed based on the index structure. Experiment results on real-world datasets show that our proposed methods significantly outperform the baseline methods by up to 6 times.",
@@ -4377,9 +4377,9 @@
     "venueUrl": "https://2021.sigmod.org/",
     "publisher": "Association for Computing Machinery (ACM)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "arxiv": "2103.14294",
     "doi": "10.1145/3448016.3457237",
@@ -4421,9 +4421,9 @@
     "venueShort": "ICDE",
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "arxiv": "2102.10768",
     "doi": "10.1109/ICDE51399.2021.00129",
@@ -4466,9 +4466,9 @@
     "publisher": "Springer",
     "track": "Demonstration",
     "rankings": {
-      "ccf": "B",
+      "core2023": "B",
       "icore2026": "B",
-      "core2023": "B"
+      "ccf": "B"
     },
     "doi": "10.1007/978-3-030-91560-5_39",
     "abstract": "There are many real-world application domains where data can be naturally modelled as a graph, such as social networks and computer networks. Relational Database Management Systems (RDBMS) find it hard to capture the relationships and inherent graph structure of data and are inappropriate for storing highly connected data; thus, graph databases have emerged to address the challenges of high data connectivity. As the performance of querying highly connected data in relational query statements is usually worse than that in the graph database. Transforming data from a relational database to a graph database is imperative for improving the performance of graph queries. In this paper, we demonstrate SQL2Cypher, a system for migrating data from a relational database to a graph database automatically. This system also supports translating SQL queries into Cypher queries. SQL2Cypher is open-source (https://github.com/UNSW-database/SQL2Cypher) to allow researchers and programmers to migrate data efficiently. Our demonstration video can be found here: https://www.youtube.com/watch?v=eGaeBrVTJws.",
@@ -4507,9 +4507,9 @@
     "venueShort": "KSEM",
     "publisher": "Springer",
     "rankings": {
-      "ccf": "C",
+      "core2023": "C",
       "icore2026": "C",
-      "core2023": "C"
+      "ccf": "C"
     },
     "doi": "10.1007/978-3-030-55130-8_29",
     "code": "https://github.com/UNSW-database/GraphDB-Benchmark",
@@ -4559,9 +4559,9 @@
     "venueUrl": "https://www.vldb.org/2019/",
     "publisher": "VLDB Endowment",
     "rankings": {
-      "ccf": "A",
+      "core2023": "A*",
       "icore2026": "A*",
-      "core2023": "A*"
+      "ccf": "A"
     },
     "arxiv": "1906.11518",
     "doi": "10.14778/3339490.3339494",
@@ -4622,9 +4622,9 @@
     "publisher": "Association for Computing Machinery (ACM)",
     "track": "Demonstration",
     "rankings": {
-      "ccf": "B",
+      "core2023": "A",
       "icore2026": "A",
-      "core2023": "A"
+      "ccf": "B"
     },
     "doi": "10.1145/3357384.3357840",
     "abstract": "Graph pattern matching is one of the most fundamental problems in graph database and is associated with a wide spectrum of applications. Due to its computational intensiveness, researchers have primarily devoted their efforts to improving the performance of the algorithm while constraining the graphs to have singular labels on vertices (edges) or no label. Whereas in practice graphs are typically associated with rich properties, thus the main focus in the industry is instead on powerful query languages that can express a sufficient number of pattern matching scenarios. We demo PatMat in this work to glue together the academic efforts on performance and the industrial efforts on expressiveness. To do so, we leverage the state-of-the-art join-based algorithms in the distributed contexts and Cypher query language - the most widely-adopted declarative language for graph pattern matching. The experiments demonstrate how we are capable of turning complex Cypher semantics into a distributed solution with high performance.",
@@ -4665,9 +4665,9 @@
       "shortName": "ICDE",
       "year": 2019,
       "rankings": {
-        "ccf": "A",
+        "core2023": "A*",
         "icore2026": "A*",
-        "core2023": "A*"
+        "ccf": "A"
       }
     },
     "doi": "10.1109/ICDEW.2019.000-2",
