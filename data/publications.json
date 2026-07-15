@@ -449,7 +449,7 @@
   {
     "id": "huang2026bcce",
     "type": "conference",
-    "status": "accepted",
+    "status": "published",
     "year": 2026,
     "displayOrder": 9,
     "title": "BCCE: Block-Centric GPU Co-Design for Real-Time Range-Top-K Query at Scale",
@@ -474,6 +474,22 @@
       "Yongchao Liu",
       "Shaonan Ma"
     ],
+    "authorAffiliations": {
+      "Chengying Huan": "Nanjing University",
+      "Ziheng Meng": "Nanjing University",
+      "Zhengyi Yang": "University of New South Wales",
+      "Yongchao Liu": "Ant Group",
+      "Jie Zhang": "Peking University",
+      "Qing Wang": "Nanjing University",
+      "Jing Wang": "Shanghai Jiao Tong University",
+      "Shaonan Ma": "Qiyuan Lab",
+      "Zhibin Wang": "Nanjing University",
+      "Mingxing Zhang": "Tsinghua University",
+      "Rong Gu": "Nanjing University",
+      "Baokun Wang": "Ant Group",
+      "Guihai Chen": "Nanjing University",
+      "Chen Tian": "Nanjing University"
+    },
     "venue": "ACM International Symposium on High-Performance Parallel and Distributed Computing",
     "venueShort": "HPDC",
     "venueUrl": "https://hpdc.sci.utah.edu/2026/",
@@ -483,14 +499,19 @@
       "icore2026": "A",
       "core2023": "A"
     },
+    "doi": "10.1145/3806645.3807585",
+    "pages": "249-264",
+    "abstract": "Range-top-k queries retrieve the top-k elements within an arbitrary subrange of a large array and are a key primitive in real-time analytics. Unlike one-shot top-k selection, practical deployments issue large volumes of queries over varying and often overlapping ranges, frequently interleaved with streaming updates. In this setting, applying conventional GPU top-k kernels per query is inefficient: each query triggers range rescans or O(n)-scale passes that overwhelm HBM bandwidth, thrash on-chip caches, and provide little reuse across overlapping windows. We present BCCE, a GPU-co-designed, block-centric engine that makes range-top-k efficient by exposing a reusable intermediate representation of the data. BCCE partitions the array into locally sorted blocks and builds a compact interval-aware auxiliary index, reducing each query to a small set of contiguous active slices that remain amenable to SIMT execution. Queries are answered via a two-layer search: a global rank-thresholding step identifies the candidate value interval, followed by block-local verification restricted to the corresponding slices. This design constrains the active working set to O(sqrt(n)) and achieves O(sqrt(n) log n) per-query time with largely coalesced accesses and high on-chip reuse. To further improve throughput, BCCE employs a DP-based cache placement policy to keep hot slices resident in L2 or shared memory, and a range-grouped batching scheme that amortizes PCIe transfers for out-of-core datasets by reusing fetched slices across queries. Finally, BCCE supports incremental, block-local insertions and deletions without global rebuilds, sustaining performance under continuous data evolution. Across 17 datasets, including up to 70B elements (256 GB), BCCE achieves sub-millisecond query latency and up to 56,308x higher throughput than state-of-the-art GPU baselines, while performing billion-scale dynamic updates in milliseconds.",
     "tags": [
       "Top-k",
       "Indexing",
-      "GPU"
+      "GPU",
+      "Parallel Algorithms"
     ],
     "researchAreas": [
       "Scalable Data Systems"
-    ]
+    ],
+    "bibtex": "@inproceedings{huang2026bcce,\n  title = {BCCE: Block-Centric GPU Co-Design for Real-Time Range-Top-K Query at Scale},\n  author = {Huan, Chengying and Meng, Ziheng and Yang, Zhengyi and Liu, Yongchao and Zhang, Jie and Wang, Qing and Wang, Jing and Ma, Shaonan and Wang, Zhibin and Zhang, Mingxing and Gu, Rong and Wang, Baokun and Chen, Guihai and Tian, Chen},\n  series = {HPDC '26},\n  url = {http://dx.doi.org/10.1145/3806645.3807585},\n  doi = {10.1145/3806645.3807585},\n  booktitle = {Proceedings of the 35th International Symposium on High-Performance Parallel and Distributed Computing},\n  publisher = {ACM},\n  year = {2026},\n  month = July,\n  pages = {249-264},\n  collection = {HPDC '26}\n}"
   },
   {
     "id": "liu2026a2rag",
