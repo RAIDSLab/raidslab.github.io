@@ -2,7 +2,7 @@
   {
     "id": "he2027ptil",
     "type": "conference",
-    "status": "accepted",
+    "status": "published",
     "year": 2027,
     "displayOrder": 1,
     "title": "PTIL: Partitioned Tree-Cover Interval Labeling for Restricted-Domain Reachability Queries",
@@ -10,6 +10,7 @@
       "Huangleshuai He",
       "Zhengyi Yang",
       "Yifu Tang",
+      "Zebin Chen",
       "Dong Wen",
       "Qi Luo",
       "Tianming Zhang"
@@ -19,20 +20,25 @@
     ],
     "authorAffiliations": {
       "Huangleshuai He": "University of New South Wales",
-      "Zhengyi Yang": "University of New South Wales",
+      "Zhengyi Yang": "University of Sydney",
       "Yifu Tang": "Swinburne University of Technology",
+      "Zebin Chen": "University of New South Wales",
       "Dong Wen": "University of New South Wales",
       "Qi Luo": "Shandong University",
       "Tianming Zhang": "Zhejiang University of Technology"
     },
     "venue": "International Conference on Extending Database Technology",
     "venueShort": "EDBT",
+    "venueUrl": "https://edbticdt2027.github.io/",
     "publisher": "OpenProceedings.org",
     "rankings": {
       "core2023": "A",
       "icore2026": "B",
       "ccf": "B"
     },
+    "doi": "10.48786/EDBT.2027.04",
+    "pages": "34-46",
+    "pdf": "https://openproceedings.org/2027/conf/edbt/paper_22.pdf",
     "abstract": "Reachability queries are a core operation in graph analytics. Existing labeling methods assume a global query space and construct uniform labels for all vertices. In practice, however, many systems issue queries over semantically structured endpoint domains such as V_s x V_t, where only a subset of vertices serve as meaningful sources or targets. This mismatch makes global labeling redundant and inefficient. We propose Partitioned Tree-Cover Interval Labeling (PTIL), a restricted-domain reachability indexing framework that extends classical Tree-Cover Labeling. PTIL timestamps only target vertices and stores compact disjoint intervals at sources, reducing each query to a single membership test while avoiding unnecessary global labels. By partitioning targets into groups, PTIL provides an explicit and predictable space-time trade-off: finer grouping yields lower latency at the cost of larger index size. PTIL also supports dynamic updates to endpoint domains. We further develop two instantiations: PTIL-g, a grouped scheme for scalable domain-aligned indexing, and PTIL-p, which additionally leverages query distributions for further prioritization when available. Experiments on real and synthetic graphs show that PTIL-g achieves order-of-magnitude lower query latency than state-of-the-art baselines, while PTIL-p provides additional gains under skewed workloads, with near-linear and predictable space-time behavior.",
     "tags": [
       "Graph",
@@ -41,7 +47,8 @@
     ],
     "researchAreas": [
       "Scalable Data Systems"
-    ]
+    ],
+    "bibtex": "@article{he2027ptil,\n  title = {PTIL: Partitioned Tree-Cover Interval Labeling for Restricted-Domain Reachability Queries},\n  author = {He, Huangleshuai and Yang, Zhengyi and Tang, Yifu and Chen, Zebin and Wen, Dong and Luo, Qi and Zhang, Tianming},\n  volume = {30},\n  number = {1},\n  pages = {34--46},\n  doi = {10.48786/EDBT.2027.04},\n  url = {https://openproceedings.org/2027/conf/edbt/paper_22.pdf},\n  keywords = {Database Technology},\n  language = {en},\n  publisher = {OpenProceedings.org},\n  year = {2027},\n  isbn = {978-3-89318-106-3},\n  issn = {2367-2005}\n}"
   },
   {
     "id": "zhang2026nucleus",
