@@ -559,11 +559,66 @@
     "bibtex": "@misc{wang2026beyond,\n  title = {Beyond Linearization: Attributed Table Graphs for Table Reasoning},\n  author = {Yuxiang Wang and Junhao Gan and Shengxiang Gao and Shenghao Ye and Zhengyi Yang and Jianzhong Qi},\n  year = {2026},\n  eprint = {2601.08444},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.AI},\n  url = {https://arxiv.org/abs/2601.08444}\n}"
   },
   {
+    "id": "liu2026hypersu",
+    "type": "conference",
+    "status": "accepted",
+    "year": 2026,
+    "displayOrder": 10,
+    "title": "HyperSU: Corpus-Driven Semantic-Unit Hypergraph for Retrieval-Augmented Generation",
+    "authors": [
+      "Jiate Liu",
+      "Liuyi Chen",
+      "Zhengyi Yang",
+      "Chuan He",
+      "Mingchen Ju",
+      "Bocheng Han",
+      "Ruyi Liu",
+      "Xu Zhou"
+    ],
+    "coFirstAuthors": [
+      "Jiate Liu",
+      "Liuyi Chen"
+    ],
+    "authorAffiliations": {
+      "Jiate Liu": "University of New South Wales",
+      "Liuyi Chen": "Hunan University",
+      "Zhengyi Yang": "University of Sydney",
+      "Chuan He": "University of New South Wales",
+      "Mingchen Ju": "Euler AI",
+      "Bocheng Han": "Vecton AI",
+      "Ruyi Liu": "University of New South Wales",
+      "Xu Zhou": "Hunan University"
+    },
+    "venue": "Conference on Empirical Methods in Natural Language Processing",
+    "venueShort": "EMNLP",
+    "venueUrl": "https://2026.emnlp.org/",
+    "publisher": "Association for Computational Linguistics (ACL)",
+    "track": "Findings",
+    "rankings": {
+      "core2023": "A*",
+      "icore2026": "A*",
+      "ccf": "B"
+    },
+    "arxiv": "2606.28351",
+    "abstract": "Recent Hypergraph-based retrieval-augmented generation (HyperRAG) methods use hyperedges to connect multiple entities simultaneously, enabling more efficient multi-entity evidence organization than pairwise graph structures. However, existing HyperRAG methods often rely on LLM-generated summaries to construct hyperedges, which can introduce hallucinations while also incurring high indexing costs. In addition, during retrieval, existing methods typically rely on either one-hop neighbor expansion or PageRank diffusion. The former may miss useful multi-hop evidence, while the latter can suffer from uncontrolled propagation over excessive hub nodes, leading to semantic drift and noisy reasoning chains. To address these challenges, we propose HyperSU, a novel hypergraph-based RAG framework featuring semantic-unit hyperedges and clue-guided bidirectional retrieval. During construction, HyperSU formulates hyperedge construction as an entity-aware minimum-description-length (MDL) optimization problem, inducing source-grounded semantic-unit hyperedges that balance sentence-level semantic coherence and entity compactness. It then constructs a hypergraph by modeling each semantic unit as a hyperedge over its co-mentioned entities. During retrieval, HyperSU performs clue-guided bidirectional expansion over the semantic-unit hypergraph, enabling both multi-hop evidence discovery and answer-aware noise reduction. Experiments show that HyperSU consistently improves answer accuracy over standard, graph-based, and hypergraph-based RAG baselines, achieving up to a 14.7% relative accuracy improvement on GraphRAG-Bench, with larger gains on reasoning-intensive tasks.",
+    "tags": [
+      "Hypergraph",
+      "RAG",
+      "Retrieval",
+      "LLM"
+    ],
+    "researchAreas": [
+      "Responsible Data Intelligence",
+      "Scalable Data Systems"
+    ],
+    "bibtex": "@misc{liu2026hypersu,\n  title = {HyperSU: Corpus-Driven Semantic-Unit Hypergraph for Retrieval-Augmented Generation},\n  author = {Jiate Liu and Liuyi Chen and Zhengyi Yang and Chuan He and Mingchen Ju and Bocheng Han and Ruyi Liu and Xu Zhou},\n  year = {2026},\n  eprint = {2606.28351},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.IR},\n  url = {https://arxiv.org/abs/2606.28351}\n}"
+  },
+  {
     "id": "huang2026bcce",
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 10,
+    "displayOrder": 11,
     "title": "BCCE: Block-Centric GPU Co-Design for Real-Time Range-Top-K Query at Scale",
     "authors": [
       "Chengying Huan",
@@ -630,7 +685,7 @@
     "type": "workshop",
     "status": "published",
     "year": 2026,
-    "displayOrder": 11,
+    "displayOrder": 12,
     "title": "A2RAG: Adaptive Agentic Graph Retrieval for Cost-Aware and Reliable Reasoning",
     "authors": [
       "Jiate Liu",
@@ -696,61 +751,6 @@
     "award": "Best Paper Award",
     "featured": true,
     "bibtex": "@inproceedings{liu2026a2rag,\n  title = {A2RAG: Adaptive Agentic Graph Retrieval for Cost-Aware and Reliable Reasoning},\n  author = {Liu, Jiate and Chen, Zebin and Qiao, Shaobo and Ju, Mingchen and Zhang, Danting and Han, Bocheng and Yu, Shuyue and Shu, Xin and Wu, Jinglin and Wen, Dong and Cao, Xin and Liu, Guanfeng and Yang, Zhengyi},\n  url = {http://dx.doi.org/10.1109/icdew71238.2026.00024},\n  DOI = {10.1109/icdew71238.2026.00024},\n  booktitle = {2026 IEEE 42nd International Conference on Data Engineering Workshops (ICDEW)},\n  publisher = {IEEE},\n  year = {2026},\n  month = May,\n  pages = {187-196}\n}"
-  },
-  {
-    "id": "liu2026hypersu",
-    "type": "conference",
-    "status": "accepted",
-    "year": 2026,
-    "displayOrder": 12,
-    "title": "HyperSU: Corpus-Driven Semantic-Unit Hypergraph for Retrieval-Augmented Generation",
-    "authors": [
-      "Jiate Liu",
-      "Liuyi Chen",
-      "Zhengyi Yang",
-      "Chuan He",
-      "Mingchen Ju",
-      "Bocheng Han",
-      "Ruyi Liu",
-      "Xu Zhou"
-    ],
-    "coFirstAuthors": [
-      "Jiate Liu",
-      "Liuyi Chen"
-    ],
-    "authorAffiliations": {
-      "Jiate Liu": "University of New South Wales",
-      "Liuyi Chen": "Hunan University",
-      "Zhengyi Yang": "University of Sydney",
-      "Chuan He": "University of New South Wales",
-      "Mingchen Ju": "Euler AI",
-      "Bocheng Han": "Vecton AI",
-      "Ruyi Liu": "University of New South Wales",
-      "Xu Zhou": "Hunan University"
-    },
-    "venue": "Conference on Empirical Methods in Natural Language Processing",
-    "venueShort": "EMNLP",
-    "venueUrl": "https://2026.emnlp.org/",
-    "publisher": "Association for Computational Linguistics (ACL)",
-    "track": "Findings",
-    "rankings": {
-      "core2023": "A*",
-      "icore2026": "A*",
-      "ccf": "B"
-    },
-    "arxiv": "2606.28351",
-    "abstract": "Recent Hypergraph-based retrieval-augmented generation (HyperRAG) methods use hyperedges to connect multiple entities simultaneously, enabling more efficient multi-entity evidence organization than pairwise graph structures. However, existing HyperRAG methods often rely on LLM-generated summaries to construct hyperedges, which can introduce hallucinations while also incurring high indexing costs. In addition, during retrieval, existing methods typically rely on either one-hop neighbor expansion or PageRank diffusion. The former may miss useful multi-hop evidence, while the latter can suffer from uncontrolled propagation over excessive hub nodes, leading to semantic drift and noisy reasoning chains. To address these challenges, we propose HyperSU, a novel hypergraph-based RAG framework featuring semantic-unit hyperedges and clue-guided bidirectional retrieval. During construction, HyperSU formulates hyperedge construction as an entity-aware minimum-description-length (MDL) optimization problem, inducing source-grounded semantic-unit hyperedges that balance sentence-level semantic coherence and entity compactness. It then constructs a hypergraph by modeling each semantic unit as a hyperedge over its co-mentioned entities. During retrieval, HyperSU performs clue-guided bidirectional expansion over the semantic-unit hypergraph, enabling both multi-hop evidence discovery and answer-aware noise reduction. Experiments show that HyperSU consistently improves answer accuracy over standard, graph-based, and hypergraph-based RAG baselines, achieving up to a 14.7% relative accuracy improvement on GraphRAG-Bench, with larger gains on reasoning-intensive tasks.",
-    "tags": [
-      "Hypergraph",
-      "RAG",
-      "Retrieval",
-      "LLM"
-    ],
-    "researchAreas": [
-      "Responsible Data Intelligence",
-      "Scalable Data Systems"
-    ],
-    "bibtex": "@misc{liu2026hypersu,\n  title = {HyperSU: Corpus-Driven Semantic-Unit Hypergraph for Retrieval-Augmented Generation},\n  author = {Jiate Liu and Liuyi Chen and Zhengyi Yang and Chuan He and Mingchen Ju and Bocheng Han and Ruyi Liu and Xu Zhou},\n  year = {2026},\n  eprint = {2606.28351},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.IR},\n  url = {https://arxiv.org/abs/2606.28351}\n}"
   },
   {
     "id": "hoang2026esg",
