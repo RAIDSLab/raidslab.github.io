@@ -755,7 +755,7 @@
   {
     "id": "hoang2026esg",
     "type": "conference",
-    "status": "accepted",
+    "status": "published",
     "year": 2026,
     "displayOrder": 13,
     "title": "ESG Reporting Lifecycle Management with Large Language Models and AI Agents",
@@ -770,17 +770,25 @@
       "Jieke Shi",
       "David Lo"
     ],
-    "venue": "IEEE International Conference on Software Architecture",
-    "venueShort": "ICSA",
+    "venue": "IEEE International Conference on Software Architecture Companion",
+    "venueShort": "ICSA-C",
     "venueUrl": "https://conf.researchr.org/home/icsa-2026",
+    "hostVenue": {
+      "name": "IEEE International Conference on Software Architecture",
+      "shortName": "ICSA",
+      "year": 2026,
+      "url": "https://conf.researchr.org/home/icsa-2026",
+      "rankings": {
+        "core2023": "A",
+        "icore2026": "A",
+        "ccf": "C"
+      }
+    },
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "track": "Software Architecture in Practice",
-    "rankings": {
-      "core2023": "A",
-      "icore2026": "A",
-      "ccf": "C"
-    },
+    "doi": "10.1109/ICSA-C68850.2026.00014",
     "arxiv": "2603.10646",
+    "pdf": "https://ieeexplore.ieee.org/document/11641224",
     "abstract": "Environmental, Social, and Governance (ESG) standards have been increasingly adopted by organizations to demonstrate accountability towards ethical, social, and sustainability goals. However, generating ESG reports that align with these standards remains challenging due to unstructured data formats, inconsistent terminology, and complex requirements. Existing ESG lifecycles provide guidance for structuring ESG reports but lack the automation, adaptability, and continuous feedback mechanisms needed to address these challenges. To bridge this gap, we introduce an agentic ESG lifecycle framework that systematically integrates the ESG stages of identification, measurement, reporting, engagement, and improvement. In this framework, multiple AI agents extract ESG information, verify ESG performance, and update ESG reports based on organisational outcomes. By embedding agentic components within the ESG lifecycle, the proposed framework transforms ESG from a static reporting process into a dynamic, accountable, and adaptive system for sustainability governance. We further define the technical requirements and quality attributes needed to support four main ESG tasks, such as report validation, multi-report comparison, report generation, and knowledge-base maintenance, and propose three architectural approaches, namely single-model, single-agent, and multi-agent, for addressing these tasks. The source code and data for the prototype of these approaches are available at https://gitlab.com/for_peer_review-group/esg_assistant.",
     "tags": [
       "ESG",
@@ -792,16 +800,17 @@
       "Data for Real-World Applications"
     ],
     "authorAffiliations": {
-      "Thong Hoang": "Commonwealth Scientific and Industrial Research Organisation",
-      "Mykhailo Klymenko": "Commonwealth Scientific and Industrial Research Organisation",
-      "Xiwei Xu": "Commonwealth Scientific and Industrial Research Organisation",
-      "Shidong Pan": "Commonwealth Scientific and Industrial Research Organisation",
+      "Thong Hoang": "Commonwealth Scientific and Industrial Research Organisation (CSIRO), Data61",
+      "Mykhailo Klymenko": "Commonwealth Scientific and Industrial Research Organisation (CSIRO), Data61",
+      "Xiwei Xu": "Commonwealth Scientific and Industrial Research Organisation (CSIRO), Data61",
+      "Shidong Pan": "Commonwealth Scientific and Industrial Research Organisation (CSIRO), Data61",
       "Yi Ding": "University of New South Wales",
       "Xushuo Tang": "University of New South Wales",
       "Zhengyi Yang": "University of New South Wales",
       "Jieke Shi": "Singapore Management University",
       "David Lo": "Singapore Management University"
-    }
+    },
+    "bibtex": "@inproceedings{hoang2026esg,\n  title = {ESG Reporting Lifecycle Management with Large Language Models and AI Agents},\n  author = {Hoang, Thong and Klymenko, Mykhailo and Xu, Xiwei and Pan, Shidong and Ding, Yi and Tang, Xushuo and Yang, Zhengyi and Shi, Jieke and Lo, David},\n  booktitle = {2026 IEEE 23rd International Conference on Software Architecture Companion (ICSA-C)},\n  year = {2026},\n  volume = {},\n  number = {},\n  pages = {29-36},\n  keywords = {Standards;Modeling;Organizations;Architecture;Computer architecture;Measurement;Large language models;Sustainable development;Tools;Retrieval augmented generation;esg standards;ai agents;llms},\n  doi = {10.1109/ICSA-C68850.2026.00014}\n}"
   },
   {
     "id": "yan2026gendered",
