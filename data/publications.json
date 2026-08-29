@@ -838,6 +838,7 @@
       "Zhengyi Yang": "University of New South Wales"
     },
     "venue": "Journal of Construction Engineering and Management",
+    "venueShort": "JCEM",
     "venueUrl": "https://ascelibrary.org/journal/jcemd4",
     "publisher": "American Society of Civil Engineers (ASCE)",
     "rankings": {
@@ -1167,7 +1168,6 @@
       "Guanfeng Liu": "Macquarie University"
     },
     "venue": "arXiv",
-    "venueShort": "arXiv",
     "venueUrl": "https://arxiv.org/",
     "arxiv": "2606.29270",
     "abstract": "Multi-Agent Debate (MAD) with Majority Voting is a dominant paradigm for improving LLM reasoning, yet its effectiveness rests on the Condorcet Jury Theorem's assumption of independent errors. Because contemporary LLMs share similar pretraining corpora, their errors are strongly correlated, causing the majority to systematically suppress correct minority opinions, a phenomenon we term Minority Truth. Through debates among three heterogeneous LLM agents on six benchmarks, we find that roughly one in four divergent cases has the minority holding the correct answer, yielding a 10-percentage-point theoretical recovery margin. We propose Minority Sentinel, a lightweight meta-classifier that extracts a multi-dimensional debate fingerprint from debate logs and trains a LightGBM model to decide when to overturn majority voting. Minority Sentinel achieves a stable Flip Precision of 81.2% with positive Net Gain across all six datasets and all 20 random seed trials, demonstrating that debate logs contain sufficient behavioral signals for a non-LLM classifier to reliably recover suppressed minorities without degrading system accuracy. The LLM-as-Judge baseline yields negative Net Gain despite higher recall, confirming that flip safety, not recovery volume, determines intervention value.",
@@ -2100,7 +2100,6 @@
       "Zhengyi Yang"
     ],
     "venue": "World Wide Web",
-    "venueShort": "WWWJ",
     "venueUrl": "https://link.springer.com/journal/11280",
     "publisher": "Springer",
     "rankings": {
@@ -2600,6 +2599,7 @@
       "Zhengyi Yang": "University of New South Wales"
     },
     "venue": "International Journal of Construction Management",
+    "venueShort": "IJCM",
     "venueUrl": "https://www.tandfonline.com/journals/tjcm20",
     "publisher": "Taylor & Francis",
     "rankings": {
@@ -2641,6 +2641,7 @@
       "Zhengyi Yang": "University of New South Wales"
     },
     "venue": "International Journal of Construction Management",
+    "venueShort": "IJCM",
     "venueUrl": "https://www.tandfonline.com/journals/tjcm20",
     "publisher": "Taylor & Francis",
     "rankings": {
@@ -3193,7 +3194,6 @@
       "Yunjun Gao"
     ],
     "venue": "World Wide Web",
-    "venueShort": "WWWJ",
     "venueUrl": "https://link.springer.com/journal/11280",
     "publisher": "Springer",
     "rankings": {
@@ -4054,7 +4054,6 @@
       "Zhengyi Yang"
     ],
     "venue": "World Wide Web",
-    "venueShort": "WWWJ",
     "venueUrl": "https://link.springer.com/journal/11280",
     "publisher": "Springer",
     "rankings": {
