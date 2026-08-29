@@ -373,7 +373,7 @@
   {
     "id": "xu2026c2tc",
     "type": "conference",
-    "status": "accepted",
+    "status": "published",
     "year": 2026,
     "displayOrder": 6,
     "title": "C2TC: A Training-Free Framework for Efficient Tabular Data Condensation",
@@ -393,9 +393,11 @@
       "icore2026": "A*",
       "ccf": "A"
     },
+    "doi": "10.1109/ICDE65706.2026.00203",
     "arxiv": "2602.21717",
+    "pdf": "https://ieeexplore.ieee.org/document/11629212",
     "code": "https://github.com/Sssara-5/TF-TabularCondensation",
-    "abstract": "Tabular data is the primary data format in industrial relational databases, underpinning modern data analytics and decision-making. However, the increasing scale of tabular data poses significant computational and storage challenges to learning-based analytical systems. This highlights the need for data-efficient learning, which enables effective model training and generalization using substantially fewer samples. Dataset condensation (DC) has emerged as a promising data-centric paradigm that synthesizes small yet informative datasets to preserve data utility while reducing storage and training costs. However, existing DC methods are computationally intensive due to reliance on complex gradient-based optimization. Moreover, they often overlook key characteristics of tabular data, such as heterogeneous features and class imbalance. To address these limitations, we introduce C2TC (Class-Adaptive Clustering for Tabular Condensation), the first training-free tabular dataset condensation framework that jointly optimizes class allocation and feature representation, enabling efficient and scalable condensation. Specifically, we reformulate the dataset condensation objective into a novel class-adaptive cluster allocation problem (CCAP), which eliminates costly training and integrates adaptive label allocation to handle class imbalance. To solve the NP-hard CCAP, we develop HFILS, a heuristic local search that alternates between soft allocation and class-wise clustering to efficiently obtain high-quality solutions. Moreover, a hybrid categorical feature encoding (HCFE) is proposed for semantics-preserving clustering of heterogeneous discrete attributes. Extensive experiments on 10 real-world datasets demonstrate that C2TC improves efficiency by at least 2 orders of magnitude over state-of-the-art baselines, while achieving superior downstream performance.",
+    "abstract": "Tabular data, organized in rows and columns, represents the most common data format in industrial relational databases, underpinning modern data analytics and decision-making. However, the ever-increasing scale of tabular data poses significant computational and storage challenges to learning-based analytical systems. This highlights the need for data-efficient learning, which maximizes the utility of available data to enable effective model training and generalization using substantially fewer samples. Dataset condensation (DC) has recently emerged as a promising data-centric paradigm that synthesizes small yet informative datasets to preserve data utility while greatly reducing storage and training costs. However, existing DC methods are computationally intensive due to reliance on complex gradient-based optimization. Moreover, they often overlook key characteristics of tabular data, such as heterogeneous features and class imbalance. To address these limitations, we introduce C2TC (Class-Adaptive Clustering for Tabular Condensation), the first training-free tabular dataset condensation framework that jointly optimizes class allocation and feature representation, enabling efficient and scalable condensation. Specifically, we reformulate the dataset condensation objective into a novel class-adaptive cluster allocation problem (CCAP), which eliminates costly training and integrates adaptive label allocation to handle class imbalance. To solve the NP-hard CCAP, we develop HFILS, a heuristic local search that alternates between soft allocation and class-wise clustering to efficiently obtain high-quality solutions. Moreover, a hybrid categorical feature encoding (HCFE) is proposed for semantics-preserving clustering of heterogeneous discrete attributes. Extensive experiments on 10 real-world datasets demonstrate that C2TC improves efficiency by at least 2 orders of magnitude over state-of-the-art baselines, while achieving superior downstream performance.",
     "tags": [
       "Tables",
       "Condensation",
@@ -411,12 +413,13 @@
       "Xiaoyang Wang": "University of New South Wales",
       "Zhengyi Yang": "University of New South Wales",
       "Xuemin Lin": "Shanghai Jiao Tong University"
-    }
+    },
+    "bibtex": "@inproceedings{xu2026c2tc,\n  title = {C2TC: A Training-Free Framework for Efficient Tabular Data Condensation},\n  author = {Xu, Sijia and Li, Fan and Wang, Xiaoyang and Yang, Zhengyi and Lin, Xuemin},\n  url = {http://dx.doi.org/10.1109/ICDE65706.2026.00203},\n  doi = {10.1109/icde65706.2026.00203},\n  booktitle = {2026 IEEE 42nd International Conference on Data Engineering (ICDE)},\n  publisher = {IEEE},\n  year = {2026},\n  month = May,\n  pages = {2725-2738}\n}"
   },
   {
     "id": "song2026efficient",
     "type": "conference",
-    "status": "accepted",
+    "status": "published",
     "year": 2026,
     "displayOrder": 7,
     "title": "Efficient Hypergraph Pattern Matching via Match-and-Filter and Intersection Constraint",
@@ -437,7 +440,9 @@
       "icore2026": "A*",
       "ccf": "A"
     },
+    "doi": "10.1109/ICDE65706.2026.00052",
     "arxiv": "2512.10621",
+    "pdf": "https://ieeexplore.ieee.org/document/11629221",
     "code": "https://github.com/SNUCSE-CTA/MaCH",
     "abstract": "A hypergraph is a generalization of a graph, in which a hyperedge can connect multiple vertices, modeling complex relationships involving multiple vertices simultaneously. Hypergraph pattern matching, which is to find all isomorphic embeddings of a query hypergraph in a data hypergraph, is one of the fundamental problems. In this paper, we present a novel algorithm for hypergraph pattern matching by introducing (1) the intersection constraint, a necessary and sufficient condition for valid embeddings, which significantly speeds up the verification process, (2) the candidate hyperedge space, a data structure that stores potential mappings between hyperedges in the query hypergraph and the data hypergraph, and (3) the Match-and-Filter framework, which interleaves matching and filtering operations to maintain only compatible candidates in the candidate hyperedge space during backtracking. Experimental results on real-world datasets demonstrate that our algorithm significantly outperforms the state-of-the-art algorithms, by up to orders of magnitude in terms of query processing time.",
     "tags": [
@@ -454,7 +459,8 @@
       "Giuseppe Italiano": "LUISS University",
       "Zhengyi Yang": "University of New South Wales",
       "Wenjie Zhang": "University of New South Wales"
-    }
+    },
+    "bibtex": "@inproceedings{song2026efficient,\n  title = {Efficient Hypergraph Pattern Matching via Match-and-Filter and Intersection Constraint},\n  author = {Song, Siwoo and Shin, Wonseok and Park, Kunsoo and Italiano, Giuseppe F. and Yang, Zhengyi and Zhang, Wenjie},\n  url = {http://dx.doi.org/10.1109/ICDE65706.2026.00052},\n  doi = {10.1109/icde65706.2026.00052},\n  booktitle = {2026 IEEE 42nd International Conference on Data Engineering (ICDE)},\n  publisher = {IEEE},\n  year = {2026},\n  month = May,\n  pages = {615-628}\n}"
   },
   {
     "id": "zhang2026CLGNN",
