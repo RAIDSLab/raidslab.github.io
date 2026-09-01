@@ -395,7 +395,6 @@
     },
     "doi": "10.1109/ICDE65706.2026.00203",
     "arxiv": "2602.21717",
-    "pdf": "https://ieeexplore.ieee.org/document/11629212",
     "code": "https://github.com/Sssara-5/TF-TabularCondensation",
     "abstract": "Tabular data, organized in rows and columns, represents the most common data format in industrial relational databases, underpinning modern data analytics and decision-making. However, the ever-increasing scale of tabular data poses significant computational and storage challenges to learning-based analytical systems. This highlights the need for data-efficient learning, which maximizes the utility of available data to enable effective model training and generalization using substantially fewer samples. Dataset condensation (DC) has recently emerged as a promising data-centric paradigm that synthesizes small yet informative datasets to preserve data utility while greatly reducing storage and training costs. However, existing DC methods are computationally intensive due to reliance on complex gradient-based optimization. Moreover, they often overlook key characteristics of tabular data, such as heterogeneous features and class imbalance. To address these limitations, we introduce C2TC (Class-Adaptive Clustering for Tabular Condensation), the first training-free tabular dataset condensation framework that jointly optimizes class allocation and feature representation, enabling efficient and scalable condensation. Specifically, we reformulate the dataset condensation objective into a novel class-adaptive cluster allocation problem (CCAP), which eliminates costly training and integrates adaptive label allocation to handle class imbalance. To solve the NP-hard CCAP, we develop HFILS, a heuristic local search that alternates between soft allocation and class-wise clustering to efficiently obtain high-quality solutions. Moreover, a hybrid categorical feature encoding (HCFE) is proposed for semantics-preserving clustering of heterogeneous discrete attributes. Extensive experiments on 10 real-world datasets demonstrate that C2TC improves efficiency by at least 2 orders of magnitude over state-of-the-art baselines, while achieving superior downstream performance.",
     "tags": [
@@ -442,7 +441,6 @@
     },
     "doi": "10.1109/ICDE65706.2026.00052",
     "arxiv": "2512.10621",
-    "pdf": "https://ieeexplore.ieee.org/document/11629221",
     "code": "https://github.com/SNUCSE-CTA/MaCH",
     "abstract": "A hypergraph is a generalization of a graph, in which a hyperedge can connect multiple vertices, modeling complex relationships involving multiple vertices simultaneously. Hypergraph pattern matching, which is to find all isomorphic embeddings of a query hypergraph in a data hypergraph, is one of the fundamental problems. In this paper, we present a novel algorithm for hypergraph pattern matching by introducing (1) the intersection constraint, a necessary and sufficient condition for valid embeddings, which significantly speeds up the verification process, (2) the candidate hyperedge space, a data structure that stores potential mappings between hyperedges in the query hypergraph and the data hypergraph, and (3) the Match-and-Filter framework, which interleaves matching and filtering operations to maintain only compatible candidates in the candidate hyperedge space during backtracking. Experimental results on real-world datasets demonstrate that our algorithm significantly outperforms the state-of-the-art algorithms, by up to orders of magnitude in terms of query processing time.",
     "tags": [
@@ -731,7 +729,6 @@
     },
     "doi": "10.1109/ICDEW71238.2026.00024",
     "arxiv": "2601.21162",
-    "pdf": "https://doi.ieeecomputersociety.org/10.1109/ICDEW71238.2026.00024",
     "authorAffiliations": {
       "Jiate Liu": "University of New South Wales",
       "Zebin Chen": "University of New South Wales",
@@ -798,7 +795,6 @@
     "track": "Software Architecture in Practice",
     "doi": "10.1109/ICSA-C68850.2026.00014",
     "arxiv": "2603.10646",
-    "pdf": "https://ieeexplore.ieee.org/document/11641224",
     "abstract": "Environmental, Social, and Governance (ESG) standards have been increasingly adopted by organizations to demonstrate accountability towards ethical, social, and sustainability goals. However, generating ESG reports that align with these standards remains challenging due to unstructured data formats, inconsistent terminology, and complex requirements. Existing ESG lifecycles provide guidance for structuring ESG reports but lack the automation, adaptability, and continuous feedback mechanisms needed to address these challenges. To bridge this gap, we introduce an agentic ESG lifecycle framework that systematically integrates the ESG stages of identification, measurement, reporting, engagement, and improvement. In this framework, multiple AI agents extract ESG information, verify ESG performance, and update ESG reports based on organisational outcomes. By embedding agentic components within the ESG lifecycle, the proposed framework transforms ESG from a static reporting process into a dynamic, accountable, and adaptive system for sustainability governance. We further define the technical requirements and quality attributes needed to support four main ESG tasks, such as report validation, multi-report comparison, report generation, and knowledge-base maintenance, and propose three architectural approaches, namely single-model, single-agent, and multi-agent, for addressing these tasks. The source code and data for the prototype of these approaches are available at https://gitlab.com/for_peer_review-group/esg_assistant.",
     "tags": [
       "ESG",
@@ -897,7 +893,7 @@
       "sjr": "Q1"
     },
     "doi": "10.3390/buildings16061224",
-    "pdf": "https://www.mdpi.com/2075-5309/16/6/1224",
+    "pdf": "https://www.mdpi.com/2075-5309/16/6/1224/pdf",
     "video": "https://encyclopedia.pub/video/1857",
     "abstract": "Digital technologies have been widely adopted to improve efficiency, transparency, and decision making in the construction industry. However, regulatory processes such as building license and registration applications remain complex, fragmented, and difficult for applicants to navigate, particularly for early career practitioners and small businesses. This study presents the design and development of a graph-based retrieval-augmented generation (RAG) artificial intelligence (AI) system that assists users in applying for building licenses and registrations in Australia. By integrating eight regulatory burden frameworks, this study identified ten categories of licensing-related burden. A three-layer system architecture was subsequently proposed for the Australian construction licensing context, and a prototype is implemented using the New South Wales (NSW) regulatory framework. The system provides context-aware responses, step-by-step guidance, and tailored information based on user queries, thereby reducing regulatory burden for individuals, companies, and industry bodies. Prototype evaluation against general-purpose AI tools indicates improved information accessibility and reduced application-related friction in representative licensing scenarios. This study sheds light on AI-enabled regulatory support systems and demonstrates how graph-based RAG could improve accessibility and usability of construction related licensing processes. The findings have implications for policymakers, regulators, and researchers seeking to leverage AI to support digital transformation in the construction industry.",
     "tags": [
@@ -938,7 +934,7 @@
       "sjr": "Q1"
     },
     "doi": "10.3390/buildings16040727",
-    "pdf": "https://www.mdpi.com/2075-5309/16/4/727",
+    "pdf": "https://www.mdpi.com/2075-5309/16/4/727/pdf",
     "video": "https://encyclopedia.pub/video/1843",
     "abstract": "Despite ongoing efforts to promote gender equity in the construction industry, women remain underrepresented at senior leadership levels. Prior studies have attempted to investigate women's professional networks in construction through traditional survey- or interview-based approaches, which are often limited in scale and unable to capture the complexity of career mobility patterns. This study adopts a previously underexplored data source, LinkedIn, to examine and compare the career networks of female and male top managers in the Australian construction industry. Using 914 publicly available LinkedIn profiles, social network analysis was conducted in Python using the NetworkX library to construct affiliation-based career networks derived from shared organizational experience. Multiple network metrics were applied to compare network connectivity, cohesion, community structure, core and periphery positioning, and robustness. The results show that female top managers are more densely connected, more locally cohesive, and more globally integrated than their male counterparts. Female career networks also exhibit fewer but larger communities, deeper and more cohesive core structures, and greater robustness to the removal of structurally important individuals. These findings extend career capital theory by highlighting the gendered differences in professional networks and provide evidence-based guidance for women, organizations, and policymakers supporting equitable leadership pathways.",
     "tags": [
@@ -1266,7 +1262,7 @@
       "sjr": "Q2"
     },
     "doi": "10.3390/app16031493",
-    "pdf": "https://www.mdpi.com/2076-3417/16/3/1493",
+    "pdf": "https://www.mdpi.com/2076-3417/16/3/1493/pdf",
     "abstract": "Small target detection in Unmanned Aerial Vehicle (UAV) applications is often plagued by inherent challenges such as small object sizes, sparse information, and complex background interference. Traditional detection algorithms and existing YOLO series models suffer from limitations in detection accuracy and fine-grained detail preservation. To address this, this paper proposes YOLO-DSNet, a small target detection network based on YOLOv13n. First, we introduce the dual-stream attention module (DSAM), which enhances discriminative features by leveraging bidirectional context modeling. Second, we design the Multi-scale Attention C2f (MSA-C2f) module - an adaptive architecture that optimizes feature extraction via multi-scale enhancement, effectively preserving and integrating small target information. Finally, through dataset augmentation, we significantly improve the mode's detection performance. The proposed YOLO-DSNet achieves a mAP@0.5 improvement from 30.8% to 40.1% on the VisDrone2019 dataset with only 0.8 million additional parameters, yielding a 30% accuracy gain while increasing computational overhead by merely 11.6 Gigaflops (GFLOPs). Experiments demonstrate YOLO-DSNet's effectiveness in small target detection tasks such as UAV aerial photography and remote sensing imagery, successfully balancing accuracy and efficiency with high practical value.",
     "tags": [
       "Vision",
@@ -1640,7 +1636,6 @@
       "ccf": "A"
     },
     "doi": "10.1109/ICDE65448.2025.00262",
-    "pdf": "https://doi.ieeecomputersociety.org/10.1109/ICDE65448.2025.00262",
     "abstract": "Counting the number of shortest paths between two query vertices on road networks has a wide range of applications and has recently drawn significant research attention. The state-of-the-art solution builds a tree-based index using the concept of tree decomposition. However, its performance deteriorates when the tree decomposition results in an unbalanced tree and may not perform well when the query vertices are close to each other. This paper aims to improve the efficiency of shortest path counting. We propose a novel indexing scheme that combines hub labeling with a balanced tree hierarchy. This approach significantly reduces the number of visited labels compared to the state-of-the-art solution. Furthermore, we introduce several optimizations to enhance the efficiency of index construction and minimize its size. Extensive experiments conducted on real-world road networks demonstrate that our method achieves up to 4.1 times higher query efficiency and reduces the index size by a factor of 2.35 compared to the state-of-the-art solution.",
     "tags": [
       "Graph",
@@ -1690,7 +1685,6 @@
       "ccf": "A"
     },
     "doi": "10.1109/ICDE65448.2025.00264",
-    "pdf": "https://doi.ieeecomputersociety.org/10.1109/ICDE65448.2025.00264",
     "abstract": "Distributed stream processing systems rely on the dataflow model to define and execute streaming jobs, organizing computations as Directed Acyclic Graphs (DAGs) of operators. Adjusting the parallelism of these operators is crucial to handling fluctuating workloads efficiently while balancing resource usage and processing performance. However, existing methods often fail to effectively utilize execution histories or fully exploit DAG structures, limiting their ability to identify bottlenecks and determine the optimal parallelism. In this paper, we propose StreamTune, a novel approach for adaptive parallelism tuning in stream processing systems. StreamTune incorporates a pre-training and fine-tuning framework that leverages global knowledge from historical execution data for job-specific parallelism tuning. In the pre-training phase, StreamTune clusters the historical data with Graph Edit Distance and pre-trains a Graph Neural Network-based encoder per cluster to capture the correlation between the operator parallelism, DAG structures, and the identified operator-level bottlenecks. In the online tuning phase, StreamTune iteratively refines operator parallelism recommendations using an operator-level bottleneck prediction model enforced with a monotonic constraint, which aligns with the observed system performance behavior. Evaluation results demonstrate that StreamTune reduces reconfigurations by up to 29.6% and parallelism degrees by up to 30.8% in Apache Flink under a synthetic workload. In Timely Dataflow, StreamTune achieves up to an 83.3% reduction in parallelism degrees while maintaining comparable processing performance under the Nexmark benchmark, when compared to the state-of-the-art methods.",
     "tags": [
       "Streams",
@@ -2072,7 +2066,6 @@
       "sjr": "Q1"
     },
     "doi": "10.1016/j.knosys.2025.114282",
-    "pdf": "https://www.sciencedirect.com/science/article/pii/S0950705125013231",
     "abstract": "As the volume of scientific publications grows, predicting the future citation counts of research papers is crucial for identifying influential studies and promising research directions. Existing graph neural network methods often rely solely on neighbor aggregation, which neglects the global heterogeneous nature of academic networks, thereby limiting their ability to fully capture the intricate relationships between different types of nodes and edges. This paper proposes a novel model, named Centrality-guided and Dual Clustering driven Heterogeneous Graph Network (CDCHGN) that addresses these limitations. CDCHGN captures both global and local structural dynamics of a dynamic academic graph using node centrality information, dual clustering techniques, and edge-type encoding to enrich semantic representation and effectively model heterogeneous relationships among various node types. Additionally, it incorporates time-injected attention to capture the temporal evolution of node features. Extensive experiments on real-world datasets demonstrate that our model achieves superior performance. Notably, on the APS dataset, CDCHGN achieves a 5.88% improvement in Mean Absolute Log Error (MALE) and a 6.87% improvement in Root Mean Squared Log Error (RMSLE) compared to the second-best models.",
     "tags": [
       "Temporal",
@@ -2167,7 +2160,6 @@
       "sjr": "Q1"
     },
     "doi": "10.1016/j.adhoc.2025.103755",
-    "pdf": "https://www.sciencedirect.com/science/article/pii/S1570870525000034",
     "abstract": "In the realm of delay-tolerant networks (DTNs), designing a routing strategy that optimizes relay vertex selection for faster message dissemination and lower network overhead is an important and challenging topic. DTNs inherently exhibit temporal variations, characterized by mobility and intermittent connectivity. In addressing this, in the paper, we model DTNs as temporal networks and propose a temporally and socially aware routing framework, called TemsRoute, which takes both the temporal betweenness centrality and the social information into consideration to intelligently identify optimal relay vertices. Within the TemsRoute, we devise exact and approximate heuristic sorting-based label propagation methods, together with two pruning lemmas, to efficiently compute the temporal betweenness centrality. We also introduce four metrics to calculate social relevance between pairs of vertices. Additionally, we explore how to incrementally update the approximate temporal betweenness centrality within the context of temporal graph streams. Extensive experiments conducted on real-world DTNs underscore the superior performance of TemsRoute. It achieves the highest message delivery rate and the lowest message average delay when compared to six other routing methods. This underscores the potential of TemsRoute to improve message dissemination efficiency in certain dynamic and challenging DTN scenarios, particularly those involving sporadic connectivity, frequent topology changes, and limited resources.",
     "tags": [
       "Temporal",
@@ -2218,7 +2210,7 @@
       "sjr": "Q1"
     },
     "doi": "10.34133/icomputing.0131",
-    "pdf": "https://spj.science.org/doi/abs/10.34133/icomputing.0131",
+    "pdf": "https://spj.science.org/doi/pdf/10.34133/icomputing.0131",
     "abstract": "Graphs are widely used in applications such as social network analysis, bioinformatics, and recommendation systems to represent relationships and complex dependencies. Subgraph matching, which involves finding instances of a query subgraph within a larger graph, is crucial for tasks such as fraud detection, pattern recognition, and semantic search. The streaming subgraph matching problem, an extension of this task, aims to efficiently process queries in a stream with minimal latency. This is particularly important in real-time applications such as dynamic monitoring and network anomaly detection, where quick query responses are essential. To address streaming subgraph matching, existing methods incorporate precomputed indices, such as tree structures. However, these approaches often fail to scale efficiently under high query arrival rates or for large graphs due to limitations in caching, query reuse, and indexing performance. In this paper, we adopt a framework that leverages a subgraph index based on graph embeddings, enabling effective caching and reuse of query results. Building on this foundation, we perform k-nearest neighbor search on high-dimensional vectors by using a vector database for indexing. Inverted file and product quantization techniques within the vector database were employed to accelerate the process. Experimental evaluations on 16 diverse real-world datasets show that our approach reduces processing time by an average of 87.7% compared to the state-of-the-art method, achieves cache hit rates ranging from 70% to 90%, and demonstrates robustness and consistency across varying batch sizes and datasets.",
     "tags": [
       "Graph",
@@ -2612,7 +2604,7 @@
       "sjr": "Q1"
     },
     "doi": "10.1080/15623599.2025.2532114",
-    "pdf": "https://www.tandfonline.com/doi/abs/10.1080/15623599.2025.2532114",
+    "pdf": "https://www.tandfonline.com/doi/pdf/10.1080/15623599.2025.2532114",
     "abstract": "Despite ongoing efforts to promote gender diversity in the Australian construction industry, women remain significantly underrepresented in managerial positions. Differing from previous studies using traditional survey or interview approaches, this study applied career capital theory and analyzed 1,595 LinkedIn profiles with 11 features, related to work experience, network size, educational background, and industry recognition. Predictive modeling was conducted using MATLAB's Classification Learner, applying multiple machine learning algorithms to assess the significance of those features in predicting managerial level. The results identified current employer size as the strongest predictor of female managerial levels. Women in small enterprises were more likely to reach top management, while those in large companies more likely remained in lower managerial levels. Experience duration also had a significant impact, but progression plateaued beyond seven years, indicating tenure alone does not drive advancement. Follower and connection count demonstrated a notable contribution, emphasizing the importance of professional visibility. Contrary to traditional assumptions, recommendation count and highest education level had lower relevance, while construction-related degrees, certifications, awards, and courses showed minimal impact. This study sheds light on the barriers and contributors of women's managerial advancement and provides practical recommendations for policymakers and industry stakeholders to foster inclusive and equitable workplaces.",
     "tags": [
       "Construction",
@@ -2654,7 +2646,7 @@
       "sjr": "Q1"
     },
     "doi": "10.1080/15623599.2025.2482220",
-    "pdf": "https://www.tandfonline.com/doi/abs/10.1080/15623599.2025.2482220",
+    "pdf": "https://www.tandfonline.com/doi/pdf/10.1080/15623599.2025.2482220",
     "abstract": "Despite ongoing efforts to promote gender diversity, gender disparities in leadership roles remain in the Australian construction industry. Existing research has identified barriers to women's career progression in construction using traditional survey or interview methods. To complement these findings and provide a broader perspective on the current state of women's representation in managerial positions in the Australian construction industry, this study analyzed 12,284 LinkedIn profiles using an exploratory-confirmatory design and compared 10 career features between male and female managers relating to work experience, educational background, and professional network and endorsement. The results revealed that women remain underrepresented in managerial roles, but their distribution across management levels was comparable to men, indicating progress toward gender parity. Women also demonstrated higher educational attainment and greater activity on professional networking platforms. However, gender disparities were observed in job categories, indicating that certain career paths may not be fully accessible to women. Additionally, female managers with more than 15 years of experience reported fewer followers than men, highlighting the need for supporting professional influence in later career stages. This study contributes a quantitative perspective to the understanding of gender disparities and offers practical strategies to advance gender equity in the Australian construction industry.",
     "tags": [
       "Construction",
@@ -2698,7 +2690,7 @@
       "sjr": "Q2"
     },
     "doi": "10.3390/app15116003",
-    "pdf": "https://www.mdpi.com/2076-3417/15/11/6003",
+    "pdf": "https://www.mdpi.com/2076-3417/15/11/6003/pdf",
     "abstract": "Graph as one of the most fundamental and representative data structures has found a wide spectrum of emerging application domains such as social media, financial transactions, biology science, and road networks. Recently, with the proliferation of graph applications, graph processing has attracted much attention in both industry and academia. Among them, most existing works focus on the static graphs in which the vertices and edges are immutable. However, in the real world, graphs are constantly and dynamically changing, bringing tricky challenges to process such dynamic graphs. This paper surveys the recent advances in dynamic graph processing, including centrality, graph coloring, cohesive subgraph, path traversal, and graph separation. We summarize the computational complexity models for dynamic algorithm analysis, theoretically compare the efficiency of algorithms among different research topics. Moreover, we also explore the research opportunities for the future.",
     "tags": [
       "Graph",
@@ -4258,7 +4250,7 @@
       "sjr": "Q2"
     },
     "doi": "10.3390/app132112019",
-    "pdf": "https://www.mdpi.com/2076-3417/13/21/12019",
+    "pdf": "https://www.mdpi.com/2076-3417/13/21/12019/pdf",
     "abstract": "With the rapid development of artificial intelligence, machine learning is gradually becoming popular for predictions in all walks of life. In meteorology, it is gradually competing with traditional climate predictions dominated by physical models. This survey aims to consolidate the current understanding of Machine Learning (ML) applications in weather and climate prediction&mdash;a field of growing importance across multiple sectors, including agriculture and disaster management. Building upon an exhaustive review of more than 20 methods highlighted in existing literature, this survey pinpointed eight techniques that show particular promise for improving the accuracy of both short-term weather and medium-to-long-term climate forecasts. According to the survey, while ML demonstrates significant capabilities in short-term weather prediction, its application in medium-to-long-term climate forecasting remains limited, constrained by factors such as intricate climate variables and data limitations. Current literature tends to focus narrowly on either short-term weather or medium-to-long-term climate forecasting, often neglecting the relationship between the two, as well as general neglect of modeling structure and recent advances. By providing an integrated analysis of models spanning different time scales, this survey aims to bridge these gaps, thereby serving as a meaningful guide for future interdisciplinary research in this rapidly evolving field.",
     "tags": [
       "Weather",
@@ -4304,7 +4296,7 @@
       "sjr": "Q1"
     },
     "doi": "10.3390/s23020629",
-    "pdf": "https://www.mdpi.com/1424-8220/23/2/629",
+    "pdf": "https://www.mdpi.com/1424-8220/23/2/629/pdf",
     "abstract": "k nearest neighbours (kNN) queries are fundamental in many applications, ranging from data mining, recommendation system and Internet of Things, to Industry 4.0 framework applications. In mining, specifically, it can be used for the classification of human activities, iterative closest point registration and pattern recognition and has also been helpful for intrusion detection systems and fault detection. Due to the importance of kNN queries, many algorithms have been proposed in the literature, for both static and dynamic data. In this paper, we focus on exact kNN queries and present a comprehensive survey of exact kNN queries. In particular, we study two fundamental types of exact kNN queries: the kNN Search queries and the kNN Join queries. Our survey focuses on exact approaches over high-dimensional data space, which covers 20 kNN Search methods and 9 kNN Join methods. To the best of our knowledge, this is the first work of a comprehensive survey of exact kNN queries over high-dimensional datasets. We specifically categorise the algorithms based on indexing strategies, data and space partitioning strategies, clustering techniques and the computing paradigm. We provide useful insights for the evolution of approaches based on the various categorisation factors, as well as the possibility of further expansion. Lastly, we discuss some open challenges and future research directions.",
     "tags": [
       "kNN",
@@ -4486,7 +4478,7 @@
       "sjr": "Q2"
     },
     "doi": "10.3390/app122412896",
-    "pdf": "https://www.mdpi.com/2076-3417/12/24/12896",
+    "pdf": "https://www.mdpi.com/2076-3417/12/24/12896/pdf",
     "abstract": "Pests and diseases are an inevitable problem in agricultural production, causing substantial economic losses yearly. The application of convolutional neural networks to the intelligent recognition of crop pest images has become increasingly popular due to advances in deep learning methods and the rise of large-scale datasets. However, the diversity and complexity of pest samples, the size of sample images, and the number of examples all directly affect the performance of convolutional neural networks. Therefore, we designed a new target-detection framework based on Cascade RCNN (Regions with CNN features), aiming to solve the problems of large image size, many pest types, and small and unbalanced numbers of samples in pest sample datasets. Specifically, this study performed data enhancement on the original samples to solve the problem of a small and unbalanced number of examples in the dataset and developed a sliding window cropping method, which could increase the perceptual field to learn sample features more accurately and in more detail without changing the original image size. Secondly, combining the attention mechanism with the FPN (Feature Pyramid Networks) layer enabled the model to learn sample features that were more important for the current task from both channel and space aspects. Compared with the current popular target-detection frameworks, the average precision value of our model (mAP@0.5) was 84.16%, the value of (mAP@0.5:0.95) was 65.23%, the precision was 67.79%, and the F1 score was 82.34%. The experiments showed that our model solved the problem of convolutional neural networks being challenging to use because of the wide variety of pest types, the large size of sample images, and the difficulty of identifying tiny pests.",
     "tags": [
       "Agriculture",
