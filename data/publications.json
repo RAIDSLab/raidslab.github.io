@@ -1032,11 +1032,52 @@
     "bibtex": "@inproceedings{ding2026building,\n  title = {Building Futures: LLM-Guided Career Pathways for Australia's Construction Graduates},\n  author = {Ding, Yi and Yan, Diya and Tang, Xushuo and Lu, Ziyao and Zhang, Wenqian and Sunindijo, Riza Y. and Wang, Cynthia C. and Yang, Zhengyi},\n  url = {http://dx.doi.org/10.1109/BigComp68355.2026.00075},\n  doi = {10.1109/bigcomp68355.2026.00075},\n  booktitle = {2026 IEEE International Conference on Big Data and Smart Computing (BigComp)},\n  publisher = {IEEE},\n  year = {2026},\n  month = Feb,\n  pages = {433-436}\n}"
   },
   {
-    "id": "ding2026when",
+    "id": "yu2025ontometric",
     "type": "conference",
     "status": "accepted",
     "year": 2026,
     "displayOrder": 19,
+    "title": "OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation",
+    "authors": [
+      "Mingqin Yu",
+      "Fethi Rabhi",
+      "Boming Xia",
+      "Zhengyi Yang",
+      "Felix Tan",
+      "Qinghua Lu"
+    ],
+    "venue": "IEEE International Conference on Knowledge Graph",
+    "venueShort": "ICKG",
+    "venueUrl": "https://ickg2026.github.io/index.html",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "track": "Regular Paper",
+    "arxiv": "2512.01289",
+    "abstract": "Environmental, Social, and Governance (ESG) metric knowledge is inherently structured, connecting industries, reporting frameworks, metric categories, metrics, and calculation models through compositional dependencies, yet in practice this structure remains embedded implicitly in regulatory documents such as SASB, TCFD, and IFRS S2 and rarely exists as an explicit, governed, or machine-actionable artefact. Existing ESG ontologies define formal schemas but do not address scalable population and governance from authoritative regulatory sources, while unconstrained large language model (LLM) extraction frequently produces semantically incorrect entities, hallucinated relationships, and structurally invalid graphs. OntoMetric is an ontology-guided framework for the automated construction and governance of ESG metric knowledge graphs from regulatory documents that operationalises the ESG Metric Knowledge Graph (ESGMKG) ontology as a first-class constraint embedded directly into the extraction and population process. The framework integrates structure-aware segmentation, ontology-constrained LLM extraction enriched with semantic fields and deterministic identifiers, and two-phase validation combining semantic type verification with rule-based schema checking, while preserving segment-level and page-level provenance to ensure traceability to regulatory source text. Evaluation on five ESG regulatory standards shows that ontology-guided extraction achieves 65-90 percent semantic accuracy and over 80 percent schema compliance, compared with 3-10 percent for unconstrained baseline extraction, and yields stable cost efficiency with a cost per validated entity of 0.01-0.02 USD and a 48 times efficiency improvement over baseline.",
+    "tags": [
+      "ESG",
+      "Knowledge Graph",
+      "Ontology",
+      "LLM"
+    ],
+    "researchAreas": [
+      "Data for Real-World Applications"
+    ],
+    "authorAffiliations": {
+      "Mingqin Yu": "University of New South Wales",
+      "Fethi Rabhi": "University of New South Wales",
+      "Boming Xia": "University of Adelaide",
+      "Zhengyi Yang": "University of New South Wales",
+      "Felix Tan": "University of New South Wales",
+      "Qinghua Lu": "Commonwealth Scientific and Industrial Research Organisation (CSIRO), Data61"
+    },
+    "bibtex": "@misc{yu2025ontometric,\n  title = {OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation},\n  author = {Mingqin Yu and Fethi Rabhi and Boming Xia and Zhengyi Yang and Felix Tan and Qinghua Lu},\n  year = {2025},\n  eprint = {2512.01289},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.AI},\n  url = {https://arxiv.org/abs/2512.01289}\n}"
+  },
+  {
+    "id": "ding2026when",
+    "type": "conference",
+    "status": "accepted",
+    "year": 2026,
+    "displayOrder": 20,
     "title": "When Gender Becomes Visible: Benchmarking Fairness in LLM-Based Resume Screening",
     "authors": [
       "Yi Ding",
@@ -1071,7 +1112,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 20,
+    "displayOrder": 21,
     "title": "Development of a Prototype AI-Driven Career Guidance System for the Australian Construction Industry",
     "authors": [
       "Diya Yan",
@@ -1117,7 +1158,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 21,
+    "displayOrder": 22,
     "title": "Predicting Women's Managerial Attainment in the Australian Construction Industry with Artificial Neural Networks: Evidence from LinkedIn Profiles",
     "authors": [
       "Diya Yan",
@@ -1147,7 +1188,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 22,
+    "displayOrder": 23,
     "title": "Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates",
     "authors": [
       "Chuan He",
@@ -1190,7 +1231,7 @@
     "type": "workshop",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 23,
+    "displayOrder": 24,
     "title": "MineClaim: A Benchmark for LLM-Based ESG Claim Verification and Greenwashing Detection in Australian Mining Reports",
     "authors": [
       "Lujia Yang",
@@ -1236,7 +1277,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 24,
+    "displayOrder": 25,
     "title": "YOLO-DSNet for Small Target Detection",
     "authors": [
       "Haokun Xu",
@@ -1278,7 +1319,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 25,
+    "displayOrder": 26,
     "title": "UniPhy: Unifying Riemannian-Clifford Geometry and Biorthogonal Dynamics for Planetary-Scale Continuous Weather Modeling",
     "authors": [
       "Ruiqing Yan",
@@ -1316,7 +1357,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 26,
+    "displayOrder": 27,
     "title": "RAIDS: Rethinking Data Systems as Responsible Intelligent Infrastructure",
     "authors": [
       "Zhengyi Yang",
@@ -1352,7 +1393,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 27,
+    "displayOrder": 28,
     "title": "Evolving Skill-Structured Attack Memory Enhances LLM Jailbreaking",
     "authors": [
       "Junke Zhang",
@@ -1393,7 +1434,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 28,
+    "displayOrder": 29,
     "title": "SALP-CG: Standard-Aligned LLM Pipeline for Classifying and Grading Large Volumes of Online Conversational Health Data",
     "authors": [
       "Yiwei Yan",
@@ -1431,7 +1472,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 29,
+    "displayOrder": 30,
     "title": "Staying In Character: Perspective-Bounded Memory For Book-Based Role-Playing Agents",
     "authors": [
       "Xushuo Tang",
@@ -1475,7 +1516,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 30,
+    "displayOrder": 31,
     "title": "AHEAD: Advancing Multi-Class Label Aggregation with Interpretable Cross-Annotator Modeling",
     "authors": [
       "Ju Chen",
@@ -2856,49 +2897,11 @@
     "bibtex": "@misc{huan2025orchann,\n  title = {OrchANN: A Unified I/O Orchestration Framework for Skewed Out-of-Core Vector Search},\n  author = {Chengying Huan and Lizheng Chen and Zhengyi Yang and Shaonan Ma and Rong Gu and Renjie Yao and Zhibin Wang and Mingxing Zhang and Fang Xi and Jie Tao and Gang Zhang and Guihai Chen and Chen Tian},\n  year = {2025},\n  eprint = {2512.22838},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.DB},\n  url = {https://arxiv.org/abs/2512.22838}\n}"
   },
   {
-    "id": "yu2025ontometric",
-    "type": "preprint",
-    "status": "preprint",
-    "year": 2025,
-    "displayOrder": 29,
-    "title": "OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation",
-    "authors": [
-      "Mingqin Yu",
-      "Fethi Rabhi",
-      "Boming Xia",
-      "Zhengyi Yang",
-      "Felix Tan",
-      "Qinghua Lu"
-    ],
-    "venue": "arXiv",
-    "venueUrl": "https://arxiv.org/",
-    "arxiv": "2512.01289",
-    "abstract": "Environmental, Social, and Governance (ESG) metric knowledge is inherently structured, connecting industries, reporting frameworks, metric categories, metrics, and calculation models through compositional dependencies, yet in practice this structure remains embedded implicitly in regulatory documents such as SASB, TCFD, and IFRS S2 and rarely exists as an explicit, governed, or machine-actionable artefact. Existing ESG ontologies define formal schemas but do not address scalable population and governance from authoritative regulatory sources, while unconstrained large language model (LLM) extraction frequently produces semantically incorrect entities, hallucinated relationships, and structurally invalid graphs. OntoMetric is an ontology-guided framework for the automated construction and governance of ESG metric knowledge graphs from regulatory documents that operationalises the ESG Metric Knowledge Graph (ESGMKG) ontology as a first-class constraint embedded directly into the extraction and population process. The framework integrates structure-aware segmentation, ontology-constrained LLM extraction enriched with semantic fields and deterministic identifiers, and two-phase validation combining semantic type verification with rule-based schema checking, while preserving segment-level and page-level provenance to ensure traceability to regulatory source text. Evaluation on five ESG regulatory standards shows that ontology-guided extraction achieves 65-90 percent semantic accuracy and over 80 percent schema compliance, compared with 3-10 percent for unconstrained baseline extraction, and yields stable cost efficiency with a cost per validated entity of 0.01-0.02 USD and a 48 times efficiency improvement over baseline.",
-    "tags": [
-      "ESG",
-      "Knowledge Graph",
-      "Ontology",
-      "LLM"
-    ],
-    "researchAreas": [
-      "Data for Real-World Applications"
-    ],
-    "authorAffiliations": {
-      "Mingqin Yu": "University of New South Wales",
-      "Fethi Rabhi": "University of New South Wales",
-      "Boming Xia": "University of Adelaide",
-      "Zhengyi Yang": "University of New South Wales",
-      "Felix Tan": "University of New South Wales",
-      "Qinghua Lu": "Commonwealth Scientific and Industrial Research Organisation (CSIRO), Data61"
-    },
-    "bibtex": "@misc{yu2025ontometric,\n  title = {OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation},\n  author = {Mingqin Yu and Fethi Rabhi and Boming Xia and Zhengyi Yang and Felix Tan and Qinghua Lu},\n  year = {2025},\n  eprint = {2512.01289},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.AI},\n  url = {https://arxiv.org/abs/2512.01289}\n}"
-  },
-  {
     "id": "huan2025scaling",
     "type": "preprint",
     "status": "preprint",
     "year": 2025,
-    "displayOrder": 30,
+    "displayOrder": 29,
     "title": "Scaling Graph Chain-of-Thought Reasoning: A Multi-Agent Framework with Efficient LLM Serving",
     "authors": [
       "Chengying Huan",
@@ -2954,7 +2957,7 @@
     "type": "report",
     "status": "published",
     "year": 2025,
-    "displayOrder": 32,
+    "displayOrder": 30,
     "title": "Report on the 4th International Workshop on Large-Scale Graph Data Analytics (LSGDA 2025)",
     "authors": [
       "Zhengyi Yang",
