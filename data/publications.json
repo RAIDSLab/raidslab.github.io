@@ -1315,11 +1315,42 @@
     "bibtex": "@article{xu2026yolodsnet,\n  title = {YOLO-DSNet for Small Target Detection},\n  author = {Xu, Haokun and He, Huangleshuai and Zhi, Qike and Yang, Zhengyi and Han, Bocheng},\n  volume = {16},\n  issn = {2076-3417},\n  url = {http://dx.doi.org/10.3390/app16031493},\n  doi = {10.3390/app16031493},\n  number = {3},\n  journal = {Applied Sciences},\n  publisher = {MDPI AG},\n  year = {2026},\n  month = Feb,\n  pages = {1493}\n}"
   },
   {
-    "id": "yan2026uniphy",
+    "id": "fang2026language",
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
     "displayOrder": 26,
+    "title": "Do Language Models Know Who Fails? Look-Ahead Bias in LLM Credit-Risk Assessment",
+    "authors": [
+      "Yiwen Fang",
+      "Xiaolu Hu",
+      "Yifu Tang",
+      "Mark Wallis",
+      "Zhengyi Yang"
+    ],
+    "venue": "SSRN",
+    "venueUrl": "https://www.ssrn.com/",
+    "doi": "10.2139/ssrn.7429342",
+    "ssrn": "7429342",
+    "abstract": "Large language models (LLMs) are being adopted as low-cost analysts of corporate disclosures, and recent studies report that they forecast adverse outcomes directly from filing text. We show that this apparent forecasting power is substantially an artefact of look-ahead bias, because the models were trained on text that already reports the outcomes they are asked to predict. Using 443 U.S. public-company bankruptcies from 2015 to 2026, each paired with a surviving firm and represented by the Risk Factors section of its last annual report before failure, we score every filing twice, once with the issuer named and once with all identifying detail removed. Naming raises the estimated 24-month default probability by 20 percentage points for firms that failed and lowers it by 7 points for survivors. Direct memory tests confirm the source, since the model can state the bankruptcy outcome for 64% of failed firms with no document in front of it. De-identifying the filing cuts measured discrimination from an area under the ROC curve of 0.97 to 0.84, and the surviving skill no longer significantly beats a conventional accounting and dictionary model. We provide a simple de-identification and memory-probe procedure that lets researchers and risk managers measure and remove this bias.",
+    "tags": [
+      "LLM",
+      "Credit Risk",
+      "Data Contamination",
+      "Responsible AI"
+    ],
+    "researchAreas": [
+      "Responsible Data Intelligence",
+      "Data for Real-World Applications"
+    ],
+    "bibtex": "@misc{fang2026language,\n  title = {Do Language Models Know Who Fails? Look-Ahead Bias in LLM Credit-Risk Assessment},\n  author = {Yiwen Fang and Xiaolu Hu and Yifu Tang and Mark Wallis and Zhengyi Yang},\n  year = {2026},\n  doi = {10.2139/ssrn.7429342},\n  url = {https://ssrn.com/abstract=7429342},\n  note = {SSRN preprint}\n}"
+  },
+  {
+    "id": "yan2026uniphy",
+    "type": "preprint",
+    "status": "preprint",
+    "year": 2026,
+    "displayOrder": 27,
     "title": "UniPhy: Unifying Riemannian-Clifford Geometry and Biorthogonal Dynamics for Planetary-Scale Continuous Weather Modeling",
     "authors": [
       "Ruiqing Yan",
@@ -1357,7 +1388,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 27,
+    "displayOrder": 28,
     "title": "RAIDS: Rethinking Data Systems as Responsible Intelligent Infrastructure",
     "authors": [
       "Zhengyi Yang",
@@ -1393,7 +1424,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 28,
+    "displayOrder": 29,
     "title": "Evolving Skill-Structured Attack Memory Enhances LLM Jailbreaking",
     "authors": [
       "Junke Zhang",
@@ -1434,7 +1465,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 29,
+    "displayOrder": 30,
     "title": "SALP-CG: Standard-Aligned LLM Pipeline for Classifying and Grading Large Volumes of Online Conversational Health Data",
     "authors": [
       "Yiwei Yan",
@@ -1472,7 +1503,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 30,
+    "displayOrder": 31,
     "title": "Staying In Character: Perspective-Bounded Memory For Book-Based Role-Playing Agents",
     "authors": [
       "Xushuo Tang",
@@ -1516,7 +1547,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 31,
+    "displayOrder": 32,
     "title": "AHEAD: Advancing Multi-Class Label Aggregation with Interpretable Cross-Annotator Modeling",
     "authors": [
       "Ju Chen",
