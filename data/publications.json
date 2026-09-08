@@ -109,11 +109,45 @@
     "bibtex": "@article{he2027ptil,\n  title = {PTIL: Partitioned Tree-Cover Interval Labeling for Restricted-Domain Reachability Queries},\n  author = {He, Huangleshuai and Yang, Zhengyi and Tang, Yifu and Chen, Zebin and Wen, Dong and Luo, Qi and Zhang, Tianming},\n  volume = {30},\n  number = {1},\n  pages = {34--46},\n  doi = {10.48786/EDBT.2027.04},\n  url = {https://openproceedings.org/2027/conf/edbt/paper_22.pdf},\n  keywords = {Database Technology},\n  language = {en},\n  publisher = {OpenProceedings.org},\n  year = {2027},\n  isbn = {978-3-89318-106-3},\n  issn = {2367-2005}\n}"
   },
   {
+    "id": "yuan2026higherorder",
+    "type": "book",
+    "status": "accepted",
+    "year": 2026,
+    "displayOrder": 1,
+    "title": "Higher-Order Graph Analytics: Models, Algorithms and Applications",
+    "authors": [
+      "Long Yuan",
+      "Zhengyi Yang",
+      "Wenjie Zhang"
+    ],
+    "authorAffiliations": {
+      "Long Yuan": "Wuhan University of Technology",
+      "Zhengyi Yang": "University of Sydney",
+      "Wenjie Zhang": "University of New South Wales"
+    },
+    "venue": "Data Analytics",
+    "venueUrl": "https://link.springer.com/book/9789819256549",
+    "publisher": "Springer Singapore",
+    "isbn": "978-981-92-5654-9",
+    "eisbn": "978-981-92-5655-6",
+    "note": "Forthcoming; hardcover and eBook publication scheduled for November 2026.",
+    "abstract": "This book presents a systematic guide to higher-order graph analytics across heterogeneous information networks, temporal graphs, multilayer graphs, and hypergraphs. It connects foundational models and problem formulations with algorithms and real-world applications, covering tasks such as centrality, community detection, cohesive subgraph analysis, traversal, and pattern matching.",
+    "tags": [
+      "Higher-Order Graph",
+      "Heterogeneous Information Network",
+      "Temporal Graph",
+      "Hypergraph"
+    ],
+    "researchAreas": [
+      "Scalable Data Systems"
+    ]
+  },
+  {
     "id": "zhang2026nucleus",
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 1,
+    "displayOrder": 2,
     "title": "Nucleus Decomposition Revisited: An Efficient Counting-Based Approach",
     "authors": [
       "Wenqian Zhang",
@@ -161,7 +195,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 2,
+    "displayOrder": 3,
     "title": "Gem: Scalable Monotonic Graph Processing Beyond Billion-Scale on a Single Machine",
     "authors": [
       "Chengying Huan",
@@ -214,7 +248,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 3,
+    "displayOrder": 4,
     "title": "CMANNS: GPU-Accelerated Graph Index Construction for ANNS via Compute-Memory Disaggregation",
     "authors": [
       "Chengying Huan",
@@ -272,7 +306,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 4,
+    "displayOrder": 5,
     "title": "Efficient Partition-Based Approaches for Diversified Top-k Subgraph Matching",
     "authors": [
       "Liuyi Chen",
@@ -324,7 +358,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 5,
+    "displayOrder": 6,
     "title": "Hypergraph Decomposition with Intersection Bounds",
     "authors": [
       "Qi Luo",
@@ -375,7 +409,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 6,
+    "displayOrder": 7,
     "title": "C2TC: A Training-Free Framework for Efficient Tabular Data Condensation",
     "authors": [
       "Sijia Xu",
@@ -420,7 +454,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 7,
+    "displayOrder": 8,
     "title": "Efficient Hypergraph Pattern Matching via Match-and-Filter and Intersection Constraint",
     "authors": [
       "Siwoo Song",
@@ -465,7 +499,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 8,
+    "displayOrder": 9,
     "title": "CLGNN: A Contrastive Learning-based GNN for Temporal Betweenness Prediction under Extreme Value Imbalance",
     "authors": [
       "Tianming Zhang",
@@ -520,7 +554,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 9,
+    "displayOrder": 10,
     "title": "Beyond Linearization: Attributed Table Graphs for Table Reasoning",
     "authors": [
       "Yuxiang Wang",
@@ -567,7 +601,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 10,
+    "displayOrder": 11,
     "title": "HyperSU: Corpus-Driven Semantic-Unit Hypergraph for Retrieval-Augmented Generation",
     "authors": [
       "Jiate Liu",
@@ -626,7 +660,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 11,
+    "displayOrder": 12,
     "title": "BCCE: Block-Centric GPU Co-Design for Real-Time Range-Top-K Query at Scale",
     "authors": [
       "Chengying Huan",
@@ -693,7 +727,7 @@
     "type": "workshop",
     "status": "published",
     "year": 2026,
-    "displayOrder": 12,
+    "displayOrder": 13,
     "title": "A2RAG: Adaptive Agentic Graph Retrieval for Cost-Aware and Reliable Reasoning",
     "authors": [
       "Jiate Liu",
@@ -764,7 +798,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 13,
+    "displayOrder": 14,
     "title": "ESG Reporting Lifecycle Management with Large Language Models and AI Agents",
     "authors": [
       "Thong Hoang",
@@ -823,7 +857,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 14,
+    "displayOrder": 15,
     "title": "Gendered Self-Presentation in the Construction Industry: Insights from LinkedIn Narratives and In-Depth Interviews",
     "authors": [
       "Diya Yan",
@@ -864,7 +898,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 15,
+    "displayOrder": 16,
     "title": "Improving Access to Building Licensing Information in Australia: Design and Development of a Graph-Based Retrieval-Augmented Generation (RAG) Artificial Intelligence (AI) System",
     "authors": [
       "Diya Yan",
@@ -911,7 +945,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 16,
+    "displayOrder": 17,
     "title": "Pathways to Leadership in the Australian Construction Industry: A Comparative Social Network Analysis Using LinkedIn Profiles",
     "authors": [
       "Diya Yan",
@@ -953,7 +987,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 17,
+    "displayOrder": 18,
     "title": "ForexAgent: Identifying Trading Strategies in Forex Markets with Large Language Models",
     "authors": [
       "Xin Shu",
@@ -994,7 +1028,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 18,
+    "displayOrder": 19,
     "title": "Building Futures: LLM-Guided Career Pathways for Australia's Construction Graduates",
     "authors": [
       "Yi Ding",
@@ -1036,7 +1070,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 19,
+    "displayOrder": 20,
     "title": "OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation",
     "authors": [
       "Mingqin Yu",
@@ -1077,7 +1111,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 20,
+    "displayOrder": 21,
     "title": "When Gender Becomes Visible: Benchmarking Fairness in LLM-Based Resume Screening",
     "authors": [
       "Yi Ding",
@@ -1112,7 +1146,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 21,
+    "displayOrder": 22,
     "title": "Development of a Prototype AI-Driven Career Guidance System for the Australian Construction Industry",
     "authors": [
       "Diya Yan",
@@ -1158,7 +1192,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 22,
+    "displayOrder": 23,
     "title": "Predicting Women's Managerial Attainment in the Australian Construction Industry with Artificial Neural Networks: Evidence from LinkedIn Profiles",
     "authors": [
       "Diya Yan",
@@ -1188,7 +1222,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 23,
+    "displayOrder": 24,
     "title": "Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates",
     "authors": [
       "Chuan He",
@@ -1231,7 +1265,7 @@
     "type": "workshop",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 24,
+    "displayOrder": 25,
     "title": "MineClaim: A Benchmark for LLM-Based ESG Claim Verification and Greenwashing Detection in Australian Mining Reports",
     "authors": [
       "Lujia Yang",
@@ -1277,7 +1311,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 25,
+    "displayOrder": 26,
     "title": "YOLO-DSNet for Small Target Detection",
     "authors": [
       "Haokun Xu",
@@ -1319,7 +1353,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 26,
+    "displayOrder": 27,
     "title": "Do Language Models Know Who Fails? Look-Ahead Bias in LLM Credit-Risk Assessment",
     "authors": [
       "Yiwen Fang",
@@ -1350,7 +1384,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 27,
+    "displayOrder": 28,
     "title": "UniPhy: Unifying Riemannian-Clifford Geometry and Biorthogonal Dynamics for Planetary-Scale Continuous Weather Modeling",
     "authors": [
       "Ruiqing Yan",
@@ -1388,7 +1422,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 28,
+    "displayOrder": 29,
     "title": "RAIDS: Rethinking Data Systems as Responsible Intelligent Infrastructure",
     "authors": [
       "Zhengyi Yang",
@@ -1424,7 +1458,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 29,
+    "displayOrder": 30,
     "title": "Evolving Skill-Structured Attack Memory Enhances LLM Jailbreaking",
     "authors": [
       "Junke Zhang",
@@ -1465,7 +1499,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 30,
+    "displayOrder": 31,
     "title": "SALP-CG: Standard-Aligned LLM Pipeline for Classifying and Grading Large Volumes of Online Conversational Health Data",
     "authors": [
       "Yiwei Yan",
@@ -1503,7 +1537,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 31,
+    "displayOrder": 32,
     "title": "Staying In Character: Perspective-Bounded Memory For Book-Based Role-Playing Agents",
     "authors": [
       "Xushuo Tang",
@@ -1547,7 +1581,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 32,
+    "displayOrder": 33,
     "title": "AHEAD: Advancing Multi-Class Label Aggregation with Interpretable Cross-Annotator Modeling",
     "authors": [
       "Ju Chen",
