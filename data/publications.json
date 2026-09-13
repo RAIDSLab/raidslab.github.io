@@ -1,10 +1,62 @@
 [
   {
-    "id": "chen2027ganns",
+    "id": "wang2027fenwalker",
     "type": "conference",
     "status": "accepted",
     "year": 2027,
     "displayOrder": 1,
+    "title": "FenWalker: Towards FPGA Accelerated Dynamic Graph Random Walks on Massive Graphs",
+    "authors": [
+      "Li Wang",
+      "Chengying Huan",
+      "Zhengyi Yang",
+      "Yi Su",
+      "Pinhuan Wang",
+      "Xinyu Chen",
+      "Rong Gu",
+      "Zhibin Wang",
+      "Guihai Chen",
+      "Chen Tian"
+    ],
+    "authorAffiliations": {
+      "Li Wang": "Nanjing University",
+      "Chengying Huan": "Nanjing University",
+      "Zhengyi Yang": "University of Sydney",
+      "Yi Su": "Nanjing University",
+      "Pinhuan Wang": "Nanjing University",
+      "Xinyu Chen": "The Hong Kong University of Science and Technology (Guangzhou)",
+      "Rong Gu": "Nanjing University",
+      "Zhibin Wang": "Nanjing University",
+      "Guihai Chen": "Nanjing University; Shanghai Jiao Tong University",
+      "Chen Tian": "Nanjing University"
+    },
+    "venue": "ACM SIGMOD International Conference on Management of Data",
+    "venueShort": "SIGMOD",
+    "venueUrl": "https://2027.sigmod.org/",
+    "publisher": "Association for Computing Machinery (ACM)",
+    "track": "Research",
+    "rankings": {
+      "core2023": "A*",
+      "icore2026": "A*",
+      "ccf": "A"
+    },
+    "abstract": "Dynamic Graph Random Walk (DGRW) is a fundamental yet computationally intensive task for analyzing large-scale graphs. A critical challenge lies in performing DGRW efficiently on dynamically changing graphs, where existing systems often struggle to simultaneously achieve high-throughput queries, online updates, and low memory overhead. This paper explores the potential of FPGA to tackle this problem, leveraging their inherent capabilities for hardware customization to implement fine-grained pipelines and optimized memory access. Specifically, we propose FenWalker, an FPGA-based DGRW accelerator designed for large-scale dynamically changing graphs. From the algorithmic perspective, we introduce a novel sampling method based on the Fenwick tree data structure. This method reduces the sampling complexity to O(log d) and the dynamic update complexity to O(log d) with small memory overhead, where d is the degree of the given vertex. From an architectural perspective, we devise a deeply pipelined hardware architecture with co-optimized on-chip and off-chip memory management, designed to maximize parallelism and fully exploit available memory bandwidth. Experiments on diverse datasets using representative DGRW algorithms show FenWalker achieves query speedups of up to 19.7x, 14.3x, and 605.3x over the state-of-the-art FPGA, GPU, and CPU implementations, respectively. Additionally, it attains up to 21.2x higher update throughput than the state-of-the-art FPGA accelerator.",
+    "tags": [
+      "Graph",
+      "Random Walk",
+      "FPGA",
+      "Hardware Acceleration"
+    ],
+    "researchAreas": [
+      "Scalable Data Systems"
+    ]
+  },
+  {
+    "id": "chen2027ganns",
+    "type": "conference",
+    "status": "accepted",
+    "year": 2027,
+    "displayOrder": 2,
     "title": "Beyond Overlap: Hierarchical Graph Abstraction for Out-of-Core Vector Search",
     "authors": [
       "Lizheng Chen",
@@ -62,7 +114,7 @@
     "type": "conference",
     "status": "published",
     "year": 2027,
-    "displayOrder": 2,
+    "displayOrder": 3,
     "title": "PTIL: Partitioned Tree-Cover Interval Labeling for Restricted-Domain Reachability Queries",
     "authors": [
       "Huangleshuai He",
