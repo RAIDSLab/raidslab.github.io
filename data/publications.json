@@ -1162,11 +1162,43 @@
     "bibtex": "@misc{yu2025ontometric,\n  title = {OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation},\n  author = {Mingqin Yu and Fethi Rabhi and Boming Xia and Zhengyi Yang and Felix Tan and Qinghua Lu},\n  year = {2025},\n  eprint = {2512.01289},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.AI},\n  url = {https://arxiv.org/abs/2512.01289}\n}"
   },
   {
-    "id": "ding2026when",
+    "id": "yu2026mapi",
     "type": "conference",
     "status": "accepted",
     "year": 2026,
     "displayOrder": 21,
+    "title": "MAPI: Measuring Prompt-Injection Propagation in Multi-Agent LLM Pipelines",
+    "authors": [
+      "Qingyu Yu",
+      "Weiyuan Wang",
+      "Zihan Yang",
+      "Yifu Tang",
+      "Mingchen Ju",
+      "Wenke Yang",
+      "Bocheng Han",
+      "Zhengyi Yang"
+    ],
+    "venue": "Australasian Joint Conference on Artificial Intelligence",
+    "venueShort": "AJCAI",
+    "venueUrl": "https://ajcai26.org/",
+    "track": "Oral",
+    "abstract": "Prompt injection in a multi-agent system can outlive the injected text as one role's decision becomes another role's input. We present MAPI, a controlled framework for tracing an unauthorized objective through a sequential LLM pipeline. MAPI uses an application-aware but architecture-agnostic attacker, matched public and restricted sources, and role-aware labels to distinguish local compromise, downstream propagation, and final leakage. Across two generation models in a four-agent email testbed, three generic attack framings produce both stopped and full-chain trajectories with model-dependent susceptibility. Boundary experiments show that retrieval and drafting controls can stop particular paths but do not behave uniformly across models, while writable-position results show that risk depends on reachable capability rather than graph distance alone. MAPI provides a general trajectory protocol, including cross-agent contamination score (CACS) and conditional transitions, for locating where prompt-injection state is adopted, removed, reintroduced, or preserved.",
+    "tags": [
+      "Multi-Agent Systems",
+      "Prompt Injection",
+      "LLM",
+      "Security Evaluation"
+    ],
+    "researchAreas": [
+      "Responsible Data Intelligence"
+    ]
+  },
+  {
+    "id": "ding2026when",
+    "type": "conference",
+    "status": "accepted",
+    "year": 2026,
+    "displayOrder": 22,
     "title": "When Gender Becomes Visible: Benchmarking Fairness in LLM-Based Resume Screening",
     "authors": [
       "Yi Ding",
@@ -1201,7 +1233,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 22,
+    "displayOrder": 23,
     "title": "Development of a Prototype AI-Driven Career Guidance System for the Australian Construction Industry",
     "authors": [
       "Diya Yan",
@@ -1247,7 +1279,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 23,
+    "displayOrder": 24,
     "title": "Predicting Women's Managerial Attainment in the Australian Construction Industry with Artificial Neural Networks: Evidence from LinkedIn Profiles",
     "authors": [
       "Diya Yan",
@@ -1277,7 +1309,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 24,
+    "displayOrder": 25,
     "title": "Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates",
     "authors": [
       "Chuan He",
@@ -1320,7 +1352,7 @@
     "type": "workshop",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 25,
+    "displayOrder": 26,
     "title": "MineClaim: A Benchmark for LLM-Based ESG Claim Verification and Greenwashing Detection in Australian Mining Reports",
     "authors": [
       "Lujia Yang",
@@ -1366,7 +1398,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 26,
+    "displayOrder": 27,
     "title": "YOLO-DSNet for Small Target Detection",
     "authors": [
       "Haokun Xu",
@@ -1408,7 +1440,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 27,
+    "displayOrder": 28,
     "title": "Do Language Models Know Who Fails? Look-Ahead Bias in LLM Credit-Risk Assessment",
     "authors": [
       "Yiwen Fang",
@@ -1439,7 +1471,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 28,
+    "displayOrder": 29,
     "title": "UniPhy: Unifying Riemannian-Clifford Geometry and Biorthogonal Dynamics for Planetary-Scale Continuous Weather Modeling",
     "authors": [
       "Ruiqing Yan",
@@ -1477,7 +1509,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 29,
+    "displayOrder": 30,
     "title": "RAIDS: Rethinking Data Systems as Responsible Intelligent Infrastructure",
     "authors": [
       "Zhengyi Yang",
@@ -1513,7 +1545,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 30,
+    "displayOrder": 31,
     "title": "Evolving Skill-Structured Attack Memory Enhances LLM Jailbreaking",
     "authors": [
       "Junke Zhang",
@@ -1554,7 +1586,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 31,
+    "displayOrder": 32,
     "title": "SALP-CG: Standard-Aligned LLM Pipeline for Classifying and Grading Large Volumes of Online Conversational Health Data",
     "authors": [
       "Yiwei Yan",
@@ -1592,7 +1624,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 32,
+    "displayOrder": 33,
     "title": "Staying In Character: Perspective-Bounded Memory For Book-Based Role-Playing Agents",
     "authors": [
       "Xushuo Tang",
@@ -1636,7 +1668,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 33,
+    "displayOrder": 34,
     "title": "AHEAD: Advancing Multi-Class Label Aggregation with Interpretable Cross-Annotator Modeling",
     "authors": [
       "Ju Chen",
