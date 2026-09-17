@@ -849,11 +849,142 @@
     "bibtex": "@inproceedings{liu2026a2rag,\n  title = {A2RAG: Adaptive Agentic Graph Retrieval for Cost-Aware and Reliable Reasoning},\n  author = {Liu, Jiate and Chen, Zebin and Qiao, Shaobo and Ju, Mingchen and Zhang, Danting and Han, Bocheng and Yu, Shuyue and Shu, Xin and Wu, Jinglin and Wen, Dong and Cao, Xin and Liu, Guanfeng and Yang, Zhengyi},\n  url = {http://dx.doi.org/10.1109/icdew71238.2026.00024},\n  DOI = {10.1109/icdew71238.2026.00024},\n  booktitle = {2026 IEEE 42nd International Conference on Data Engineering Workshops (ICDEW)},\n  publisher = {IEEE},\n  year = {2026},\n  month = May,\n  pages = {187-196}\n}"
   },
   {
+    "id": "zhang2026heliostrace",
+    "type": "conference",
+    "status": "accepted",
+    "year": 2026,
+    "displayOrder": 14,
+    "title": "HeliosTrace: Profiling Data Mining Pipelines on Apple Silicon GPUs with Unified Memory",
+    "authors": [
+      "Yizhe Zhang",
+      "Zhengyi Yang",
+      "Xin Cao"
+    ],
+    "venue": "IEEE International Conference on Data Mining",
+    "venueShort": "ICDM",
+    "venueUrl": "https://icdm2026.neu.edu.cn/CallforDemos/list.htm",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "track": "Demonstration",
+    "tags": [
+      "Data Mining",
+      "GPU",
+      "Performance Profiling",
+      "Unified Memory"
+    ],
+    "researchAreas": [
+      "Scalable Data Systems"
+    ]
+  },
+  {
+    "id": "ding2026euleresg",
+    "type": "conference",
+    "status": "accepted",
+    "year": 2026,
+    "displayOrder": 15,
+    "title": "EulerESG: A Unified Platform for Standards-Aware ESG Disclosure Analysis",
+    "authors": [
+      "Yi Ding",
+      "Zhengyi Yang",
+      "Yiheng Lu",
+      "Lingjing Lan",
+      "Yifu Tang",
+      "Zihan Yang",
+      "Xushuo Tang",
+      "Jiayu Hu",
+      "Mingchen Ju",
+      "Wenqian Zhang",
+      "Wenke Yang",
+      "Xiwei Xu",
+      "Wenjie Zhang"
+    ],
+    "venue": "IEEE International Conference on Data Mining",
+    "venueShort": "ICDM",
+    "venueUrl": "https://icdm2026.neu.edu.cn/CallforDemos/list.htm",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "track": "Demonstration",
+    "tags": [
+      "ESG",
+      "Reporting",
+      "LLM",
+      "Data Analysis"
+    ],
+    "researchAreas": [
+      "Data for Real-World Applications"
+    ]
+  },
+  {
+    "id": "lu2026novagraph",
+    "type": "conference",
+    "status": "accepted",
+    "year": 2026,
+    "displayOrder": 16,
+    "title": "NovaGraph: Interactive Graph Analytics, Locally in the Browser",
+    "authors": [
+      "Ziyao Lu",
+      "Liuyi Chen",
+      "Yifu Tang",
+      "Merry Rosalie",
+      "Tuan Minh Truong",
+      "Simin Wu",
+      "Yuchao Jiang",
+      "Zhengyi Yang"
+    ],
+    "venue": "IEEE International Conference on Data Mining",
+    "venueShort": "ICDM",
+    "venueUrl": "https://icdm2026.neu.edu.cn/CallforDemos/list.htm",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "track": "Demonstration",
+    "tags": [
+      "Graph",
+      "Analytics",
+      "Browser",
+      "Visualization"
+    ],
+    "researchAreas": [
+      "Scalable Data Systems"
+    ]
+  },
+  {
+    "id": "tian2026hyfin",
+    "type": "conference",
+    "status": "accepted",
+    "year": 2026,
+    "displayOrder": 17,
+    "title": "HyFin: An LLM-Driven Platform for Hybrid Text-and-Table Financial Report Analysis",
+    "authors": [
+      "Runze Tian",
+      "Jingyuan Xue",
+      "Zihan Yang",
+      "Yifu Tang",
+      "Liuyi Chen",
+      "Yiming Huang",
+      "Jianke Yu",
+      "Bocheng Han",
+      "Yiwen Fang",
+      "Jiahui Jin",
+      "Zhengyi Yang"
+    ],
+    "venue": "IEEE International Conference on Data Mining",
+    "venueShort": "ICDM",
+    "venueUrl": "https://icdm2026.neu.edu.cn/CallforDemos/list.htm",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "track": "Demonstration",
+    "tags": [
+      "Financial Analysis",
+      "LLM",
+      "Table Reasoning",
+      "Reporting"
+    ],
+    "researchAreas": [
+      "Data for Real-World Applications"
+    ]
+  },
+  {
     "id": "hoang2026esg",
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 14,
+    "displayOrder": 18,
     "title": "ESG Reporting Lifecycle Management with Large Language Models and AI Agents",
     "authors": [
       "Thong Hoang",
@@ -912,7 +1043,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 15,
+    "displayOrder": 19,
     "title": "Gendered Self-Presentation in the Construction Industry: Insights from LinkedIn Narratives and In-Depth Interviews",
     "authors": [
       "Diya Yan",
@@ -953,7 +1084,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 16,
+    "displayOrder": 20,
     "title": "Improving Access to Building Licensing Information in Australia: Design and Development of a Graph-Based Retrieval-Augmented Generation (RAG) Artificial Intelligence (AI) System",
     "authors": [
       "Diya Yan",
@@ -1000,7 +1131,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 17,
+    "displayOrder": 21,
     "title": "Pathways to Leadership in the Australian Construction Industry: A Comparative Social Network Analysis Using LinkedIn Profiles",
     "authors": [
       "Diya Yan",
@@ -1042,7 +1173,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 18,
+    "displayOrder": 22,
     "title": "ForexAgent: Identifying Trading Strategies in Forex Markets with Large Language Models",
     "authors": [
       "Xin Shu",
@@ -1083,7 +1214,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 19,
+    "displayOrder": 23,
     "title": "Building Futures: LLM-Guided Career Pathways for Australia's Construction Graduates",
     "authors": [
       "Yi Ding",
@@ -1125,7 +1256,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 20,
+    "displayOrder": 24,
     "title": "OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation",
     "authors": [
       "Mingqin Yu",
@@ -1166,7 +1297,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 21,
+    "displayOrder": 25,
     "title": "MAPI: Measuring Prompt-Injection Propagation in Multi-Agent LLM Pipelines",
     "authors": [
       "Qingyu Yu",
@@ -1198,7 +1329,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 22,
+    "displayOrder": 26,
     "title": "When Gender Becomes Visible: Benchmarking Fairness in LLM-Based Resume Screening",
     "authors": [
       "Yi Ding",
@@ -1233,7 +1364,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 23,
+    "displayOrder": 27,
     "title": "Development of a Prototype AI-Driven Career Guidance System for the Australian Construction Industry",
     "authors": [
       "Diya Yan",
@@ -1279,7 +1410,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 24,
+    "displayOrder": 28,
     "title": "Predicting Women's Managerial Attainment in the Australian Construction Industry with Artificial Neural Networks: Evidence from LinkedIn Profiles",
     "authors": [
       "Diya Yan",
@@ -1309,7 +1440,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 25,
+    "displayOrder": 29,
     "title": "Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates",
     "authors": [
       "Chuan He",
@@ -1352,7 +1483,7 @@
     "type": "workshop",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 26,
+    "displayOrder": 30,
     "title": "MineClaim: A Benchmark for LLM-Based ESG Claim Verification and Greenwashing Detection in Australian Mining Reports",
     "authors": [
       "Lujia Yang",
@@ -1398,7 +1529,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 27,
+    "displayOrder": 31,
     "title": "YOLO-DSNet for Small Target Detection",
     "authors": [
       "Haokun Xu",
@@ -1440,7 +1571,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 28,
+    "displayOrder": 32,
     "title": "Do Language Models Know Who Fails? Look-Ahead Bias in LLM Credit-Risk Assessment",
     "authors": [
       "Yiwen Fang",
@@ -1471,7 +1602,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 29,
+    "displayOrder": 33,
     "title": "UniPhy: Unifying Riemannian-Clifford Geometry and Biorthogonal Dynamics for Planetary-Scale Continuous Weather Modeling",
     "authors": [
       "Ruiqing Yan",
@@ -1509,7 +1640,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 30,
+    "displayOrder": 34,
     "title": "RAIDS: Rethinking Data Systems as Responsible Intelligent Infrastructure",
     "authors": [
       "Zhengyi Yang",
@@ -1545,7 +1676,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 31,
+    "displayOrder": 35,
     "title": "Evolving Skill-Structured Attack Memory Enhances LLM Jailbreaking",
     "authors": [
       "Junke Zhang",
@@ -1586,7 +1717,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 32,
+    "displayOrder": 36,
     "title": "SALP-CG: Standard-Aligned LLM Pipeline for Classifying and Grading Large Volumes of Online Conversational Health Data",
     "authors": [
       "Yiwei Yan",
@@ -1624,7 +1755,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 33,
+    "displayOrder": 37,
     "title": "Staying In Character: Perspective-Bounded Memory For Book-Based Role-Playing Agents",
     "authors": [
       "Xushuo Tang",
@@ -1668,7 +1799,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 34,
+    "displayOrder": 38,
     "title": "AHEAD: Advancing Multi-Class Label Aggregation with Interpretable Cross-Annotator Modeling",
     "authors": [
       "Ju Chen",
