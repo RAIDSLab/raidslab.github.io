@@ -865,6 +865,18 @@
     "venueUrl": "https://icdm2026.neu.edu.cn/CallforDemos/list.htm",
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "track": "Demonstration",
+    "rankings": {
+      "core2023": "A*",
+      "icore2026": "A*"
+    },
+    "hostVenue": {
+      "name": "IEEE International Conference on Data Mining",
+      "shortName": "ICDM",
+      "year": 2026,
+      "rankings": {
+        "ccf": "B"
+      }
+    },
     "tags": [
       "Data Mining",
       "GPU",
@@ -902,6 +914,18 @@
     "venueUrl": "https://icdm2026.neu.edu.cn/CallforDemos/list.htm",
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "track": "Demonstration",
+    "rankings": {
+      "core2023": "A*",
+      "icore2026": "A*"
+    },
+    "hostVenue": {
+      "name": "IEEE International Conference on Data Mining",
+      "shortName": "ICDM",
+      "year": 2026,
+      "rankings": {
+        "ccf": "B"
+      }
+    },
     "tags": [
       "ESG",
       "Reporting",
@@ -934,6 +958,18 @@
     "venueUrl": "https://icdm2026.neu.edu.cn/CallforDemos/list.htm",
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "track": "Demonstration",
+    "rankings": {
+      "core2023": "A*",
+      "icore2026": "A*"
+    },
+    "hostVenue": {
+      "name": "IEEE International Conference on Data Mining",
+      "shortName": "ICDM",
+      "year": 2026,
+      "rankings": {
+        "ccf": "B"
+      }
+    },
     "tags": [
       "Graph",
       "Analytics",
@@ -969,6 +1005,18 @@
     "venueUrl": "https://icdm2026.neu.edu.cn/CallforDemos/list.htm",
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "track": "Demonstration",
+    "rankings": {
+      "core2023": "A*",
+      "icore2026": "A*"
+    },
+    "hostVenue": {
+      "name": "IEEE International Conference on Data Mining",
+      "shortName": "ICDM",
+      "year": 2026,
+      "rankings": {
+        "ccf": "B"
+      }
+    },
     "tags": [
       "Financial Analysis",
       "LLM",
