@@ -575,6 +575,7 @@
     "venue": "ACM Web Conference",
     "venueShort": "WWW",
     "venueUrl": "https://www2026.thewebconf.org/",
+    "track": "Oral",
     "publisher": "Association for Computing Machinery (ACM)",
     "rankings": {
       "core2023": "A*",
@@ -3470,6 +3471,7 @@
     "venue": "ACM Web Conference",
     "venueShort": "WWW",
     "venueUrl": "https://www2024.thewebconf.org/",
+    "track": "Oral",
     "publisher": "Association for Computing Machinery (ACM)",
     "rankings": {
       "core2023": "A*",
