@@ -994,10 +994,30 @@
       "Yiming Huang",
       "Jianke Yu",
       "Bocheng Han",
-      "Yiwen Fang",
+      "Yvonne Fang",
       "Jiahui Jin",
       "Zhengyi Yang"
     ],
+    "coFirstAuthors": [
+      "Runze Tian",
+      "Jingyuan Xue"
+    ],
+    "correspondingAuthors": [
+      "Zhengyi Yang"
+    ],
+    "authorAffiliations": {
+      "Runze Tian": "University of New South Wales",
+      "Jingyuan Xue": "University of New South Wales",
+      "Zihan Yang": "Chang'an University",
+      "Yifu Tang": "Vecton AI",
+      "Liuyi Chen": "Hunan University",
+      "Yiming Huang": "University of New South Wales",
+      "Jianke Yu": "University of Technology Sydney",
+      "Bocheng Han": "Vecton AI",
+      "Yvonne Fang": "RMIT University",
+      "Jiahui Jin": "Southeast University",
+      "Zhengyi Yang": "The University of Sydney"
+    },
     "venue": "IEEE International Conference on Data Mining",
     "venueShort": "ICDM",
     "venueUrl": "https://icdm2026.neu.edu.cn/CallforDemos/list.htm",
@@ -1015,10 +1035,14 @@
         "ccf": "B"
       }
     },
+    "code": "https://github.com/Jingyuan-Xue/hyfin",
+    "video": "https://youtu.be/4NxMEMd4m6g",
+    "abstract": "Annual reports describe a company's businesses, performance, risks, and future plans. However, this information is distributed across textual content and financial tables, making analysis and verification difficult at scale. Manual analysis is labor-intensive, and large language models may generate hallucinations. We present HyFin, a financial report analysis system for investment research that provides a complete pipeline from report processing to analysis. HyFin organizes annual report analysis around industry exposure, risk exposure, and strategic outlook and future prospects. It retrieves and fuses text and table data through separate evidence graphs while preserving provenance to the source reports. On actual annual-report questions, HyFin achieves an average answer quality score of 0.858, compared with 0.674 for Plain Dense RAG and 0.798 for the best reported competition system, corresponding to relative improvements of 27.3% and 7.5%, respectively. Case studies further show that the industry and risk signals produced by HyFin are consistent with independent market and financial evidence. Together, these capabilities support interactive and traceable investment research.",
     "tags": [
       "Finance",
       "Tables",
-      "Reporting",
+      "QA",
+      "RAG",
       "LLM"
     ],
     "researchAreas": [
