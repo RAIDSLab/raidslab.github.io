@@ -1964,6 +1964,42 @@
     "bibtex": "@misc{chen2026ahead,\n  title = {AHEAD: Advancing Multi-Class Label Aggregation with Interpretable Cross-Annotator Modeling},\n  author = {Ju Chen and Sijia Xu and Jun Feng and Zhiqiang Gao and Zhengyi Yang},\n  year = {2026},\n  eprint = {2607.18465},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.LG},\n  url = {https://arxiv.org/abs/2607.18465}\n}"
   },
   {
+    "id": "li2026ownership",
+    "type": "workshop",
+    "status": "accepted",
+    "year": 2026,
+    "displayOrder": 40,
+    "title": "Ownership Tracing in AI Tutoring: Correcting Apparent Mastery with Source-of-Practice Evidence",
+    "authors": [
+      "Sichao Li",
+      "Weiyuan Wang",
+      "Sai Ma",
+      "Ye Wei",
+      "Zhengyi Yang"
+    ],
+    "venue": "ICDM 2026 Education Workshop",
+    "venueShort": "ICDM Education Workshop",
+    "hostVenue": {
+      "name": "IEEE International Conference on Data Mining",
+      "shortName": "ICDM",
+      "year": 2026,
+      "rankings": {
+        "core2023": "A*",
+        "icore2026": "A*",
+        "ccf": "B"
+      }
+    },
+    "tags": [
+      "Education",
+      "AI Tutoring",
+      "Learning Analytics",
+      "Practice Evidence"
+    ],
+    "researchAreas": [
+      "Data for Real-World Applications"
+    ]
+  },
+  {
     "id": "zhang2025accelerating",
     "type": "conference",
     "status": "published",
