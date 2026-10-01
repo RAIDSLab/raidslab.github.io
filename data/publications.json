@@ -1470,7 +1470,10 @@
     "venueShort": "ISARC",
     "venueUrl": "https://www.iaarc.org/isarc-2026",
     "doi": "10.22260/ISARC2026/0321",
-    "url": "http://www.iaarc.org/publications/2026_proceedings_of_the_43rd_isarc_singapore/development_of_a_prototype_ai_driven_career_guidance_system_for_the_australian_construction_industry.html",
+    "url": "https://www.iaarc.org/publications/2026_proceedings_of_the_43rd_isarc_singapore/development_of_a_prototype_ai_driven_career_guidance_system_for_the_australian_construction_industry.html",
+    "pdf": "https://www.iaarc.org/publications/fulltext/ISARC2026_1098.pdf",
+    "pages": "2507-2514",
+    "isbn": "978-0-6458322-3-5",
     "publisher": "International Association for Automation and Robotics in Construction (IAARC)",
     "rankings": {
       "era2010": "B"
@@ -1483,7 +1486,8 @@
     "researchAreas": [
       "Data for Real-World Applications"
     ],
-    "bibtex": "@inproceedings{yan2026development,\n  title = {Development of a Prototype AI-Driven Career Guidance System for the Australian Construction Industry},\n  author = {Yan, Diya and Ding, Yi and Wang, Cynthia Changxin and Sunindijo, Riza Yosia and Tang, Xushuo and Lu, Ziyao and Zhang, Wenqian and Yang, Zhengyi},\n  series = {ISARC2026},\n  ISSN = {2413-5844},\n  url = {http://dx.doi.org/10.22260/ISARC2026/0321},\n  DOI = {10.22260/isarc2026/0321},\n  booktitle = {Proceedings of the 43rd International Symposium on Automation and Robotics in Construction},\n  publisher = {International Association for Automation and Robotics in Construction (IAARC)},\n  year = {2026},\n  month = June,\n  collection = {ISARC2026}\n}"
+    "abstract": "The construction industry is undergoing rapid transformation driven by digitalization, automation, and changing workforce structures. Despite these shifts, career guidance practices within the sector remain largely manual, fragmented, and poorly aligned with dynamic labor market conditions, limiting their effectiveness for workforce planning and innovation adoption. This study addresses this gap through the design and development of an artificial intelligence (AI)-driven career guidance system tailored to the Australian construction industry. The proposed system architecture comprises four integrated layers: knowledge base, reasoning algorithm, user interface, and cloud-based deployment environment. The knowledge base consolidates theoretical insights from a systematic literature review and occupational data from government and industry sources. A hybrid reasoning approach combining rule-based logic and large language model (LLM) capabilities enables automated, scalable, and personalized career recommendations. The user interface was delivered through a web-based platform to support intuitive design and ease of use. Deployment was implemented through Amazon Web Services (AWS) Elastic Compute Cloud (EC2) to support scalable and reliable system hosting. After the prototype was developed, 32 construction students were invited to pilot the system and complete a questionnaire on perceived usefulness, usability, and impact, while also providing recommendations for improvements. This study contributes to construction technology management and service innovation by demonstrating how AI enabled automation tools can support workforce development, enhance career decision making, and inform strategic talent pipelines for education providers and industry stakeholders.",
+    "bibtex": "@inproceedings{yan2026development,\n  doi = {10.22260/ISARC2026/0321},\n  year = {2026},\n  month = {June},\n  author = {Yan, Diya and Ding, Yi and Wang, Cynthia Changxin and Sunindijo, Riza Yosia and Tang, Xushuo and Lu, Ziyao and Zhang, Wenqian and Yang, Zhengyi},\n  title = {Development of a Prototype AI-Driven Career Guidance System for the Australian Construction Industry},\n  booktitle = {Proceedings of the 43rd International Symposium on Automation and Robotics in Construction},\n  isbn = {978-0-6458322-3-5},\n  issn = {2413-5844},\n  publisher = {International Association for Automation and Robotics in Construction (IAARC)},\n  editor = {Chen, Qian and Lee, Gaang and Liang, Ci-Jyun and Zhang, Jiansong and Kamat, Vineet},\n  pages = {2507--2514},\n  address = {Singapore}\n}"
   },
   {
     "id": "yan2026predicting",
