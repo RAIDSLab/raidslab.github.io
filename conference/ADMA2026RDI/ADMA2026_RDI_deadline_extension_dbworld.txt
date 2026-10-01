@@ -1,0 +1,21 @@
+Subject: Deadline Extended to July 31: ADMA 2026 RDI Special Session
+
+Dear colleagues,
+
+The submission deadline for the ADMA 2026 Special Session on Responsible Data Intelligence (RDI) has been extended to July 31, 2026 (AoE).
+
+The session welcomes research on trustworthy, transparent, fair, robust, and reliable data intelligence, including responsible data mining, trustworthy AI, data quality, LLMs and RAG, and responsible data systems.
+
+Submission:
+https://cmt3.research.microsoft.com/ADMA2026
+
+Session website:
+https://raids-lab.com/conference/ADMA2026RDI/
+
+ADMA 2026 will be held in Hong Kong SAR, China, from November 13 to 15, 2026.
+
+We welcome your submissions and would appreciate your help in sharing this call.
+
+Best regards,
+
+ADMA 2026 RDI Special Session Organising Committee
