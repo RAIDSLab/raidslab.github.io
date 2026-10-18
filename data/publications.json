@@ -1564,7 +1564,7 @@
   {
     "id": "yang2026mineclaim",
     "type": "workshop",
-    "status": "accepted",
+    "status": "published",
     "year": 2026,
     "displayOrder": 30,
     "title": "MineClaim: A Benchmark for LLM-Based ESG Claim Verification and Greenwashing Detection in Australian Mining Reports",
@@ -1577,8 +1577,15 @@
       "Yifu Tang",
       "Zhengyi Yang"
     ],
+    "correspondingAuthors": [
+      "Yi Ding"
+    ],
     "venue": "The 1st International Workshop on Natural Resources Survey, Monitoring, and Assessment in the Big Data Era",
     "venueShort": "NRSMA",
+    "publisher": "Springer",
+    "doi": "10.1007/978-981-92-6621-0_11",
+    "url": "https://link.springer.com/chapter/10.1007/978-981-92-6621-0_11",
+    "pdf": "https://link.springer.com/content/pdf/10.1007/978-981-92-6621-0_11.pdf",
     "hostVenue": {
       "name": "The 10th APWeb-WAIM Joint International Conference on Web and Big Data",
       "shortName": "APWeb-WAIM",
@@ -1599,13 +1606,14 @@
     ],
     "authorAffiliations": {
       "Lujia Yang": "University of New South Wales",
-      "Yiheng Lu": "Euler AI",
+      "Yiheng Lu": "EulerAI",
       "Zherui Wang": "University of New South Wales",
       "Yi Ding": "University of New South Wales",
-      "Mingchen Ju": "Euler AI",
+      "Mingchen Ju": "EulerAI",
       "Yifu Tang": "Swinburne University of Technology",
       "Zhengyi Yang": "University of Sydney"
-    }
+    },
+    "bibtex": "@inproceedings{yang2026mineclaim,\n  title = {MineClaim: A Benchmark for LLM-Based ESG Claim Verification and Greenwashing Detection in Australian Mining Reports},\n  author = {Yang, Lujia and Lu, Yiheng and Wang, Zherui and Ding, Yi and Ju, Mingchen and Tang, Yifu and Yang, Zhengyi},\n  editor = {Li, Jiajia and Ding, Lingling and Manolopoulos, Yannis and Bou-chaaya, Karam and Chbeir, Richard and Tuan, Tran Ngoc},\n  booktitle = {Web and Big Data. APWeb-WAIM 2026 International Workshops},\n  year = {2027},\n  publisher = {Springer Nature Singapore},\n  address = {Singapore},\n  pages = {132--144},\n  isbn = {978-981-92-6621-0}\n}"
   },
   {
     "id": "xu2026yolodsnet",
