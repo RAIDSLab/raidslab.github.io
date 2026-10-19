@@ -1440,11 +1440,114 @@
     ]
   },
   {
+    "id": "cao2026robust",
+    "type": "conference",
+    "status": "accepted",
+    "year": 2026,
+    "displayOrder": 27,
+    "title": "Robust Forex Fraud Detection under Noisy Supervision via Label-Quality-Aware Learning",
+    "authors": [
+      "Xinru Cao",
+      "Xiaofei Yuan",
+      "Weiyuan Wang",
+      "Jianke Yu",
+      "Yifu Tang",
+      "Zihan Yang",
+      "Xin Shu",
+      "Ye Gu",
+      "Hualong Lin",
+      "Guanfeng Liu",
+      "Zhengyi Yang"
+    ],
+    "venue": "Australasian Database Conference",
+    "venueShort": "ADC",
+    "venueUrl": "https://adc-conference.github.io/2026/",
+    "publisher": "Springer",
+    "track": "Research",
+    "rankings": {
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
+    },
+    "tags": [
+      "Finance",
+      "Fraud Detection",
+      "Label Noise",
+      "Machine Learning"
+    ],
+    "researchAreas": [
+      "Data for Real-World Applications"
+    ],
+    "authorAffiliations": {
+      "Xinru Cao": "University of New South Wales",
+      "Xiaofei Yuan": "Euler AI",
+      "Weiyuan Wang": "Euler AI",
+      "Jianke Yu": "University of Technology Sydney",
+      "Yifu Tang": "Vecton AI",
+      "Zihan Yang": "Vecton AI",
+      "Xin Shu": "University of New South Wales; Eigenflow AI",
+      "Ye Gu": "Sigma Trading Management",
+      "Hualong Lin": "Sigma Trading Management",
+      "Guanfeng Liu": "Macquarie University",
+      "Zhengyi Yang": "The University of Sydney"
+    }
+  },
+  {
+    "id": "li2026taxonomy",
+    "type": "conference",
+    "status": "accepted",
+    "year": 2026,
+    "displayOrder": 28,
+    "title": "Taxonomy-Guided Benchmarking of Jailbreak Robustness in Chinese Large Language Models",
+    "authors": [
+      "Yizhuo Li",
+      "Huangleshuai He",
+      "Weiyuan Wang",
+      "Wenke Yang",
+      "Yifu Tang",
+      "Zihan Yang",
+      "Mingchen Ju",
+      "Bocheng Han",
+      "Yi Ding",
+      "Zhengyi Yang"
+    ],
+    "venue": "Australasian Database Conference",
+    "venueShort": "ADC",
+    "venueUrl": "https://adc-conference.github.io/2026/",
+    "publisher": "Springer",
+    "track": "Research",
+    "rankings": {
+      "core2023": "Australasian B",
+      "icore2026": "Australasian B"
+    },
+    "abstract": "Jailbreak evaluations developed primarily in English may not fully capture how Chinese linguistic forms, prompt framing, and operational risk domains interact with model safety alignment. This paper presents a taxonomy-guided benchmark for evaluating jailbreak robustness in Chinese-capable large language models (LLMs). The benchmark crosses 136 harmful seed requests with eight controlled templates, yielding 1,088 single-turn prompts across nine risk domains and four attack categories: role-playing, instruction overriding, implicit prompting, and Chinese-specific obfuscation. We evaluate DeepSeek, GLM, and Qwen through a common API configuration and manually label each response as refusal, safe, unsafe, or borderline. Baseline attack success rates (ASRs) are 48.07%, 44.30%, and 57.44%, respectively. Attack framing reveals substantial variation that is obscured by a single aggregate score: role-playing reaches 72.06-94.49% ASR across models, while responses to Chinese obfuscation vary from unsafe semantic recovery to refusal and confused outputs. We further evaluate a dual-stage inference-time defense that normalizes and classifies inputs before generation and checks outputs before delivery. On the constructed benchmark, the defense reduces final ASR to 0% while all 100 ordinary benign controls pass, with 99.45% of harmful prompts blocked before target-model invocation. We interpret this result as benchmark-specific rather than a general robustness guarantee. These findings suggest that Chinese LLM safety evaluation should jointly consider semantic risk, attack frame, language form, response behavior, and defense usability.",
+    "tags": [
+      "LLM",
+      "Security",
+      "Jailbreak",
+      "Benchmark"
+    ],
+    "researchAreas": [
+      "Responsible Data Intelligence"
+    ],
+    "authorAffiliations": {
+      "Yizhuo Li": "University of New South Wales",
+      "Huangleshuai He": "University of New South Wales",
+      "Weiyuan Wang": "Euler AI",
+      "Wenke Yang": "University of New South Wales",
+      "Yifu Tang": "Vecton AI",
+      "Zihan Yang": "Vecton AI",
+      "Mingchen Ju": "Euler AI",
+      "Bocheng Han": "Vecton AI",
+      "Yi Ding": "Gholodata Pty Ltd",
+      "Zhengyi Yang": "The University of Sydney"
+    }
+  },
+  {
     "id": "yan2026development",
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 27,
+    "displayOrder": 29,
     "title": "Development of a Prototype AI-Driven Career Guidance System for the Australian Construction Industry",
     "authors": [
       "Diya Yan",
@@ -1494,7 +1597,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 28,
+    "displayOrder": 30,
     "title": "Predicting Women's Managerial Attainment in the Australian Construction Industry with Artificial Neural Networks: Evidence from LinkedIn Profiles",
     "authors": [
       "Diya Yan",
@@ -1524,7 +1627,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 29,
+    "displayOrder": 31,
     "title": "Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates",
     "authors": [
       "Chuan He",
@@ -1566,7 +1669,7 @@
     "type": "workshop",
     "status": "published",
     "year": 2026,
-    "displayOrder": 30,
+    "displayOrder": 32,
     "title": "MineClaim: A Benchmark for LLM-Based ESG Claim Verification and Greenwashing Detection in Australian Mining Reports",
     "authors": [
       "Lujia Yang",
@@ -1620,7 +1723,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 31,
+    "displayOrder": 33,
     "title": "YOLO-DSNet for Small Target Detection",
     "authors": [
       "Haokun Xu",
@@ -1662,7 +1765,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 32,
+    "displayOrder": 34,
     "title": "Replan, Repair, or Edit? A Unified Empirical Evaluation of Travel Agents for Itinerary Revision under Resource Disruptions",
     "authors": [
       "Xiaofei Yuan",
@@ -1712,7 +1815,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 33,
+    "displayOrder": 35,
     "title": "Do Language Models Know Who Fails? Look-Ahead Bias in LLM Credit-Risk Assessment",
     "authors": [
       "Yiwen Fang",
@@ -1744,7 +1847,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 34,
+    "displayOrder": 36,
     "title": "UniPhy: Unifying Riemannian-Clifford Geometry and Biorthogonal Dynamics for Planetary-Scale Continuous Weather Modeling",
     "authors": [
       "Ruiqing Yan",
@@ -1782,7 +1885,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 35,
+    "displayOrder": 37,
     "title": "RAIDS: Rethinking Data Systems as Responsible Intelligent Infrastructure",
     "authors": [
       "Zhengyi Yang",
@@ -1818,7 +1921,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 36,
+    "displayOrder": 38,
     "title": "Evolving Skill-Structured Attack Memory Enhances LLM Jailbreaking",
     "authors": [
       "Junke Zhang",
@@ -1859,7 +1962,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 37,
+    "displayOrder": 39,
     "title": "SALP-CG: Standard-Aligned LLM Pipeline for Classifying and Grading Large Volumes of Online Conversational Health Data",
     "authors": [
       "Yiwei Yan",
@@ -1898,7 +2001,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 38,
+    "displayOrder": 40,
     "title": "Staying In Character: Perspective-Bounded Memory For Book-Based Role-Playing Agents",
     "authors": [
       "Xushuo Tang",
@@ -1941,7 +2044,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 39,
+    "displayOrder": 41,
     "title": "AHEAD: Advancing Multi-Class Label Aggregation with Interpretable Cross-Annotator Modeling",
     "authors": [
       "Ju Chen",
@@ -1980,7 +2083,7 @@
     "type": "workshop",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 40,
+    "displayOrder": 42,
     "title": "Ownership Tracing in AI Tutoring: Correcting Apparent Mastery with Source-of-Practice Evidence",
     "authors": [
       "Sichao Li",
