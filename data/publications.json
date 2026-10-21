@@ -779,11 +779,53 @@
     "bibtex": "@inproceedings{huang2026bcce,\n  title = {BCCE: Block-Centric GPU Co-Design for Real-Time Range-Top-K Query at Scale},\n  author = {Huan, Chengying and Meng, Ziheng and Yang, Zhengyi and Liu, Yongchao and Zhang, Jie and Wang, Qing and Wang, Jing and Ma, Shaonan and Wang, Zhibin and Zhang, Mingxing and Gu, Rong and Wang, Baokun and Chen, Guihai and Tian, Chen},\n  series = {HPDC '26},\n  url = {http://dx.doi.org/10.1145/3806645.3807585},\n  doi = {10.1145/3806645.3807585},\n  booktitle = {Proceedings of the 35th International Symposium on High-Performance Parallel and Distributed Computing},\n  publisher = {ACM},\n  year = {2026},\n  month = July,\n  pages = {249-264},\n  collection = {HPDC '26}\n}"
   },
   {
+    "id": "he2026graph",
+    "type": "journal",
+    "status": "accepted",
+    "year": 2026,
+    "displayOrder": 13,
+    "title": "Graph Reachability Queries: A Unified Multi-Metric Framework with Dynamic Evaluation and Practical Guidelines",
+    "authors": [
+      "Huangleshuai He",
+      "Zhengyi Yang",
+      "Dong Wen",
+      "Wenke Yang",
+      "Wenjie Zhang"
+    ],
+    "correspondingAuthors": [
+      "Zhengyi Yang"
+    ],
+    "venue": "World Wide Web",
+    "venueUrl": "https://link.springer.com/journal/11280",
+    "publisher": "Springer",
+    "rankings": {
+      "ccf": "B",
+      "sjr": "Q1"
+    },
+    "abstract": "Reachability queries are a fundamental operation in large graph analysis, with applications in domains such as social networks, finance, program analysis, and XML query processing. Although many reachability indexes have been proposed, existing empirical studies remain limited in benchmark diversity, evaluation dimensions, and practical deployment guidance. In this work, we present a comprehensive empirical study of representative reachability indexes across diverse graph structures, query workloads, and both static and dynamic settings. We construct a large-scale benchmark covering 1,400 graphs and more than 38,000 query configurations, significantly broadening the structural and workload coverage of prior evaluations. To enable a more practical comparison, we introduce a unified multi-metric evaluation framework with complementary metrics that jointly consider query time, index size, construction cost, and dynamic update behaviour, thereby capturing a richer range of space-time trade-offs than previous studies. Our experiments reveal how graph structure, workload characteristics, and system constraints influence the relative advantages of different methods. Based on these findings, we further develop a decision-tree-based analysis to uncover feature-driven method preferences and derive practical guidelines for index selection under different deployment scenarios.",
+    "tags": [
+      "Graph",
+      "Reachability",
+      "Indexing",
+      "Benchmark"
+    ],
+    "researchAreas": [
+      "Scalable Data Systems"
+    ],
+    "authorAffiliations": {
+      "Huangleshuai He": "University of New South Wales",
+      "Zhengyi Yang": "University of New South Wales",
+      "Dong Wen": "University of New South Wales",
+      "Wenke Yang": "University of New South Wales",
+      "Wenjie Zhang": "University of New South Wales"
+    }
+  },
+  {
     "id": "liu2026a2rag",
     "type": "workshop",
     "status": "published",
     "year": 2026,
-    "displayOrder": 13,
+    "displayOrder": 14,
     "title": "A2RAG: Adaptive Agentic Graph Retrieval for Cost-Aware and Reliable Reasoning",
     "authors": [
       "Jiate Liu",
@@ -854,7 +896,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 14,
+    "displayOrder": 15,
     "title": "HeliosTrace: Profiling Data Mining Pipelines on Apple Silicon GPUs with Unified Memory",
     "authors": [
       "Yizhe Zhang",
@@ -896,7 +938,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 15,
+    "displayOrder": 16,
     "title": "EulerESG: A Unified Platform for Standards-Aware ESG Disclosure Analysis",
     "authors": [
       "Yi Ding",
@@ -947,7 +989,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 16,
+    "displayOrder": 17,
     "title": "NovaGraph: Interactive Graph Analytics, Locally in the Browser",
     "authors": [
       "Ziyao Lu",
@@ -993,7 +1035,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 17,
+    "displayOrder": 18,
     "title": "HyFin: An LLM-Driven Platform for Hybrid Text-and-Table Financial Report Analysis",
     "authors": [
       "Runze Tian",
@@ -1064,7 +1106,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 18,
+    "displayOrder": 19,
     "title": "ESG Reporting Lifecycle Management with Large Language Models and AI Agents",
     "authors": [
       "Thong Hoang",
@@ -1123,7 +1165,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 19,
+    "displayOrder": 20,
     "title": "Gendered Self-Presentation in the Construction Industry: Insights from LinkedIn Narratives and In-Depth Interviews",
     "authors": [
       "Diya Yan",
@@ -1164,7 +1206,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 20,
+    "displayOrder": 21,
     "title": "Improving Access to Building Licensing Information in Australia: Design and Development of a Graph-Based Retrieval-Augmented Generation (RAG) Artificial Intelligence (AI) System",
     "authors": [
       "Diya Yan",
@@ -1211,7 +1253,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 21,
+    "displayOrder": 22,
     "title": "Pathways to Leadership in the Australian Construction Industry: A Comparative Social Network Analysis Using LinkedIn Profiles",
     "authors": [
       "Diya Yan",
@@ -1253,7 +1295,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 22,
+    "displayOrder": 23,
     "title": "ForexAgent: Identifying Trading Strategies in Forex Markets with Large Language Models",
     "authors": [
       "Xin Shu",
@@ -1294,7 +1336,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 23,
+    "displayOrder": 24,
     "title": "Building Futures: LLM-Guided Career Pathways for Australia's Construction Graduates",
     "authors": [
       "Yi Ding",
@@ -1336,7 +1378,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 24,
+    "displayOrder": 25,
     "title": "OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation",
     "authors": [
       "Mingqin Yu",
@@ -1377,7 +1419,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 25,
+    "displayOrder": 26,
     "title": "MAPI: Measuring Prompt-Injection Propagation in Multi-Agent LLM Pipelines",
     "authors": [
       "Qingyu Yu",
@@ -1409,7 +1451,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 26,
+    "displayOrder": 27,
     "title": "When Gender Becomes Visible: Benchmarking Fairness in LLM-Based Resume Screening",
     "authors": [
       "Yi Ding",
@@ -1445,7 +1487,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 27,
+    "displayOrder": 28,
     "title": "Taxonomy-Guided Benchmarking of Jailbreak Robustness in Chinese Large Language Models",
     "authors": [
       "Yizhuo Li",
@@ -1496,7 +1538,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 28,
+    "displayOrder": 29,
     "title": "Robust Forex Fraud Detection under Noisy Supervision via Label-Quality-Aware Learning",
     "authors": [
       "Xinru Cao",
@@ -1548,7 +1590,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 29,
+    "displayOrder": 30,
     "title": "Development of a Prototype AI-Driven Career Guidance System for the Australian Construction Industry",
     "authors": [
       "Diya Yan",
@@ -1598,7 +1640,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 30,
+    "displayOrder": 31,
     "title": "Predicting Women's Managerial Attainment in the Australian Construction Industry with Artificial Neural Networks: Evidence from LinkedIn Profiles",
     "authors": [
       "Diya Yan",
@@ -1628,7 +1670,7 @@
     "type": "workshop",
     "status": "published",
     "year": 2026,
-    "displayOrder": 31,
+    "displayOrder": 32,
     "title": "MineClaim: A Benchmark for LLM-Based ESG Claim Verification and Greenwashing Detection in Australian Mining Reports",
     "authors": [
       "Lujia Yang",
@@ -1682,7 +1724,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 32,
+    "displayOrder": 33,
     "title": "YOLO-DSNet for Small Target Detection",
     "authors": [
       "Haokun Xu",
@@ -1724,7 +1766,7 @@
     "type": "workshop",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 33,
+    "displayOrder": 34,
     "title": "Ownership Tracing in AI Tutoring: Correcting Apparent Mastery with Source-of-Practice Evidence",
     "authors": [
       "Sichao Li",
@@ -1759,7 +1801,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 34,
+    "displayOrder": 35,
     "title": "Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates",
     "authors": [
       "Chuan He",
@@ -1801,7 +1843,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 35,
+    "displayOrder": 36,
     "title": "Replan, Repair, or Edit? A Unified Empirical Evaluation of Travel Agents for Itinerary Revision under Resource Disruptions",
     "authors": [
       "Xiaofei Yuan",
@@ -1851,7 +1893,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 36,
+    "displayOrder": 37,
     "title": "Do Language Models Know Who Fails? Look-Ahead Bias in LLM Credit-Risk Assessment",
     "authors": [
       "Yiwen Fang",
@@ -1883,7 +1925,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 37,
+    "displayOrder": 38,
     "title": "UniPhy: Unifying Riemannian-Clifford Geometry and Biorthogonal Dynamics for Planetary-Scale Continuous Weather Modeling",
     "authors": [
       "Ruiqing Yan",
@@ -1921,7 +1963,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 38,
+    "displayOrder": 39,
     "title": "RAIDS: Rethinking Data Systems as Responsible Intelligent Infrastructure",
     "authors": [
       "Zhengyi Yang",
@@ -1956,7 +1998,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 39,
+    "displayOrder": 40,
     "title": "Evolving Skill-Structured Attack Memory Enhances LLM Jailbreaking",
     "authors": [
       "Junke Zhang",
@@ -1997,7 +2039,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 40,
+    "displayOrder": 41,
     "title": "SALP-CG: Standard-Aligned LLM Pipeline for Classifying and Grading Large Volumes of Online Conversational Health Data",
     "authors": [
       "Yiwei Yan",
@@ -2037,7 +2079,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 41,
+    "displayOrder": 42,
     "title": "Staying In Character: Perspective-Bounded Memory For Book-Based Role-Playing Agents",
     "authors": [
       "Xushuo Tang",
@@ -2080,7 +2122,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 42,
+    "displayOrder": 43,
     "title": "AHEAD: Advancing Multi-Class Label Aggregation with Interpretable Cross-Annotator Modeling",
     "authors": [
       "Ju Chen",
