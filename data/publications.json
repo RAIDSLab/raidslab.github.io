@@ -608,7 +608,7 @@
   {
     "id": "wang2026beyond",
     "type": "conference",
-    "status": "accepted",
+    "status": "published",
     "year": 2026,
     "displayOrder": 10,
     "title": "Beyond Linearization: Attributed Table Graphs for Table Reasoning",
@@ -618,6 +618,9 @@
       "Shengxiang Gao",
       "Shenghao Ye",
       "Zhengyi Yang",
+      "Jianzhong Qi"
+    ],
+    "correspondingAuthors": [
       "Jianzhong Qi"
     ],
     "venue": "Conference on Empirical Methods in Natural Language Processing",
@@ -631,7 +634,10 @@
       "ccf": "B"
     },
     "arxiv": "2601.08444",
-    "abstract": "Table reasoning, a task to answer questions by reasoning over data presented in tables, is an important topic due to the prevalence of knowledge stored in tabular formats. Recent solutions use Large Language Models (LLMs), exploiting the semantic understanding and reasoning capabilities of LLMs. A common paradigm of such solutions linearizes tables to form plain texts that are served as input to LLMs. This paradigm has critical issues. It loses table structures, lacks explicit reasoning paths for result explainability, and is subject to the \"lost-in-the-middle\" issue. To address these issues, we propose Table Graph Reasoner (TABGR), a training-free model that represents tables as an Attributed Table Graph (ATG). The ATG explicitly preserves row-column-cell structures while enabling graph-based reasoning for explainability. We further propose a Question-Guided Personalized PageRank (QG-PPR) mechanism to rerank tabular data and mitigate the lost-in-the-middle issue. Extensive experiments on two commonly used benchmarks show that TABGR consistently outperforms state-of-the-art models by up to 9.7% in accuracy. Our code will be made publicly available upon publication.",
+    "url": "https://aclanthology.org/2026.emnlp-main.2197/",
+    "pdf": "https://aclanthology.org/2026.emnlp-main.2197.pdf",
+    "code": "https://github.com/yxw-11/TabGR",
+    "abstract": "Table reasoning, a task to answer questions by reasoning over data presented in tables, is an important topic due to the prevalence of knowledge stored in tabular formats. Recent solutions use Large Language Models (LLMs) for their semantic understanding and reasoning capabilities. A common paradigm of such solutions linearizes tables to form plain texts that are served as input to LLMs. This paradigm has critical issues. It requires LLMs to infer row-column-cell relations from serialized inputs, makes evidence paths harder to trace, and is subject to the \"lost-in-the-middle\" issue. To address these issues, we propose Table Graph Reasoner (TabGR), a model that represents tables as an Attributed Table Graph (ATG) without task-specific training. The ATG explicitly preserves row-column-cell structure while enabling graph-based reasoning over traceable evidence paths. We further propose a Question-Guided Personalized PageRank (QG-PPR) mechanism to rerank tabular data and mitigate the lost-in-the-middle issue. Extensive experiments across multiple table reasoning benchmarks show that TabGR consistently outperforms state-of-the-art models by up to 9.7% in accuracy.",
     "tags": [
       "Tables",
       "Graph",
@@ -646,16 +652,16 @@
       "Yuxiang Wang": "University of Melbourne",
       "Junhao Gan": "University of Melbourne",
       "Shengxiang Gao": "University of Melbourne",
-      "Shenghao Ye": "The University of Science and Technology of",
+      "Shenghao Ye": "University of Science and Technology of China",
       "Zhengyi Yang": "University of New South Wales",
       "Jianzhong Qi": "University of Melbourne"
     },
-    "bibtex": "@misc{wang2026beyond,\n  title = {Beyond Linearization: Attributed Table Graphs for Table Reasoning},\n  author = {Yuxiang Wang and Junhao Gan and Shengxiang Gao and Shenghao Ye and Zhengyi Yang and Jianzhong Qi},\n  year = {2026},\n  eprint = {2601.08444},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.AI},\n  url = {https://arxiv.org/abs/2601.08444}\n}"
+    "bibtex": "@inproceedings{wang2026beyond,\n  title = {Beyond Linearization: Attributed Table Graphs for Table Reasoning},\n  author = {Wang, Yuxiang and Gan, Junhao and Gao, Shengxiang and Ye, Shenghao and Yang, Zhengyi and Qi, Jianzhong},\n  editor = {Lee, Hung-Yi and Dev, Sunipa and Li, Jessy and Elliott, Desmond},\n  booktitle = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing},\n  month = oct,\n  year = {2026},\n  address = {Budapest, Hungary},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/2026.emnlp-main.2197/},\n  pages = {49955--49974},\n  ISBN = {979-8-89176-459-0}\n}"
   },
   {
     "id": "liu2026hypersu",
     "type": "conference",
-    "status": "accepted",
+    "status": "published",
     "year": 2026,
     "displayOrder": 11,
     "title": "HyperSU: Corpus-Driven Semantic-Unit Hypergraph for Retrieval-Augmented Generation",
@@ -693,10 +699,19 @@
     "track": "Findings",
     "rankings": {
       "core2023": "A*",
-      "icore2026": "A*",
-      "ccf": "B"
+      "icore2026": "A*"
+    },
+    "hostVenue": {
+      "name": "Conference on Empirical Methods in Natural Language Processing",
+      "shortName": "EMNLP",
+      "year": 2026,
+      "rankings": {
+        "ccf": "B"
+      }
     },
     "arxiv": "2606.28351",
+    "url": "https://aclanthology.org/2026.findings-emnlp.1058/",
+    "pdf": "https://aclanthology.org/2026.findings-emnlp.1058.pdf",
     "code": "https://github.com/RAIDSLab/HyperSU",
     "abstract": "Recent Hypergraph-based retrieval-augmented generation (HyperRAG) methods use hyperedges to connect multiple entities simultaneously, enabling more efficient multi-entity evidence organization than pairwise graph structures. However, existing HyperRAG methods often rely on LLM-generated summaries to construct hyperedges, which can introduce hallucinations while also incurring high indexing costs. In addition, during retrieval, existing methods typically rely on either one-hop neighbor expansion or PageRank diffusion. The former may miss useful multi-hop evidence, while the latter can suffer from uncontrolled propagation over excessive hub nodes, leading to semantic drift and noisy reasoning chains. To address these challenges, we propose HyperSU, a novel hypergraph-based RAG framework featuring semantic-unit hyperedges and clue-guided bidirectional retrieval. During construction, HyperSU formulates hyperedge construction as an entity-aware minimum-description-length (MDL) optimization problem, inducing source-grounded semantic-unit hyperedges that balance sentence-level semantic coherence and entity compactness. It then constructs a hypergraph by modeling each semantic unit as a hyperedge over its co-mentioned entities. During retrieval, HyperSU performs clue-guided bidirectional expansion over the semantic-unit hypergraph, enabling both multi-hop evidence discovery and evidence-anchored noise reduction. Experiments show that HyperSU consistently improves answer accuracy over standard, graph-based, and hypergraph-based RAG baselines, raising average accuracy on GraphRAG-Bench by 5.5 points over the strongest baseline (68.7 vs. 63.2), with larger gains on reasoning-intensive tasks, where the relative improvement reaches 14.1%. Our code is available at https://github.com/RAIDSLab/HyperSU.",
     "tags": [
@@ -709,7 +724,7 @@
     "researchAreas": [
       "Responsible Data Intelligence"
     ],
-    "bibtex": "@misc{liu2026hypersu,\n  title = {HyperSU: Corpus-Driven Semantic-Unit Hypergraph for Retrieval-Augmented Generation},\n  author = {Jiate Liu and Liuyi Chen and Zhengyi Yang and Chuan He and Mingchen Ju and Bocheng Han and Ruyi Liu and Xu Zhou},\n  year = {2026},\n  eprint = {2606.28351},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.IR},\n  url = {https://arxiv.org/abs/2606.28351}\n}"
+    "bibtex": "@inproceedings{liu2026hypersu,\n  title = {{H}yper{SU}: Corpus-Driven Semantic-Unit Hypergraph for Retrieval-Augmented Generation},\n  author = {Liu, Jiate and Chen, Liuyi and Yang, Zhengyi and He, Chuan and Ju, Mingchen and Han, Bocheng and Liu, Ruyi and Zhou, Xu},\n  editor = {Lee, Hung-Yi and Dev, Sunipa and Li, Jessy and Elliott, Desmond},\n  booktitle = {Findings of the {A}ssociation for {C}omputational {L}inguistics: {EMNLP} 2026},\n  month = oct,\n  year = {2026},\n  address = {Budapest, Hungary},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/2026.findings-emnlp.1058/},\n  pages = {22399--22424},\n  ISBN = {979-8-89176-462-0}\n}"
   },
   {
     "id": "huang2026bcce",
@@ -1633,7 +1648,7 @@
       "Data for Real-World Applications"
     ],
     "abstract": "The construction industry is undergoing rapid transformation driven by digitalization, automation, and changing workforce structures. Despite these shifts, career guidance practices within the sector remain largely manual, fragmented, and poorly aligned with dynamic labor market conditions, limiting their effectiveness for workforce planning and innovation adoption. This study addresses this gap through the design and development of an artificial intelligence (AI)-driven career guidance system tailored to the Australian construction industry. The proposed system architecture comprises four integrated layers: knowledge base, reasoning algorithm, user interface, and cloud-based deployment environment. The knowledge base consolidates theoretical insights from a systematic literature review and occupational data from government and industry sources. A hybrid reasoning approach combining rule-based logic and large language model (LLM) capabilities enables automated, scalable, and personalized career recommendations. The user interface was delivered through a web-based platform to support intuitive design and ease of use. Deployment was implemented through Amazon Web Services (AWS) Elastic Compute Cloud (EC2) to support scalable and reliable system hosting. After the prototype was developed, 32 construction students were invited to pilot the system and complete a questionnaire on perceived usefulness, usability, and impact, while also providing recommendations for improvements. This study contributes to construction technology management and service innovation by demonstrating how AI enabled automation tools can support workforce development, enhance career decision making, and inform strategic talent pipelines for education providers and industry stakeholders.",
-    "bibtex": "@inproceedings{yan2026development,\n  doi = {10.22260/ISARC2026/0321},\n  year = {2026},\n  month = {June},\n  author = {Yan, Diya and Ding, Yi and Wang, Cynthia Changxin and Sunindijo, Riza Yosia and Tang, Xushuo and Lu, Ziyao and Zhang, Wenqian and Yang, Zhengyi},\n  title = {Development of a Prototype AI-Driven Career Guidance System for the Australian Construction Industry},\n  booktitle = {Proceedings of the 43rd International Symposium on Automation and Robotics in Construction},\n  isbn = {978-0-6458322-3-5},\n  issn = {2413-5844},\n  publisher = {International Association for Automation and Robotics in Construction (IAARC)},\n  editor = {Chen, Qian and Lee, Gaang and Liang, Ci-Jyun and Zhang, Jiansong and Kamat, Vineet},\n  pages = {2507--2514},\n  address = {Singapore}\n}"
+    "bibtex": "@inproceedings{yan2026development,\n  title = {Development of a Prototype AI-Driven Career Guidance System for the Australian Construction Industry},\n  author = {Yan, Diya and Ding, Yi and Wang, Cynthia Changxin and Sunindijo, Riza Yosia and Tang, Xushuo and Lu, Ziyao and Zhang, Wenqian and Yang, Zhengyi},\n  doi = {10.22260/ISARC2026/0321},\n  year = {2026},\n  month = {June},\n  booktitle = {Proceedings of the 43rd International Symposium on Automation and Robotics in Construction},\n  isbn = {978-0-6458322-3-5},\n  issn = {2413-5844},\n  publisher = {International Association for Automation and Robotics in Construction (IAARC)},\n  editor = {Chen, Qian and Lee, Gaang and Liang, Ci-Jyun and Zhang, Jiansong and Kamat, Vineet},\n  pages = {2507--2514},\n  address = {Singapore}\n}"
   },
   {
     "id": "yan2026predicting",
@@ -3912,8 +3927,15 @@
     "track": "Demonstration",
     "rankings": {
       "core2023": "C",
-      "icore2026": "C",
-      "ccf": "C"
+      "icore2026": "C"
+    },
+    "hostVenue": {
+      "name": "Asia-Pacific Web and Web-Age Information Management Joint International Conference on Web and Big Data",
+      "shortName": "APWeb-WAIM",
+      "year": 2024,
+      "rankings": {
+        "ccf": "C"
+      }
     },
     "doi": "10.1007/978-981-97-7244-5_25",
     "abstract": "Field-programmable gate arrays (FPGAs) have significant advantages in parallelism and energy efficiency over CPUs and GPUs and are widely deployed by many enterprises and cloud server providers nowadays. In this paper, we demonstrate FGAQ, an FPGA-based system for accelerating graph queries on massive graphs. FGAQ supports the two most fundamental types of graph queries, namely subgraph and path queries, and features 1) a CPU-FPGA co-designed framework, 2) a fully pipelined FPGA execution, and 3) reduced data transfer from FPGA's external memory. FGAQ provides a user-friendly interface and significantly improved performance. Performance evaluation shows that FGAQ outperforms the most popular graph database, Neo4j, by up to three orders of magnitude. The demo video can be found at https://www.youtube.com/watch?v=pEkzw_DOQYE.",
@@ -5211,8 +5233,15 @@
     "track": "Demonstration",
     "rankings": {
       "core2023": "B",
-      "icore2026": "B",
-      "ccf": "B"
+      "icore2026": "B"
+    },
+    "hostVenue": {
+      "name": "International Conference on Web Information Systems Engineering",
+      "shortName": "WISE",
+      "year": 2021,
+      "rankings": {
+        "ccf": "B"
+      }
     },
     "doi": "10.1007/978-3-030-91560-5_39",
     "abstract": "There are many real-world application domains where data can be naturally modelled as a graph, such as social networks and computer networks. Relational Database Management Systems (RDBMS) find it hard to capture the relationships and inherent graph structure of data and are inappropriate for storing highly connected data; thus, graph databases have emerged to address the challenges of high data connectivity. As the performance of querying highly connected data in relational query statements is usually worse than that in the graph database. Transforming data from a relational database to a graph database is imperative for improving the performance of graph queries. In this paper, we demonstrate SQL2Cypher, a system for migrating data from a relational database to a graph database automatically. This system also supports translating SQL queries into Cypher queries. SQL2Cypher is open-source (https://github.com/UNSW-database/SQL2Cypher) to allow researchers and programmers to migrate data efficiently. Our demonstration video can be found here: https://www.youtube.com/watch?v=eGaeBrVTJws.",
@@ -5367,8 +5396,15 @@
     "track": "Demonstration",
     "rankings": {
       "core2023": "A",
-      "icore2026": "A",
-      "ccf": "B"
+      "icore2026": "A"
+    },
+    "hostVenue": {
+      "name": "ACM International Conference on Information and Knowledge Management",
+      "shortName": "CIKM",
+      "year": 2019,
+      "rankings": {
+        "ccf": "B"
+      }
     },
     "doi": "10.1145/3357384.3357840",
     "abstract": "Graph pattern matching is one of the most fundamental problems in graph database and is associated with a wide spectrum of applications. Due to its computational intensiveness, researchers have primarily devoted their efforts to improving the performance of the algorithm while constraining the graphs to have singular labels on vertices (edges) or no label. Whereas in practice graphs are typically associated with rich properties, thus the main focus in the industry is instead on powerful query languages that can express a sufficient number of pattern matching scenarios. We demo PatMat in this work to glue together the academic efforts on performance and the industrial efforts on expressiveness. To do so, we leverage the state-of-the-art join-based algorithms in the distributed contexts and Cypher query language - the most widely-adopted declarative language for graph pattern matching. The experiments demonstrate how we are capable of turning complex Cypher semantics into a distributed solution with high performance.",
