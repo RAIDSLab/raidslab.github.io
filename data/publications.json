@@ -2172,6 +2172,52 @@
     "bibtex": "@misc{chen2026ahead,\n  title = {AHEAD: Advancing Multi-Class Label Aggregation with Interpretable Cross-Annotator Modeling},\n  author = {Ju Chen and Sijia Xu and Jun Feng and Zhiqiang Gao and Zhengyi Yang},\n  year = {2026},\n  eprint = {2607.18465},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.LG},\n  url = {https://arxiv.org/abs/2607.18465}\n}"
   },
   {
+    "id": "liu2026read",
+    "type": "preprint",
+    "status": "preprint",
+    "year": 2026,
+    "displayOrder": 44,
+    "title": "Read the Route: Attention-Steered Hypergraph Retrieval for Multi-hop RAG",
+    "authors": [
+      "Jiate Liu",
+      "Liuyi Chen",
+      "Xiaofei Yuan",
+      "Yifu Tang",
+      "Zihan Yang",
+      "Xu Zhou",
+      "Zhengyi Yang"
+    ],
+    "correspondingAuthors": [
+      "Zhengyi Yang"
+    ],
+    "authorAffiliations": {
+      "Jiate Liu": "University of New South Wales",
+      "Liuyi Chen": "Hunan University",
+      "Xiaofei Yuan": "Euler AI",
+      "Yifu Tang": "Vecton AI",
+      "Zihan Yang": "Vecton AI",
+      "Xu Zhou": "Hunan University",
+      "Zhengyi Yang": "The University of Sydney"
+    },
+    "venue": "arXiv",
+    "venueUrl": "https://arxiv.org/abs/2610.35412",
+    "doi": "10.48550/arXiv.2610.35412",
+    "arxiv": "2610.35412",
+    "pdf": "https://arxiv.org/pdf/2610.35412",
+    "abstract": "Graph-based retrieval-augmented generation (GraphRAG) answers multi-hop questions by organizing a corpus into a graph and retrieving along its structure. Existing retrieval methods face two limitations. Diffusion- and similarity-based methods expand retrieval along fixed edge weights or by similarity to the question, without resolving its implicit entity references, allowing relevance errors to accumulate across hops. In contrast, exploration-based methods let an LLM reason about the next hop, but require a separate generation at each hop, leading to high inference costs. We observe that an LLM can resolve implicit entity references from retrieved passages and a multi-hop question before generating any tokens. Further analysis identifies a small set of attention heads, termed addressing heads, that capture this capability across multiple hops in a single forward pass. Building on this finding, we propose HyperAddress, which runs Personalized PageRank on a description-labelled hypergraph, using addressing heads to determine the restart distribution and transition weights, thereby guiding multi-hop retrieval without any generation at query time. On MuSiQue, 2WikiMultiHopQA, and HotpotQA, HyperAddress outperforms the strongest baseline by 3.5 points of Recall@5 and 7.4 points of All@5 on average, with gains that grow with the number of hops. It answers more than twice as fast and builds its index at half the cost.",
+    "tags": [
+      "Hypergraph",
+      "RAG",
+      "Retrieval",
+      "LLM",
+      "AI4DB"
+    ],
+    "researchAreas": [
+      "Responsible Data Intelligence"
+    ],
+    "bibtex": "@misc{liu2026read,\n  title = {Read the Route: Attention-Steered Hypergraph Retrieval for Multi-hop RAG},\n  author = {Jiate Liu and Liuyi Chen and Xiaofei Yuan and Yifu Tang and Zihan Yang and Xu Zhou and Zhengyi Yang},\n  year = {2026},\n  eprint = {2610.35412},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.IR},\n  url = {https://arxiv.org/abs/2610.35412}\n}"
+  },
+  {
     "id": "zhang2025accelerating",
     "type": "conference",
     "status": "published",
