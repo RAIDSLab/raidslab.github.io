@@ -1778,7 +1778,7 @@
   },
   {
     "id": "li2026ownership",
-    "type": "workshop",
+    "type": "conference",
     "status": "accepted",
     "year": 2026,
     "displayOrder": 34,
@@ -1792,6 +1792,7 @@
     ],
     "venue": "ICDM 2026 Education Forum",
     "venueUrl": "https://icdm2026.neu.edu.cn/CallforEducationForum/list.htm",
+    "track": "Special Track",
     "hostVenue": {
       "name": "IEEE International Conference on Data Mining",
       "shortName": "ICDM",
