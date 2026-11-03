@@ -161,6 +161,103 @@
     "bibtex": "@article{he2027ptil,\n  title = {PTIL: Partitioned Tree-Cover Interval Labeling for Restricted-Domain Reachability Queries},\n  author = {He, Huangleshuai and Yang, Zhengyi and Tang, Yifu and Chen, Zebin and Wen, Dong and Luo, Qi and Zhang, Tianming},\n  volume = {30},\n  number = {1},\n  pages = {34--46},\n  doi = {10.48786/EDBT.2027.04},\n  url = {https://openproceedings.org/2027/conf/edbt/paper_22.pdf},\n  keywords = {Database Technology},\n  language = {en},\n  publisher = {OpenProceedings.org},\n  year = {2027},\n  isbn = {978-3-89318-106-3},\n  issn = {2367-2005}\n}"
   },
   {
+    "id": "liu2027echo",
+    "type": "conference",
+    "status": "accepted",
+    "year": 2027,
+    "displayOrder": 4,
+    "title": "ECHO: Decoding Answers, Not Programs, for Knowledge Base Question Answering",
+    "authors": [
+      "Jiate Liu",
+      "Zhengyi Yang",
+      "Zihan Yang",
+      "Yifu Tang",
+      "Sichao Li",
+      "Xiaofei Yuan",
+      "Wenke Yang",
+      "Bocheng Han",
+      "Junda Lu"
+    ],
+    "authorAffiliations": {
+      "Jiate Liu": "University of New South Wales",
+      "Zhengyi Yang": "The University of Sydney",
+      "Zihan Yang": "Vecton AI",
+      "Yifu Tang": "Vecton AI",
+      "Sichao Li": "The University of Sydney",
+      "Xiaofei Yuan": "Euler AI",
+      "Wenke Yang": "University of New South Wales",
+      "Bocheng Han": "Vecton AI",
+      "Junda Lu": "Western Sydney University"
+    },
+    "venue": "ACM International Conference on Web Search and Data Mining",
+    "venueShort": "WSDM",
+    "venueUrl": "https://www.wsdm-conference.org/2027/",
+    "publisher": "Association for Computing Machinery (ACM)",
+    "track": "Research",
+    "rankings": {
+      "core2023": "A",
+      "icore2026": "A",
+      "ccf": "B"
+    },
+    "abstract": "Knowledge base question answering (KBQA) commonly uses semantic parsing to translate natural-language questions into executable programs over a knowledge base (KB). Existing systems typically select the single highest-scoring program, even when multiple programs return the same answer, and use execution only to verify program validity. Consequently, evidence for an answer is fragmented across programs, while mismatches between a question and the returned answer are not reflected in program scores. We propose ECHO, an execution-aware answer-level decoding framework. ECHO predicts a type skeleton to guide grounded program enumeration, executes all enumerated candidates, and groups programs by their returned answers. It scores each program using a noisy-channel model that combines an answer-aware channel term, measuring how well the program and its execution result explain the input question, with a skeleton-conditioned prior over the program. A tempered sum then aggregates the scores of programs supporting each answer. ECHO achieves state-of-the-art performance on three widely used benchmarks, GrailQA, WebQSP, and GraphQuestions, across all reported EM and F1 metrics, while answering each question an order of magnitude faster than systems with comparable accuracy. Controlled comparisons further confirm the effectiveness of our proposed answer-level decoding.",
+    "tags": [
+      "Graph",
+      "QA",
+      "Semantic Parsing",
+      "AI4DB"
+    ],
+    "researchAreas": [
+      "Responsible Data Intelligence"
+    ]
+  },
+  {
+    "id": "zhou2027mdte",
+    "type": "conference",
+    "status": "accepted",
+    "year": 2027,
+    "displayOrder": 5,
+    "title": "MDTE: Minority-Aware Diffusion over Temporal Edge Events for Imbalanced Node Classification",
+    "authors": [
+      "Zelong Zhou",
+      "Tianming Zhang",
+      "Zhengyi Yang",
+      "Yifu Tang",
+      "Chenyu Hou",
+      "Bin Cao",
+      "Jing Fan"
+    ],
+    "authorAffiliations": {
+      "Zelong Zhou": "Zhejiang University of Technology",
+      "Tianming Zhang": "Zhejiang University of Technology",
+      "Zhengyi Yang": "The University of Sydney",
+      "Yifu Tang": "Vecton AI",
+      "Chenyu Hou": "Zhejiang University of Technology",
+      "Bin Cao": "Zhejiang University of Technology",
+      "Jing Fan": "Zhejiang University of Technology"
+    },
+    "venue": "ACM International Conference on Web Search and Data Mining",
+    "venueShort": "WSDM",
+    "venueUrl": "https://www.wsdm-conference.org/2027/",
+    "publisher": "Association for Computing Machinery (ACM)",
+    "track": "Research",
+    "rankings": {
+      "core2023": "A",
+      "icore2026": "A",
+      "ccf": "B"
+    },
+    "abstract": "Class-imbalanced node classification on temporal graphs is challenging because majority-dominated temporal propagation progressively assimilates minority representations, while conventional node and neighborhood information provides insufficient discriminative evidence for minority classes. To address these issues, we propose MDTE, a minority-aware diffusion framework that reconstructs stable and discriminative temporal edge-event representations through conditional diffusion denoising. Specifically, MDTE introduces Distribution-Aware Selective Propagation, which combines Local Outlier Factor (LOF)-based propagation filtering with cluster-aware low-frequency propagation. The module preserves informative neighborhood dependencies while mitigating harmful propagation and majority-class information assimilation. It further develops Multi-View Discriminative Fusion, which exploits feature reconstruction and topology prediction to characterize class-wise differences in distribution learning and extracts complementary discriminability signals to guide denoising. Experiments on five real-world datasets demonstrate that MDTE consistently achieves the best performance on minority-class-oriented metrics, improving minority-class recall by up to 23.53 percentage points, minority-class F1 by 8.68 percentage points, and AUPRC by 2.67 percentage points over the strongest baselines.",
+    "tags": [
+      "Graph",
+      "Temporal",
+      "Classification",
+      "Diffusion",
+      "AI4DB"
+    ],
+    "researchAreas": [
+      "Responsible Data Intelligence"
+    ]
+  },
+  {
     "id": "yuan2026higherorder",
     "type": "book",
     "status": "accepted",
