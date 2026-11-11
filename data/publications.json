@@ -893,7 +893,7 @@
   {
     "id": "he2026graph",
     "type": "journal",
-    "status": "accepted",
+    "status": "published",
     "year": 2026,
     "displayOrder": 13,
     "title": "Graph Reachability Queries: A Unified Multi-Metric Framework with Dynamic Evaluation and Practical Guidelines",
@@ -911,6 +911,12 @@
     "venueShort": "WWWJ",
     "venueUrl": "https://link.springer.com/journal/11280",
     "publisher": "Springer",
+    "volume": "29",
+    "articleNumber": "52",
+    "doi": "10.1007/s11280-026-01440-9",
+    "url": "https://link.springer.com/article/10.1007/s11280-026-01440-9",
+    "publicationDate": "2026-11-09",
+    "openAccess": true,
     "rankings": {
       "ccf": "B",
       "sjr": "Q1"
@@ -927,11 +933,12 @@
     ],
     "authorAffiliations": {
       "Huangleshuai He": "University of New South Wales",
-      "Zhengyi Yang": "University of New South Wales",
+      "Zhengyi Yang": "The University of Sydney",
       "Dong Wen": "University of New South Wales",
       "Wenke Yang": "University of New South Wales",
       "Wenjie Zhang": "University of New South Wales"
-    }
+    },
+    "bibtex": "@article{he2026graph,\n  title = {Graph Reachability Queries: A Unified Multi-Metric Framework with Dynamic Evaluation and Practical Guidelines},\n  author = {He, Huangleshuai and Yang, Zhengyi and Wen, Dong and Yang, Wenke and Zhang, Wenjie},\n  journal = {World Wide Web},\n  volume = {29},\n  pages = {52},\n  year = {2026},\n  publisher = {Springer Nature},\n  doi = {10.1007/s11280-026-01440-9},\n  url = {https://doi.org/10.1007/s11280-026-01440-9}\n}"
   },
   {
     "id": "liu2026a2rag",
