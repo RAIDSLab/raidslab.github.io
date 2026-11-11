@@ -1322,11 +1322,41 @@
     "bibtex": "@article{yan2026gendered,\n  title = {Gendered Self-Presentation in the Construction Industry: Insights from LinkedIn Narratives and In-Depth Interviews},\n  author = {Yan, Diya and Sunindijo, Riza Yosia and Wang, Cynthia Changxin and Ding, Yi and Yang, Zhengyi},\n  volume = {152},\n  ISSN = {1943-7862},\n  url = {http://dx.doi.org/10.1061/JCEMD4.COENG-17771},\n  DOI = {10.1061/jcemd4.coeng-17771},\n  number = {9},\n  journal = {Journal of Construction Engineering and Management},\n  publisher = {American Society of Civil Engineers (ASCE)},\n  year = {2026},\n  month = Sept\n}"
   },
   {
+    "id": "yan2026careerprogression",
+    "type": "journal",
+    "status": "accepted",
+    "year": 2026,
+    "displayOrder": 21,
+    "title": "Career Progression to Top Management: Gender Differences Across Managerial Stages in the Construction Industry",
+    "authors": [
+      "Diya Yan",
+      "Riza Yosia Sunindijo",
+      "Cynthia Changxin Wang",
+      "Yi Ding",
+      "Zhengyi Yang"
+    ],
+    "venue": "International Journal of Construction Management",
+    "venueShort": "IJCM",
+    "venueUrl": "https://www.tandfonline.com/journals/tjcm20",
+    "publisher": "Taylor & Francis",
+    "rankings": {
+      "sjr": "Q1"
+    },
+    "tags": [
+      "Construction",
+      "Gender",
+      "Career Progression"
+    ],
+    "researchAreas": [
+      "Data for Real-World Applications"
+    ]
+  },
+  {
     "id": "yan2026improving",
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 21,
+    "displayOrder": 22,
     "title": "Improving Access to Building Licensing Information in Australia: Design and Development of a Graph-Based Retrieval-Augmented Generation (RAG) Artificial Intelligence (AI) System",
     "authors": [
       "Diya Yan",
@@ -1373,7 +1403,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 22,
+    "displayOrder": 23,
     "title": "Pathways to Leadership in the Australian Construction Industry: A Comparative Social Network Analysis Using LinkedIn Profiles",
     "authors": [
       "Diya Yan",
@@ -1415,7 +1445,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 23,
+    "displayOrder": 24,
     "title": "ForexAgent: Identifying Trading Strategies in Forex Markets with Large Language Models",
     "authors": [
       "Xin Shu",
@@ -1456,7 +1486,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 24,
+    "displayOrder": 25,
     "title": "Building Futures: LLM-Guided Career Pathways for Australia's Construction Graduates",
     "authors": [
       "Yi Ding",
@@ -1498,7 +1528,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 25,
+    "displayOrder": 26,
     "title": "OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation",
     "authors": [
       "Mingqin Yu",
@@ -1539,7 +1569,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 26,
+    "displayOrder": 27,
     "title": "MAPI: Measuring Prompt-Injection Propagation in Multi-Agent LLM Pipelines",
     "authors": [
       "Qingyu Yu",
@@ -1571,7 +1601,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 27,
+    "displayOrder": 28,
     "title": "When Gender Becomes Visible: Benchmarking Fairness in LLM-Based Resume Screening",
     "authors": [
       "Yi Ding",
@@ -1607,7 +1637,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 28,
+    "displayOrder": 29,
     "title": "Taxonomy-Guided Benchmarking of Jailbreak Robustness in Chinese Large Language Models",
     "authors": [
       "Yizhuo Li",
@@ -1658,7 +1688,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 29,
+    "displayOrder": 30,
     "title": "Robust Forex Fraud Detection under Noisy Supervision via Label-Quality-Aware Learning",
     "authors": [
       "Xinru Cao",
@@ -1710,7 +1740,7 @@
     "type": "conference",
     "status": "published",
     "year": 2026,
-    "displayOrder": 30,
+    "displayOrder": 31,
     "title": "Development of a Prototype AI-Driven Career Guidance System for the Australian Construction Industry",
     "authors": [
       "Diya Yan",
@@ -1760,7 +1790,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 31,
+    "displayOrder": 32,
     "title": "Predicting Women's Managerial Attainment in the Australian Construction Industry with Artificial Neural Networks: Evidence from LinkedIn Profiles",
     "authors": [
       "Diya Yan",
@@ -1790,7 +1820,7 @@
     "type": "workshop",
     "status": "published",
     "year": 2026,
-    "displayOrder": 32,
+    "displayOrder": 33,
     "title": "MineClaim: A Benchmark for LLM-Based ESG Claim Verification and Greenwashing Detection in Australian Mining Reports",
     "authors": [
       "Lujia Yang",
@@ -1844,7 +1874,7 @@
     "type": "journal",
     "status": "published",
     "year": 2026,
-    "displayOrder": 33,
+    "displayOrder": 34,
     "title": "YOLO-DSNet for Small Target Detection",
     "authors": [
       "Haokun Xu",
@@ -1886,7 +1916,7 @@
     "type": "conference",
     "status": "accepted",
     "year": 2026,
-    "displayOrder": 34,
+    "displayOrder": 35,
     "title": "Ownership Tracing in AI Tutoring: Correcting Apparent Mastery with Source-of-Practice Evidence",
     "authors": [
       "Sichao Li",
@@ -1922,7 +1952,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 35,
+    "displayOrder": 36,
     "title": "Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates",
     "authors": [
       "Chuan He",
@@ -1964,7 +1994,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 36,
+    "displayOrder": 37,
     "title": "Replan, Repair, or Edit? A Unified Empirical Evaluation of Travel Agents for Itinerary Revision under Resource Disruptions",
     "authors": [
       "Xiaofei Yuan",
@@ -2014,7 +2044,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 37,
+    "displayOrder": 38,
     "title": "Do Language Models Know Who Fails? Look-Ahead Bias in LLM Credit-Risk Assessment",
     "authors": [
       "Yiwen Fang",
@@ -2046,7 +2076,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 38,
+    "displayOrder": 39,
     "title": "UniPhy: Unifying Riemannian-Clifford Geometry and Biorthogonal Dynamics for Planetary-Scale Continuous Weather Modeling",
     "authors": [
       "Ruiqing Yan",
@@ -2084,7 +2114,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 39,
+    "displayOrder": 40,
     "title": "RAIDS: Rethinking Data Systems as Responsible Intelligent Infrastructure",
     "authors": [
       "Zhengyi Yang",
@@ -2119,7 +2149,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 40,
+    "displayOrder": 41,
     "title": "Evolving Skill-Structured Attack Memory Enhances LLM Jailbreaking",
     "authors": [
       "Junke Zhang",
@@ -2160,7 +2190,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 41,
+    "displayOrder": 42,
     "title": "SALP-CG: Standard-Aligned LLM Pipeline for Classifying and Grading Large Volumes of Online Conversational Health Data",
     "authors": [
       "Yiwei Yan",
@@ -2200,7 +2230,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 42,
+    "displayOrder": 43,
     "title": "Staying In Character: Perspective-Bounded Memory For Book-Based Role-Playing Agents",
     "authors": [
       "Xushuo Tang",
@@ -2243,7 +2273,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 43,
+    "displayOrder": 44,
     "title": "AHEAD: Advancing Multi-Class Label Aggregation with Interpretable Cross-Annotator Modeling",
     "authors": [
       "Ju Chen",
@@ -2282,7 +2312,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 44,
+    "displayOrder": 45,
     "title": "Read the Route: Attention-Steered Hypergraph Retrieval for Multi-hop RAG",
     "authors": [
       "Jiate Liu",
@@ -2328,7 +2358,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 45,
+    "displayOrder": 46,
     "title": "DISRL: Dual-Scale Incremental Semi-Supervised Reinforcement Learning for Dynamic Community Tracking",
     "authors": [
       "Tianming Zhang",
@@ -2374,7 +2404,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 46,
+    "displayOrder": 47,
     "title": "RAHC: Rule-Augmented Hyper-Relational Knowledge Graph Completion for Materials Synthesis",
     "authors": [
       "Jiawei Sun",
