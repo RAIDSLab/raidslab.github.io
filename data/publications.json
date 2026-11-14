@@ -1948,11 +1948,45 @@
     ]
   },
   {
-    "id": "he2026minority",
+    "id": "zhang2026bandit",
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
     "displayOrder": 36,
+    "title": "Bandit Multiclass PAC Learning: Structural Baselines and a Confidence Direct Sum",
+    "authors": [
+      "Guangjian Zhang",
+      "Zhengyi Yang",
+      "Xiaoyang Wang"
+    ],
+    "authorAffiliations": {
+      "Guangjian Zhang": "University of New South Wales",
+      "Zhengyi Yang": "The University of Sydney",
+      "Xiaoyang Wang": "University of New South Wales"
+    },
+    "venue": "arXiv",
+    "venueUrl": "https://arxiv.org/abs/2609.29694",
+    "doi": "10.48550/arXiv.2609.29694",
+    "arxiv": "2609.29694",
+    "pdf": "https://arxiv.org/pdf/2609.29694",
+    "abstract": "This paper studies the sample complexity of realizable multiclass PAC learning when a learner receives only correct-or-incorrect feedback for each prediction. It develops an anchored dimension that yields a general lower bound and identifies product-block classes that attain the bound up to constants. An affine multiplexer construction shows that the cost of high confidence can grow across candidate groups, ruling out a universal additive-confidence bound linear in the bandit DS dimension. The paper also refines the confidence analysis of ListCascade and shows how a positive response can replace the bandit DS dimension with the anchored dimension in a general upper bound.",
+    "tags": [
+      "Machine Learning",
+      "PAC Learning",
+      "Bandit Feedback",
+      "Sample Complexity"
+    ],
+    "researchAreas": [
+      "Responsible Data Intelligence"
+    ],
+    "bibtex": "@misc{zhang2026bandit,\n  title = {Bandit Multiclass PAC Learning: Structural Baselines and a Confidence Direct Sum},\n  author = {Guangjian Zhang and Zhengyi Yang and Xiaoyang Wang},\n  year = {2026},\n  eprint = {2609.29694},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.LG},\n  doi = {10.48550/arXiv.2609.29694},\n  url = {https://arxiv.org/abs/2609.29694}\n}"
+  },
+  {
+    "id": "he2026minority",
+    "type": "preprint",
+    "status": "preprint",
+    "year": 2026,
+    "displayOrder": 37,
     "title": "Minority Sentinel: When to Overturn Majority Voting in Multi-Agent LLM Debates",
     "authors": [
       "Chuan He",
@@ -1994,7 +2028,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 37,
+    "displayOrder": 38,
     "title": "Replan, Repair, or Edit? A Unified Empirical Evaluation of Travel Agents for Itinerary Revision under Resource Disruptions",
     "authors": [
       "Xiaofei Yuan",
@@ -2044,7 +2078,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 38,
+    "displayOrder": 39,
     "title": "Do Language Models Know Who Fails? Look-Ahead Bias in LLM Credit-Risk Assessment",
     "authors": [
       "Yiwen Fang",
@@ -2076,7 +2110,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 39,
+    "displayOrder": 40,
     "title": "UniPhy: Unifying Riemannian-Clifford Geometry and Biorthogonal Dynamics for Planetary-Scale Continuous Weather Modeling",
     "authors": [
       "Ruiqing Yan",
@@ -2114,7 +2148,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 40,
+    "displayOrder": 41,
     "title": "RAIDS: Rethinking Data Systems as Responsible Intelligent Infrastructure",
     "authors": [
       "Zhengyi Yang",
@@ -2149,7 +2183,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 41,
+    "displayOrder": 42,
     "title": "Evolving Skill-Structured Attack Memory Enhances LLM Jailbreaking",
     "authors": [
       "Junke Zhang",
@@ -2190,7 +2224,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 42,
+    "displayOrder": 43,
     "title": "SALP-CG: Standard-Aligned LLM Pipeline for Classifying and Grading Large Volumes of Online Conversational Health Data",
     "authors": [
       "Yiwei Yan",
@@ -2230,7 +2264,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 43,
+    "displayOrder": 44,
     "title": "Staying In Character: Perspective-Bounded Memory For Book-Based Role-Playing Agents",
     "authors": [
       "Xushuo Tang",
@@ -2273,7 +2307,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 44,
+    "displayOrder": 45,
     "title": "AHEAD: Advancing Multi-Class Label Aggregation with Interpretable Cross-Annotator Modeling",
     "authors": [
       "Ju Chen",
@@ -2312,7 +2346,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 45,
+    "displayOrder": 46,
     "title": "Read the Route: Attention-Steered Hypergraph Retrieval for Multi-hop RAG",
     "authors": [
       "Jiate Liu",
@@ -2358,7 +2392,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 46,
+    "displayOrder": 47,
     "title": "DISRL: Dual-Scale Incremental Semi-Supervised Reinforcement Learning for Dynamic Community Tracking",
     "authors": [
       "Tianming Zhang",
@@ -2404,7 +2438,7 @@
     "type": "preprint",
     "status": "preprint",
     "year": 2026,
-    "displayOrder": 47,
+    "displayOrder": 48,
     "title": "RAHC: Rule-Augmented Hyper-Relational Knowledge Graph Completion for Materials Synthesis",
     "authors": [
       "Jiawei Sun",
