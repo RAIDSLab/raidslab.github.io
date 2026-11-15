@@ -1526,7 +1526,7 @@
   {
     "id": "yu2025ontometric",
     "type": "conference",
-    "status": "accepted",
+    "status": "published",
     "year": 2026,
     "displayOrder": 26,
     "title": "OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation",
@@ -1544,7 +1544,7 @@
     "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
     "track": "Regular Paper",
     "arxiv": "2512.01289",
-    "abstract": "Environmental, Social, and Governance (ESG) metric knowledge is inherently structured, connecting industries, reporting frameworks, metric categories, metrics, and calculation models through compositional dependencies, yet in practice this structure remains embedded implicitly in regulatory documents such as SASB, TCFD, and IFRS S2 and rarely exists as an explicit, governed, or machine-actionable artefact. Existing ESG ontologies define formal schemas but do not address scalable population and governance from authoritative regulatory sources, while unconstrained large language model (LLM) extraction frequently produces semantically incorrect entities, hallucinated relationships, and structurally invalid graphs. OntoMetric is an ontology-guided framework for the automated construction and governance of ESG metric knowledge graphs from regulatory documents that operationalises the ESG Metric Knowledge Graph (ESGMKG) ontology as a first-class constraint embedded directly into the extraction and population process. The framework integrates structure-aware segmentation, ontology-constrained LLM extraction enriched with semantic fields and deterministic identifiers, and two-phase validation combining semantic type verification with rule-based schema checking, while preserving segment-level and page-level provenance to ensure traceability to regulatory source text. Evaluation on five ESG regulatory standards shows that ontology-guided extraction achieves 65-90 percent semantic accuracy and over 80 percent schema compliance, compared with 3-10 percent for unconstrained baseline extraction, and yields stable cost efficiency with a cost per validated entity of 0.01-0.02 USD and a 48 times efficiency improvement over baseline.",
+    "abstract": "Environmental, Social, and Governance (ESG) metric knowledge is inherently structured, connecting industries, reporting frameworks, metric categories, metrics, and calculation models through compositional dependencies. In practice, however, this structure remains embedded implicitly in regulatory documents and rarely exists as an explicit, governed, or machine-actionable artefact. Existing ESG ontologies provide formal schemas but do not address scalable population and governance from authoritative regulatory sources, while unconstrained large language model (LLM) extraction can produce semantically incorrect entities, hallucinated relationships, and structurally invalid graphs. We present OntoMetric, an ontology-guided framework for automated generation and governance of ESG metric knowledge graphs from regulatory documents. OntoMetric operationalises the ESG Metric Knowledge Graph (ESGMKG) ontology as a first-class constraint in the extraction and population process. The framework integrates structure-aware segmentation, ontology-constrained LLM extraction with semantic fields and deterministic identifiers, and two-phase validation combining semantic verification with rule-based schema checking, while preserving segment-level and page-level provenance. Evaluation on five ESG regulatory documents shows semantic validation rates of 65–90% and schema compliance above 80%, compared with 3–10% schema compliance for an unconstrained extraction baseline. OntoMetric also achieves a cost per validated entity of $0.01–$0.02, substantially lower than the evaluated baseline. These results demonstrate the potential of ontology-guided extraction and validation for constructing traceable, structurally compliant ESG metric knowledge graphs.",
     "tags": [
       "ESG",
       "Knowledge Graph",
@@ -1558,11 +1558,15 @@
       "Mingqin Yu": "University of New South Wales",
       "Fethi Rabhi": "University of New South Wales",
       "Boming Xia": "University of Adelaide",
-      "Zhengyi Yang": "University of New South Wales",
+      "Zhengyi Yang": "University of Sydney",
       "Felix Tan": "University of New South Wales",
       "Qinghua Lu": "Commonwealth Scientific and Industrial Research Organisation (CSIRO), Data61"
     },
-    "bibtex": "@misc{yu2025ontometric,\n  title = {OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation},\n  author = {Mingqin Yu and Fethi Rabhi and Boming Xia and Zhengyi Yang and Felix Tan and Qinghua Lu},\n  year = {2025},\n  eprint = {2512.01289},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.AI},\n  url = {https://arxiv.org/abs/2512.01289}\n}"
+    "doi": "10.1109/ICKG70389.2026.00020",
+    "url": "https://doi.org/10.1109/ICKG70389.2026.00020",
+    "pages": "95-102",
+    "isbn": "979-8-3195-1509-4",
+    "bibtex": "@inproceedings{yu2025ontometric,\n  title = {OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation},\n  author = {Yu, Mingqin and Rabhi, Fethi and Xia, Boming and Yang, Zhengyi and Tan, Felix and Lu, Qinghua},\n  booktitle = {2026 IEEE International Conference on Knowledge Graph (ICKG)},\n  year = {2026},\n  pages = {95--102},\n  publisher = {IEEE},\n  isbn = {979-8-3195-1509-4},\n  doi = {10.1109/ICKG70389.2026.00020},\n  url = {https://doi.org/10.1109/ICKG70389.2026.00020}\n}"
   },
   {
     "id": "yu2026mapi",
