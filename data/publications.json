@@ -1917,6 +1917,7 @@
     "status": "accepted",
     "year": 2026,
     "displayOrder": 35,
+    "awardDisplayOrder": 13,
     "title": "Ownership Tracing in AI Tutoring: Correcting Apparent Mastery with Source-of-Practice Evidence",
     "authors": [
       "Sichao Li",
