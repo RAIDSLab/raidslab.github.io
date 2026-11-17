@@ -2475,6 +2475,90 @@
     "bibtex": "@misc{sun2026rahc,\n  title = {RAHC: Rule-Augmented Hyper-Relational Knowledge Graph Completion for Materials Synthesis},\n  author = {Jiawei Sun and Sijia Xu and Zihan Chen and Zhengyi Yang},\n  year = {2026},\n  eprint = {2611.04809},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.AI},\n  url = {https://arxiv.org/abs/2611.04809}\n}"
   },
   {
+    "id": "yan2025becoming",
+    "type": "conference",
+    "status": "published",
+    "year": 2026,
+    "displayOrder": 49,
+    "title": "Becoming Leaders in the Australian Construction Industry: A Machine Learning Analysis of LinkedIn Profiles",
+    "authors": [
+      "Diya Yan",
+      "Yi Ding",
+      "Riza Yosia Sunindijo",
+      "Cynthia Changxin Wang",
+      "Zhengyi Yang"
+    ],
+    "correspondingAuthors": [
+      "Diya Yan"
+    ],
+    "venue": "48th Australasian Universities Building Education Association (AUBEA 2025) International Conference",
+    "venueShort": "AUBEA 2025",
+    "venueUrl": "https://iopscience.iop.org/issue/1755-1315/1673/1",
+    "pdf": "https://iopscience.iop.org/article/10.1088/1755-1315/1673/1/012005/pdf",
+    "tags": [
+      "Construction",
+      "Gender",
+      "Diversity",
+      "Machine Learning"
+    ],
+    "researchAreas": [
+      "Data for Real-World Applications"
+    ],
+    "authorAffiliations": {
+      "Diya Yan": "University of New South Wales",
+      "Yi Ding": "University of New South Wales",
+      "Riza Yosia Sunindijo": "University of New South Wales",
+      "Cynthia Changxin Wang": "University of New South Wales",
+      "Zhengyi Yang": "University of New South Wales; University of Sydney"
+    },
+    "abstract": "As one of the most male-dominated industries in Australia, the construction industry should strive for a more inclusive and socially sustainable future, where leadership opportunities are accessible to diverse talent. While existing research has identified some barriers to career progression in construction through traditional survey and interview methods, this study aims to apply machine learning algorithms to investigate the role of gender in attaining managerial positions based on 3190 LinkedIn profiles. The classification algorithms, including Decision Trees, Ensemble Trees, and Neural Networks, were compared to determine the best-performing model. Then, the six adopted features, which relate to gender, work experience, educational background, and professional visibility, were ranked based on their contribution to the model's accuracy. Surprisingly, the results revealed that gender, often assumed to play a key role in career progression, was a non-contributing feature in the model. In contrast, the current company size, number of followers, and total duration of work experience emerged as significant predictors of higher managerial levels. These findings challenge gender assumptions and underscore the need for targeted strategies to enhance networking and visibility for supporting career advancement in the construction industry. This study contributes to the theoretical understanding of career progression by using a large-scale, data-driven machine learning approach. The results call for future studies to investigate predictors specific to career progressions and offer practical implications for fostering equitable and inclusive career pathways in the industry.",
+    "publisher": "IOP Publishing",
+    "doi": "10.1088/1755-1315/1673/1/012005",
+    "url": "https://iopscience.iop.org/article/10.1088/1755-1315/1673/1/012005",
+    "volume": "1673",
+    "issue": "1",
+    "articleNumber": "012005",
+    "note": "Published in IOP Conference Series: Earth and Environmental Science, volume 1673, issue 1, article 012005 (2026).",
+    "rankings": {
+      "era2010": "B"
+    },
+    "bibtex": "@article{yan2025becoming,\n  title = {Becoming Leaders in the Australian Construction Industry: A Machine Learning Analysis of LinkedIn Profiles},\n  author = {Yan, Diya and Ding, Yi and Sunindijo, Riza Yosia and Wang, Cynthia Changxin and Yang, Zhengyi},\n  journal = {IOP Conference Series: Earth and Environmental Science},\n  volume = {1673},\n  number = {1},\n  pages = {012005},\n  year = {2026},\n  publisher = {IOP Publishing},\n  doi = {10.1088/1755-1315/1673/1/012005},\n  url = {https://iopscience.iop.org/article/10.1088/1755-1315/1673/1/012005}\n}"
+  },
+  {
+    "id": "zhang2026agnostic",
+    "type": "preprint",
+    "status": "preprint",
+    "year": 2026,
+    "displayOrder": 50,
+    "title": "An Agnostic Sample Compression Scheme for Squared Loss of Near-Linear Size in the Fat-Shattering Dimension",
+    "authors": [
+      "Guangjian Zhang",
+      "Zhengyi Yang",
+      "Xiaoyang Wang"
+    ],
+    "authorAffiliations": {
+      "Guangjian Zhang": "University of New South Wales",
+      "Zhengyi Yang": "The University of Sydney",
+      "Xiaoyang Wang": "University of New South Wales"
+    },
+    "venue": "arXiv",
+    "venueUrl": "https://arxiv.org/abs/2609.29696",
+    "doi": "10.48550/arXiv.2609.29696",
+    "arxiv": "2609.29696",
+    "pdf": "https://arxiv.org/pdf/2609.29696",
+    "abstract": "We study agnostic sample compression for squared loss. For every nonempty class of [0,1]-valued functions with finite fat-shattering dimension d at a scale proportional to the target accuracy α, we establish a deterministic scheme of total size O(d log^3(2/α)). Its code retains original labeled observations and auxiliary bits, and its reconstruction achieves empirical loss at most α above the best loss in the class on every finite sample. The construction approximates a near-optimal internal target using a fixed-step boosting ensemble and its equal-weight median. Because average loss permits an accuracy-dependent number of rounds, the entire ensemble can be retained without dual-dimension sparsification. We also show that, when retained observations must come from the sample, a class of fat-shattering dimension one requires Ω(log(1/α)) total size, ruling out a log-free bound under that restriction. The framework extends to average power loss at scale α/p.",
+    "tags": [
+      "Machine Learning",
+      "Learning Theory",
+      "Sample Compression",
+      "Regression"
+    ],
+    "researchAreas": [
+      "Responsible Data Intelligence"
+    ],
+    "bibtex": "@misc{zhang2026agnostic,\n  title = {An Agnostic Sample Compression Scheme for Squared Loss of Near-Linear Size in the Fat-Shattering Dimension},\n  author = {Guangjian Zhang and Zhengyi Yang and Xiaoyang Wang},\n  year = {2026},\n  eprint = {2609.29696},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.LG},\n  doi = {10.48550/arXiv.2609.29696},\n  url = {https://arxiv.org/abs/2609.29696}\n}"
+  },
+  {
     "id": "zhang2025accelerating",
     "type": "conference",
     "status": "published",
@@ -3668,48 +3752,6 @@
       "Scalable Data Systems"
     ],
     "bibtex": "@article{chen2025recent,\n  title = {Recent Advances in Efficient Dynamic Graph Processing},\n  author = {Chen, Zi and Liang, Keke and Yuan, Long and Zhang, Wenjie and Yang, Zhengyi},\n  volume = {15},\n  issn = {2076-3417},\n  url = {http://dx.doi.org/10.3390/app15116003},\n  doi = {10.3390/app15116003},\n  number = {11},\n  journal = {Applied Sciences},\n  publisher = {MDPI AG},\n  year = {2025},\n  month = May,\n  pages = {6003}\n}"
-  },
-  {
-    "id": "yan2025becoming",
-    "type": "conference",
-    "status": "accepted",
-    "year": 2025,
-    "displayOrder": 26,
-    "title": "Becoming Leaders in the Australian Construction Industry: A Machine Learning Analysis of LinkedIn Profiles",
-    "authors": [
-      "Diya Yan",
-      "Yi Ding",
-      "Riza Yosia Sunindijo",
-      "Cynthia Changxin Wang",
-      "Zhengyi Yang"
-    ],
-    "correspondingAuthors": [
-      "Diya Yan"
-    ],
-    "venue": "Australasian Universities Building Education Association Conference",
-    "venueShort": "AUBEA",
-    "venueUrl": "https://www.canberra.edu.au/about-uc/events/aubea-2025",
-    "pdf": "https://www.researchgate.net/profile/Diya-Yan/publication/402866088_Becoming_Leaders_in_the_Australian_Construction_Industry_A_Machine_Learning_Analysis_of_LinkedIn_Profiles/links/69bcd055a685ad71ef8c860b/Becoming-Leaders-in-the-Australian-Construction-Industry-A-Machine-Learning-Analysis-of-LinkedIn-Profiles.pdf",
-    "rankings": {
-      "era2010": "B"
-    },
-    "tags": [
-      "Construction",
-      "Gender",
-      "Diversity",
-      "Machine Learning"
-    ],
-    "researchAreas": [
-      "Data for Real-World Applications"
-    ],
-    "authorAffiliations": {
-      "Diya Yan": "University of New South Wales",
-      "Yi Ding": "University of New South Wales",
-      "Riza Yosia Sunindijo": "University of New South Wales",
-      "Cynthia Changxin Wang": "University of New South Wales",
-      "Zhengyi Yang": "University of New South Wales"
-    },
-    "abstract": "As one of the most male-dominated industries in Australia, the construction industry should strive for a more inclusive and socially sustainable future, where leadership opportunities are accessible to diverse talent. While existing research has identified some barriers to career progression in construction through traditional survey and interview methods, this study aims to apply machine learning algorithms to investigate the role of gender in attaining managerial positions based on 3190 LinkedIn profiles. The classification algorithms, including Decision Trees, Ensemble Trees, and Neural Networks, were compared to determine the best-performing model. Then, the six adopted features, which relate to gender, work experience, educational background, and professional visibility, were ranked based on their contribution to the model's accuracy. Surprisingly, the results revealed that gender, often assumed to play a key role in career progression, was a non-contributing feature in the model. In contrast, the current company size, number of followers, and total duration of work experience emerged as significant predictors of higher managerial levels. These findings challenge gender assumptions and underscore the need for targeted strategies to enhance networking and visibility for supporting career advancement in the construction industry. This study contributes to the theoretical understanding of career progression by using a large-scale, data-driven machine learning approach. The results call for future studies to investigate predictors specific to career progressions and offer practical implications for fostering equitable and inclusive career pathways in the industry."
   },
   {
     "id": "ding2025euleresg",
