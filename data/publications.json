@@ -1324,7 +1324,7 @@
   {
     "id": "yan2026careerprogression",
     "type": "journal",
-    "status": "accepted",
+    "status": "published",
     "year": 2026,
     "displayOrder": 21,
     "title": "Career Progression to Top Management: Gender Differences Across Managerial Stages in the Construction Industry",
@@ -1349,7 +1349,20 @@
     ],
     "researchAreas": [
       "Data for Real-World Applications"
-    ]
+    ],
+    "doi": "10.1080/15623599.2026.2765512",
+    "url": "https://doi.org/10.1080/15623599.2026.2765512",
+    "pdf": "https://www.tandfonline.com/doi/pdf/10.1080/15623599.2026.2765512",
+    "pages": "1-19",
+    "authorAffiliations": {
+      "Diya Yan": "University of New South Wales",
+      "Riza Yosia Sunindijo": "University of New South Wales",
+      "Cynthia Changxin Wang": "University of New South Wales",
+      "Yi Ding": "University of New South Wales",
+      "Zhengyi Yang": "University of New South Wales; University of Sydney"
+    },
+    "abstract": "Despite ongoing efforts to improve gender equity, women remain underrepresented in the construction industry, particularly in senior management. This study compares the career progression of female and male top managers in the Australian construction industry through a stage-based mixed-methods analysis across non-managerial, first-line managerial, and middle-managerial levels. Phase 1 analyzed 733 LinkedIn profiles using independent-samples t-tests, one-way analysis of variance (ANOVA), and Tukey’s Honestly Significant Difference (HSD) post-hoc tests. Women spent significantly longer in non-managerial roles than men, averaging 167.0 months compared with 100.7 months, and held more job titles, averaging six compared with three, indicating slower early-career progression. However, gender differences diminished at the first-line and middle-managerial levels, where company size emerged as a key factor associated with career mobility. Phase 2 involved in-depth interviews with 15 female managers to contextualize the quantitative findings. The study advances a stage-based understanding of gendered career trajectories and identifies the non-managerial stage as a critical point of inequality. Individuals, particularly women, are encouraged to plan their careers strategically and explore opportunities across companies of different sizes. The findings also highlight the need for stage-specific career support within organizations, alongside policy measures to monitor gender differences in managerial progression beyond overall workforce participation.",
+    "bibtex": "@article{yan2026careerprogression,\n  title = {Career Progression to Top Management: Gender Differences Across Managerial Stages in the Construction Industry},\n  author = {Yan, Diya and Sunindijo, Riza Yosia and Wang, Cynthia Changxin and Ding, Yi and Yang, Zhengyi},\n  journal = {International Journal of Construction Management},\n  year = {2026},\n  pages = {1--19},\n  publisher = {Taylor & Francis},\n  doi = {10.1080/15623599.2026.2765512},\n  url = {https://doi.org/10.1080/15623599.2026.2765512}\n}"
   },
   {
     "id": "yan2026improving",
