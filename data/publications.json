@@ -261,8 +261,8 @@
     "id": "yuan2026higherorder",
     "type": "book",
     "status": "accepted",
-    "year": 2026,
-    "displayOrder": 1,
+    "year": 2027,
+    "displayOrder": 6,
     "title": "Higher-Order Graph Analytics: Models, Algorithms and Applications",
     "authors": [
       "Long Yuan",
@@ -282,7 +282,7 @@
     "publisher": "Springer Singapore",
     "isbn": "978-981-92-5654-9",
     "eisbn": "978-981-92-5655-6",
-    "note": "Forthcoming; hardcover and eBook publication scheduled for November 2026.",
+    "note": "Forthcoming; hardcover and eBook publication scheduled for 24 February 2027.",
     "abstract": "This book presents a systematic guide to higher-order graph analytics across heterogeneous information networks, temporal graphs, multilayer graphs, and hypergraphs. It connects foundational models and problem formulations with algorithms and real-world applications, covering tasks such as centrality, community detection, cohesive subgraph analysis, traversal, and pattern matching.",
     "tags": [
       "Graph",
