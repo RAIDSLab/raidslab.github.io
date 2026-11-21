@@ -193,7 +193,8 @@
     "venueShort": "WSDM",
     "venueUrl": "https://www.wsdm-conference.org/2027/",
     "publisher": "Association for Computing Machinery (ACM)",
-    "track": "Research",
+    "track": "Oral",
+    "note": "Accepted to the WSDM 2027 Main Conference (paper ID 1646).",
     "rankings": {
       "core2023": "A",
       "icore2026": "A",
