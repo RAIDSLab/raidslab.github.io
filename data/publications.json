@@ -193,8 +193,7 @@
     "venueShort": "WSDM",
     "venueUrl": "https://www.wsdm-conference.org/2027/",
     "publisher": "Association for Computing Machinery (ACM)",
-    "track": "Oral",
-    "note": "Accepted to the WSDM 2027 Main Conference (paper ID 1646).",
+    "track": "Main Conference · Oral",
     "rankings": {
       "core2023": "A",
       "icore2026": "A",
@@ -2532,7 +2531,6 @@
     "volume": "1673",
     "issue": "1",
     "articleNumber": "012005",
-    "note": "Published in IOP Conference Series: Earth and Environmental Science, volume 1673, issue 1, article 012005 (2026).",
     "rankings": {
       "era2010": "B"
     },
